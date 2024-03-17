@@ -1,4 +1,8 @@
-Welcome! 
+thèse_aurelien_vers1
+
+rédaction d'une thèse sur la biodiversité végétale et les stocks de carbone dans certaines forêts communales du Cameroun.
+
+![stability-wip](https://img.shields.io/badge/stability-work_in_progress-lightgrey.svg)
 
 This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). 
 
