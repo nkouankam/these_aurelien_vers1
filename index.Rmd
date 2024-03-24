@@ -10,7 +10,7 @@ otherlangs: [en-US]
 # Paper, font
 papersize: A4
 fontsize: 12pt
-mainfont: texgyretermes
+mainfont: texgyretermes 
 mainfontoptions:
   - Extension=.otf
   - UprightFont=*-regular
