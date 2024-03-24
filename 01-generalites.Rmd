@@ -1,0 +1,119 @@
+# Chapitre I. Généralités  
+ 
+## Présentation de la Forêt Communale de Nanga-Eboko
+
+### Localisation
+
+La Forêt Communale de Nanga-Eboko est constituée de deux blocs distincts (FiG.1) couvrant une superficie total de 20000 ha (11000 ha et 9000 ha). C'est le décret n°2009/2046/PM du 16 Novembre 2009 qui marque sa création et confi sa tutelle à la mairie de Nanga-Eboko. Elle est située dans la région du Centre, Département de la Haute Sanaga, Arrondissement de Nanga-Eboko ([@Yemafack et Alemagi, 2016]).
+
+[![Localisation de la Forêt Communale de Nanga-Eboko (Yemefack et Alemagi, 2016)](images/localisation_nanga-01.png)](FiG.1)
+
+### Milieu biophysique
+
+#### Relief et hydrographie
+
+  C'est le relief inégal du grand plateau méridional qui est une vaste surface d'érosion en gradins ou en "mosaïque irrégulière de blocs" couvrant tout le Centre-Sud et le Sud du Cameroun ([@Martin, 1966]). Ce sont des formations précambriennes plissées puis arasées par l'érosion ([@Servant et al., 2000]). Elles ont été mises en place sur une surface subhorizontale où les altitudes varient entre 600 et 750 m. Avec son aspect vallonnée, le réseau hydrographique y est très ramifié et les eaux s'écoulent vers la Sanaga axe principal de drainage du plateau sud-Camerounais. Le principal cours d'eau est la Njékè et ses affluents: Menam, Abomvé, Membé et Tigbé qui drainent toute la FC. la Njékè est un affluent de la Sanaga, son bassin s'étend surtout en savane jusqu'à la plaine Yoko.
+
+#### Climat
+
+  Par son appartenance au domaine subéquatorial, la Forêt Communale de Nanga-Eboko connait quatre saisons: deux saisons pluvieuses séparées par deux saisons sèches d'inégale importance. C'est le climat équatorial de type guinéen. La topographie de cuvette et l'abaissement imporatant de l'altitude par rapport aux hautes terres voisines favorisent l'échauffement et l'évolution dynamique diurne. Par conséquent c'est une zone relativement chaude: la température moyenne annuelle se situe autour de 24°C avec une amplitude de 3,4°C. Les fortes chaleurs sont enrégitrés pendant les mois de janvier, février et mars (25°C-26°C) tandis que les basses températures sont relevées en juillet et août (22,6°C-22,8°C). Les valeurs de pluviosité sont faibles avec des précipitations oscillant entre 1113 et 1827 mm. Avec des pluies étalées d'avril à juin et de mi-août à novembre, le nombre de jours pluvieux sur l'ensemble de la zone d'étude est de 133 jours.
+
+#### Végétation
+
+  La végétation de la Forêt Communale de Nanga-Eboko se caractérise par une forêt de type tropicale semi décidue guinéo-congololaise ([@Letouzey, 1985]) constituée de strates arborescentes, arbustives et d'espèces lianescentes. Elle appartient au domaine des forêts secondaires à savanes péri-forestières plus ou moins dégradées sur terres forestières ([@Onana et al., 2019]). Le massif forestier renferme de nombreuses espèces de la famille des Sterculiacées telles que: *Triplochiton scleroxylon*, *Sterculia oblonga* et autres *Sterculia*, *Pterygota kamerunensis* et divers *Cola*.Dans les autres familles on relève divers *Celtis*, *Chlorophora excelsa*, de nombreux *Ficus* et *Terminalia superba*. En dehors des forêts galerie,les autres surfaces forestières apparaissent dégradées soit par l'exploitation forestière ou les défrichements avec jachères forestières à divers stades de régénération, soit de forêts et brousses forestières reconstituées à partir de la savane. Elles sont caractérisées par les espèces de jachères suivantes: *Musanga cecropiodes*, *Albizzia zigia*, *Anthocleista nobilis*, *Xylopia aethiopica*, *Sarcocephalus esculentus*, *Ceiba pentadra* et *Vernonia amygdalina*. A certains endroit au Nord-ouest de la Forêt Communale (village Bisaga), l'on peut observé des champs cultivés à partir des défrichements de savanes et des brousses forestières fermées caractérisées par les espèces telles que: *Anthocleista nobilis*, *Sarcocephalus esculentus*, *Albizzia zigia*, *Vernonia amygdalina*, *Harungana madascariensis*. Quelques rares pieds de *Terminalia glaucescens*, *Annona arenaria* et *Piliostigma reticulata* témoignent d'une présence ancienne de la savane. Les savanes proprement dites sont arborées et caractérisées par les espèces telles que: *Bridelia ferruginea*, *Crossopteryx febrifuga*,*Himinocardia acida*, *Annona arenaria*, *Piliostigma reticulata*. La graminéé dominante des savanes est *Hyparrhenia rufa*. Les espèces comme *Pennisetum purpureum* sont répandus dans les jachères et sur les termitières. Dans les bas-fonds marécageux on peut observer des formations forestières dominées par les *Raphias*.
+
+#### Sols
+
+  La grande majorité des sols de la Forêt Communale de Nanga-Eboko appartiennent à la sous-classe des sols ferralitiques et aux catégories des sols ferralitiques typiques et sols ferralitiques indurés. Ce sont éssentiellement des sols argileux présentant une richesse organique moyenne et richesse minérale faible leur conférant ainsi une fertilité intrinsèque moyenne ([@Martin, 1966]). Dans les bas-fonds marécageux et les vallées des grandes rivières, on peut noter la présence des sols hydromorphes: ils ne représentent que des surfaces reduites et leur valeur agricole est généralement très médiocre.
+
+#### Environnement socio-économique
+
+  La population autour de la Forêt Communale est hétérogène avec trois tribus (Vouté, Baveuk et Yangavok) occupant 23 villages appartenant à deux groupements: Emtsé et Bissaga. Le groupement Emtsé est le plus important en terme de population avec plus de 6000 habitants. Dans cet ensemble les femmes sont les plus nombreuses et représentent près de 52% de la population. Chaque village est soumis à l'autorité d'un chef. Ce dernier est élu par les populations et les canditats à l'élection proviennent des descendants de la famille reignante. Le chef est garant du pouvoir traditionnel et assure le lien entre l'administration et les populations. Il dernier règle les problèmes de tenure foncière et tout autre type de conflits qui sont de deux types : les conflits en vue de l'appropriation des arbres, et les divergences entre les membres d'une famille ou tribu.
+
+  L'agriculture est la principale activité des riverains de la FC de Nanga-Eboko. Les cultures vivrières occupent la première place dans les activités agricoles. Bien que les techniques agricoles soient encore rudimentaires, le maïs occupe une place prépondérante dans ces cultures étant donné que l'alimentation de base de la zone est le couscous de maïs. Le cacao et le café sont les principales sources de revenus des populations. L'élevage est de faible importance et concerne surtout les caprins, les ovins et la volaille. La chasse et la pêche sont des activités de moyenne importance et fournissent des revenus non négligeables à ceux qui les pratiquent.
+
+## Présentation de la Forêt Communale de Ndikiniméki
+
+### Localisation
+
+  La Forêt communale de Ndikiniméki est située dans la région du Centre, Département du Mbam et Inoubou, Arrondissement de Ndikiniméki. Elle couvre une superficie de 20000 ha repartie en deux blocs (17000 ha et 3000 ha) entièrement gérés par la commune de Ndikiniméki (FiG.2). Cette commune est limitée au Nord par l'arrondissement de Makénéné, à l'Ouest par l'arrondissement de Yingui, au Sud par Ngambé et Yingui et à l'Est par les arrondissements de Ndom, Bokito, Nitoukou et Bafia.
+
+[![Localisation de la Forêt Communale de Ndikiniméki (Centre Technique de la Forêt Communale Cameroun, 2008)](images/localisation_Ndiki-01.png){width="486"}](FiG.2)
+
+### Milieu biophysique
+
+#### Relief et hydrographie
+
+  Le relief de la Forêt Communale de Ndikiniméki correspond au relief de la frange occidentale du plateau sud-Camerounais. C'est un relief escarpé et coupé par de nombreuses vallées très profondes. Il est rattaché dans sa partie Est au plateau Sud-Camerounais par la dépression de Bafia et dans sa partie Ouest aux plateaux Bamilékés et Bamoun où il prend un aspect réellement montagneux ([@Olivry, 1986]). Le réseau hydrographique est dense et constitué de cours d'eaux permanents et aux débits variables (Nting-nting, Molo, Bassaben, Biadjang, Makombé...). Le Makombé est la rivière la plus importante de la zone et constitue l'un des affluents les plus importants du Wouri dans sa partie continentale.
+
+#### Climat
+
+  Le climat est équatorial de type guinéen, caractérisé par deux saisons sèches et deux saisons de pluies. La moyenne thermique se situe entre 20 et 25°C avec un maxima de 30°C au mois de février. Les précipitations moyennes annuelles se situent autour de 1440 mm.
+
+#### Végétation
+
+  La végétation rencontrée d'une part est celle de la forêt ombrophile de basse et moyenne altitude à Lophira alata ([@Letouzey, 1958]). Elle est constituée d'espèces de bois d'œuvre, de bois de chauffe et d'espèces à usage multiples. Quelques espèces rencontrées sont : le Movingui (*Distemonanthus benthamanus*), le Padouk (*Ptérocarpus soyauxii*), le Tali (*Erythrophleum suaveolens*), le Sapelli (*Entandrophragma cylindicum*), l'Okan (*Cilicodiscus gabonensis*), le Fraké (*Terminalia superba*), l'Iroko (*Chlorophora excelsa*) et l'Ilumba (*Pycnanthus angolensis*). Les familles typiques sont entre autre : les Violaceae, Euphorbiaceae, Anonaceae, Fabaceae et Ebénaceae. D'autre part on rencontre des jachères et des cultures. Les cultures sont vivrières (arachides, manioc, maïs, etc.) et pérennes (cacao). La faune terrestre est abondante et diversifiée et comprend : les mammifères, les oiseaux et les reptiles. La faune aquatique est riche et comprend : les clarias, les carpes, les capitaines, etc.
+
+#### Sols
+
+  La grande majorité des sols de la FC de Ndikiniméki appartient à la classe des sols à sesquioxydes faiblement ferralitiques modaux sur roches acides. Dans les zones de savane on peut distinguer les sols ferraliques indurés caractérisés par des affleurements de dalles ou de gravillons. Les sols hydromorphes sont localisés dans les bas-fonds marécageux et les vallées ([@Anonyme c, 2012]).
+
+#### Environnement socio-économique
+
+  La population est constituée essentiellement de l'ethnie Banen, les autres ethnies étant halogènes. C'est une population cosmopolite qui vit pour sa grande majorité le long de la route nationale numéro 4, loin de la forêt à raison des troubles qu'a connue la zone à la veille des indépendances. Les habitants des villages qui autrefois jouxtaient la forêt communale (Ndokbou I et II) reviennent de temps en temps pratiquer l'agriculture à la lisière de la Forêt Communale. La commune est peu peuplée avec une densité de 19 habitants au km² pour une superficie de 2650 km². Chaque village est sous l'autorité d'un chef assisté par des notables. Les élites, les élus locaux, les patriarches et les responsables politiques, jouent également un rôle important dans les prises de décisions au sein des communautés. La vie des populations locales dépend énormément de la Forêt Communale. Elles y prélèvent des ressources pour leur alimentation, la pharmacopée, l'artisanat, l'énergie et le commerce. La pratique de l'agriculture est rudimentaire avec l'usage de très peu de fertilisants et de semences améliorées. L'essentiel de la production vivrière est destinée à la consommation tandis que la production de rente (cacao) est destinée à la vente. Les produits de la chasse et de la pêche sont généralement boucanés avant d'être vendus sur les marchés locaux (Makénéné et Ndikiniméki) ou Yaoundé.
+
+## Définition des concepts
+
+### Biodiversité
+
+  D'après la Convention des Nations Unies sur la Diversité Biologique , la biodiversité peut se définir comme étant la diversité des écosystèmes, des espèces et des gènes dans l'espace et dans le temps, ainsi que les interactions au sein de ces niveaux d'organisaion. Loin d'être un catalogue statistique des espèces, elle est le resultat de la dynamique du monde vivant (FiG.3).
+
+[![Concept de biodiversité d'après di Castri et Younes, 1996](images/Biodiversit%C3%A9.png)](FiG.3)
+
+  Pour les scientifiques il existe trois niveaux d'organisation de la biodiversité: la diversité génétique en tant que diversité de l'information génétique portée par les organismes vivants;la diversité des espèces qui correspond à l'ensemble des être vivants identifiables dans le monde vivant;la diversité des écosystèmes qui correspond aux communautés animales et végétales vivants sous différentes conditions climatiques et géographiques ([@Lévêque, 2008]). Le terme "biodiversité" qui est la forme réduite de "diversité biologique"a été employé pour la première fois par des naturalistes inquiets de la destruction rapide des milieux naturels et des forêts tropicales humides en particulier. La grande majorité des espèces présentes sur Terre sont encore inconnues, de même leur rôle dans le fonctionnement des écosystèmes reste encore à déterminer. Au coeur d'écosystèmes évoluant en permanence sous l'effet des contraintes climatiques, géologiques et anthropiques, la diversité se crée soit par des mutations génétiques soit par des processus de selections naturelles.
+
+### Estimation des stocks de carbone
+
+  La capacité à pouvoir mesurer avec exactitude et précision, les stocks de carbone séquestrés dans les forêts et avec des méthodes comparables fait l'objet de nombreuses recherches. Beaucoup de pays tropicaux disposent de très peu de données d'inventaires de tout ou partie de leur surface forestière. La plupart des inventaires sont anciens et n'ont pas souvent fait l'objet d'une actualisation ([@Brown, 2002; @Brown, 1997]). Les méthodes d'estimation de stock de carbone les plus rependues concernent surtout la biomasse aérienne constituée des branches (houppier) et le tronc (FiG.4). Elles reposent pour la plupart sur des méthodes biométriques pour ce qui concerne les forêts tropicales, et consistent généralement à convertir les données d'inventaires en stocks de carbone ([@Loubota, 2018]).
+
+[![Stockage de biomasse au niveau de l'arbre (adapté de De Madron, 2013)](images/Stockage%20biomasse%20arbre.png)](FiG.4)
+
+  Pour l'évaluation des stocks de carbone, [\@Penman et al.](2003) et [\@MacDicken](1997) définissent 5 réservoirs repartis en 3 groupes pour la quantification du carbone:
+
+-   Groupe1: biomasse vivante. Il englobe la biomasse aérienne constituée des arbres et des autres végétaux et la biomasse souterraine, ou les racines;
+-   Groupe 2: matière organique morte. Il comprend le bois mort;
+-   Groupe 3: carbone organique du sol. Il inclue le carbone du sol.
+
+  La première technique employée par [\@Brown et Lugo](1992), consiste à estimer la biomasse à partir des volumes de bois dits « commerciaux » (volume de bois fort sur écorce) corrigés par un coefficient d'expansion (FiG.5). Elle s'applique pour les inventaires ayant un diamètre de précomptage égale à 10 cm.
+
+[![Méthode de Brown et Lugo (1992)](images/M%C3%A9thode%20Brown%20et%20Lugo.png)](FiG.5)
+
+  Cependant, son application pour des inventaires ayant un diamètre de précomptage allant jusqu'à 30 cm nécessite l'ajout d'un facteur correctif (VEF : Volume Expansion Factor) permettant d'extrapoler le volume des classes de diamètre manquantes (1).
+
+$$
+AGB=VOB×WB×BEF(VEF) (1) 
+$$ *AGB: Biomasse épigée; VOB: Volume bois fort; WD: Densité du bois; VEF: Facteur d'expansion de volume*.
+
+  La seconde technique (FiG.5) est celle consistant à estimer la biomasse à partir des tables d'inventaires et d'un modèle allométrique ([@Chave et al., 2005]). Elle repose sur l'utilisation du résultat d'un inventaire en nombre de tiges par essence et par catégorie de diamètre auquel on associe la biomasse épigée totale d'un arbre (AGB) estimée à partir d'une ou plusieurs données d'entrées : le Diamètre (D), la Hauteur (H), la Densité du bois (ρ) (2).
+
+$$
+AGB=0,0673×(ρD^2 H)0,976≡0,559×(ρD^2 H)     (2)
+$$ *D: diamètre à hauteur de poitrine ou au-dessus des contreforts (m); H: hauteur (m); ρ: densité spécifique (g/cm^3).* [l'intervalle de validité de l'équation 5 à 156 cm de diamètre].
+
+  Lorsque les données de hauteur ne sont pas disponibles, [\@Chave](2014) (2014) a récemment développé une équation permettant d'estimer la biomasse épigée à partir du diamètre de l'arbre et un facteur de stress environnemental (3)
+
+$$
+AGB=℮^[-1,803-0,976×E+0,976×ln⁡(ρ)+2,673×ln⁡(D)-0,0299×(ln⁡(D))²] (3)
+$$*AGB, ρ, D, H et E sont respectivement la biomasse aérienne (kg), la densité du bois spécifique (g/cm\^3), le diamètre de l'arbre (cm), la hauteur totale de l'arbre (m) et une variable qui quantifie le stress environnemental (elle varie entre -0,2 et 1).* [L'intervalle de validité de cette équation est de 5 à 180 cm de diamètre].
+
+  Comparativement à la technique de [\@Brown et Lugo](1992) (1992), les équations de Chave permettent d'estimer la biomasse totale de l'arbre en fonction du diamètre et/ou la hauteur et un facteur de stress environnemental sans appliquer de facteur de conversion global (FiG.6). C'est une méthode qui s'applique aisément aux données brutes d'inventaires forestiers et est très adaptée aux dispositifs scientifiques du type « placettes permanentes ». Cependant sa mise en œuvre exige des corrections d'imprécision liées à l'affectation de chaque tige à une classe de diamètre plus ou moins large (5 ou 10 cm).
+
+[![Méthode Chave 2014](images/Chave%202014-04.png){width="529"}](FiG.6)
+
+### Zone de transition
+
+  La zone de transition au Cameroun correspond à la zone de contact forêt-savane. C'est un vaste domaine situé entre le sixième et le quatrième degré de latitude nord, et entre le onzième et le seizième degré de longitude est. Avec une altitude comprise entre 650 et 900 m, son relief est formé d'une succession de collines convexes et d'interfluves émoussés , parfois cuirassés ([@Morin, 1979]). La végétation dominante est une forêt semi-décidue en équilibre instable avec les savanes périforestières. Le caractère semi-caducifolié de cette forêt constitue un trait dominant avec les espèces arborescentes caractéristiques telles que les Sterculiacées et les Celtis ([@Olivry,1986]).
+
+### Evolution du processus REDD+
+
+  La stratégie REDD+ est un ensemble de politiques, d'actions locales, infranationales, nationales et mondiales dont l'objectif premier est de réduire les émissions liées à la déforestation et la dégradation des forêts et d'augmenter les stocks de carbone forestier dans les pays en développement. Cette définition relève que le processus REDD+ est liée aux émissions et aux piégeages des Gaz à Effet de Serre (GES), et que les actions entreprises devraient englober des paiements conditionnels ou basés sur les résultats ([@Angelsen et al., 2013]). En théorie, l'architecture globale de la stratégie REDD+ peut être comparée à un système qui consiste à payer les propriétaires forestiers et les usagers de la forêt sur la base de leurs performances en réduction des émissions ([@Angelsen et al., 2010] ). Ces paiements sont effectués conformément au respect d'un régime d'occupation des terres ou d'actions menés convenus et prévoient des restrictions d'usage. La stratégie REDD+ est un mécanisme qui a été initié à Montréal en 2005 lors de la 11e Conférence des parties (CdP-11) à la Convention Cadre des Nations Unies pour les Changements Climatiques (CCNUCC) par la Papouasie-Nouvelle-Guinée et le Costa Rica. Ces pays s'étaient appuyés sur une publication produite par un consortium d'organisations non gouvernementales, de centres de recherche brésiliens et l'université de Yale aux USA. Ce rapport rappelait le rôle clé joué par la déforestation dans les émissions de GES, mettait en évidence l'opportunité d'une approche sectorielle de ce problème et proposait le concept de « réduction d'émissions compensées » ([@Santilli et al., 2005]). En effet, sur la totalité des émissions annuelles de GES générées par les activités humaines depuis 1990, 20% proviennent des changements d'usage des sols ([@GIEC, 2007]) et en particulier de la déforestation et de la dégradation des forêts en milieu tropical. L'engagement et la participation du Cameroun à ce processus s'est concrétisé par la création du comité de pilotage REDD+ en juin 2012.

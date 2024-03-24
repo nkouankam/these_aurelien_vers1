@@ -1,0 +1,202 @@
+# Chapitre II. Matériel et méthodes
+
+## Matériel
+
+### Sites de l'étude
+
+Les Forêts Communales de Nanga et Boko et Ndikiniméki sont toutes deux situées dans la région du centre Cameroun. C'est une zone correspondant à un climat équatorial de type guinéen. La végétation rencontrée est respectivement une forêt de type tropicale semi décidue guinéo-congololaise ([@Letouzey, 1985]) et une forêt ombrophile de basse et moyenne altitude à Lophira alata ([@Letouzey, 1958]). Le choix de ces Forêts Communales s'est fait sur la base de: leur statut juridique (existence d'un acte de classement); la validation de leur plan d'aménagement; leur accessibilité (l'existence des pistes forestières qui ont facilité les choix et l'installation des placettes). D'autres part, le fait pour ces forêts d'être soit en arrêt d'exploitation (FC Nanga-Eboko) ou pas encore en exploitation (FC Ndikiniméki), constitue un atout indéniable pour l'élaboration des critères et indicateurs pour la désignation des sites de carbone, l'évaluation et le suivi du carbone dans les forêts communales. La formulation des Critères et Indicateurs (C&I) de désignation des sites de carbone dans cette étude a été basée à la fois sur la gestion de l'activité forestière courante dans la forêt, la structure du peuplement, et la gestion des écosystèmes ([@Nivert et al., 2012]).
+
+### Matériel technique
+
+Pour atteindre les objectifs fixés, le matériel inscrits dans le tableau 1 a été utilisé.
+
+| Outils                                      | Fonctions                                                                                  |
+|------------------------|------------------------------------------------|
+| Global Positionning System (GPS)            | enregistrement des coordonnées géographiques des points et des parcelles d'échantillonnage |
+| Boussole                                    | Orientation des layons d'ouverture                                                         |
+| Appareil photo                              | Prise de vues                                                                              |
+| Machette                                    | ouverture des layons et confection des jalons                                              |
+| Penta-décamètre de 50 m                     | Délimitation des aires d'échantillonnage                                                   |
+| Compas forestier                            | Mesure des diamètres ou circonférences des arbres                                          |
+| Ficelle                                     | Délimitation des sous-parcelles                                                            |
+| Clinomètre                                  | Mesure les pentes des parcelles                                                            |
+| Sécateur                                    | Collecte des échantillons sur le terrain                                                   |
+| Etuve                                       | Séchage des échantillons                                                                   |
+| Marqueurs                                   | Etiquetage des échantillons collectés                                                      |
+| Plastique polyéthylique                     | Collecte des échantillons de litière et sol                                                |
+| Planche à herbier, papiers-presse et alcool | Pressage, séchage et conservation des spécimens                                            |
+| Balance                                     | Pesage des échantillons                                                                    |
+| Carnets, crayons et gommes                  | prises de notes                                                                            |
+
+: Outils utilisés et leur fonction
+
+## Méthodes
+
+La méthodologie utilisée dans cette étude a consisté à une combinaison de trois opérations. La première, à partir des observations et l'analyse des données prélevées dans un ensemble de parcelles préétablies, a permis de décrire la composition floristique et la structure des peuplements forestiers (caractérisation et évaluation de la biodiversité). La seconde a consisté à mesurer les volumes de biomasse dans les pools préalablement définis pour en déduire les stocks de carbone existants (estimation des stocks de carbone). La dernière s'est focalisée sur la classification des images multibandes correspondantes aux zones d'étude pour générer des cartes de distribution de carbone.
+
+### Caractérisation et évaluation de la biodiversité
+
+La caractérisation et l'évaluation de la biodiversité a nécessité l'établissement d'un dispositif de sondage d'inventaires forestiers. De manière pratique c'est une opération qui exige la mise sur pied des parcelles d'inventaires suivant un plan de sondage. Etant représentatif de grandes surfaces d'inventaires, l'échantillonnage a été le meilleur moyen du point de vue statistique, d'évaluer la structure et la composition des peuplements forestiers. Il a consisté à constituer à partir d'une population, un échantillon de « n » unités et chaque combinaison d'unités ayant la même probabilité d'être sélectionnée. Dans notre contexte, l'échantillonnage stratifié randomisé s'est avéré plus précis et moins couteux pour un inventaire de la biodiversité associé à l'estimation des stocks de carbone en comparaison aux autres modèles d'échantillonnage ([@Anonyme d, 2009; @MacDicken, 1997]). L'application de ce modèle a nécessité une stratification ou découpage spatiale des Forêts Communales en zones aussi homogènes que possible ([@Picard et Gourlet-Fleury, 2008]). Chaque strate ou sous-population pouvant être définie par son type d'occupation de sol. Pour se faire, nous nous sommes appuyés sur des supports cartographiques de la végétation issus des images satellites vérifiées sur terrain, des photos aériennes et des cartes de sol ou de la topographie. Cette stratification a également pris en compte des critères qui sont liés aux variables mesurés et surveillés, à l'exemple des réservoirs de carbone. Les normes de stratification forestière élaborée en 2016 en République Démocratique du Congo ([@DIAF, 2016]), les normes d'inventaire d'aménagement et de préinvestissement du Cameroun ([@ONADEF, 1991]) et le manuel pour le relevé intégré de données sur le terrain ([@FAO, 2009]) ont servi de base pour identifier les différentes unités d'occupation dans le présent travail.
+
+#### Dispositif d'échantillonnage
+
+Le dispositif d'échantillonnage utilisé dans le cadre de ce travail est un ensemble de placettes proposées par [\\ @Hairiah et al.] (2011) dans le cadre du partenariat ASB (Alternative to Slash and Burn) (FiG.7). En effet, cette méthode préconise l'installation des placettes principales rectangulaires de 2 000 m² (50 m × 40 m) pour l'échantillonnage des ligneux à grands diamètres ($DHP\ge 30 cm$) et des placettes secondaires rectangulaires de 200 m² (5 m × 40 m) pour l'échantillonnage des ligneux à petits diamètres ($5 cm\le DHP < 30 cm$).
+
+[![Placettes d'échantillonnages [Adaptée de Hairiah et al. (2010)].](images/Placettes%20d'echantillonnages.png)](FiG.7)
+
+Dans chaque parcelle, un inventaire a été réalisé dans le but d'identifier toutes les espèces ligneuses présentes. Les mesures dendrométriques faites étaient la hauteur de l'arbre et le Diamètre à Hauteur de poitrine (DHP). Dans chaque parcelle et sous-parcelle, tous les arbres de diamètre du tronc à hauteur de poitrine (1,30 m du sol et 0,30 m au-dessus des défauts) pour les individus de diamètre supérieurs à 10 cm et à 50 cm du sol pour les individus de diamètre inférieurs à 10 cm ([@Zapfack, 2005; Hairiah et al., 2011]) ont été mesurés en utilisant un dhp-mètre.
+
+#### Installation des parcelles
+
+Les parcelles ont été installées en respectant les conditions moyennes de densité des espèces proposées par [\@Picard et Goulet-Fleury] (2008). En effet ce sont des parcelles de 0,2 à 0,5 ha ayant fait l'objet d'une stratification selon le milieu et la composition spécifique (FiG.9). La mise en place des placettes s'est faite à partir de coordonnées GPS des points issus de la classification non supervisée des images satellites de la zone d'étude. La «méthode 3-4-5» a été utilisée pour la mise en place des parcelles. Une fois le point de reférence repéré, un jalon est fixé (FiG.8a). Ensuite un second jalon est placé à 4 m du premier suivant la direction de base principale (FiG.8b). Par la suite, on mesure 3 m à partir du premier jalon suivant une direction perpendiculaire à l'axe principal, puis on fixe le troisième jalon lorsque la distance qui sépare ce dernier du second est égale à 5 m (FiG.8c). Ainsi, l'extrémité de la placette formera un angle droit et on pourra matérialiser le reste de la surface aux dimensions requises (40m x 50m) par une ficelle colorée (FiG.8).
+
+[![Protocole de mise en place des placettes](images/Mise%20en%20place%20placettes.png)](FiG.8)
+
+![Délimitation d'une parcelle d'échantillonnage](images/installation%20parcelle.png){alt="Délimitation d'une parcelle d'échantillonnage"}
+
+#### Mesure des paramètres dendrométriques des arbres
+
+Sur chaque placette installée, les informations générales (coordonnées géographiques, description du paysage, etc.) ont été enregistrées, puis les parcelles principales et secondaires ont été délimitées. Pour chaque arbre identifié, les paramètres tels que : le diamètre, les noms scientifiques ou vernaculaires et/ou les noms commerciaux ont été notés (FiG.10). Tous les arbres ont été identifiés sur la base de leurs caractères discriminants en utilisant les flores et les clés d'identification. Pour limiter le risque de double comptage des ligneux dans les parcelles en forêt, tous les arbres ont été marqués à la peinture. Des échantillons d'herbier des espèces non identifiées sur le terrain ont été collectés, pressés, puis conservés dans de l'alcool 70°. Ces derniers ont été utilisés pour confirmer plus tard leur identification à l'Herbier National de Yaoundé. La nomenclature taxonomique adoptée a été la classification botanique phylogénétique des angiospermes (APG IV).
+
+[![Mesure du diamètre des arbres](images/mesures%20dendrom%C3%A9triques.png)](FiG.10)
+
+#### Méthode d'estimation de la biomasse aérienne
+
+Pour l'évaluation des stocks de carbone, [\\ @CIFOR] (2009), [\\ @Penman et al.] (2003) et [\\ @MacDicken] (1997) définissent 5 réservoirs repartis en 3 groupes pour la quantification du carbone :
+
+-   groupe 1 : biomasse vivante. Il englobe la biomasse aérienne constituée des arbres et des autres végétaux et la biomasse souterraine, ou les racines ;
+-   groupe 2 : matière organique morte. Il comprend le bois mort ;
+-   groupe 3 : carbone organique du sol. Il inclue le carbone du sol.
+
+Pour estimer les stocks de carbone dans la biomasse vivante, nous avons utilisé la méthode biométrique employée par [\@Fayolle et al.] (2018) dans le bassin du Congo qui est une approche basée sur les équations allométriques permettant d'estimer directement la biomasse totale ou partielle d'un arbre à partir de prédicteurs tels que le diamètre du tronc, la densité du bois, la hauteur totale et une constante environnementale. Ensuite nous avons multiplié la biomasse obtenue par un facteur d'expansion et de conversion de la biomasse 0,47 ([@Zapfack et al., 2013]) pour obtenir la masse de carbone stockée. A l'échelle du paysage, la quantité de biomasse est estimée en multipliant la superficie de chaque biome par la quantité de biomasse moyenne par unité de surface pour ce biome. Les quantités moyennes par biome sont elles-mêmes estimées à partir de mesures faites à une échelle plus restreinte ([@Mounmemi, 2021]).
+
+#### Collecte des données d'estimation de la biomasse du bois mort
+
+La collecte des données d'estimation des stocks de carbone dans les débris ligneux étendus au sol s'est faite à partir de la méthode d'intersection des lignes. Elle a consisté à considérer la somme des quatre côtés des parcelles de 2000 m² comme des lignes d'échantillonnages soit 180 m. Par la suite, les diamètres des deux extrémités ainsi que les longueurs des fragments couchés en intersection avec la ligne ont été mesurés lorsque : au moins 50% du bois était en dehors du sol ; et la ligne d'échantillonnage traversant au moins 50% du fragment ([@Kabelong et al., 2018; @Walker et al., 2012]). Pour déterminer la densité des fragments, on a heurté chaque fragment sélectionné avec un outil contondant (machette ou scie) puis on les a rangé dans l'une des trois classes de densité correspondante (dure-intermédiaire-pourri). En effet, si au moment de la percussion l'outil ne pénètre pas l'objet ou rebondi, le fragment est rangé dans la catégorie des dures. Par contre si l'outil pénètre partiellement l'objet et que des débris s'en détachent, le bois est rangé dans la catégorie des intermédiaires. Si enfin l'outil pénètre le bois et qu'il s'émiette ou des fragments importants s'en détachent, le bois est classé comme pourri ([@Pearson et al., 2005]). La collecte des données pour l'estimation de la biomasse des bois morts sur pied s'est faite en mesurant les diamètres et les hauteurs de tous les arbres morts sur pied ainsi que les souches de diamètre supérieur à 5 cm et de longueur supérieure à 50 cm. Par la suite chaque bois mort ou débris a été rangé dans l'une des classes: décomposition peu avancée; décomposition moyenne; et décomposition très avancée selon les conditions de l'aubier ([@Walker et al., 2012]).
+
+#### Dispositif de collecte des herbacées et de la litière
+
+La procédure d'échantillonnage s'est faite en délimitant des quadrats (05) de 1 m² (1 m x 1 m) à l'intérieur des placettes d'échantillonnage de 200 m². Ces quadrats ont ensuite été rasés de toute végétation herbeuse (FiG.11a). Les tiges d'herbes et d'arbustes ont été débarrassées de leur feuillage et stockés séparément à l'intérieur des sachets plastiques. Ces échantillons ont été pesés sur place pour déterminer le Poids frais (Pf) en forêt (Gramme/m²). Des échantillons composites de 500 grammes ont été constitués séparément pour les feuilles et pour les tiges à partir de la mixture de tous les différents groupes d'échantillons prélevés dans chaque quadrat. Au total, deux échantillons composites (feuilles et tiges) de 500 g chacun par placette d'échantillonnage de 200 m² seront constitués.
+
+[![collecte d'échantillons d'herbacées et litière](images/herbacees%20et%20litiere.png)](FiG.11)
+
+Les échantillons de litière grossière (toutes nécromasses ligneuses de diamètre inférieur à 5 cm et d'une longueur inférieure à 50 cm), les matières végétales non décomposées et les résidus des récoltes, et toutes les matières végétales non décomposées seront ramassées à l'intérieur des quadrats de 1 m² et stockées à l'intérieur des sachets plastiques (FiG.11b). Ces échantillons ont également été pesés pour déterminer le Poids frais (Pf) en forêt (gramme/m²). Un échantillon composite de 500 grammes y était prélevé après la mixture des échantillons de litière provenant des cinq quadrats de 1 m² chacun. Ces échantillons composites ont été transportés à l'étuve pour être séchés pendant 72 heures à une température de 85°C pour les tiges et 65°C pour les feuilles et la litière. Les mesures du poids sec (Ps) ont suivi après séchage des échantillons à l'étuve.
+
+#### Dispositif de collecte des échantillons de sol
+
+La procédure d'échantillonnage s'est faite premièrement en délimitant un sous-quadrat de 0,25 m² (0,5 m × 0,5 m) dans tous les cinq (05) quadrats de 1 m² à l'intérieur des placettes d'échantillonnage de 200 m² (FiG.12).
+
+[![Sous-quadrat de 0,25 m² pour l'échantillonnage des sols. (Adaptée de Hairiah et al., (2011).](images/echantillonnage%20des%20sols.png)](FiG.12)
+
+Après la mise en place,les couches de litière organique du sol ont été préalablement raclées puis les échantillons de sol prélevés à des profondeurs de 0 à 10 cm, 10 à 20 cm et 20 à 30 cm. Les échantillons de sols en provenance de chaque quadrat ont été mixés entre eux à l'intérieur de petits seaux tout en respectant la profondeur de prélèvement (FiG.12a). De la mixture obtenue, un échantillon composite de 500 grammes a été prélevé (FiG.12b). Il en ressort 3 échantillons composites pour les 3 profils de sol par placette de 200 m2, lesquels échantillons ont été envoyés au laboratoire d'analyse des sols de l'IITA (Institut Iternational d'Agriculture Tropical) pour la détermination du pourcentage de carbone organique par digestion chromique acide et analyse spectro-photométrique d'après la méthode décrite par Heanes (1984).
+
+[![Mise en place mini profil et collecte échantillon de sol](images/profil%20sol.png)](FiG.12)
+
+### Analyse des données
+
+#### Caractérisation de la diversité floristique
+
+La diversité floristique renvoie à la richesse (nombre d'espèces végétales) et l'équitabilité (égalité en terme de nombre d'individus pour les espèces considérées). L'analyse de la diversité floristique s'est faite à partir de la liste des espèces identifiées dans chaque parcelle. Ces informations ont été regroupées sous forme de matrice de données à partir d'un tableur Excel. Dans cette matrice les lignes correspondent aux espèces et les colonnes aux parcelles d'inventaires.Chaque cellule de la matrice renferme les valeurs d'abondance de chaque espèce dans une parcelle donnée. Nous avons ensuite utilisé le Package *Biodiversity.R* version 2.14-2 qui est une application necessitant l'usage du logiciel R pour l'analyse des données ([@Kindt R. et Coe R., 2005]). Cette application a la capacité de faire des analyses statistiques de la biodiversité ainsi que les communautés écologiques tout en incluant les courbes d'espèces cumulées, les indices de diversité, les profils Rényi, les analyses d'abondances, etc.
+
+##### Composition floristique et richesse spécifique
+
+La composition floristique a été déterminée à partir de la liste des espèces ligneuses inventoriées dans chaque parcelle. Le nombre d'espèces, de genres et de familles ont été relevés. Les différences entre les parcelles en terme de composition d'espèces ont été investiguées par une valeur statistique issue du calcul des distances écologiques entre les sites. En effet pour des sites qui partagent un grand nombre d'espèces cette distance devrait être petite. Par contre lorsque les sites ont peu d'espèces en commun cette distance devrait être grande.
+
+[\@Magurran] (2004) a relevé une difference entre la densité des espèces et la richesse spécifique numérique. La densité des espèces est le nombre d'espèces présents dans une unité d'échantillonnage ou surface donnée([@Hurlbert, 1971]). La richesse spécifique numérique est le nombre d'espèces par rapport à un effectif prédéfinit ou unité de biomasse([@Kempton,1979]). D'après [\@Borcard et al.] (2018), pour garantir la comparaison de deux parcelles d'échantillonnages, [\@Sanders] (1968) a proposé une méthode de rarefaction qui estime le nombre d'espèces dans des unités d'échantillonnages renfermant le même nombre d'individus. Etant donné que la rarefaction ne peut être calculé qu'à partir des éffectifs réels(non transformés), la formule de Sanders a été revue par [\@Hurlbert] (1971). Cette relation estime le nombre *q'* des espèces dans une unité d'échantillonnage standard de *n'*individus reposant sur une unité d'échantillonnage réelle de *n* individus appartenant à *q* espèces et n_i individus appartenant à l'espèce *i*. L'équation d'Hurlbert est la suivante:
+
+$$E(q')=\sum_{i=1}^q\left[1-\frac{\binom{n-n_i}{n}}{\binom{n}{n'}}\right]$$
+
+avec $n'\le(n-n_1)$, n_1 étant l'effectif de l'espèce la plus abondante.
+
+$$\binom {n}{n'}=\frac{n!}{n'!(n-n')!};\binom{n-n_i}{n'}=\frac{(n-n_i)!}{n'!(n-n_i-n')!}$$
+
+##### Indices de diversité
+
+La détermination des indices de diversité permet d'obtenir des informations sommaires sur la richesse et l'équitabilité par le calcul d'une valeur statistique unique. Selon [\@Gosselin et Laroussinie] (2004) de nombreux indices de diversité existent et leur détermination repose sur des calculs assez complexes. Ces indices sont fréquemment usités en écologie pour la caractérisation des peuplements([@Ramade, 1994]). Cependant l'usage d'un indice de diversité unique n'est pas toujours suffisant pour fournir des informations sur le classement des sites selon leur importance en diversité.Dans le cadre de cet travail, en dehors de certaines techniques de classement des diversités, les indices selectionnés par [\@Picard et al.] (2012) et [\@Mounmemi] (2021) ont été utilisés pour analyser la diversité floristique dans les sites d'inventaires. Il représente la somme des fréquences des differentes espèces identifiées dans les parcelles d'échatillonnages.
+
+###### Indice de diversité de Shannon
+
+L'indice de diversité de Shannon est une valeur statistique indépendante de la taille de l'échantillon analysé, par conséquent il est indiqué pour les études comparatives de peuplements forestiers. Tout en permettant de quantifier l'hétérogénéité de la biodiversité d'un milieu, l'indice de Shannon permet de mesurer la composition en espèces en combinant l'abondance relative des espèces à la richesse spécifique. Pour les échantillons de faible taille, l'indice de Shannon varit entre 1 et 4,5 ([@Riera et Alexandfre, 2004]). Pour des parcelles ayant le même nombre d'espèces, la plus diversifiée sera celle dont les effectifs de chaque catégorie d'espèces seront à peu près les mêmes. la formule mathématique de l'indice de Shannon ([@Shannon, 1948]) est donnée par la relation suivante:
+
+$$H=-\sum_{i=1}^q\frac{n_i}{N}ln\frac{n_i}{N}\\
+H:indice\ de\ Shannon;\ q:nombre\ d'espèces;\ n_i:nombre\ d'individus\ d'une\ espèce;\ N:nombre\ total\ des\ individus\ enregistrés$$
+
+Quel que soit le nombre d'individus enregistré dans une unité d'échantillonnage, l'indice de Shannon(H) atteint son maximum(H_max) lorsque toutes les espèces sont représentées par le même nombre d'effectif.
+
+$$H_{max}=-\sum_{i=1}^q\frac{1}{q}ln\frac{1}{q}=lnq
+$$
+
+par conséquent l'équitabilité de Pielou([@Pielou,1966]) peut être définit comme suit:
+
+$$J=\frac{H}{H_{max}}\\ J:indice\ de\ Pielou
+$$ Malgrè le fait qu'il soit fortement dépendant de la richesse spécifique, l'équitabilité de Pielou reste très usité comme indice d'équitabilité. D'autre part l'équitabilité peut être relié à la forme de la courbe d'abondance des espèces, qui est une fonction décrivant l'allure rang/abondance où l'abscisse range les espèces en ordre décroissant d'abondance et l'ordonnée représente le logarithme transformé d'abondance. Les principaux modèles de courbes observés varient des séries géométriques où peu espèces sont dominantes et d'autres quasi rares, vers les modèles de Broken Stick où les espèces ont les mêmes abondances. Lorsque J tend vers 0, un phénomène de dominance est observé, par contre lorqu'il tend vers 1 on relève une répartition régulière des éffectifs entre les espèces.
+
+###### Indice de diversité de Simpson
+
+Il représente la probabilité que deux individus pris au hasard soient de la même espèce. Il varie inversement avec la diversité puisque, des valeurs élevées de cet indice indiquent une faible diversité. L'indice de Simpson est calculée comme suit:
+
+$$𝛌=\sum_{i=1}^q\ p_i^2\\ 𝛌:indice\ de\ Simpson;\ p_i:\ fréquence\ relative\ de\ l'espèce\ i;\ q:nombre\ des\ espèces
+$$ La valeur de *𝛌* s'accroit lorsque la probabilité que deux individus soient de la même espèce est élevée. Généralement la diversité de Simpson est transformée sous la forme:$D=1-𝛌$, D variant de 0 à 1. Plus D augmente, plus le milieu est hétérogène et la diversité grande. La richesse spécifique, l'entropie de Shannon et la diversité de Simpson ont été regroupées dans la formule de l'entropie généralisée de Rényi([@Rényi,1961]) et reprise par Hill(1973) et Pielou (1975): $$H_a=\frac{1}{1-a}log\sum_{i=1}^qp_i^a $$ avec *a* étant la mesure de l'ordre de l'entropie(a=0,1,2,...). Hill(1973) a également proposé d'utilisé les *nombres de diversité*
+
+$$N_a=e^{H_a} $$
+
+le paramètre *a* permet de quantifier l'importance des effectifs et par conséquent l'équitabilité: lorsque $a=0$ la diversité se resume au nombre d'espèces(présence-absence); lorsque *a* augmente de plus en plus l'importance est accordée à l'espèce ayant l'effectif le plus élevé. De même avec cette notation, Hill a proposé l'usage du ratio $E_1={N_1}/{N_0}$ pour l'équitabilité de Shannon et $E_2={N_2}/{N_0}$ pour l'équitabilité de Simpson. De nos jours la plupart des écologiste préfèrent utilisés les nombres de Hill pour étudier la diversité taxonomique parce que ces nombres parfois appelés "nombres équivalents" sont faciles à interpreter et représentent le nombre d'espèces équiprobables nécessaires pour produire la même valeur de diversité que la distribution observé. Les nombres de diversité sont également intéressant pour l'interprétation des modèles lineaires parce qu'ils sont plus probables d'être en rélation de colinéarité avec les variables environnementales.
+
+###### Courbes cumulées des espèces
+
+les courbes cumulées des espèces permettent de suivre l'évolution de la richesse spécifique sur des combinaisons de plusieurs sites. Ces courbes représentent la moyenne cumulée de la richesse spécifique lorsque plusieurs ou la totalité des sites étudiés sont mis ensemble ([@Kindt et Coe, 2005]). Le calcul de la moyenne cumulée de la richesse spécifique s'explique par le fait que differentes combinaison de sites donnent des richesses spécifiques distinctes. Par contre lorsqu'on considère la moyenne de la richesse spécifique issue d'un éventail de combinaison de sites allant de trois ou plusieurs sites, jusqu'atteindre toutes les tailles de combinaison possible, on est presque certain d'avoir une tendance fidèle de l'évolution de la richesse spécifique dans l'ensemble des sites étudiés. Ces courbes permettent également de comparer la richesse spécifique entre les differentes catégories d'utlisation des terres.
+
+###### Arbre de regression multivarié
+
+C'est une méthode d'analyse proposée par [\@De'Ath] (2002) avec pour but de ressortir les correlations entre la distribution des espèces et les types d'utlisation de terre. Elle consiste en une technique statistique qui décrit et prédit les préferences écologiques des espèces par rapport à des groupes prédéfinis. Le résultat de l'analyse est un arbre dont les "feuilles"(regroupement de parcelles) sont des ensembles formés par des découpages successifs des données, chaque découpage étant définit par une valeur seuil ou variable explicative basée sur des paramètres environnementaux. par rapport à la multitude de potentiels solutions que présente l'algorithme, seules les prédictions les plus précises sont selectionnées.
+
+#### Estimation de la biomasse
+
+##### Biomasse ligneuse
+
+Elle correspond à la masse de matière végétale ligneuse sèche par unité de surface. La biomasse totale en bois des ligneux sur pieds répartie en biomasse aérienne (AGB) et en biomasse souterraine (BGB). L'estimation de la biomasse aérienne des arbres s'est faite à partir des équations allométriques élaborée par [\@Fayolle et al.] (2018) dans le bassin du Congo. Elle a été utilisée pour les arbres de DHP supérieur à 10 cm. C'est une équation qui prend en compte le diamètre de l'arbre, la densité du bois et l'indice climatique comme prédicteur de la biomasse épigée. La formule mathématique est la suivante :
+
+$$BA=℮^{\left(a+b⨯ln(\rho)+c⨯ln(D)+d⨯ln(D)+e⨯E\right)}\ \ \ \ \ \ \ (Fayolle \ et \ al., 2018)\\ BA:\ Biomasse\ épigée\ en\ Kg;\ D:\ Diamètre(cm);\\ ρ : densité\  spécifique\ d’une \ espèce \ exprimée \ en \ g/cm^3 ;\\ E : indice \ climatique ;\ a,\ b,\ c\ et\ d\ sont\ des\ estimations\ du\ coefficient\\ (a = -2,3027 ;\ b = 1,1599 ;\ c = 3,0484 ; d = -0,0807 ;\ e = 0,3197)$$
+
+La biomasse des individus de $5 cm < dhp < 10 cm$ a eté estimée à partir de l'équation allométrique de [\@Chave et al.] (2014) dont la relation est la suivante :
+
+$$BA=℮^{\left(-1,803-0,976E+0,976ln(\rho)+2,673ln(D)-0,0299(ln(D))^2\right)}\ \ \ \ (Chave\ et\ al.,\ 2014)$$
+
+##### Biomasse souterraine(BGG) des ligneux sur pied
+
+l'équivalent racinaire de la biomasse des ligneux sur pied a été trouvé en multipliant la valeur de la biomasse aérienne(AGB) par un coefficient R dont la valeur est estimée en fonction du niveau de pluviométrie de la zone concernée([@GIEC, 2007]). Pour notre zone d'étude, nous avons considéré $R=1/4$
+
+$$BGB=AGB⨯R \\ BGB: Below\ Ground\ Biomass\ ou\ Biomasse\ souterraine (Kg);\\ ABG:  Above\ ground\ Biomass\ ou\ biomasse\ aérienne (Kg);\\  R:  Root\ to\ shoot\ ratio\ ou\ coefficient\ racinaire$$
+
+Les stocks de carbone ont été déduits de la biomasse aérienne en la multipliant par la constante 0,475 ([@Zapfack et al., 2013]). La Biomasse Totale (TB) des ligneux sur pied a été alors estimée en sommant les deux valeurs ci-dessus :
+
+$$TB=AGB+BGB\\ TB: Total\ Biomass\ ou\ Biomasse\ totale\ (Kg) ;\\ BGB:  Below\ Ground\ Biomass\ ou\ Biomasse\ Souterraine (Kg) ;\\ AGB: Above\ Ground\ Biomass\ ou\ Biomasse\ Aérienne (Kg)$$
+
+Les valeurs de densité du bois des arbres échantillonnés ont été puisées dans la littérature. Pour les espèces dont les valeurs de densité n'ont pas été retrouvées dans la littérature,une valeur par défaut ($ρ\ défaut = 0,58 g/cm^3$) pour les forêts tropicales d'Afrique, a été utilisée ([@Mounmemi,2021]).
+
+##### Biomasse des espèces arborescentes sur pied
+
+Le tableau ci-contre présente les équations allométriques utilisées pour estimer la biomasse aérienne des palmiers et bananiers.
+
+| Espèces végétales    | Equations allométriques                                                                                                                                                                                | Sources                 |
+|------------|-------------------------------------------------|------------|
+| Bananiers (Musaceae) | $$                                                                                                                                                                                                     
+                                                                                                                                                                        ABG=0,0303⨯DHP^{2,1345}                                 
+                                                                                                                                                                        $$                                                      | Arifin (2001)           |
+| Palmiers (Arecaceae) | $$                                                                                                                                                                                                     
+                                                                                                                                                AGB=23,487+41,851⨯(lnH^2)                                                       
+                                                                                                                                                $$                                                                              | Pearson et Brown (2005) |
+
+: Equations allométriques de quelques espèces végétales arborescentes. AGB = Above Ground Biomass (kg) ; DHP = Diamètre à Hauteur de Poitrine en cm ; H = hauteur du tronc de palmier de sa souche à la base de la partie non visible du tronc
+
+##### Biomasse des herbacées et de la litière
+
+Les mesures du poids sec (Ps) ont suivi après séchage des échantillons à l'étuve. La biomasse a été par la suite déterminée à l'aide de la relation développée par Pearson et Brown, (2005):
+
+$$Biomasse=\frac{Pht⨯Ps}{Ph}\\ Ps = Poids\ sec (g)\  de\ l’échantillon\ après\ 3\ jours\ à\ l’étuve\ à\ 65 °C\ pour\ les\ feuilles\ et\ la\ litière,\ 85 °C\ pour\ les\ tiges ;\\ Ph = Poids\ humide (g)\ de\ l’échantillon\ composite\ soit\ 500 g;\\ Pht = Poids\ humide\ total\ en\ forêt (somme\ des\ poids\ frais\ issus\ des\ 5\ quadrats)$$
+
+##### Biomasse des arbres morts
+
+La biomasse des arbres morts a été estimée selon les formules ci-contre:
+
+$$Biomasse=\frac{\pi}{4}⨯D^2⨯L⨯\rho\ \ \ \ \ \ \ \ \ \ \ \ Diamètre\  moyen\ D=\frac{D_1+D_2}{2}\\D:\ diamètre\ moyen\ de\ l'arbre\ mort\ ( cm);\\L:\ longueur\ de\ l'arbre\ dans\ la\ placette\ d'échantillonnage\ (cm);\\ \rho:\ densité\ spécifique\ (g/cm^3)\ lié\ au\ niveau\ de\ décomposition\ de\ l'arbre\\ 0,8:\ décomposition\ peu\ avancée;\\ 0,5:\ décomposition\ moyennement\ avancée;\\ 0,3:\ décomposition\ très\ avancée$$
