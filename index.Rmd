@@ -142,46 +142,112 @@ knitr::write_bib(Packages, file="packages.bib")
 ```
 
 
-# About
+# Introduction
 
-This is a _sample_ book written in **Markdown**. You can use anything that Pandoc's Markdown supports; for example, a math equation $a^2 + b^2 = c^2$.
+La concentration des Gaz à Effet de Serre (GES) dans l'atmosphère et particulièrement le gaz carbonique ($CO_2$) a connu une nette augmentation à partir du début de l'ère industriel avec un taux de 277 parties par million (ppm) en 1750 ([\@Joos et Spahni, 2008]), pour 405 ± 0,1 ppm en 2017 ([\@Le Quéré et al., 2018]).
+Cette augmentation exceptionnelle des émissions de GES pendant la période post-industrielle est principalement d'origine anthropique et a conduit à un brusque rechauffement global qui perturbe l'équilibre général de la planète.
+Des changements aussi soudain codéterminent l'impact du rechauffement global sur les systèmes naturels et socioéconomiques.
+L'une des conséquences les plus palpable et irréversible est la perte de la biodiversité.
+Les espèces endémiques des hauts lieux de la biodiversité ont un risque d'extinction très élevé et qui peut même doublé lorsque la température moyenne mondiale augmente de 1,5 °C à 2 °C (\@Anonyme a, 2022).En effet, une lente augmentation de température facilite l'adaptation aux changements contrairement aux augmentations brusques qui sont généralement à l'origine des cataclismes ([\@Joos et Spahni, 2008]).
+Les études menées par ([\@Griscom et al., 2017];[\@Seymour et Busch, 2016]) montrent qu'il est difficile d'atteindre les objectifs de reduction des émissions de GES sans la prise en compte des forêts, la reduction de la déforestation et la dégradation des forêts, la regenération des forêts et l'amélioration des méthodes de gestion forestière.
+De nos jours seules les forêts présentent une capacité d'absorption et de stockage de $CO_2$ atmosphérique à une échelle significative pour contribuer aux efforts de reduction du rechauffement global.
+Les forêts absorbent environ 25% des émissions de $CO_2$ d'origine anthropique ([\@Le Quéré et al., 2018]).
+A côté des prises de mesures drastiques telles que la reduction des émissions liées aux énergies fossiles, seules les forêts présentent de grands potentiels de reduction avec des bénéfices importants pour les sols, l'air, l'eau, la biodiversité et le développement ([\@Van Goor et Martijn, 2019]).
+Les forêts ont autrefois suscitées beaucoup d'interêts à cause des nombreuses ressources dont elles disposent notamment : les grumes, le bois énergie et les produits forestiers non ligneux.
+De même les inventaires forestiers ont généralement porté sur la densité des arbres par unité de surface, leur âge, leur taux de croissance, leur biomasse et la densité du bois des espèces ligneuses ([\@Watson, 2009]).
+Cependant le rôle des forêts dans la conservation de la biodiversité, le cycle de l'eau, la survie des populations riveraines, les cycles biogéochimiques, particulièrement le cycle du carbone et son lien avec les émissions de gaz à effet de serre a été moins bien mis en exsergue avant les premières manifestations des changements climatiques.
+Les forêts tropicales renferment environ 25% du carbone de la biosphère représentant ainsi 33% de la production primaire net ([\@Bonan, 2008]).
+Avec une superficie estimée à 178 millions d'hectares ([\@Vancutsem et al., 2021]), les forêts du bassin du Congo constituent le deuxième plus grand massif de forêts denses tropicales humides au monde après l'amazonie et représentent un reservoir exceptionnel de carbone et de biodiversité ([\@Eba'a et al., 2022]).
+Elles s'étendent des côtes du golfe de Guinée à l'ouest, aux montagnes du rift Albertin à l'est, et couvrent près de 7° de latitude de part et d'autre de l'équateur.
+En majeur partie, elles appartiennent à l'ensemble des forêts Guinéo-congolaises dont elles constituent plus de 80% de la superficie ([\@Devers et al., 2006]).
+Elles offrent des moyens de subsistance à 100 millions de personnes qui y vivent ou résident à proximité ([\@Nasi et al., 2011]) et contribuent plus indirectement à alimenter 40 millions d'autres personnes vivant dans les centres urbains avoisinant ([\@Eba'a et al., 2022]).
+Avec environ 60% des réservoirs de carbone terrestre ([\@Van Goor et al., 2019]), la biomasse forestière représente la quantité potentielle de carbone pouvant être ajouté au $CO_2$ atmosphérique si elle venait à disparaitre ([\@Brown, 1997]).
+Les forêts d'Afrique centrale sequestrent environ 40 Gt de carbone ([\@Saatchi et al., 2011]).
+Elles ont une capacité de fixation de $CO_2$ atmosphérique supérieure à celle des forêts amazonniènes malgré leur superficie comparativement plus reduite ([\@Hubau et al., 2020]).
+Cependant ces écosystèmes sont exposés à des processus de dégradation qui contribuent fortement à la diminution de leur étendue.
+En effet, depuis l'an 2000 on a enregistré une disparition de près 9% de leur superficie soit 18 millions ha ([\@Eba'a et al., 2022]) et d'après \@Seymour et Busch, (2016) si aucune mesure n'est prise nous assisterons à une disparition de près de 2,9 millions de km² de forêts tropicales à l'horison 2050.
+Ces reductions de surfaces forestières sont liées à la progression des surfaces cultivées, la croissance démographique, le développement des infrastructures urbaines à proximité des forêts, l'exploitation forestière et l'extration du bois énergie ([\@Mayaux et al., 2013]).
+En Afrique centrale la déforestation est beaucoup plus liée à des activités à petites échelles telles que: l'agriculture de subsistance, la production du charbon et le ramassage du bois de chauffe contrairement à l'amérique latine où des grands espaces sont directement concernés ([\@Curtis et al., 2018]).
+Les menaces auxquelles sont exposées les forêts ont retenu l'attention de la communauté internationale en vue de developper des stratégies permettant la réduction des émissions liées à la déforestation et la dégradation des forêts.
+Cette mobilisation s'est manifestée par l'institution de la Convention Cadre des Nations Unies pour les Changements Climatiques (CCNUCC), qui encourage les pays signataires à participer à l'aténuation des effets des changements climatiques, en mettant en oeuvre de manière volontaire, des processus visant à reduire les émissions de Gaz à Effet de Serre (GES) et à renforcer la fixation et la sequestration durable de ces gaz.
+De même, elle recommande à tous les Etats parties de s'engager à développer et à publier périodiquement et selon des méthodes comparables, leurs inventaires nationaux des émissions et stockage de tout leur GES ([\@Brown, 2002; \@Houghton et al., 2001]).
+Pour faciliter la réalisation des engagements souscrits par les pays développés, trois mécanismes de flexibilités ont été mis sur pieds:
 
-## Usage 
+\- le mécanisme des permis négociables qui provient directement du principe de préservation de la Convention Cadre des Nations Unies pour les Changements Climatiques (CCNUCC) et de la création du crédit carbone.
+Il correspond à la mise en place du marché carbone à différentes échelles où s'échangent les crédits carbones;
 
-Each **bookdown** chapter is an .Rmd file, and each .Rmd file can contain one (and only one) chapter. A chapter *must* start with a first-level heading: `# A good chapter`, and can contain one (and only one) first-level heading.
+\- la Mise en Oeuvre Conjointe (MOC) qui est un mécanisme de financement de projets ayant pour objectif principal le stockage du carbone ou la réduction des GES.
+Il permet entre pays développés de procéder à des investissements visant à réduire les émissions de GES en dehors de leur territoire national et à bénéficier des crédits d'émission générés par les réductions ainsi suscitées;
 
-Use second-level and higher headings within chapters like: `## A short section` or `### An even shorter section`.
+\- le Mécanisme de Développement Propre (MDP) qui permet aux pays industrialisés et les entités qui en sont issues, d'aider au financement et à la réalisation de projets de réduction d'émissions dans les pays en développement.
 
-The `index.Rmd` file is required, and is also your first book chapter. It will be the homepage when you render the book.
+L'accord de Paris de 2015 a été décisif dans les négociations internationales sur le climat par l'initiation d'une approche systémique conduite par les pays pour atteindre des objectifss climatiques collectifs dans un cadre de transparence, de suivi et de communication.
+Les Contributions Déterminées au niveau National (CDN) issuent de cet accord représentent l'un des principaux instruments par lequel les contributions des forêts sont suivies par tous les pays du monde.
+De même l'agenda 2030 de l'Organisation des Nations Unies (ONU) avec ses 17 Objectifs de Développement Durable (ODD) et spécifiquement l'ODD 13 sur la lutte contre les changements climatiques représente également un instrument international par lequel l'importance des forêts peut être mise en évidence ([\@Mbairamadji et al., 2022]).
+Dans le secteur forestier les efforts de reduction des émissions des GES sont beaucoup plus manifestes à travers le processus REDD+ qui est un mécanisme de reduction des émissions de gaz liées à la déforestation et la dégradation des forêts dans les pays en développement.
+Ce processus a entre autre pour objectif de: conserver les stocks de carbone; gérer durablemeent les forêts et renforcer les stocks de carbone forestiers.
+L'idée soutenue par cette approche est d'établir un lien direct entre les incitations financières à la conservation des forêts et les stocks de carbone.
+Dans ce sens la REDD+ est souvent consideré comme un mécanisme à gain quadruple en ceci que les bénéfices climatiques obtenus pourraient être associés à une reduction de la pauvreté, une meilleure gouvernance forestière et à une conservation de la biodiversité ([\@Duchelle et al., 2018]).
+De même une protection exclusive des forêts tropicales sans l'amélioration des conditions de vies des couches défavorisées et les plus vulnérables ne saurait être éfficasse pour l'atteinte des objectifs de reduction des effets des changements climatiques ([\@Seymour et Busch, 2016]).
+En effet 28% du revenu total des ménages des communautés riveraines proviennent des forêts ([\@Angelsen et al., 2014]).
+Des études recentes ont montré que stopper la déforestation et ses corollaires pourraient contribuer à une reduction des émissions de l'ordre de 37% par rapport aux objectifs de 2030 stipulés dans l'accord de Paris sur le maintien du rechauffement global en dessous de 2°C au dessus du niveau de la période préindustrielle, la diminution des émissions de 43% d'ici 2030 et l'atteinte de la neutralité carbone à l'horizon 2050 ([\@Griscom et al., 2017]).
 
-## Render book
+Le Cameroun a adhéré au processus REDD+ et a publié son document de proposition de mesures pour l'état de préparation (R-PP) de sa stratégie nationale en juin 2014.
+Dans ce document, il affirme son attachement à la stabilisation du climat et l'amélioration des conditions de vie des populations locales.
+Pour lui, le mécanisme REDD+ doit adopter une approche multisectorielle, intégrée et partenariale mettant en exergue tous les secteurs de développement et fondée sur une démarche participative et inclusive ([\@R-PP, 2013]).
+Cette transformation fait de la gestion des ressources naturelles un pôle de développement.
+Depuis 1994 le Cameroun a entamé une vaste réforme de sa politique forestière et la gestion durable des ressources forestières.
+Cette réforme s'est traduite par l'institution des outils de valorisation de l'implication des différents acteurs dans la gestion des forêts.
+Il s'agit entre autre, de la valorisation d'une foresterie sociale à travers la création des forêts communales ([\@Milol, 2008]).
+Ce concept renvoie aux formations végétales ayant fait l'objet d'un acte de classement pour le compte d'une commune ou qui ont été plantées par la collectivité concernée.
+Avec une superficie totale cumulée de 2327891 ha les forêts communales représentent 25% de la superficie des forêts de production du Cameroun ([\@Anonyme c, 2021]) et font partie intégrante du Domaine Forestier Permanent (DFP) en ce sens qu'elles sont définitivement affectées à la forêt.
+Cependant, la gestion de la plupart de ces forêts communales créées reste très inadéquate, en raison du fait que les acteurs des communes locales ne disposent ni outils, ni capacités suffisantes pour mettre en œuvre une gestion forestière durable, prenant en compte les opportunités qu'offrent les services écosystémiques et les problématiques actuels liées à la biodiversité et au changement climatique ([\@Anonyme b, 2022]).
+Bien que le Cameroun soit impliqué dans des programmes internationaux relatifs à la préparation de la REDD+, il n'a pas encore mis en place un système opérationnel de surveillance et de comptabilisation du carbone.
+En effet un système de comptabilisation et de surveillance du carbone est un outil d'estimation et de prédiction des stocks de carbone forestier, s'appuyant sur des scénarios des taux de perturbation futurs et des actions de gestion ainsi que les changements dans les stocks de carbone pour les prochaines décennies ([\@Watson, 2009]).
+En d'autre terme il s'agit d'un système de Mesure, de Notification et de Vérification (MRV) afin de générer des informations vérifiables et de qualité à des fins diverses sur l'ensemble des pools de carbone.
 
-You can render the HTML version of this example book without changing anything:
+Les forêts communales du Cameroun peuvent constituer des puits de carbone permettant de réduire l'impact de la déforestation sur le stock de carbone.
+De ce fait elles sont éligibles au MDP et la REDD+ dont la finalité est la gestion durable, la conservation des forêts, mais également la possibilité de bénéficier des Réductions d'Emission Certifiés (REC), encore appelées crédits carbone ([\@Cuny, 2011]).
+La mise en œuvre des programmes environnementaux tels que le mécanisme REDD+ implique les riverains et les propriétaires forestiers pour s'assurer que ces derniers participent activement à la gestion forestière.
+L'évaluation de la performance des systèmes d'aménagement et de gestion durable mis en place dans les forêts communales et suivant le contexte des changements climatiques, nécessite une tenue régulière des inventaires floristiques et la caractérisation des stocks de carbone dans ces espaces.
+La plupart des études antérieures ont généralement porté sur l'étude des impacts de l'exploitation forestère sur les stocks de carbone ( [\@Kankeu et al., 2016; \@Nanda et al., 2018] ).
+D'autres travaux se sont intéressés à l'étude de l'évolutiondu couvert végétal par des techniques de télédetection ([\@Momo et al., 2018; \@Djiongo et al., 2019; \@Zekeng et al., 2020]) et peu d'études ont été faites sur la biodiversité et la croissance des ligneux en rapport avec les stocks de carbone.
+La pertinence de cette étude découle du fait qu'en ciblant la dynamique de la biodiversité et des stocks de carbone dans les forêts communales situées dans la zone de contact forêt-savane, elle permettra de mieux comprendre leur fonction potentielle dans l'atténuation du rechauffement climatique ainsi que les mécanismes qui gouvernent l'évolution de la biodiversité et des stocks de carbone dans un contexte de gestion forestière décentralisée.
+La question générale qui se dégage est la suivante : quels sont les mécanismes qui soutendent la dynamique de la biodiversité et les stocks de carbone dans les zones de contact forêt-savane et dans des systèmes de gestion forestière associés aux populations locales?
+spécifiquement il s'agit de répondre aux questions suivantes:
 
-1. Find the **Build** pane in the RStudio IDE, and
+\- quelle est la dynamique spatio-temporelle de la végetation dans les forêts communales des zones de contact forêt-savane?
 
-1. Click on **Build Book**, then select your output format, or select "All formats" if you'd like to use multiple formats from the same book source files.
+\- quelle est la nature de la diversité ligneuse dans ces espaces?
 
-Or build the book from the R console:
+\- quelles sont les quantités de carbone stockées dans ces forêts?
 
-```{r, eval=FALSE}
-bookdown::render_book()
-```
+\- où sont localisés les stocks de carbone les plus importants dans ces forêts?
 
-To render this example to PDF as a `bookdown::pdf_book`, you'll need to install XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.org/tinytex/>.
+La situation géographique de la zone de contact forêt-savane nous amène à émettre l'hypothèse selon laquelle l'évolution de ces écosystèmes pourrait être un indicateur de la nature des influences aux quelles elle est soumise notamment; les changements climatiques et les actions anthropiques.
+D'autres hypothèses que nous pouvons dégagées sont les suivantes:
 
-## Preview book
+\- les espaces occupés par les écosystèmes forestiers subissent une augmentation au détriment des écosystèmes savanicoles;
 
-As you work, you may start a local server to live preview this HTML book. This preview will update as you edit the book when you save individual .Rmd files. You can start the server in a work session by using the RStudio add-in "Preview book", or from the R console:
+\- la dynamique spatio-temporelle va entrainer une augmentation de la composition et de la diversité ligneuse;
 
-```{r eval=FALSE}
-bookdown::serve_book()
-```
+\- les stocks de carbone seront moins élevés comparativement aux espaces entièrement couverts de forêts;
+
+\- les stocks de carbone les plus importants seront localisés dans les zones forestières les moins accessibles à l'homme.
+
+L'objectif général de cette étude est d'analyser la biodiversité et la distribution des stocks de carbone dans les zones de contact forêt-savane.
+Spécifiquement il s'agit de:
+
+\- comprendre la dynamique spatio-temporelle de la couverture végétale et prédire ses changements;
+
+\- caractériser et évaluer la diversité ligneuse;
+
+\- évaluer les stocks de carbone;
+
+\- et cartographier la distribution spatiale des stocks de carbone.
 
 
-```{r include=FALSE}
-# automatically create a bib database for R packages
-knitr::write_bib(c(
-  .packages(), 'bookdown', 'knitr', 'rmarkdown'
-), 'packages.bib')
+
+
+
 ```
