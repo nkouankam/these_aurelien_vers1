@@ -135,7 +135,7 @@ theme_update(panel.background = element_rect(fill = "transparent", colour = NA),
 knitr::opts_chunk$set(dev.args=list(bg="transparent"))
 
 # Random seed
-set.seed(973)  
+set.seed(973)   
 
 # Create packages.bib file to reference them as @R-package
 knitr::write_bib(Packages, file="packages.bib")
