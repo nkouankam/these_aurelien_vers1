@@ -42,7 +42,7 @@ La caractérisation et l'évaluation de la biodiversité a nécessité l'établi
 
 Le dispositif d'échantillonnage utilisé dans le cadre de ce travail est un ensemble de placettes proposées par [\\ @Hairiah et al.] (2011) dans le cadre du partenariat ASB (Alternative to Slash and Burn) (FiG.7). En effet, cette méthode préconise l'installation des placettes principales rectangulaires de 2 000 m² (50 m × 40 m) pour l'échantillonnage des ligneux à grands diamètres ($DHP\ge 30 cm$) et des placettes secondaires rectangulaires de 200 m² (5 m × 40 m) pour l'échantillonnage des ligneux à petits diamètres ($5 cm\le DHP < 30 cm$).
 
-[![Placettes d'échantillonnages [Adaptée de Hairiah et al. (2010)].](images/Placettes%20d'echantillonnages.png)](FiG.7)
+[![Placettes d'échantillonnages [Adaptée de Hairiah et al. (2010)].](images/Placettes_echantillonnages.png)](FiG.7)
 
 Dans chaque parcelle, un inventaire a été réalisé dans le but d'identifier toutes les espèces ligneuses présentes. Les mesures dendrométriques faites étaient la hauteur de l'arbre et le Diamètre à Hauteur de poitrine (DHP). Dans chaque parcelle et sous-parcelle, tous les arbres de diamètre du tronc à hauteur de poitrine (1,30 m du sol et 0,30 m au-dessus des défauts) pour les individus de diamètre supérieurs à 10 cm et à 50 cm du sol pour les individus de diamètre inférieurs à 10 cm ([@Zapfack, 2005; Hairiah et al., 2011]) ont été mesurés en utilisant un dhp-mètre.
 
@@ -50,15 +50,15 @@ Dans chaque parcelle, un inventaire a été réalisé dans le but d'identifier t
 
 Les parcelles ont été installées en respectant les conditions moyennes de densité des espèces proposées par [\@Picard et Goulet-Fleury] (2008). En effet ce sont des parcelles de 0,2 à 0,5 ha ayant fait l'objet d'une stratification selon le milieu et la composition spécifique (FiG.9). La mise en place des placettes s'est faite à partir de coordonnées GPS des points issus de la classification non supervisée des images satellites de la zone d'étude. La «méthode 3-4-5» a été utilisée pour la mise en place des parcelles. Une fois le point de reférence repéré, un jalon est fixé (FiG.8a). Ensuite un second jalon est placé à 4 m du premier suivant la direction de base principale (FiG.8b). Par la suite, on mesure 3 m à partir du premier jalon suivant une direction perpendiculaire à l'axe principal, puis on fixe le troisième jalon lorsque la distance qui sépare ce dernier du second est égale à 5 m (FiG.8c). Ainsi, l'extrémité de la placette formera un angle droit et on pourra matérialiser le reste de la surface aux dimensions requises (40m x 50m) par une ficelle colorée (FiG.8).
 
-[![Protocole de mise en place des placettes](images/Mise%20en%20place%20placettes.png)](FiG.8)
+[![Protocole de mise en place des placettes](images/Mise_en_place_placettes.png)](FiG.8)
 
-![Délimitation d'une parcelle d'échantillonnage](images/installation%20parcelle.png){alt="Délimitation d'une parcelle d'échantillonnage"}
+![Délimitation d'une parcelle d'échantillonnage](images/installation_parcelle.png){alt="Délimitation d'une parcelle d'échantillonnage"}
 
 #### Mesure des paramètres dendrométriques des arbres
 
 Sur chaque placette installée, les informations générales (coordonnées géographiques, description du paysage, etc.) ont été enregistrées, puis les parcelles principales et secondaires ont été délimitées. Pour chaque arbre identifié, les paramètres tels que : le diamètre, les noms scientifiques ou vernaculaires et/ou les noms commerciaux ont été notés (FiG.10). Tous les arbres ont été identifiés sur la base de leurs caractères discriminants en utilisant les flores et les clés d'identification. Pour limiter le risque de double comptage des ligneux dans les parcelles en forêt, tous les arbres ont été marqués à la peinture. Des échantillons d'herbier des espèces non identifiées sur le terrain ont été collectés, pressés, puis conservés dans de l'alcool 70°. Ces derniers ont été utilisés pour confirmer plus tard leur identification à l'Herbier National de Yaoundé. La nomenclature taxonomique adoptée a été la classification botanique phylogénétique des angiospermes (APG IV).
 
-[![Mesure du diamètre des arbres](images/mesures%20dendrom%C3%A9triques.png)](FiG.10)
+[![Mesure du diamètre des arbres](images/mesures_dendrometriques.png)](FiG.10)
 
 #### Méthode d'estimation de la biomasse aérienne
 
@@ -78,7 +78,7 @@ La collecte des données d'estimation des stocks de carbone dans les débris lig
 
 La procédure d'échantillonnage s'est faite en délimitant des quadrats (05) de 1 m² (1 m x 1 m) à l'intérieur des placettes d'échantillonnage de 200 m². Ces quadrats ont ensuite été rasés de toute végétation herbeuse (FiG.11a). Les tiges d'herbes et d'arbustes ont été débarrassées de leur feuillage et stockés séparément à l'intérieur des sachets plastiques. Ces échantillons ont été pesés sur place pour déterminer le Poids frais (Pf) en forêt (Gramme/m²). Des échantillons composites de 500 grammes ont été constitués séparément pour les feuilles et pour les tiges à partir de la mixture de tous les différents groupes d'échantillons prélevés dans chaque quadrat. Au total, deux échantillons composites (feuilles et tiges) de 500 g chacun par placette d'échantillonnage de 200 m² seront constitués.
 
-[![collecte d'échantillons d'herbacées et litière](images/herbacees%20et%20litiere.png)](FiG.11)
+[![collecte d'échantillons d'herbacées et litière](images/herbacees_et_20litiere.png)](FiG.11)
 
 Les échantillons de litière grossière (toutes nécromasses ligneuses de diamètre inférieur à 5 cm et d'une longueur inférieure à 50 cm), les matières végétales non décomposées et les résidus des récoltes, et toutes les matières végétales non décomposées seront ramassées à l'intérieur des quadrats de 1 m² et stockées à l'intérieur des sachets plastiques (FiG.11b). Ces échantillons ont également été pesés pour déterminer le Poids frais (Pf) en forêt (gramme/m²). Un échantillon composite de 500 grammes y était prélevé après la mixture des échantillons de litière provenant des cinq quadrats de 1 m² chacun. Ces échantillons composites ont été transportés à l'étuve pour être séchés pendant 72 heures à une température de 85°C pour les tiges et 65°C pour les feuilles et la litière. Les mesures du poids sec (Ps) ont suivi après séchage des échantillons à l'étuve.
 
@@ -86,11 +86,11 @@ Les échantillons de litière grossière (toutes nécromasses ligneuses de diam�
 
 La procédure d'échantillonnage s'est faite premièrement en délimitant un sous-quadrat de 0,25 m² (0,5 m × 0,5 m) dans tous les cinq (05) quadrats de 1 m² à l'intérieur des placettes d'échantillonnage de 200 m² (FiG.12).
 
-[![Sous-quadrat de 0,25 m² pour l'échantillonnage des sols. (Adaptée de Hairiah et al., (2011).](images/echantillonnage%20des%20sols.png)](FiG.12)
+[![Sous-quadrat de 0,25 m² pour l'échantillonnage des sols. (Adaptée de Hairiah et al., (2011).](images/echantillonnage_des_sols.png)](FiG.12)
 
 Après la mise en place,les couches de litière organique du sol ont été préalablement raclées puis les échantillons de sol prélevés à des profondeurs de 0 à 10 cm, 10 à 20 cm et 20 à 30 cm. Les échantillons de sols en provenance de chaque quadrat ont été mixés entre eux à l'intérieur de petits seaux tout en respectant la profondeur de prélèvement (FiG.12a). De la mixture obtenue, un échantillon composite de 500 grammes a été prélevé (FiG.12b). Il en ressort 3 échantillons composites pour les 3 profils de sol par placette de 200 m2, lesquels échantillons ont été envoyés au laboratoire d'analyse des sols de l'IITA (Institut Iternational d'Agriculture Tropical) pour la détermination du pourcentage de carbone organique par digestion chromique acide et analyse spectro-photométrique d'après la méthode décrite par Heanes (1984).
 
-[![Mise en place mini profil et collecte échantillon de sol](images/profil%20sol.png)](FiG.12)
+[![Mise en place mini profil et collecte échantillon de sol](images/profil_sol.png)](FiG.12)
 
 ### Analyse des données
 
@@ -129,14 +129,22 @@ $$
 par conséquent l'équitabilité de Pielou([@Pielou,1966]) peut être définit comme suit:
 
 $$J=\frac{H}{H_{max}}\\ J:indice\ de\ Pielou
-$$ Malgrè le fait qu'il soit fortement dépendant de la richesse spécifique, l'équitabilité de Pielou reste très usité comme indice d'équitabilité. D'autre part l'équitabilité peut être relié à la forme de la courbe d'abondance des espèces, qui est une fonction décrivant l'allure rang/abondance où l'abscisse range les espèces en ordre décroissant d'abondance et l'ordonnée représente le logarithme transformé d'abondance. Les principaux modèles de courbes observés varient des séries géométriques où peu espèces sont dominantes et d'autres quasi rares, vers les modèles de Broken Stick où les espèces ont les mêmes abondances. Lorsque J tend vers 0, un phénomène de dominance est observé, par contre lorqu'il tend vers 1 on relève une répartition régulière des éffectifs entre les espèces.
+$$ 
+
+Malgrè le fait qu'il soit fortement dépendant de la richesse spécifique, l'équitabilité de Pielou reste très usité comme indice d'équitabilité. D'autre part l'équitabilité peut être relié à la forme de la courbe d'abondance des espèces, qui est une fonction décrivant l'allure rang/abondance où l'abscisse range les espèces en ordre décroissant d'abondance et l'ordonnée représente le logarithme transformé d'abondance. Les principaux modèles de courbes observés varient des séries géométriques où peu espèces sont dominantes et d'autres quasi rares, vers les modèles de Broken Stick où les espèces ont les mêmes abondances. Lorsque J tend vers 0, un phénomène de dominance est observé, par contre lorqu'il tend vers 1 on relève une répartition régulière des éffectifs entre les espèces.
 
 ###### Indice de diversité de Simpson
 
 Il représente la probabilité que deux individus pris au hasard soient de la même espèce. Il varie inversement avec la diversité puisque, des valeurs élevées de cet indice indiquent une faible diversité. L'indice de Simpson est calculée comme suit:
 
 $$𝛌=\sum_{i=1}^q\ p_i^2\\ 𝛌:indice\ de\ Simpson;\ p_i:\ fréquence\ relative\ de\ l'espèce\ i;\ q:nombre\ des\ espèces
-$$ La valeur de *𝛌* s'accroit lorsque la probabilité que deux individus soient de la même espèce est élevée. Généralement la diversité de Simpson est transformée sous la forme:$D=1-𝛌$, D variant de 0 à 1. Plus D augmente, plus le milieu est hétérogène et la diversité grande. La richesse spécifique, l'entropie de Shannon et la diversité de Simpson ont été regroupées dans la formule de l'entropie généralisée de Rényi([@Rényi,1961]) et reprise par Hill(1973) et Pielou (1975): $$H_a=\frac{1}{1-a}log\sum_{i=1}^qp_i^a $$ avec *a* étant la mesure de l'ordre de l'entropie(a=0,1,2,...). Hill(1973) a également proposé d'utilisé les *nombres de diversité*
+$$
+
+La valeur de *𝛌* s'accroit lorsque la probabilité que deux individus soient de la même espèce est élevée. Généralement la diversité de Simpson est transformée sous la forme:$D=1-𝛌$, D variant de 0 à 1. Plus D augmente, plus le milieu est hétérogène et la diversité grande. La richesse spécifique, l'entropie de Shannon et la diversité de Simpson ont été regroupées dans la formule de l'entropie généralisée de Rényi([@Rényi,1961]) et reprise par Hill(1973) et Pielou (1975):
+
+$$H_a=\frac{1}{1-a}log\sum_{i=1}^qp_i^a $$
+
+avec *a* étant la mesure de l'ordre de l'entropie(a=0,1,2,...). Hill(1973) a également proposé d'utilisé les *nombres de diversité*
 
 $$N_a=e^{H_a} $$
 
