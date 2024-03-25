@@ -42,7 +42,7 @@ La caractérisation et l'évaluation de la biodiversité a nécessité l'établi
 
 Le dispositif d'échantillonnage utilisé dans le cadre de ce travail est un ensemble de placettes proposées par [\\ @Hairiah et al.] (2011) dans le cadre du partenariat ASB (Alternative to Slash and Burn) (FiG.7). En effet, cette méthode préconise l'installation des placettes principales rectangulaires de 2 000 m² (50 m × 40 m) pour l'échantillonnage des ligneux à grands diamètres ($DHP\ge 30 cm$) et des placettes secondaires rectangulaires de 200 m² (5 m × 40 m) pour l'échantillonnage des ligneux à petits diamètres ($5 cm\le DHP < 30 cm$).
 
-[![Placettes d'échantillonnages [Adaptée de Hairiah et al. (2010)].](images/Placettes_echantillonnages.png)](FiG.7)
+[![Placettes d'échantillonnages (Adaptée de Hairiah et al.(2010)).](images/Placettes_echantillonnages.png)](FiG.7)
 
 Dans chaque parcelle, un inventaire a été réalisé dans le but d'identifier toutes les espèces ligneuses présentes. Les mesures dendrométriques faites étaient la hauteur de l'arbre et le Diamètre à Hauteur de poitrine (DHP). Dans chaque parcelle et sous-parcelle, tous les arbres de diamètre du tronc à hauteur de poitrine (1,30 m du sol et 0,30 m au-dessus des défauts) pour les individus de diamètre supérieurs à 10 cm et à 50 cm du sol pour les individus de diamètre inférieurs à 10 cm ([@Zapfack, 2005; Hairiah et al., 2011]) ont été mesurés en utilisant un dhp-mètre.
 
@@ -52,7 +52,7 @@ Les parcelles ont été installées en respectant les conditions moyennes de den
 
 [![Protocole de mise en place des placettes](images/Mise_en_place_placettes.png)](FiG.8)
 
-![Délimitation d'une parcelle d'échantillonnage](images/installation_parcelle.png){alt="Délimitation d'une parcelle d'échantillonnage"}
+[![Délimitation d'une parcelle d'échantillonnage](images/installation_parcelle.png)]{alt="Délimitation d'une parcelle d'échantillonnage"}
 
 #### Mesure des paramètres dendrométriques des arbres
 
@@ -60,7 +60,7 @@ Sur chaque placette installée, les informations générales (coordonnées géog
 
 [![Mesure du diamètre des arbres](images/mesures_dendrometriques.png)](FiG.10)
 
-#### Méthode d'estimation de la biomasse aérienne
+### Méthode d'estimation de la biomasse aérienne
 
 Pour l'évaluation des stocks de carbone, [\\ @CIFOR] (2009), [\\ @Penman et al.] (2003) et [\\ @MacDicken] (1997) définissent 5 réservoirs repartis en 3 groupes pour la quantification du carbone :
 
@@ -70,11 +70,11 @@ Pour l'évaluation des stocks de carbone, [\\ @CIFOR] (2009), [\\ @Penman et al.
 
 Pour estimer les stocks de carbone dans la biomasse vivante, nous avons utilisé la méthode biométrique employée par [\@Fayolle et al.] (2018) dans le bassin du Congo qui est une approche basée sur les équations allométriques permettant d'estimer directement la biomasse totale ou partielle d'un arbre à partir de prédicteurs tels que le diamètre du tronc, la densité du bois, la hauteur totale et une constante environnementale. Ensuite nous avons multiplié la biomasse obtenue par un facteur d'expansion et de conversion de la biomasse 0,47 ([@Zapfack et al., 2013]) pour obtenir la masse de carbone stockée. A l'échelle du paysage, la quantité de biomasse est estimée en multipliant la superficie de chaque biome par la quantité de biomasse moyenne par unité de surface pour ce biome. Les quantités moyennes par biome sont elles-mêmes estimées à partir de mesures faites à une échelle plus restreinte ([@Mounmemi, 2021]).
 
-#### Collecte des données d'estimation de la biomasse du bois mort
+### Collecte des données d'estimation de la biomasse du bois mort
 
 La collecte des données d'estimation des stocks de carbone dans les débris ligneux étendus au sol s'est faite à partir de la méthode d'intersection des lignes. Elle a consisté à considérer la somme des quatre côtés des parcelles de 2000 m² comme des lignes d'échantillonnages soit 180 m. Par la suite, les diamètres des deux extrémités ainsi que les longueurs des fragments couchés en intersection avec la ligne ont été mesurés lorsque : au moins 50% du bois était en dehors du sol ; et la ligne d'échantillonnage traversant au moins 50% du fragment ([@Kabelong et al., 2018; @Walker et al., 2012]). Pour déterminer la densité des fragments, on a heurté chaque fragment sélectionné avec un outil contondant (machette ou scie) puis on les a rangé dans l'une des trois classes de densité correspondante (dure-intermédiaire-pourri). En effet, si au moment de la percussion l'outil ne pénètre pas l'objet ou rebondi, le fragment est rangé dans la catégorie des dures. Par contre si l'outil pénètre partiellement l'objet et que des débris s'en détachent, le bois est rangé dans la catégorie des intermédiaires. Si enfin l'outil pénètre le bois et qu'il s'émiette ou des fragments importants s'en détachent, le bois est classé comme pourri ([@Pearson et al., 2005]). La collecte des données pour l'estimation de la biomasse des bois morts sur pied s'est faite en mesurant les diamètres et les hauteurs de tous les arbres morts sur pied ainsi que les souches de diamètre supérieur à 5 cm et de longueur supérieure à 50 cm. Par la suite chaque bois mort ou débris a été rangé dans l'une des classes: décomposition peu avancée; décomposition moyenne; et décomposition très avancée selon les conditions de l'aubier ([@Walker et al., 2012]).
 
-#### Dispositif de collecte des herbacées et de la litière
+### Dispositif de collecte des herbacées et de la litière
 
 La procédure d'échantillonnage s'est faite en délimitant des quadrats (05) de 1 m² (1 m x 1 m) à l'intérieur des placettes d'échantillonnage de 200 m². Ces quadrats ont ensuite été rasés de toute végétation herbeuse (FiG.11a). Les tiges d'herbes et d'arbustes ont été débarrassées de leur feuillage et stockés séparément à l'intérieur des sachets plastiques. Ces échantillons ont été pesés sur place pour déterminer le Poids frais (Pf) en forêt (Gramme/m²). Des échantillons composites de 500 grammes ont été constitués séparément pour les feuilles et pour les tiges à partir de la mixture de tous les différents groupes d'échantillons prélevés dans chaque quadrat. Au total, deux échantillons composites (feuilles et tiges) de 500 g chacun par placette d'échantillonnage de 200 m² seront constitués.
 
@@ -82,7 +82,7 @@ La procédure d'échantillonnage s'est faite en délimitant des quadrats (05) de
 
 Les échantillons de litière grossière (toutes nécromasses ligneuses de diamètre inférieur à 5 cm et d'une longueur inférieure à 50 cm), les matières végétales non décomposées et les résidus des récoltes, et toutes les matières végétales non décomposées seront ramassées à l'intérieur des quadrats de 1 m² et stockées à l'intérieur des sachets plastiques (FiG.11b). Ces échantillons ont également été pesés pour déterminer le Poids frais (Pf) en forêt (gramme/m²). Un échantillon composite de 500 grammes y était prélevé après la mixture des échantillons de litière provenant des cinq quadrats de 1 m² chacun. Ces échantillons composites ont été transportés à l'étuve pour être séchés pendant 72 heures à une température de 85°C pour les tiges et 65°C pour les feuilles et la litière. Les mesures du poids sec (Ps) ont suivi après séchage des échantillons à l'étuve.
 
-#### Dispositif de collecte des échantillons de sol
+### Dispositif de collecte des échantillons de sol
 
 La procédure d'échantillonnage s'est faite premièrement en délimitant un sous-quadrat de 0,25 m² (0,5 m × 0,5 m) dans tous les cinq (05) quadrats de 1 m² à l'intérieur des placettes d'échantillonnage de 200 m² (FiG.12).
 
@@ -91,6 +91,9 @@ La procédure d'échantillonnage s'est faite premièrement en délimitant un sou
 Après la mise en place,les couches de litière organique du sol ont été préalablement raclées puis les échantillons de sol prélevés à des profondeurs de 0 à 10 cm, 10 à 20 cm et 20 à 30 cm. Les échantillons de sols en provenance de chaque quadrat ont été mixés entre eux à l'intérieur de petits seaux tout en respectant la profondeur de prélèvement (FiG.12a). De la mixture obtenue, un échantillon composite de 500 grammes a été prélevé (FiG.12b). Il en ressort 3 échantillons composites pour les 3 profils de sol par placette de 200 m2, lesquels échantillons ont été envoyés au laboratoire d'analyse des sols de l'IITA (Institut Iternational d'Agriculture Tropical) pour la détermination du pourcentage de carbone organique par digestion chromique acide et analyse spectro-photométrique d'après la méthode décrite par Heanes (1984).
 
 [![Mise en place mini profil et collecte échantillon de sol](images/profil_sol.png)](FiG.12)
+
+### Collecte des données géospatiales
+
 
 ### Analyse des données
 
