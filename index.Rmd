@@ -48,7 +48,7 @@ graphics: true
 link-citations: true
 colorlinks: true
 csquotes: true  
-bibliography: references.bib
+bibliography: [references.bib,packages.bib]
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
