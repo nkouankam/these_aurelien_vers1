@@ -1,0 +1,25 @@
+# Chapitre III. Résultats
+
+```{r community data set}
+spa_Ndiki<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_cordinate.csv",check.names = FALSE)
+spa_Nanga<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_cordinate.csv",check.names = FALSE)
+Ndiki_com_plus<-read.csv2("C:/Users/Windows/AppData/Local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_communaute.csv",check.names = FALSE)
+Nanga_com<-read.csv2("C:/Users/Windows/AppData/Local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_communaute.csv",check.names = FALSE)
+spec.column_Ndiki<-as.character(Ndiki_com_plus[,1])
+spec.column_Nanga<-as.character(Nanga_com[,1])
+Ndiki_spec<-as.data.frame(t(Ndiki_com_plus[,-1]))
+Nanga_spec<-as.data.frame(t(Nanga_com[,-1]))
+names(Ndiki_spec)<-spec.column_Ndiki
+names(Nanga_spec)<-spec.column_Nanga
+```
+
+You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file. 
+
+Add a numbered part: `# (PART) Act one {-}` (followed by `# A chapter`)
+
+Add an unnumbered part: `# (PART\*) Act one {-}` (followed by `# A chapter`)
+
+Add an appendix as a special kind of un-numbered part: `# (APPENDIX) Other stuff {-}` (followed by `# A chapter`). Chapters in an appendix are prepended with letters instead of numbers.
+
+
+
