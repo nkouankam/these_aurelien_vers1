@@ -1,0 +1,98 @@
+# Chapitre III. Résultats et Discussions
+
+## Résultats
+
+### Caractérisation de la diversité floristique de la forêt communale de Ndikiniméki
+
+```{r parametrage des données sur les espèces}
+spa_Ndiki<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_cordinate.csv",check.names = FALSE)
+spa_Nanga<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_cordinate.csv",check.names = FALSE)
+Ndiki_com_plus<-read.csv2("C:/Users/Windows/AppData/Local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_communaute_plus.csv",check.names = FALSE)
+Nanga_com<-read.csv2("C:/Users/Windows/AppData/Local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_communaute.csv",check.names = FALSE)
+spec.column_Ndiki<-as.character(Ndiki_com_plus[,1])
+spec.column_Nanga<-as.character(Nanga_com[,1])
+Ndiki_spec<-as.data.frame(t(Ndiki_com_plus[,-1]))
+Nanga_spec<-as.data.frame(t(Nanga_com[,-1]))
+names(Ndiki_spec)<-spec.column_Ndiki
+names(Nanga_spec)<-spec.column_Nanga
+```
+
+```{r parametrage des données sur les familles d'espèces}
+Ndiki_famille<-read.csv2("C:/Users/Windows/AppData/Local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_famille.csv",check.names = FALSE)
+Nanga_famille<-read.csv2("C:/Users/Windows/AppData/Local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_famille.csv",check.names = FALSE)
+fami.column_Ndiki=as.character(Ndiki_famille[,1])
+fami.column_Nanga=as.character(Nanga_famille[,1])
+Ndiki_fami=as.data.frame(t(Ndiki_famille[,-1]))
+Nanga_fami=as.data.frame(t(Nanga_famille[,-1]))
+names(Ndiki_fami)=fami.column_Ndiki
+names(Nanga_fami)=fami.column_Nanga
+```
+
+```{r parametrage des données environnementales}
+Ndiki_categori<-read.csv2("C:/Users/Windows/AppData/Local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_environnement.csv",check.names = FALSE)
+Nanga_categori<-read.csv2("C:/Users/Windows/AppData/Local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_environnement.csv",check.names = FALSE)
+sites.rows_Ndiki<-as.character(Ndiki_categori[,1])	
+sites.rows<-as.character(Nanga_categori[,1])
+Ndiki.Env<-Ndiki_categori[,2:5]
+Nanga.Env<-Nanga_categori[,2:5]
+rownames(Ndiki_spec)<-rownames(Ndiki.Env)					
+rownames(Nanga_spec)<-rownames(Nanga.Env)
+
+```
+
+Notre étude floristique dans la Forêt Communale de Ndikiniméki a couvert un ensemble de 32 parcelles d'inventaires reparties sur 05 catégories d'utilisation des terres (TUT): 
+\- les Forêts Matures (FM);
+\- les Forêts Secondaires (FS);
+\- les Forêts Marécageuses (FMa);
+\- les Cacaoyères (CAC);
+\- et les Jachères (JA).
+
+```{r Nomenclature des parcelles étudiés}
+rownames(Ndiki_fami)
+```
+
+```{r identification des catégories de Types d'Utilisation des Terre}
+library(prettyR)
+describe(Ndiki.Env$TUT)
+```
+
+Au total 148 espèces appartenant à 43 familles ont été identifiées.
+
+```{r identification des individus enregistrées }
+# Nom des espèces
+colnames(Ndiki_spec)
+# Nom des familles
+colnames(Ndiki_fami)
+```
+
+Aucune espèce n'a été présente de manière permanente dans les 32  parcelles d'inventaires.Le nombre d'absence ou valeur d'abondance nulle s'élève à 4128 soit 87% des données de la matrice d'inventaire. La valeur  maximale d'abondance a été enregistrée dans une parcelle où une espèce a été observée 29 fois de suite.
+
+```{r dénombrement des classes d'abondance }
+(ab<-table(unlist(Ndiki_spec)))
+```
+
+
+```{r Histogramme des effectifs de classes de toutes les espèces}
+barplot(ab,las=1,xlab = "Classes d'abondance",ylab = "Fréquences",col = gray(5:0/5))
+```
+
+```{r Coordonnées géographiques des parcelles}
+library(sf)
+my_sf=st_as_sf(spa_Ndiki,coords = c("Longitude","Latitude")) 
+#plot my_sf# 
+library(ggplot2)
+theme_set(theme_bw()) 
+ggplot(my_sf)+geom_sf(aes(fill=Ndiki.Env$TUT))+geom_sf_label(aes(label=Ndiki.Env$TUT))+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FM","FS","FMa","JA","CAC"),labels=c("FM:Forêt Mature","FS:Forêt Secondaire","FMa:Forêt Marécageuse","JA:Jachère","CAC:Cacaoyère"))+labs(x="Longitude",y="Latitude")
+```
+
+
+You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file. 
+
+Add a numbered part: `# (PART) Act one {-}` (followed by `# A chapter`)
+
+Add an unnumbered part: `# (PART\*) Act one {-}` (followed by `# A chapter`)
+
+Add an appendix as a special kind of un-numbered part: `# (APPENDIX) Other stuff {-}` (followed by `# A chapter`). Chapters in an appendix are prepended with letters instead of numbers.
+
+
+
