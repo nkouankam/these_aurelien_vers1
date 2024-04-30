@@ -5,8 +5,8 @@
 ### Caractérisation de la diversité floristique de la forêt communale de Ndikiniméki
 
 ```{r parametrage des données sur les espèces}
-spa_Ndiki<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_cordinate.csv",check.names = FALSE)
-spa_Nanga<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_cordinate.csv",check.names = FALSE)
+spa_Ndiki<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_coord_modif.csv",check.names = FALSE)
+spa_Nanga<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_coord_modif.csv",check.names = FALSE)
 Ndiki_com_plus<-read.csv2("C:/Users/Windows/AppData/Local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_communaute_plus.csv",check.names = FALSE)
 Nanga_com<-read.csv2("C:/Users/Windows/AppData/Local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_communaute.csv",check.names = FALSE)
 spec.column_Ndiki<-as.character(Ndiki_com_plus[,1])
@@ -48,7 +48,7 @@ Notre étude floristique dans la Forêt Communale de Ndikiniméki a couvert un e
 \- et les Jachères (JA).
 
 ```{r Nomenclature des parcelles étudiés}
-rownames(Ndiki_fami)
+rownames(Ndiki_spec)
 ```
 
 ```{r identification des catégories de Types d'Utilisation des Terre}
@@ -76,7 +76,10 @@ Aucune espèce n'a été présente de manière permanente dans les 32  parcelles
 barplot(ab,las=1,xlab = "Classes d'abondance",ylab = "Fréquences",col = gray(5:0/5))
 ```
 
+Une projection des données GPS recueillies sur le terrain permet de confirmer la localisation des parcelles d'inventaires par rapport à la situation géographiaque de la Forêt Communale de Ndikiniméki.
+
 ```{r Coordonnées géographiques des parcelles}
+plot.default(spa_Ndiki,asp = 1,type = "p",main = "Localisation des sites",xlab = "Longitude",ylab = "Latitude")
 library(sf)
 my_sf=st_as_sf(spa_Ndiki,coords = c("Longitude","Latitude")) 
 #plot my_sf# 
@@ -85,6 +88,198 @@ theme_set(theme_bw())
 ggplot(my_sf)+geom_sf(aes(fill=Ndiki.Env$TUT))+geom_sf_label(aes(label=Ndiki.Env$TUT))+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FM","FS","FMa","JA","CAC"),labels=c("FM:Forêt Mature","FS:Forêt Secondaire","FMa:Forêt Marécageuse","JA:Jachère","CAC:Cacaoyère"))+labs(x="Longitude",y="Latitude")
 ```
 
+```{r Nombres d'occurences}
+# Déterminer le nombre de sites où chaque espèce est présente
+spe.pres <- apply(Ndiki_spec > 0, 2, sum)
+# Déterminer le percentage fréquences
+spe.relf <- 100 * spe.pres/nrow(Ndiki_spec)
+# Arrondir le résultat à 1/10^e près
+round(sort(spe.relf), 1)
+# Construction des histogrammes
+par(mfrow = c(1,2))
+hist(spe.pres, 
+main = " Occurrences des espèces", 
+right = FALSE, 
+las = 1, 
+xlab = "Nombres d'occurrences", 
+ylab = "Nombres d'espèces", 
+breaks = seq(0, 30, by = 5),
+col = "bisque"
+)
+hist(spe.relf, 
+main = "Frequences relatives des espèces", 
+right = FALSE, 
+las = 1,
+xlab = "Frequences  d'occurrences (%)", 
+ylab = "Nombres d'espèces",
+breaks = seq(0, 100, by = 10),
+col = "bisque"
+)
+```
+
+Au regard des histogrammes d'occurences, 3/4 des espèces repertoriées ont une fréquence d'occurence inférieure à 10% et moins de 5 espèces ont une fréquences d'occurence supérieure à 80%.
+
+```{r Richesse specifique}
+# Déterminer le nombre d'espèces par parcelles
+sit.pres <- apply(Ndiki_spec > 0,1,sum)
+# Classement des résultats par ordre croissant
+sort(sit.pres)
+plot(sit.pres,type = "s",
+las = 1, 
+col = "gray",
+main = "Richesses spécifiques\ par parcelles",
+xlab = "Numéros des parcelles", 
+ylab = "Richesses spécifiques"
+)
+text(sit.pres, row.names(Ndiki_spec), cex = .8, col = "red")
+plot.default(spa_Ndiki, 
+asp = 1, 
+main = "Cartographie des richesses spécifiques", 
+pch = 21, 
+col = "white", 
+bg = "brown", 
+cex = 5 * sit.pres / max(sit.pres), 
+xlab = "Longitude", 
+ylab = "Latitude"
+)
+```
+
+Parmi les 32 parcelles prises séparément, la richesse spécifique observée la plus faible a été retrouvée dans la parcelle (P26) avec 05 espèces enregitrées tandis que la plus élévée est de 33 espèces et se situe dans la parcelle (P31).75% des parcelles inventoriées comptent 22 espèces et la moyenne se situe autour de 19 espèces dans l'ensemble.
+
+```{r Analyse du nombre d'espèces observées dans la FC de Ndiki }
+# nombre d'espèces dans FC de Ndiki
+library(vegan)
+(Ndiki.nbsp<-specnumber(Ndiki_spec))
+# Sites avec minimum et maximum de richesse spécifique observée
+Ndiki.nbsp[Ndiki.nbsp==min(Ndiki.nbsp)]
+Ndiki.nbsp[Ndiki.nbsp==max(Ndiki.nbsp)]
+range(Ndiki.nbsp)
+```
+
+```{r analyse de l'abondance dans la FC de Ndiki}
+# Abondance totale des individus dans la FC de Ndiki
+(Ndiki.abund<-rowSums(Ndiki_spec))
+range(Ndiki.abund)
+# Abondance dans le site ayant la plus petite richesse spécifique observée
+Ndiki.abund[Ndiki.nbsp==min(Ndiki.nbsp)]
+# Abondance dans le site ayant la plus grande richesse spécifique observée
+Ndiki.abund[Ndiki.nbsp==max(Ndiki.nbsp)]
+# Nombre d'espèces dans le site ayant la plus petite abondance
+Ndiki.nbsp[Ndiki.abund==min(Ndiki.abund)]
+# Nombre d'espèces dans le site ayant la plus grande abondance
+Ndiki.nbsp[Ndiki.abund==max(Ndiki.abund)]
+```
+
+Nous observons que la parcelle (P4) avec l'effectif le plus reduit (27 individus)présente une richesse spécifiques de 14 espèces tandis que la parcelle (P26) avec un effectif presque équivalent (34 individus)  présente la richesse spécifiques observée la plus faible (5 espèces). La parcelle (P9) est celle présentant la plus forte abondance (61 espèces) avec une richesse spécifiques observée de 31 espèces. 
+
+```{r Analyse de la rarefaction dans la FC de Ndiki}
+# Rarefaction au 3^ème quartile
+summary(Ndiki.abund)
+Ndiki.rare47<-rarefy(Ndiki_spec,sample = 47)
+# Comparaison du classement des sites selon l'abondance observée et la rarefaction
+sort(Ndiki.nbsp)
+sort(round(Ndiki.rare47))
+# Sites ayant le minimum et le maximum de richesses spécifiques estimées
+Ndiki.rare47[Ndiki.rare47==min(Ndiki.rare47)]
+Ndiki.rare47[Ndiki.rare47==max(Ndiki.rare47)]
+# Site prédit ayant la plus petite richesse spécifique
+P26=Ndiki_spec[which(Ndiki.rare47==min(Ndiki.rare47)),]
+# Site prédit ayant la plus grande richesse spécifique
+P28=Ndiki_spec[which(Ndiki.rare47==max(Ndiki.rare47)),]
+```
+
+Après avoir standardisé les parcelles à un effectif de 47 individus, on constate que le classement des sites par rapport à la richesse spécifiques a été modifié. Une estimation du nombre d'espèces montre que la parcelle (P26) demeure la plus pauvre en terme de richesse spécifiques observées (5 espèces), la plus riche est la parcelle (P28) avec 32 espèces observées.
+
+```{r Calcul des indices de diversité}
+# Richesses spécifiques
+N0 <- rowSums(Ndiki_spec > 0) 
+# # Richesses spécifiques (alterné) 
+N0 <- specnumber(Ndiki_spec)
+# Entropie de Shannon (base e)
+H <- diversity(Ndiki_spec)
+# Entropie de Shannon (base 2)
+Hb2 <- diversity(Ndiki_spec, base = 2)
+# Diversité de Shannon (base e)
+N1 <- exp(H)
+#(espèces abondantes)
+# Diversité de Shannon (base 2)
+N1b2 <- 2^Hb2
+# Diversité de Simpson
+N2 <- diversity(Ndiki_spec, "inv")
+# (espèces dominantes)
+# équitabilité de Pielou 
+J <- H / log(N0)
+# équitabilité de Shannon (ratio de Hill)
+E10 <- N1 / N0
+# équitabilité de Simpson (ratio de Hill)
+ E20 <- N2 / N0
+ div <- data.frame(N0, H, Hb2, N1, N1b2, N2, E10, E20, J)
+div.pearson<-cor(div)
+round(div.pearson,2)
+library(gclus)
+env.O=order.single(div.pearson)
+library(PerformanceAnalytics)
+chart.Correlation(div.pearson[,env.O],histogram = TRUE,pch=19)
+```
+
+Si l'on se refère aux résultats du tableau ci-contre, on pourrait conclure que les Forêts Marécageuses (FMa) ont la richesse spécifiques la plus faible puisque les calculs nous disent qu'elles comptent 22 espèces tandis qu'elle est élevée pour les autres catégories d'utilisation des terres (plus d'une centaine d'espèces pour les Forêts Matures). Toujours dans ce même tableau, "n" représente le nombre d'unités d'échantillonnages pour chaque catégorie d'utilisation des terres. En regardant les différences de valeurs attribuées à "n" dans les différentes catégories, on constate que les Forêts marécageuses et les Jachères ont les valeurs les plus faibles. 
+
+```{r Comparaison de la richesse spécifique observée entre les differents Types d'Utilisation des Terres}
+Ndiki.Env$Management_type<- factor(Ndiki.Env$TUT)
+Diversity.3<- diversitycomp(Ndiki_spec,y=Ndiki.Env,factor1 = "Management_type",index = "richness",method = "pooled")
+library(kableExtra)
+Diversity.3 %>% kbl(caption = "Table: Richesse spécifiques observées des differentes catégories d'utilisation des terres") %>% kable_classic(full_width=F,html_font = "cambria")
+```
+
+Etant donné que la richesse spécifique est dépendante de la taille de l'échantillon, il n'est pas aisé de comparer la richesse spécifiques entre des catégories d'occupation des terres de tailles différentes. Ces différences pouvant être liées soit à la taille des échantillons ou à la différence de richesse spécifiques entre les catégories. Il faut également noter que la somme des espèces lorsque plus d'un site sont combinés n'est pas toujours égale à la somme des espèces de cette combinaison. Ceci ne peut être possible que si les sites combinés partagent le même nombre d'espèces. Ainsi, pour déterminer le nombre d'espèces dans des combinaisons de sites on a calculé la moyenne cumulée de la richesse spécifiques des différentes combinaison de sites. A cause du fait qu'il n'existe pas une valeur unique pour la richesse spécifiques d'un site, nous avons calculé la valeur moyenne. La richesse spécifiques moyenne pour un site est de 19. La courbe des espèces cumulées a permis de calculer la richesse spécifiques moyenne pour une large combinaison de sites en considérant la présence et non l'éffectif des espèces. Le résultat nous a montré que la richesse spécifiques moyenne croît rapidement avec le nombre de sites combinées mais lorsque la somme des sites combinés atteint un certain seuil ce taux d'accroissement devient faible. La richesse spécifique moyenne pour toutes les combinaisons possibles de 23 sites est de 133,66 tandis que pour une combinaison de 25 sites elle est de 137,55. "sd" indique l'écart type observé lorsque par chance certaines combinaisons de sites présentent un nombre élevé d'espèces tandis d'autres en contiennent un faible nombre. Au regard de la courbe d'accumulation des espèces, l'axe horizontal représente l'ensemble des 32 sites cumulés tandis que l'axe vertical représente l'ensemble des 148 espèces cumulées.
+
+```{r Richesse spécifiques moyennes issues de la combinaison des sites dans la FC de Ndiki}
+Accum.1_Ndiki <- accumresult(Ndiki_spec, method="exact") 
+Accum.1_Ndiki
+```
+
+```{r  Courbe d'accumulation des espèces de la FC de Ndikinimeki}
+accumplot(Accum.1_Ndiki)
+```
+
+Il a également été important de rechercher et de comparer le nombre moyen d'espèces par site et selon les différentes catégories d'utilisation des terres afin de resoudre le problème de la taille des échantillons. Pour déterminer si la différence de richesse spécifiques entre les différentes catégories pourraient être liées à la taille des échantillons, on a construit une courbe d'accumulation des espèces pour chaque catégorie d'utilisation des terres et on les a comparer par la suite. Ces courbes présentent la richesse spécifiques moyenne cumulée pour une large combinaison de sites dans chaque catégorie d'utilisation des terres jusqu'à ce que toutes  les combinaisons de tailles possibles d'échantillons soient épuisées. En se reférent à la moyenne cumulée de la richesse spécifiques dans chaque catégorie d'utilisation des terres de la Forêt Communale de Ndikiniméki, il a desormais été possible de comparer la richesse spécifique sur des échantillons de mêmes tailles. Par exemple à l'échelle de 2 parcelles, on peut observer que les Forêts Matures (FM) ont une plus grande richesse spécifiques (41 espèces) que les quatre autres catégories (36, 28, 22 et 18 espèces). De plus, il y a désormais une légère évidence que les Forêts marécageuses (FMa) ont une richesse spécifiques plus importante (22 espèces) que les Cacaoyères (18 espèces) bien que le nombre total d'espèces qui avaient été observé plus haut était élevé.   
+
+```{r Usage de la courbe d'accumulation des espèces pour la comparaison de la richesse spécifiques à travers les différentes catégories }
+Accum2_Ndiki=accumcomp(Ndiki_spec,y=Ndiki.Env,factor = "Management_type",methode="exact",conditioned = FALSE,plotit = FALSE)
+ accum.long2=accumcomp.long(Accum2_Ndiki,ci=NA,label.freq = 1) 
+theme_set(theme_classic())
+library(ggsci)
+plotgg2=ggplot(data = accum.long2,aes(x=Sites,y=Richness,ymax=UPR,ymin=LWR))+geom_line(aes(color=Grouping),size=2)+geom_point(data = subset(accum.long2,labelit==TRUE),aes(color=Grouping,shape=Grouping),size=5)+geom_ribbon(aes(color=Grouping,fill=after_scale(alpha(colour,alpha = 0.3))),show.legend=FALSE)+scale_colour_npg()+labs(x="Sites",y="Richesse spécifiques",color="Types d'Utilisation\ndes Terres",shape="Types d'Utilisation\ndes Terres")
+plotgg2
+```
+
+Pour déterminer toutes les espèces qui pourraient être identifiées dans l'ensemble de la zone d'étude, l'on a fait des extrapolations à partir de la courbe d'accumulation des espèces jusqu'atteindre le point de l'axe des abcisses correspondant à la totalité de la zone d'étude. Certaines prédictions du nombre total des espèces de la zone d'étude ont été faites à partir des formules de Chao, bootstrap et Jackknife du premier et du second ordre. Ces estimations nous ont révélé que le nombre total des espèces dans l'ensemble de zone d'étude varit entre 168 et 206, suggérant ainsi que l'échantillonnage choisi en amont aurait capturé près de 75% des espèces de la zone d'étude. 
+
+```{r Estimation du nombre total d'espèces dans l'ensemble de la zone d'étude}
+Diversity.4<-diversityresult(Ndiki_spec,index = "jack1",method = "pooled")
+Diversity.5<-diversityresult(Ndiki_spec,index = "jack2",method = "pooled")
+Diversity.6<-diversityresult(Ndiki_spec,index = "chao",method = "pooled")
+Diversity.7<-diversityresult(Ndiki_spec,index = "boot",method = "pooled")
+library(tidyverse)
+Diversity.8=bind_cols(Diversity.4,Diversity.5,Diversity.6,Diversity.7) 
+round(Diversity.8,2)%>% kbl(caption = "Table 3:Nombre total des espèces dans l'ensemble de la zone d'étude") %>% kable_classic(full_width=F,html_font = "cambria")
+```
+
+La construction de la courbe d'abondance a permis d'analyser la structure de la diversité. Après avoir calculé le nombre total d'individus par catégories (espèces ou familles) et les ranger suivant un ordre décroissant,la courbe d'abondance présente un étalement suivant l'axe des abcisses indicant ainsi une richesse spécifiques importante. La raideur de la pente de la courbe sur l'une de ses portions indique une faible équitabilité dans la distribution des espèces. *Theobroma cacao* est l'espèce classée en première position en terme d'abondance (165 individus enregistrés).
+
+```{r Calcul et construction de la courbe d'abondance}
+Rankabond.1<-rankabundance(Ndiki_spec) 
+head(Rankabond.1,10)%>%kbl(caption = "Table 4: Les 10 plus abondantes espèces de la Forêt Communaale de Ndikiniméki ") %>% kable_classic(full_width=F,html_font = "cambria")
+rankabunplot(Rankabond.1,scale = "abundance",specnames = c(1:3))
+Rankabond.1f<-rankabundance(Ndiki_fami)
+head(Rankabond.1f,5)
+rankabunplot(Rankabond.1f,scale = "abundance",specnames = c(1:3))
+```
+
+
+
+
+Between the 32 sites taking separately, the lowest species richness is 5 and the highest 33 for an global average of 19 species per site whereas 75 % of sites recorded 22.5 species.
 
 You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file. 
 
