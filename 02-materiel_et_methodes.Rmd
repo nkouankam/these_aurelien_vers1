@@ -11,7 +11,7 @@ Les Forêts Communales de Nanga et Boko et Ndikiniméki sont toutes deux située
 Pour atteindre les objectifs fixés, le matériel inscrits dans le tableau 1 a été utilisé.
 
 | Outils                                      | Fonctions                                                                                  |
-|--------------------------|----------------------------------------------|
+|--------------------------|---------------------------------------------|
 | Global Positionning System (GPS)            | enregistrement des coordonnées géographiques des points et des parcelles d'échantillonnage |
 | Boussole                                    | Orientation des layons d'ouverture                                                         |
 | Appareil photo                              | Prise de vues                                                                              |
@@ -42,7 +42,7 @@ La caractérisation et l'évaluation de la biodiversité a nécessité l'établi
 
 Le dispositif d'échantillonnage utilisé dans le cadre de ce travail est un ensemble de placettes proposées par [\\ @Hairiah et al.] (2011) dans le cadre du partenariat ASB (Alternative to Slash and Burn) (FiG.7). En effet, cette méthode préconise l'installation des placettes principales rectangulaires de 2 000 m² (50 m × 40 m) pour l'échantillonnage des ligneux à grands diamètres ($DHP\ge 30 cm$) et des placettes secondaires rectangulaires de 200 m² (5 m × 40 m) pour l'échantillonnage des ligneux à petits diamètres ($5 cm\le DHP < 30 cm$).
 
-[![Placettes d'échantillonnages (Adaptée de Hairiah et al.(2010)).](images/Placettes_echantillonnages.png)](FiG.7)
+[![Placettes d\'échantillonnages (Adaptée de Hairiah et al.(2010)).](images/Placettes_echantillonnages.png)](FiG.7)
 
 Dans chaque parcelle, un inventaire a été réalisé dans le but d'identifier toutes les espèces ligneuses présentes. Les mesures dendrométriques faites étaient la hauteur de l'arbre et le Diamètre à Hauteur de poitrine (DHP). Dans chaque parcelle et sous-parcelle, tous les arbres de diamètre du tronc à hauteur de poitrine (1,30 m du sol et 0,30 m au-dessus des défauts) pour les individus de diamètre supérieurs à 10 cm et à 50 cm du sol pour les individus de diamètre inférieurs à 10 cm ([@Zapfack, 2005; Hairiah et al., 2011]) ont été mesurés en utilisant un dhp-mètre.
 
@@ -78,7 +78,7 @@ La collecte des données d'estimation des stocks de carbone dans les débris lig
 
 La procédure d'échantillonnage s'est faite en délimitant des quadrats (05) de 1 m² (1 m x 1 m) à l'intérieur des placettes d'échantillonnage de 200 m². Ces quadrats ont ensuite été rasés de toute végétation herbeuse (FiG.11a). Les tiges d'herbes et d'arbustes ont été débarrassées de leur feuillage et stockés séparément à l'intérieur des sachets plastiques. Ces échantillons ont été pesés sur place pour déterminer le Poids frais (Pf) en forêt (gramme/m²). Des échantillons composites de 500 grammes ont été constitués séparément pour les feuilles et pour les tiges à partir de la mixture de tous les différents groupes d'échantillons prélevés dans chaque quadrat. Au total, deux échantillons composites (feuilles et tiges) de 500 g chacun par placette d'échantillonnage de 200 m² seront constitués.
 
-[![collecte d'échantillons d'herbacées et litière](images/herbacees_et_litiere.png)](FiG.11)
+[![collecte d\'échantillons d\'herbacées et litière](images/herbacees_et_litiere.png)](FiG.11)
 
 Les échantillons de litière grossière (toutes nécromasses ligneuses de diamètre inférieur à 5 cm et d'une longueur inférieure à 50 cm), les matières végétales non décomposées et les résidus des récoltes, et toutes les matières végétales non décomposées seront ramassées à l'intérieur des quadrats de 1 m² et stockées à l'intérieur des sachets plastiques (FiG.11b). Ces échantillons ont également été pesés pour déterminer le Poids frais (Pf) en forêt (gramme/m²). Un échantillon composite de 500 grammes y était prélevé après la mixture des échantillons de litière provenant des cinq quadrats de 1 m² chacun. Ces échantillons composites ont été transportés à l'étuve pour être séchés pendant 72 heures à une température de 85°C pour les tiges et 65°C pour les feuilles et la litière. Les mesures du poids sec (Ps) ont suivi après séchage des échantillons à l'étuve.
 
@@ -86,7 +86,7 @@ Les échantillons de litière grossière (toutes nécromasses ligneuses de diam�
 
 La procédure d'échantillonnage s'est faite premièrement en délimitant un sous-quadrat de 0,25 m² (0,5 m × 0,5 m) dans tous les cinq (05) quadrats de 1 m² à l'intérieur des placettes d'échantillonnage de 200 m² (FiG.12).
 
-[![Sous-quadrat de 0,25 m² pour l'échantillonnage des sols. (Adapté de Hairiah et al., (2011).](images/echantillonnage_des_sols.png)](FiG.12)
+[![Sous-quadrat de 0,25 m² pour l\'échantillonnage des sols. (Adapté de Hairiah et al., (2011).](images/echantillonnage_des_sols.png)](FiG.12)
 
 Après la mise en place,les couches de litière organique du sol ont été préalablement raclées puis les échantillons de sol prélevés à des profondeurs de 0 à 10 cm, 10 à 20 cm et 20 à 30 cm. Les échantillons de sols en provenance de chaque quadrat ont été mixés entre eux à l'intérieur de petits seaux tout en respectant la profondeur de prélèvement (FiG.12a). De la mixture obtenue, un échantillon composite de 500 grammes a été prélevé (FiG.12b). Il en ressort 3 échantillons composites pour les 3 profils de sol par placette de 200 m2, lesquels échantillons ont été envoyés au laboratoire d'analyse des sols de l'IITA (Institut Iternational d'Agriculture Tropical) pour la détermination du pourcentage de carbone organique par digestion chromique acide et analyse spectro-photométrique d'après la méthode décrite par Heanes (1984).
 
@@ -156,7 +156,13 @@ les courbes cumulées des espèces permettent de suivre l'évolution de la riche
 
 ###### Arbre de regression multivarié
 
-C'est une méthode d'analyse proposée par [  @De'Ath] (2002) avec pour but de ressortir les correlations entre la distribution des espèces et les types d'utlisation de terre. Elle consiste en une technique statistique qui décrit et prédit les préferences écologiques des espèces par rapport à des groupes prédéfinis. Le résultat de l'analyse est un arbre dont les "feuilles"(regroupement de parcelles) sont des ensembles formés par des découpages successifs des données, chaque découpage étant définit par une valeur seuil ou variable explicative basée sur des paramètres environnementaux. par rapport à la multitude de potentiels solutions que présente l'algorithme, seules les prédictions les plus précises sont selectionnées.
+C'est une méthode d'analyse proposée par [\ @De'Ath] (2002) avec pour but de ressortir les correlations entre la distribution des espèces et les types d'utlisation de terre. Elle consiste en une technique statistique qui décrit et prédit les préferences écologiques des espèces par rapport à des groupes prédéfinis. Le résultat de l'analyse est un arbre dont les "feuilles"(regroupement de parcelles) sont des ensembles formés par des découpages successifs des données, chaque découpage étant définit par une valeur seuil ou variable explicative basée sur des paramètres environnementaux. par rapport à la multitude de potentiels solutions que présente l'algorithme, seules les prédictions les plus précises sont selectionnées.
+
+###### Indices de valeur des espèces ou espèces caractéristiques
+
+Pour mesurer l'association entre plusieurs espèces appartenant à un même groupe de parcelles, on a utilisé l'indicateur de valeur ([@Dufrêne et Legendre, 1997; @De Cáceres et Legendre,2009]). C'est une méthode qui calcule un indice (InVal) entre les espèces et les groupes de parcelles auxquelles elles appartiennent et par la suite recherhe le groupe correspondant au test de permutation. Cet indicateur de valeur est un indice qui est le produit de deux composantes 'A' et 'B'. la composante 'A' est l'abondance moyenne de l'espèce dans le groupe cible comparé à son abondance moyenne  à travers les autres groupes (spécificité). La composante 'B' est la proportion de parcelles des groupes où l'espèce est présente (fidélité) 
+
+ 
 
 #### Estimation de la biomasse
 
@@ -186,14 +192,14 @@ Les valeurs de densité du bois des arbres échantillonnés ont été puisées d
 
 Le tableau ci-contre présente les équations allométriques utilisées pour estimer la biomasse aérienne des palmiers et bananiers.
 
-| Espèces végétales    | Equations allométriques                                                                                                                                                                                                                                                                                                                                            | Sources                 |
-|------------------|-----------------------------------|------------------|
-| Bananiers (Musaceae) | $$                                                                                                                                                                                                                                                                                                                                                                 
-                                                                                                                                                                                                                                                                                                                        ABG=0,0303⨯DHP^{2,1345}                                             
-                                                                                                                                                                                                                                                                                                                        $$                                                                  | Arifin (2001)           |
-| Palmiers (Arecaceae) | $$                                                                                                                                                                                                                                                                                                                                                                 
-                                                                                                                                                                                                                                                                                                AGB=23,487+41,851⨯(lnH^2)                                                                   
-                                                                                                                                                                                                                                                                                                $$                                                                                          | Pearson et Brown (2005) |
+| Espèces végétales    | Equations allométriques                                                                                                                                                                                                                                                                                                                                                                      | Sources                 |
+|-------------------|-----------------------------------|-------------------|
+| Bananiers (Musaceae) | $$                                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                                                ABG=0,0303⨯DHP^{2,1345}                                               
+                                                                                                                                                                                                                                                                                                                                                $$                                                                    | Arifin (2001)           |
+| Palmiers (Arecaceae) | $$                                                                                                                                                                                                                                                                                                                                                                                           
+                                                                                                                                                                                                                                                                                                                        AGB=23,487+41,851⨯(lnH^2)                                                                     
+                                                                                                                                                                                                                                                                                                                        $$                                                                                            | Pearson et Brown (2005) |
 
 : Equations allométriques de quelques espèces végétales arborescentes. AGB = Above Ground Biomass (kg) ; DHP = Diamètre à Hauteur de Poitrine en cm ; H = hauteur du tronc de palmier de sa souche à la base de la partie non visible du tronc
 
@@ -213,13 +219,13 @@ $$Biomasse=\frac{\pi}{4}⨯D^2⨯L⨯\rho\ \ \ \ \ \ \ \ \ \ \ \ Diamètre\  moy
 
 Cette opération s'est appuyé sur la classification des images multibandes correspondantes à nos différentes zones d'intérêts. Le suivi du protocole de classification d'image nous a exigé l'installation des utilitaires et les *plugins* necessaires, sur notre poste de travail notamment Qgis et les Semi automatic Classification Plugins (SCP). Les étapes de ce protocole ont été les suivantes (FiG.13):
 
--    l'enregistrement des coordonnées géographiques de la zone d'étude ;
--    le téléchargement des scènes Landsat correspondantes; - le prétraitement des images (sélection des images, corrections radiométriques et corrections géométriques) ;
+-   l'enregistrement des coordonnées géographiques de la zone d'étude ;
+-   le téléchargement des scènes Landsat correspondantes; - le prétraitement des images (sélection des images, corrections radiométriques et corrections géométriques) ;
 -   l'analyse des images par des approches et méthodes appropriées ;
 -   faire la classification proprement dite des images à partir des algorithmes;
 -   faire le post-traitement des images à partir des données collectées sur le terrain et valider la carte finale.
 
-[![Protocole de classification d\'image](images/protocole_classification_image.png){width="546"}](FiG.13)
+[![Protocole de classification d'image](images/protocole_classification_image.png){width="546"}](FiG.13)
 
 La classification est un procédé qui attribue à chaque pixel issu de plusieurs bandes d'images une certaine classe ou thème selon les caractéristiques statistiques (valeur Minimale, valeur Maximale, valeur Moyenne et déviation standard) de la valeur de l'intensité du pixel. Elle vise à créer une corrélation entre les données recueillies sur le terrain (classes d'informations) et le traitement numérique des images à une échelle plus grande (classes spectrales). Il existe plusieurs approches de classification d'image : l'approche basée sur les pixels (chaque pixel de l'image est analysé de manière individuelle selon l'information spectrale qu'il contient et rattaché à la classe correspondante), elle est utile pour analyser les multiples changements dans un espace pendant une période réduite ; l'approche par objet (les pixels mitoyens ayant les mêmes propriétés ou presque (spectrale, spatiale et/ou temporelle) sont regroupés en régions appelées objets ou segments), elle est très usitée pour les images de grande résolution. Deux principales méthodes de classification sont généralement utilisées : la classification supervisée et la classification non supervisée. La classification supervisée s'appuie sur les connaissances de l'analyste, sa familiarité avec les régions géographiques et les types de surfaces présentes dans l'image, pour identifier des échantillons assez homogènes de l'image, représentatifs des types d'occupation de sol (classes d'informations) (FiG.13). Ces échantillons constituent un ensemble de données test ou zones de calibrage. Les informations numériques issues des bandes et de chaque pixel de ces zones, sont utilisées par l'ordinateur à travers des algorithmes pour reconnaitre des régions aux caractéristiques similaires sur toute l'étendue de l'image. Les algorithmes utilisés pour ces opérations sont principalement (Anonyme e, 2019):
 
@@ -229,11 +235,11 @@ La classification est un procédé qui attribue à chaque pixel issu de plusieur
 -   Arbre de décision : algorithme reposant sur une succession de tests binaires débouchant à la construction d'un arbre de décision visant à créer des régions de plus en plus homogènes ;
 -   Random Forest : amélioration de l'arbre de décisions qui combine différentes classifications de la même donnée pour générer une classification encore plus précise.
 
-[![Principales étapes d\'une classification supervisée](images/etapes_classification_supervisee.png)](FiG.13)
+[![Principales étapes d'une classification supervisée](images/etapes_classification_supervisee.png)](FiG.13)
 
 La classification non supervisée s'appuie uniquement sur l'information numérique des données pour regrouper les pixels en classes d'éléments identiques (classes spectrales) (Fig.14). Par la suite, l'analyste, lorsque cela s'avère satisfaisant, peut associer ces classes à des catégories d'informations. Des algorithmes sont utilisés pour isoler des groupes statistiques naturels ou structures de données. Généralement, deux algorithmes sont utilisés :
 
 -   K-Means : algorithme qui, à partir des classes localisées aléatoirement, exécute une répétition de regroupement de pixels selon la moyenne la plus proche jusqu'à atteindre une constance entre les itérations ;
 -   et ISODATA : affinement du K-Means qui permet de réorganiser la taille des classes en s'appuyant sur un seuil prédéfini.
 
-[![Principales étapes d'une classifcation non supervisée](images/etapes_classification_non_supervisee.png)](FiG.14)
+[![Principales étapes d\'une classifcation non supervisée](images/etapes_classification_non_supervisee.png)](FiG.14) 
