@@ -2,7 +2,7 @@
 
 ## Résultats
 
-### Caractérisation de la diversité floristique de la forêt communale de Ndikiniméki
+### Caractérisation de la diversité floristique des forêts communales de Ndikiniméki et Nanga-Eboko
 
 ```{r parametrage des données sur les espèces}
 spa_Ndiki<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_coord_modif.csv",check.names = FALSE)
@@ -35,70 +35,130 @@ sites.rows_Ndiki<-as.character(Ndiki_categori[,1])
 sites.rows<-as.character(Nanga_categori[,1])
 Ndiki.Env<-Ndiki_categori[,2:5]
 Nanga.Env<-Nanga_categori[,2:5]
-rownames(Ndiki_spec)<-rownames(Ndiki.Env)					
+rownames(Ndiki_spec)<-rownames(Ndiki.Env)				
 rownames(Nanga_spec)<-rownames(Nanga.Env)
-
 ```
 
-Notre étude floristique dans la Forêt Communale de Ndikiniméki a couvert un ensemble de 32 parcelles d'inventaires reparties sur 05 catégories d'utilisation des terres (TUT): 
-\- les Forêts Matures (FM);
-\- les Forêts Secondaires (FS);
-\- les Forêts Marécageuses (FMa);
-\- les Cacaoyères (CAC);
-\- et les Jachères (JA).
+```{r Parametrage des données de biomasse}
+Ndiki_sup30<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_sup30.csv",check.names = FALSE)
+Nanga_sup30<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_sup30.csv",check.names = FALSE)
+Ndiki_inf30<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_inf30.csv",check.names = FALSE)
+Nanga_inf30<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_inf30.csv",check.names = FALSE)
+Ndiki_BM<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_boisM.csv",check.names = FALSE)
+Nanga_BM<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_boisM.csv",check.names = FALSE)
+Ndiki_Herb<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_herb.csv",check.names = FALSE)
+Nanga_Herb<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_herb.csv",check.names = FALSE)
+Ndiki_Lit<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_litiere.csv",check.names = FALSE)
+Nanga_Lit<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_litiere.csv",check.names = FALSE)
+Ndiki_Sol<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Ndiki_data/Ndiki_sol.csv",check.names = FALSE)
+Nanga_Sol<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_sol.csv",check.names = FALSE)
+```
 
-```{r Nomenclature des parcelles étudiés}
+Dans la Forêt Communale de Ndikiniméki notre étude floristique  a couvert un ensemble de 32 parcelles d'inventaires reparties sur 05 catégories  d'utilisation des terres (TUT):
+\- 13 parcelles de Forêts Matures (FM);
+\- 07 parcelles de Forêts Secondaires (FS);
+\- 02 parcelles de Forêts Marécageuses (FMa);
+\- 08 parcelles de Cacaoyères (CAC);
+\- et 02 parcelles de Jachères (JA).
+Dans la FC de Nanga-Eboko l'étude floristique a couvert 23 parcelles au t
+\- et 02 parcelles de cultures (CUL).otal reparties en 06 catégories d'utlisation des terres:
+\- 07 parcelles de Forêts Secondaires Adultes (FSA);
+\- 04 parcelles de Forêts Secondaires Jeunes (FSJ);
+\- 04 parcelles de Marécages (MAR);
+\- 03 parcelles de Forêts Galeries (FGA);
+\- 03 parcelles de Savanes (SAV);
+
+```{r Nomenclature des parcelles étudiées dans FC de Ndikinimeki}
 rownames(Ndiki_spec)
 ```
 
-```{r identification des catégories de Types d'Utilisation des Terre}
+```{r Nomenclature des parcelles étudiées dans FC de Nanga-Eboko}
+row.names(Nanga_spec)
+```
+
+```{r identification des catégories de Types d'Utilisation des Terre dans la FC de Ndikinimeki}
 library(prettyR)
 describe(Ndiki.Env$TUT)
 ```
 
-Au total 148 espèces appartenant à 43 familles ont été identifiées.
+```{r identification des catégories de Types d'Utilisation des Terre dans FC de Nanga-Eboko}
+describe(Nanga.Env$TUT)
+```
 
-```{r identification des individus enregistrées }
-# Nom des espèces
+Dans la FC de Ndikinimeki l'on a identifié 148 espèces appartenant à 43 familles, tandis que dans la FC de Nanga-Eboko 122 espèces rattachées à 39 familles ont été enregistrées.
+
+```{r identification des individus enregistrées dans la FC de Ndikinimeki}
+# Noms des espèces identifiées à Ndikinimeki
 colnames(Ndiki_spec)
-# Nom des familles
+```
+
+```{r identification des individus enregistrées dans la FC de Nanga-Eboko}
+# Noms des espèces identifiées à Nanga-Eboko
+colnames(Nanga_spec)
+```
+
+```{r Identification des familles dans la FC de Ndikinimeki}
+# Nom des familles enregistrées à Ndikinimeki
 colnames(Ndiki_fami)
 ```
 
-Aucune espèce n'a été présente de manière permanente dans les 32  parcelles d'inventaires.Le nombre d'absence ou valeur d'abondance nulle s'élève à 4128 soit 87% des données de la matrice d'inventaire. La valeur  maximale d'abondance a été enregistrée dans une parcelle où une espèce a été observée 29 fois de suite.
-
-```{r dénombrement des classes d'abondance }
-(ab<-table(unlist(Ndiki_spec)))
+```{r Identification des familles dans la FC de Nanga-Eboko}
+# Noms des familles identifiées à Nanga-Eboko
+colnames(Nanga_fami)
 ```
 
+Soit $X_i$ le nombre d'individus de *i*th espèces observées dans l'échantillon, i=1,2,...,n; $X_i$ est considéré comme la fréquence des espèces de l'échantillon. Soit $f_k$ le nombre d'espèces représentées
+exactement par k individus dans l'échantillon, k=0,1,...,N; $f_k$ est considéré comme la fréquence d'abondance observée. $f_1=390\ et\ f_1=189$ est le nombre d'espèces représentées exactement par 1 individu (singletons) dans une parcelle  unique parmi celles inventoriées respectivement pour les FC de Ndikinikimeki et Nanga-Eboko. $f_2=93\ et\ f_2=57$ est le nombre d'espèces représentées par 2 individus (doublons) dans l'échantillon d'inventaire respectivement pour les FC de Ndikinimeki et Nanga-Eboko. Pour la FC de Ndikinimeki le nombre d'observation de présence est de 608 tandis que la fréquence non-observable $f_0=4128$ dénote le nombre d'espèces présentes  dans l'assemblage des individus mais non observées dans l'échantillon d'inventaire. Elle représente près de 87% des données de la matrice d'inventaire et la valeur maximale d'abondance a été enregistrée dans une parcelle où une espèce a été observée 29 fois de suite. Pour la FC de Nanga-Eboko la fréquence non-observable est 2473 tandis que la valeur maximale d'abondance est de 25.
 
-```{r Histogramme des effectifs de classes de toutes les espèces}
-barplot(ab,las=1,xlab = "Classes d'abondance",ylab = "Fréquences",col = gray(5:0/5))
+```{r dénombrement des classes d'abondance dans la FC de Ndikinimeki }
+(ab_Ndiki<-table(unlist(Ndiki_spec)))
 ```
 
-Une projection des données GPS recueillies sur le terrain permet de confirmer la localisation des parcelles d'inventaires par rapport à la situation géographiaque de la Forêt Communale de Ndikiniméki.
+```{r dénombrement des classes d'abondance dans la FC de Nanga-Eboko}
+(ab_Nanga<-table(unlist(Nanga_spec)))
+```
+
+```{r Histogramme des effectifs des classes d'abondance de toutes les espèces}
+par(mfrow=c(1,2))
+barplot(ab_Ndiki,las=1,xlab = "Classes d'abondance",ylab = "Fréquences",col = gray(5:0/5),main = "FC Ndikinimeki")
+barplot(ab_Nanga,las=1,xlab = "Classes d'abondance",ylab = "Fréquences",col = gray(5:0/5),main = "FC Nanga-Eboko")
+```
+
+Une projection des données GPS recueillies sur le terrain permet de confirmer la localisation des parcelles d'inventaires par rapport à la
+situation géographique des deux Forêts Communales.
 
 ```{r Coordonnées géographiques des parcelles}
-plot.default(spa_Ndiki,asp = 1,type = "p",main = "Localisation des sites",xlab = "Longitude",ylab = "Latitude")
-library(sf)
-my_sf=st_as_sf(spa_Ndiki,coords = c("Longitude","Latitude")) 
-#plot my_sf# 
-library(ggplot2)
-theme_set(theme_bw()) 
-ggplot(my_sf)+geom_sf(aes(fill=Ndiki.Env$TUT))+geom_sf_label(aes(label=Ndiki.Env$TUT))+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FM","FS","FMa","JA","CAC"),labels=c("FM:Forêt Mature","FS:Forêt Secondaire","FMa:Forêt Marécageuse","JA:Jachère","CAC:Cacaoyère"))+labs(x="Longitude",y="Latitude")
+par(mfrow=c(1,2))
+plot.default(spa_Ndiki,asp = 1,type = "p",main = "Localisation sites Ndikinimeki",xlab = "Longitude",ylab = "Latitude")
+plot.default(spa_Nanga,asp = 1,type = "p",main = "Localisation sites Nanga-Eboko",xlab = "Longitude",ylab = "Latitude")
 ```
 
-```{r Nombres d'occurences}
+```{r Localisation des Types d'occupation des sols}
+library(sf)
+my_sf_Ndiki=st_as_sf(spa_Ndiki,coords= c("Longitude","Latitude"))
+my_sf_Nanga=st_as_sf(spa_Nanga,coords= c("Longitude","Latitude"))
+#plot my_sf# 
+library(ggplot2)
+theme_set(theme_bw())
+par(mfrow=c(1,2))
+ggplot(my_sf_Ndiki)+geom_sf(aes(fill=Ndiki.Env$TUT))+geom_sf_label(aes(label=Ndiki.Env$TUT))+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FM","FS","FMa","JA","CAC"),labels=c("FM:Forêt Mature","FS:Forêt Secondaire","FMa:Forêt Marécageuse","JA:Jachère","CAC:Cacaoyère"))+labs(x="Longitude",y="Latitude",title = "FC de Ndikinimeki",caption = "Localisation des sites par catégories d'occupation des terres")
+ggplot(my_sf_Nanga)+geom_sf(aes(fill=Nanga.Env$TUT))+geom_sf_label(aes(label=Nanga.Env$TUT))+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FSA","FSJ","MAR","FGA","SAV","CUL"),labels=c("FSA:Forêt Secondaire Adulte","FSJ:Forêt Secondaire Jeune","MAR:Marécages","FGA:Forêts Galeries","SAV:Savanes","CUL:Cultures"))+labs(x="Longitude",y="Latitude",title = "FC de Nanga-Eboko",caption ="Localisation des sites par catégories d'occupation des terres")
+```
+
+```{r Nombres d'occurences des espèces}
 # Déterminer le nombre de sites où chaque espèce est présente
-spe.pres <- apply(Ndiki_spec > 0, 2, sum)
-# Déterminer le percentage fréquences
-spe.relf <- 100 * spe.pres/nrow(Ndiki_spec)
+spe.pres_Ndiki <- apply(Ndiki_spec > 0, 2, sum)
+spe.pres_Nanga <- apply(Nanga_spec > 0, 2, sum)
+# Déterminer le pourcentage des fréquences
+spe.relf_Ndiki <- 100 * spe.pres_Ndiki/nrow(Ndiki_spec)
+spe.relf_Nanga <- 100 * spe.pres_Nanga/nrow(Nanga_spec)
 # Arrondir le résultat à 1/10^e près
-round(sort(spe.relf), 1)
+round(sort(spe.relf_Ndiki), 1)
+round(sort(spe.relf_Nanga), 1)
 # Construction des histogrammes
 par(mfrow = c(1,2))
-hist(spe.pres, 
-main = " Occurrences des espèces", 
+hist(spe.pres_Ndiki, 
+main = "FC Ndikinimeki", 
 right = FALSE, 
 las = 1, 
 xlab = "Nombres d'occurrences", 
@@ -106,8 +166,27 @@ ylab = "Nombres d'espèces",
 breaks = seq(0, 30, by = 5),
 col = "bisque"
 )
-hist(spe.relf, 
-main = "Frequences relatives des espèces", 
+hist(spe.pres_Nanga, 
+main = "FC Nanga-Eboko", 
+right = FALSE, 
+las = 1, 
+xlab = "Nombres d'occurrences", 
+ylab = "Nombres d'espèces", 
+breaks = seq(0, 30, by = 5),
+col = "bisque"
+)
+par(mfrow = c(1,2))
+hist(spe.relf_Ndiki, 
+main = "FC Ndikinimeki", 
+right = FALSE, 
+las = 1,
+xlab = "Frequences  d'occurrences (%)", 
+ylab = "Nombres d'espèces",
+breaks = seq(0, 100, by = 10),
+col = "bisque"
+)
+hist(spe.relf_Nanga, 
+main = "FC Nanga-Eboko", 
 right = FALSE, 
 las = 1,
 xlab = "Frequences  d'occurrences (%)", 
@@ -117,80 +196,173 @@ col = "bisque"
 )
 ```
 
-Au regard des histogrammes d'occurences, 3/4 des espèces repertoriées ont une fréquence d'occurence inférieure à 10% et moins de 5 espèces ont une fréquences d'occurence supérieure à 80%.
+En examinant l'allure de la répartition des fréquences d'occurrences des espèces, ordonnées en rang de fréquences croissants, on observe que le nombre d'espèces est inversement proportionnel à la fréquence d'occurrence. Lorsque la fréquence d'occurrence commence à augmenter, le nombre d'espèces diminue. En effet 3/4 des espèces repertoriées ont une fréquence d'occurence inférieure à 10%.
 
 ```{r Richesse specifique}
 # Déterminer le nombre d'espèces par parcelles
-sit.pres <- apply(Ndiki_spec > 0,1,sum)
+sit.pres_Ndiki <- apply(Ndiki_spec > 0,1,sum)
+sit.pres_Nanga <- apply(Nanga_spec > 0,1,sum)
 # Classement des résultats par ordre croissant
-sort(sit.pres)
-plot(sit.pres,type = "s",
+sort(sit.pres_Ndiki)
+sort(sit.pres_Nanga)
+plot(sit.pres_Ndiki,type = "s",
 las = 1, 
 col = "gray",
-main = "Richesses spécifiques\ par parcelles",
+main = "Richesses spécifiques\ par parcelles (FC Ndikinimeki)",
 xlab = "Numéros des parcelles", 
 ylab = "Richesses spécifiques"
 )
-text(sit.pres, row.names(Ndiki_spec), cex = .8, col = "red")
+text(sit.pres_Ndiki, row.names(Ndiki_spec), cex = .8, col = "red")
+plot(sit.pres_Nanga,type = "s",
+las = 1, 
+col = "gray",
+main = "Richesses spécifiques\ par parcelles (FC Ndikinimeki)",
+xlab = "Numéros des parcelles", 
+ylab = "Richesses spécifiques"
+)
+text(sit.pres_Nanga, row.names(Nanga_spec), cex = .8, col = "blue")
 plot.default(spa_Ndiki, 
 asp = 1, 
-main = "Cartographie des richesses spécifiques", 
+main = "Cartographie des richesses spécifiques (FC Ndikinimeki)", 
 pch = 21, 
 col = "white", 
 bg = "brown", 
-cex = 5 * sit.pres / max(sit.pres), 
+cex = 5 * sit.pres_Ndiki / max(sit.pres_Ndiki), 
+xlab = "Longitude", 
+ylab = "Latitude"
+)
+plot.default(spa_Nanga, 
+asp = 1, 
+main = "Cartographie des richesses spécifiques (FC Nanga-Eboko)", 
+pch = 21, 
+col = "white", 
+bg = "green", 
+cex = 5 * sit.pres_Nanga / max(sit.pres_Nanga), 
 xlab = "Longitude", 
 ylab = "Latitude"
 )
 ```
 
-Parmi les 32 parcelles prises séparément, la richesse spécifique observée la plus faible a été retrouvée dans la parcelle (P26) avec 05 espèces enregitrées tandis que la plus élévée est de 33 espèces et se situe dans la parcelle (P31).75% des parcelles inventoriées comptent 22 espèces et la moyenne se situe autour de 19 espèces dans l'ensemble.
+Parmi les 32 parcelles prises séparément dans la FC de Ndikinimeki, la richesse spécifique observée la plus faible a été retrouvée dans la parcelle (P19) avec 05 espèces enregitrées tandis que la plus élévée est de 33 espèces et se situe dans la parcelle (P25).75% des parcelles inventoriées comptent 22 espèces et la moyenne se situe autour de 19 espèces dans l'ensemble. Dans la FC de Nanga-Eboko, la richesse spécifique observée la plus faible a été enregistrée dans la parcelle (P3) avec 1 seule espèce tandis que la richesse spécifique maximale a été relevée dans la parcelle (P11) avec 32 espèces.
 
-```{r Analyse du nombre d'espèces observées dans la FC de Ndiki }
-# nombre d'espèces dans FC de Ndiki
+```{r Analyse du nombre d'espèces observées dans la FC de Ndikinimeki}
+# nombre d'espèces dans FC de Ndikinimeki
 library(vegan)
 (Ndiki.nbsp<-specnumber(Ndiki_spec))
-# Sites avec minimum et maximum de richesse spécifique observée
+```
+
+```{r Site avec le Max de richesse observées dans la FC de Ndikinimeki}
 Ndiki.nbsp[Ndiki.nbsp==min(Ndiki.nbsp)]
+```
+
+```{r Site avec le Min de richesse observées dans la FC de Ndikinimeki}
 Ndiki.nbsp[Ndiki.nbsp==max(Ndiki.nbsp)]
+```
+
+```{r Classement des effectifs de richesses spécifiques dans la FC de Ndikinimeki}
 range(Ndiki.nbsp)
 ```
 
-```{r analyse de l'abondance dans la FC de Ndiki}
-# Abondance totale des individus dans la FC de Ndiki
-(Ndiki.abund<-rowSums(Ndiki_spec))
-range(Ndiki.abund)
-# Abondance dans le site ayant la plus petite richesse spécifique observée
-Ndiki.abund[Ndiki.nbsp==min(Ndiki.nbsp)]
-# Abondance dans le site ayant la plus grande richesse spécifique observée
-Ndiki.abund[Ndiki.nbsp==max(Ndiki.nbsp)]
-# Nombre d'espèces dans le site ayant la plus petite abondance
-Ndiki.nbsp[Ndiki.abund==min(Ndiki.abund)]
-# Nombre d'espèces dans le site ayant la plus grande abondance
-Ndiki.nbsp[Ndiki.abund==max(Ndiki.abund)]
+```{r Analyse du nombre d'espèces observées dans la FC de Nanga-Eboko }
+# nombre d'espèces dans FC de Nanga-Eboko
+(Nanga.nbsp<-specnumber(Nanga_spec))
 ```
 
-Nous observons que la parcelle (P4) avec l'effectif le plus reduit (27 individus)présente une richesse spécifiques de 14 espèces tandis que la parcelle (P26) avec un effectif presque équivalent (34 individus)  présente la richesse spécifiques observée la plus faible (5 espèces). La parcelle (P9) est celle présentant la plus forte abondance (61 espèces) avec une richesse spécifiques observée de 31 espèces. 
+```{r Site avec le Max de richesse observées dans la FC de Nanga-Eboko }
+Nanga.nbsp[Nanga.nbsp==max(Nanga.nbsp)]
+```
 
-```{r Analyse de la rarefaction dans la FC de Ndiki}
-# Rarefaction au 3^ème quartile
+```{r Site avec le Min de richesse observées dans la FC de Nanga-Eboko }
+Nanga.nbsp[Nanga.nbsp==min(Nanga.nbsp)]
+```
+
+```{r Classement des effectifs de richesses spécifiques dans la FC de Nanga-Eboko }
+range(Nanga.nbsp)
+```
+
+```{r Abondance totale des individus dans la FC de Ndikinimeki}
+(Ndiki.abund<-rowSums(Ndiki_spec))
+sum(Ndiki.abund)
+range(Ndiki.abund)
+```
+
+```{r Abondance dans le site ayant la plus petite richesse spécifique observée dans la FC de Ndikinimeki}
+Ndiki.abund[Ndiki.nbsp==min(Ndiki.nbsp)]
+```
+
+```{r Abondance dans le site ayant la plus grande richesse spécifique observée dans la FC de Ndikinimeki}
+Ndiki.abund[Ndiki.nbsp==max(Ndiki.nbsp)]
+```
+
+```{r Abondance totale des individus dans la FC de Nanga-Eboko}
+(Nanga.abund<-rowSums(Nanga_spec))
+sum(Nanga.abund)
+range(Nanga.abund)
+```
+
+```{r Abondance dans le site ayant la plus petite richesse spécifique observée dans la FC de Nanga-Eboko}
+Nanga.abund[Nanga.nbsp==min(Nanga.nbsp)]
+```
+
+```{r Abondance dans le site ayant la plus grande richesse spécifique observée dans la FC de Nanga-Eboko}
+Nanga.abund[Nanga.nbsp==max(Nanga.nbsp)]
+```
+
+Nous observons que sur les 1348 individus constituant l'échantillon dans la FC de Ndikinimeki, la parcelle (P27) a l'effectif le plus reduit (27 individus) et présente une richesse spécifiques de 14 espèces tandis que la parcelle (P19) avec un effectif presque équivalent (34 individus) présente la richesse spécifiques observée la plus faible (5 espèces). La parcelle (P32) est celle présentant la plus forte abondance (61 espèces) avec une richesse spécifiques observée de 31 espèces. Dans la FC de Nanga-Eboko avec les 843 individus constituant l'échantillon, c'est la parcelle (P3) avec l'effectif le plus réduit (01 individu) qui a enregistrée la richesse spécifique la plus faible (01 espèce). De même la parcelle présentant l'abondance la plus importante (P11) a une richesse spécifique de 47 espèces. 
+
+```{r Analyse de la rarefaction au 3^ème quartile dans la FC de Ndiki}
 summary(Ndiki.abund)
 Ndiki.rare47<-rarefy(Ndiki_spec,sample = 47)
-# Comparaison du classement des sites selon l'abondance observée et la rarefaction
-sort(Ndiki.nbsp)
-sort(round(Ndiki.rare47))
-# Sites ayant le minimum et le maximum de richesses spécifiques estimées
-Ndiki.rare47[Ndiki.rare47==min(Ndiki.rare47)]
-Ndiki.rare47[Ndiki.rare47==max(Ndiki.rare47)]
-# Site prédit ayant la plus petite richesse spécifique
-P26=Ndiki_spec[which(Ndiki.rare47==min(Ndiki.rare47)),]
-# Site prédit ayant la plus grande richesse spécifique
-P28=Ndiki_spec[which(Ndiki.rare47==max(Ndiki.rare47)),]
 ```
 
-Après avoir standardisé les parcelles à un effectif de 47 individus, on constate que le classement des sites par rapport à la richesse spécifiques a été modifié. Une estimation du nombre d'espèces montre que la parcelle (P26) demeure la plus pauvre en terme de richesse spécifiques observées (5 espèces), la plus riche est la parcelle (P28) avec 32 espèces observées.
 
-```{r Calcul des indices de diversité}
+```{r Comparaison du classement des sites selon l'abondance observée et la rarefaction dans la FC de Ndikinimeki}
+sort(Ndiki.nbsp)
+sort(round(Ndiki.rare47))
+```
+
+```{r Sites ayant le minimum et le maximum de richesses spécifiques estimées dans la FC de Ndikinimeki}
+Ndiki.rare47[Ndiki.rare47==min(Ndiki.rare47)]
+Ndiki.rare47[Ndiki.rare47==max(Ndiki.rare47)]
+```
+
+
+```{r Site prédit ayant la plus petite richesse spécifique dans la FC de Ndikinimeki}
+P_19=Ndiki_spec[which(Ndiki.rare47==min(Ndiki.rare47)),]
+```
+
+
+```{r Site prédit ayant la plus grande richesse spécifique dans la FC de Ndikinimeki}
+P_21=Ndiki_spec[which(Ndiki.rare47==max(Ndiki.rare47)),]
+```
+
+```{r Analyse de la rarefaction au 3^ème quartile dans la FC de Nanga-Eboko}
+summary(Nanga.abund)
+Nanga.rare48<-rarefy(Nanga_spec,sample = 48)
+```
+
+```{r Comparaison du classement des sites selon l'abondance observée et la rarefaction dans la FC de Nanga-Eboko}
+sort(Nanga.nbsp)
+sort(round(Nanga.rare48))
+```
+
+```{r Sites ayant le minimum et le maximum de richesses spécifiques estimées dans la FC de Nanga-Eboko}
+Nanga.rare48[Nanga.rare48==min(Nanga.rare48)]
+Nanga.rare48[Nanga.rare48==max(Nanga.rare48)]
+```
+
+```{r Site prédit ayant la plus petite richesse spécifique dans la FC de Nanga-Eboko}
+P_3=Nanga_spec[which(Nanga.rare48==min(Nanga.rare48)),]
+```
+
+```{r Site prédit ayant la plus grande richesse spécifique dans la FC de Nanga-Eboko}
+P_11=Nanga_spec[which(Nanga.rare48==max(Nanga.rare48)),]
+```
+
+Après avoir standardisé les unités d'échantillonnages de la FC de Ndikinimeki à un effectif de 47 individus correspondant au nombre d'individus enregistrés dans les 3/4 des parcelles inventoriées, on constate que la richesse spécifiques varie de 5 à 32 espèces respectivement pour l'unité la plus pauvre et l'unité la plus riche. On observe également que l'unité la plus pauvre en terme de richesse spécifiques observées (5 espèces) demeure la parcelle (P19), cependant la plus riche correspond désormais à la parcelle (P21) avec 32 espèces trouvées.
+De même dans la FC de Nanga-Eboko les unités ont été ramenées à un effectif de 48 individus par unité d'échantillonnage. Les résultats obtenus en terme de richesse spécifiques ont été les mêmes que ceux observés dans parcelles pour ce qui concerne le minimum et le maximum de richesse: ce sont respectivement les parcelles (P3) et (P11).
+
+```{r Calcul des indices de diversité dans la FC de Ndikinimeki}
 # Richesses spécifiques
 N0 <- rowSums(Ndiki_spec > 0) 
 # # Richesses spécifiques (alterné) 
@@ -213,81 +385,257 @@ J <- H / log(N0)
 E10 <- N1 / N0
 # équitabilité de Simpson (ratio de Hill)
  E20 <- N2 / N0
- div <- data.frame(N0, H, Hb2, N1, N1b2, N2, E10, E20, J)
-div.pearson<-cor(div)
-round(div.pearson,2)
+div_nd <- data.frame(N0, H, Hb2, N1, N1b2, N2, E10, E20, J)
+div.pearson_nd <- cor(div_nd)
+round(div.pearson_nd,2)
+# Reclassement des variables en vue de la représentation graphique
 library(gclus)
-env.O=order.single(div.pearson)
+div.o_nd <- order.single(div.pearson_nd)
 library(PerformanceAnalytics)
-chart.Correlation(div.pearson[,env.O],histogram = TRUE,pch=19)
+chart.Correlation(div.pearson_nd[,div.o_nd],histogram = TRUE,pch=19)
+library(ggplot2)
+library(GGally)
+ggpairs(div.pearson_nd[,div.o_nd])+theme_bw()
 ```
 
-Si l'on se refère aux résultats du tableau ci-contre, on pourrait conclure que les Forêts Marécageuses (FMa) ont la richesse spécifiques la plus faible puisque les calculs nous disent qu'elles comptent 22 espèces tandis qu'elle est élevée pour les autres catégories d'utilisation des terres (plus d'une centaine d'espèces pour les Forêts Matures). Toujours dans ce même tableau, "n" représente le nombre d'unités d'échantillonnages pour chaque catégorie d'utilisation des terres. En regardant les différences de valeurs attribuées à "n" dans les différentes catégories, on constate que les Forêts marécageuses et les Jachères ont les valeurs les plus faibles. 
+```{r Calcul des indices de diversité dans la FC Nanga-Eboko}
+# Richesses spécifiques
+N0_ng <- rowSums(Nanga_spec > 0) 
+# # Richesses spécifiques (alterné) 
+N0_ng <- specnumber(Nanga_spec)
+# Entropie de Shannon (base e)
+H_ng <- diversity(Nanga_spec)
+# Entropie de Shannon (base 2)
+Hb2_ng <- diversity(Nanga_spec, base = 2)
+# Diversité de Shannon (base e)
+N1_ng <- exp(H_ng)
+#(espèces abondantes)
+# Diversité de Shannon (base 2)
+N1b2_ng <- 2^Hb2_ng
+# Diversité de Simpson
+N2_ng <- diversity(Nanga_spec, "inv")
+# (espèces dominantes)
+# équitabilité de Pielou 
+J_ng <- H_ng / log(N0_ng)
+# équitabilité de Shannon (ratio de Hill)
+E10_ng <- N1_ng / N0_ng
+# équitabilité de Simpson (ratio de Hill)
+ E20_ng <- N2_ng / N0_ng
+div_ng <- data.frame(N0_ng, H_ng, Hb2_ng, N1_ng, N1b2_ng, N2_ng, E10_ng, E20_ng, J_ng)
+div.pearson_ng <- cor(div_ng[,-9])
+round(div.pearson_ng,2)
+# Reclassement des variables en vue de la représentation graphique
+library(gclus)
+div.o_ng <- order.single(div.pearson_ng)
+library(PerformanceAnalytics)
+chart.Correlation(div.pearson_ng[,div.o_ng],histogram = TRUE,pch=19)
+library(ggplot2)
+library(GGally)
+ggpairs(div.pearson_ng[,div.o_ng])+theme_bw()
+```
 
-```{r Comparaison de la richesse spécifique observée entre les differents Types d'Utilisation des Terres}
+
+Si l'on se refère aux résultats du tableau ci-contre, on pourrait conclure que les Forêts Marécageuses (FMa) ont la richesse spécifiques
+la plus faible puisque les calculs nous disent qu'elles comptent 22 espèces tandis qu'elle est élevée pour les autres catégories d'utilisation des terres (plus d'une centaine d'espèces pour les Forêts Matures). Toujours dans ce même tableau, "n" représente le nombre d'unités d'échantillonnages pour chaque catégorie d'utilisation des terres. En regardant les différences de valeurs attribuées à "n" dans
+les différentes catégories, on constate que les Forêts marécageuses et les Jachères ont les valeurs les plus faibles.
+
+```{r Comparaison de la richesse spécifique observée entre les differents Types d'Utilisation des Terres dans la FC de Ndikinimeki}
+library(BiodiversityR)
 Ndiki.Env$Management_type<- factor(Ndiki.Env$TUT)
-Diversity.3<- diversitycomp(Ndiki_spec,y=Ndiki.Env,factor1 = "Management_type",index = "richness",method = "pooled")
+Diversity.3_nd<- diversitycomp(Ndiki_spec,y=Ndiki.Env,factor1 = "Management_type",index = "richness",method = "pooled")
 library(kableExtra)
-Diversity.3 %>% kbl(caption = "Table: Richesse spécifiques observées des differentes catégories d'utilisation des terres") %>% kable_classic(full_width=F,html_font = "cambria")
+Diversity.3_nd %>% kbl(caption = "Table 2: Richesse spécifiques observées des differentes catégories d'utilisation des terres dans la FC de Ndikinimeki") %>% kable_classic(full_width=F,html_font = "cambria")
 ```
 
-Etant donné que la richesse spécifique est dépendante de la taille de l'échantillon, il n'est pas aisé de comparer la richesse spécifiques entre des catégories d'occupation des terres de tailles différentes. Ces différences pouvant être liées soit à la taille des échantillons ou à la différence de richesse spécifiques entre les catégories. Il faut également noter que la somme des espèces lorsque plus d'un site sont combinés n'est pas toujours égale à la somme des espèces de cette combinaison. Ceci ne peut être possible que si les sites combinés partagent le même nombre d'espèces. Ainsi, pour déterminer le nombre d'espèces dans des combinaisons de sites on a calculé la moyenne cumulée de la richesse spécifiques des différentes combinaison de sites. A cause du fait qu'il n'existe pas une valeur unique pour la richesse spécifiques d'un site, nous avons calculé la valeur moyenne. La richesse spécifiques moyenne pour un site est de 19. La courbe des espèces cumulées a permis de calculer la richesse spécifiques moyenne pour une large combinaison de sites en considérant la présence et non l'éffectif des espèces. Le résultat nous a montré que la richesse spécifiques moyenne croît rapidement avec le nombre de sites combinées mais lorsque la somme des sites combinés atteint un certain seuil ce taux d'accroissement devient faible. La richesse spécifique moyenne pour toutes les combinaisons possibles de 23 sites est de 133,66 tandis que pour une combinaison de 25 sites elle est de 137,55. "sd" indique l'écart type observé lorsque par chance certaines combinaisons de sites présentent un nombre élevé d'espèces tandis d'autres en contiennent un faible nombre. Au regard de la courbe d'accumulation des espèces, l'axe horizontal représente l'ensemble des 32 sites cumulés tandis que l'axe vertical représente l'ensemble des 148 espèces cumulées.
+```{r Comparaison de la richesse spécifique observée entre les differents Types d'Utilisation des Terres dans la FC de Nanga-Eboko}
+Nanga.Env$Management_type<- factor(Nanga.Env$TUT)
+Diversity.3_ng<- diversitycomp(Nanga_spec,y=Nanga.Env,factor1 = "Management_type",index = "richness",method = "pooled")
+Diversity.3_ng %>% kbl(caption = "Table 3: Richesse spécifiques observées des differentes catégories d'utilisation des terres dans la FC de Nanga-Eboko") %>% kable_classic(full_width=F,html_font = "cambria")
+```
 
-```{r Richesse spécifiques moyennes issues de la combinaison des sites dans la FC de Ndiki}
-Accum.1_Ndiki <- accumresult(Ndiki_spec, method="exact") 
+Etant donné que la richesse spécifique est dépendante de la taille de l'échantillon, il n'est pas aisé de comparer la richesse spécifiques entre des catégories d'occupation des terres de tailles différentes. Ces différences pouvant être liées soit à la taille de l'échantillon ou à la différence de richesse spécifiques entre les catégories d'utilisation des terres. Il faut également noter que la somme des espèces lorsque plus d'un site sont combinés n'est pas toujours égale à la somme des espèces de cette combinaison. Ceci ne peut être possible que si les sites combinés partagent le même nombre d'espèces. Ainsi, pour déterminer le nombre d'espèces dans des combinaisons de sites on a calculé la moyenne cumulée de la richesse spécifiques des différentes combinaison de sites. A cause du fait qu'il n'existe pas une valeur unique pour la richesse spécifiques d'un site, nous avons calculé la valeur moyenne. La richesse spécifiques moyenne pour un site est de 19 espèces pour la FC de Ndinimeki et de 14 espèces pour la FC de Nanga-Eboko. La courbe des espèces cumulées a permis de calculer la richesse spécifiques moyenne pour une large combinaison de sites en considérant la présence et non l'éffectif des espèces. Le résultat nous a montré que la richesse spécifiques moyenne croît rapidement avec le nombre de sites combinées mais lorsque la somme des sites combinés atteint un certain seuil ce taux d'accroissement devient faible. Dans la FC de Ndikinimeki par exemple, la richesse spécifique moyenne pour toutes les combinaisons possibles de 23 sites est de 133,66 tandis que
+pour une combinaison de 25 sites elle est de 137,55. "sd" indique dans le tableau indique l'écart type observé lorsque par chance certaines combinaisons de sites présentent un nombre élevé d'espèces tandis d'autres en contiennent un faible nombre. Au regard de la courbe d'accumulation des espèces, l'axe horizontal représente l'ensemble des 32 et 23 sites cumulés respectivement pour les FC de Ndikinimeki et Nanga-Eboko tandis que l'axe vertical représente l'ensemble des 148 et 122 espèces cumulées pour chacune des forêts communautaires.
+
+```{r Richesse spécifiques moyennes issues de la combinaison des sites dans la FC de Ndikinimeki}
+Accum.1_Ndiki <- accumresult(Ndiki_spec, method="exact")
 Accum.1_Ndiki
+```
+
+```{r Richesse spécifiques moyennes issues de la combinaison des sites dans la FC de Nanga-Eboko}
+Accum.1_Nanga <- accumresult(Nanga_spec,method = "exact")
+Accum.1_Nanga
 ```
 
 ```{r  Courbe d'accumulation des espèces de la FC de Ndikinimeki}
 accumplot(Accum.1_Ndiki)
 ```
 
-Il a également été important de rechercher et de comparer le nombre moyen d'espèces par site et selon les différentes catégories d'utilisation des terres afin de resoudre le problème de la taille des échantillons. Pour déterminer si la différence de richesse spécifiques entre les différentes catégories pourraient être liées à la taille des échantillons, on a construit une courbe d'accumulation des espèces pour chaque catégorie d'utilisation des terres et on les a comparer par la suite. Ces courbes présentent la richesse spécifiques moyenne cumulée pour une large combinaison de sites dans chaque catégorie d'utilisation des terres jusqu'à ce que toutes  les combinaisons de tailles possibles d'échantillons soient épuisées. En se reférent à la moyenne cumulée de la richesse spécifiques dans chaque catégorie d'utilisation des terres de la Forêt Communale de Ndikiniméki, il a desormais été possible de comparer la richesse spécifique sur des échantillons de mêmes tailles. Par exemple à l'échelle de 2 parcelles, on peut observer que les Forêts Matures (FM) ont une plus grande richesse spécifiques (41 espèces) que les quatre autres catégories (36, 28, 22 et 18 espèces). De plus, il y a désormais une légère évidence que les Forêts marécageuses (FMa) ont une richesse spécifiques plus importante (22 espèces) que les Cacaoyères (18 espèces) bien que le nombre total d'espèces qui avaient été observé plus haut était élevé.   
 
-```{r Usage de la courbe d'accumulation des espèces pour la comparaison de la richesse spécifiques à travers les différentes catégories }
+```{r  Courbe d'accumulation des espèces de la FC de Nanga-Eboko}
+accumplot(Accum.1_Nanga)
+```
+
+Il a également été important de rechercher et de comparer le nombre moyen d'espèces par site et selon les différentes catégories d'utilisation des terres afin de resoudre le problème de la taille des échantillons. Pour déterminer si la différence de richesse spécifiques entre les différentes catégories pourraient être liées à la taille des échantillons, on a construit une courbe d'accumulation des espèces pour chaque catégorie d'utilisation des terres et on les a comparer par la suite. Ces courbes présentent la richesse spécifiques moyenne cumulée pour une large combinaison de sites dans chaque catégorie d'utilisation des terres jusqu'à ce que toutes les combinaisons de tailles possibles d'échantillons soient épuisées. En se reférent à la moyenne cumulée de la richesse spécifiques dans chaque catégorie d'utilisation des terres
+de la Forêt Communale de Ndikiniméki, il a été possible de comparer la richesse spécifiques sur des échantillons de mêmes tailles. Par exemple à l'échelle de 2 parcelles, on peut observer que les Forêts Matures (FM) ont une plus grande richesse spécifiques (41 espèces) que les quatre autres catégories (36, 28, 22 et 18 espèces). De plus, il y a désormais une légère évidence que les Forêts marécageuses (FMa) ont une richesse spécifiques plus importante (22 espèces) que les Cacaoyères (18 espèces) bien que le nombre total d'espèces qui avaient été observé plus haut était élevé. Par contre dans la FC de Nanga-Eboko, la différence de richesse spécifiques entre les types d'utilisation des terres n'a pas été influencé par la taille de l'échantillon.
+
+```{r Usage de la courbe d'accumulation des espèces pour la comparaison de la richesse spécifiques à travers les différentes catégories dans les FC de Ndikinimeki et Nanga-Eboko}
+par(mfrow=c(1,2))
 Accum2_Ndiki=accumcomp(Ndiki_spec,y=Ndiki.Env,factor = "Management_type",methode="exact",conditioned = FALSE,plotit = FALSE)
- accum.long2=accumcomp.long(Accum2_Ndiki,ci=NA,label.freq = 1) 
+ accum.long_Ndiki=accumcomp.long(Accum2_Ndiki,ci=NA,label.freq = 1) 
 theme_set(theme_classic())
 library(ggsci)
-plotgg2=ggplot(data = accum.long2,aes(x=Sites,y=Richness,ymax=UPR,ymin=LWR))+geom_line(aes(color=Grouping),size=2)+geom_point(data = subset(accum.long2,labelit==TRUE),aes(color=Grouping,shape=Grouping),size=5)+geom_ribbon(aes(color=Grouping,fill=after_scale(alpha(colour,alpha = 0.3))),show.legend=FALSE)+scale_colour_npg()+labs(x="Sites",y="Richesse spécifiques",color="Types d'Utilisation\ndes Terres",shape="Types d'Utilisation\ndes Terres")
-plotgg2
+plotgg_Ndiki=ggplot(data = accum.long_Ndiki,aes(x=Sites,y=Richness,ymax=UPR,ymin=LWR))+geom_line(aes(color=Grouping),size=2)+geom_point(data = subset(accum.long_Ndiki,labelit==TRUE),aes(color=Grouping,shape=Grouping),size=5)+geom_ribbon(aes(color=Grouping,fill=after_scale(alpha(colour,alpha = 0.3))),show.legend=FALSE)+scale_colour_npg()+labs(x="Sites",y="Richesse spécifiques",color="Types d'Utilisation\ndes Terres",shape="Types d'Utilisation\ndes Terres",caption = "FC de Ndikinimeki")
+Accum2_Nanga=accumcomp(Nanga_spec,y=Nanga.Env,factor = "Management_type",methode="exact",conditioned = FALSE,plotit = FALSE)
+ accum.long_Nanga=accumcomp.long(Accum2_Nanga,ci=NA,label.freq = 1) 
+plotgg_Nanga=ggplot(data = accum.long_Nanga, aes(x=Sites,y=Richness,ymax=UPR,ymin=LWR))+geom_line(aes(color=Grouping),size=2)+geom_point(data=subset(accum.long_Nanga,labelit==TRUE),aes(color=Grouping,shape=Grouping),size=6)+geom_ribbon(aes(color=Grouping,fill=after_scale(alpha(colour,alpha = 0.3))),show.legend=FALSE)+scale_colour_npg()+labs(x="Sites",y="Richesse spécifiques",color="Types d'Utilisation\ndes Terres",shape="Types d'Utilisation\ndes Terres",caption = "FC de Nanga-Eboko")
+plotgg_Ndiki
+plotgg_Nanga
 ```
 
-Pour déterminer toutes les espèces qui pourraient être identifiées dans l'ensemble de la zone d'étude, l'on a fait des extrapolations à partir de la courbe d'accumulation des espèces jusqu'atteindre le point de l'axe des abcisses correspondant à la totalité de la zone d'étude. Certaines prédictions du nombre total des espèces de la zone d'étude ont été faites à partir des formules de Chao, bootstrap et Jackknife du premier et du second ordre. Ces estimations nous ont révélé que le nombre total des espèces dans l'ensemble de zone d'étude varit entre 168 et 206, suggérant ainsi que l'échantillonnage choisi en amont aurait capturé près de 75% des espèces de la zone d'étude. 
+Pour déterminer toutes les espèces qui pourraient être identifiées dans l'ensemble de la zone d'étude, l'on a fait des extrapolations à partir de la courbe d'accumulation des espèces jusqu'atteindre le point de l'axe des abcisses correspondant à la totalité de la zone d'étude.
+Certaines prédictions du nombre total des espèces de la zone d'étude ont été faites à partir des formules de Chao, bootstrap et Jackknife du premier et du second ordre. Ces estimations nous ont révélé que le nombre total des espèces dans l'ensemble de zone d'étude de Ndikinimeki varit entre 168 et 206, suggérant ainsi que l'échantillonnage choisi en amont aurait capturé près de 75% des espèces de la zone d'étude. Dans la FC de Nanga-Eboko il varit entre 146 et 226 espèces suggérant une capture inférieure aux 3/4 des espèces potentielles que pourrait contenir la zone d'étude.
 
-```{r Estimation du nombre total d'espèces dans l'ensemble de la zone d'étude}
-Diversity.4<-diversityresult(Ndiki_spec,index = "jack1",method = "pooled")
-Diversity.5<-diversityresult(Ndiki_spec,index = "jack2",method = "pooled")
-Diversity.6<-diversityresult(Ndiki_spec,index = "chao",method = "pooled")
-Diversity.7<-diversityresult(Ndiki_spec,index = "boot",method = "pooled")
+```{r Estimation du nombre total d'espèces dans l'ensemble des zones d'études}
+par(mfrow=c(1,2))
+Diversity.4_Ndiki<-diversityresult(Ndiki_spec,index = "jack1",method = "pooled")
+Diversity.5_Ndiki<-diversityresult(Ndiki_spec,index = "jack2",method = "pooled")
+Diversity.6_Ndiki<-diversityresult(Ndiki_spec,index = "chao",method = "pooled")
+Diversity.7_Ndiki<-diversityresult(Ndiki_spec,index = "boot",method = "pooled")
 library(tidyverse)
-Diversity.8=bind_cols(Diversity.4,Diversity.5,Diversity.6,Diversity.7) 
-round(Diversity.8,2)%>% kbl(caption = "Table 3:Nombre total des espèces dans l'ensemble de la zone d'étude") %>% kable_classic(full_width=F,html_font = "cambria")
+Diversity.8_Ndiki=bind_cols(Diversity.4_Ndiki,Diversity.5_Ndiki,Diversity.6_Ndiki,Diversity.7_Ndiki) 
+round(Diversity.8_Ndiki,2)%>% kbl(caption = "Table 4:Nombre total des espèces dans l'ensemble de la FC de Ndikinimeki") %>% kable_classic(full_width=F,html_font = "cambria")
+Diversity.4_Nanga<-diversityresult(Nanga_spec,index = "jack1",method = "pooled")
+Diversity.5_Nanga<-diversityresult(Nanga_spec,index = "jack2",method = "pooled")
+Diversity.6_Nanga<-diversityresult(Nanga_spec,index = "chao",method = "pooled")
+Diversity.7_Nanga<-diversityresult(Nanga_spec,index = "boot",method = "pooled")
+Diversity.8_Nanga=bind_cols(Diversity.4_Nanga,Diversity.5_Nanga,Diversity.6_Nanga,Diversity.7_Nanga) 
+round(Diversity.8_Nanga,2)%>% kbl(caption = "Table 5:Nombre total des espèces dans l'ensemble de la FC de Nanga-Eboko") %>% kable_classic(full_width=F,html_font = "cambria")
 ```
 
-La construction de la courbe d'abondance a permis d'analyser la structure de la diversité. Après avoir calculé le nombre total d'individus par catégories (espèces ou familles) et les ranger suivant un ordre décroissant,la courbe d'abondance présente un étalement suivant l'axe des abcisses indicant ainsi une richesse spécifiques importante. La raideur de la pente de la courbe sur l'une de ses portions indique une faible équitabilité dans la distribution des espèces. *Theobroma cacao* est l'espèce classée en première position en terme d'abondance (165 individus enregistrés).
+La construction des courbes d'abondance a permis d'analyser la structure de la diversité dans les deux forêts communales. Après avoir calculé le nombre total d'individus par catégories (espèces ou familles) et les ranger suivant un ordre décroissant,les courbes d'abondance présentent un étalement suivant l'axe des abcisses indicant ainsi une richesse spécifiques importante. La raideur des pentes de courbes sur l'une des portions indique une faible équitabilité dans la distribution des espèces. *Theobroma cacao* est l'espèce classée en première position en terme d'abondance (165 individus enregistrés) dans la FC de Ndikinimeki tandis que l'espèce *Raphia sp.* est en pool position dans la FC de Nanga-Eboko. Dans la FC de Ndikinimeki  la famille la plus abondante est celle des Sterculiaceae suivit des Myristicaceae et des Fabaceae. Dans la FC de Nanga-Eboko la famille la plus importante en terme d'effectif est celle des Annonaceae suivit des Aracaceae et des Malvaceae.
 
-```{r Calcul et construction de la courbe d'abondance}
-Rankabond.1<-rankabundance(Ndiki_spec) 
-head(Rankabond.1,10)%>%kbl(caption = "Table 4: Les 10 plus abondantes espèces de la Forêt Communaale de Ndikiniméki ") %>% kable_classic(full_width=F,html_font = "cambria")
-rankabunplot(Rankabond.1,scale = "abundance",specnames = c(1:3))
-Rankabond.1f<-rankabundance(Ndiki_fami)
-head(Rankabond.1f,5)
-rankabunplot(Rankabond.1f,scale = "abundance",specnames = c(1:3))
+```{r Calcul et construction de la courbe d'abondance dans la FC de Ndikinimeki}
+Rankabond.1_Ndiki<-rankabundance(Ndiki_spec) 
+head(Rankabond.1_Ndiki,10)%>%kbl(caption = "Table 6: Les 10 plus abondantes espèces de la Forêt Communaale de Ndikiniméki ") %>% kable_classic(full_width=F,html_font = "cambria")
+rankabunplot(Rankabond.1_Ndiki,scale = "abundance",specnames = c(1:3))
+Rankabond.1f_Ndiki<-rankabundance(Ndiki_fami)
+head(Rankabond.1f_Ndiki,5)
+rankabunplot(Rankabond.1f_Ndiki,scale = "abundance",specnames = c(1:3))
 ```
 
+```{r Calcul et construction de la courbe d'abondance dans la FC de Nanga-Eboko}
+Rankabond.1_Nanga<-rankabundance(Nanga_spec) 
+head(Rankabond.1_Nanga,10)%>%kbl(caption = "Table 7: Les 10 plus abondantes espèces de la FC de Nanga-Eboko ") %>% kable_classic(full_width=F,html_font = "cambria")
+rankabunplot(Rankabond.1_Nanga,scale = "abundance",specnames = c(1:2))
+Rankabond.1f_Nanga<-rankabundance(Nanga_fami)
+head(Rankabond.1f_Nanga,5)
+rankabunplot(Rankabond.1f_Nanga,scale = "abundance",specnames = c(1:3))
+```
 
+```{r Choix de l'arbre approprié pour une classification supervisée dans la FC de Ndikinimeki}
+# selection du plus petit arbre entre 1 erreur standard et l'erreur due à la validation croisée
+par(mfrow = c(1, 2))
+spe.norm_Ndiki=decostand(Ndiki_spec,"nor")
+library(mvpart)
+spe.ch.mvrpart_Ndiki.min=mvpart(data.matrix(spe.norm_Ndiki)~.,Ndiki.Env,margin = 0,08,cp=0,xv="1se",xval = nrow(Ndiki_spec),xvmult = 100,which = 4,big.pts=TRUE)
+```
 
+Les statistiques à la base de l'ARM sont respectivement: l'erreur résiduel (Error), l'erreur due à la validation croisée (CV Error) et l'erreur standard (SE). Cet arbre présente 2 groupes. Chaque groupe est caractérisé par un diagramme à bâtonnets qui indique l'abondance des espèces dans les groupes constitués, le nombre de parcelles (n) et l'erreur relative du groupe. A partir de cette figure nous constatons que la matrice des espèces a été partitionnée suivant le Type d'utilisation des terres (TUT). L'erreur résiduel = 0,754 ce qui signifit que le modèle R² (1-0,754) explique 24,6% de la variance de la matrice des espèces.
 
-Between the 32 sites taking separately, the lowest species richness is 5 and the highest 33 for an global average of 19 species per site whereas 75 % of sites recorded 22.5 species.
+```{r Choix de l'arbre approprié pour une classification supervisée dans la FC de Ndikinimeki}
+# selection du plus grand arbre 
+spe.ch.mvrpart_Ndiki.max=mvpart(data.matrix(spe.norm_Ndiki)~.,Ndiki.Env,margin = 0,08,cp=0,xv="none",xval = nrow(Ndiki_spec),xvmult = 100,which = 4,size=8,big.pts=TRUE)
+```
 
-You can add parts to organize one or more book chapters together. Parts can be inserted at the top of an .Rmd file, before the first-level chapter heading in that same file. 
+Cet arbre est difficile à interpreter. Il comprend un nombre important de groupes bien qu'il offre une puissance explicative élevée (R²=60%) et superieur à celle de la solution à 2 groupes.
+
+```{r Choix de l'arbre approprié pour une classification supervisée dans la FC de Ndikinimeki}
+spe.ch.mvrpart_Ndiki=mvpart(data.matrix(spe.norm_Ndiki)~.,Ndiki.Env,margin = 0,08,cp=0,xv="none",xval = nrow(Ndiki_spec),xvmult = 100,which = 4,size = 4,big.pts=TRUE)
+```
+
+Entre les deux solutions précédentes, une répartition en 4 groupes produit un graphe qui pourrait être interpretée comme des differences de composition en espèces à travers les groupes constitués le R² de cet arbre ($1-erreur\ relative$) est 0,367. Le premier découpage s'est fait sur la base du type d'occupation des sols: il a permis d'isoler un groupe de 10 parcelles localisées dans les Cacaoyères (CAC) et les Jachères (JA) et un second  groupe  de 22 parcelles retrouvées dans les Forêts marécageuses (Fma), les Forêts matures (FM) et les Forêts secondaires. Sur la base des stocks de carbone, le premier groupe de 10 parcelles a été scindé en deux sous-groupes:le premier regroupe 7 parcelles établies dans les Cacaoyères dont les stocks de carbone sont inférieurs à 20,85t/ha et un second de  3 parcelles éssentiellement dans les Jachères avec des stocks de carbone superieurs à 20,85 t/ha. Le bloc de 22 parcelles a permis d'isolé un sous-groupe de 2 parcelles appartenant aux forêts marécageuses. Les 20 parcelles restantes forment un bloc réparti entre les Forêts matures et les forêts secondaires.
+
+```{r Classification supervisée à partir de l'arbre de regression multivarié dans la FC de Ndikinimeki}
+spe.norm_Ndiki=decostand(Ndiki_spec,"nor")
+par(mfrow = c(1, 2)) 
+library(mvpart)
+spe.ch.mvrpart_Ndiki=mvpart(data.matrix(spe.norm_Ndiki)~.,Ndiki.Env,margin = 0,08,cp=0,xv="none",xval = nrow(Ndiki_spec),xvmult = 100,which = 4,size = 5,big.pts=TRUE)
+```
+
+```{r Composition environnementale des groupes dans la FC de Ndikinimeki}
+grps_Ndiki=spe.ch.mvrpart$where
+(groups.mrt=levels(as.factor(spe.ch.mvrpart$where))) 
+Ndiki.Env[which(spe.ch.mvrpart$where == groups.mrt[1]),]
+Ndiki.Env[which(spe.ch.mvrpart$where == groups.mrt[2]),]
+Ndiki.Env[which(spe.ch.mvrpart$where == groups.mrt[3]),]
+Ndiki.Env[which(spe.ch.mvrpart$where == groups.mrt[4]),]
+```
+
+```{r Indicateurs d'espèces liés aux variables explicatives dans la FC de Ndikinimeki}
+library(indicspecies)
+iva_Ndiki=multipatt(Ndiki_spec,grps_Ndiki,max.order = 2,control = how(nperm = 999))
+```
+
+```{r Correction du p-value pour les tests multiples dans la FC de Ndikinimeki}
+pval.adj_Ndiki<- p.adjust(iva_Ndiki$sign$p.value)
+summary(iva_Ndiki,indvalcomp = TRUE)
+```
+
+Parmi les 148 espèces identifiées dans la FC de Ndikinimeki, 7 ont été retenues comme représentives ou caractéristiques de certains groupes de parcelles appartenant à des Types t'Utilisation de Terres (TUT).Parmi ces espèces selectionnées 3 espèces sont associées exclusivement à un groupe, 4 sont associées à 2 groupes et aucune espèce n'a été associée à 3 groupes.  L'espèce *Klainedoxa gabonensis* (p.value=0,027) est un bon indicateur du groupe 4 (Jachères) avec une composante spécifique élevée (A=0,8696) et une fidélité au dessus de la moyenne (B=0,6667). Les espèces telles que: *Nauclea pobeguinii*(A=1,0000 et B=1,0000) et *Vernonia conferta* (A=0,9545 et B=1,0000) sont de très bons indicateurs (p.value=0,002) du groupe 6 (Forêts marécageuses) parce qu'ils apparaissent dans toutes les parcelles qui constituent ce groupe (B=1,0000).Avec une composante de spécificité A=1,0000, ces espèces ne sont rencontrées presque exclusivement que dans les Forêts marécageuses. les espèces telles que: *Theobroma cacao*, *Musa sp.* et *Dacryodes edulis* sont des indicateurs des groupe 3+4 (Cacaoyères et Jachères). Dans cette association de deux groupes constituée de 10 parcelles au total, *Theobroma* est rencontrée dans presque tous les sites et nulle part ailleur (A=0,9451 et B=1,000) cependant *Musa sp.* et *Dacryodes edulis* ne sont pas présentent dans toutes les parcelles qui constituent ce regroupement. Une association des groupes 4 et 7 (Jachères, Forêts matures et Forêts secondaires) a pour indicateur l'espèce *Pycnanthus angolensis*. Cette espèce est présente dans toutes les parcelles constituant ce regroupement (B=1,0000) mais on la retrouve dans des parcelles en dehors de ce groupe (A=0,7606).
+
+```{r Choix de l'arbre approprié pour une classification supervisée dans la FC de Nanga-Eboko}
+# selection du plus petit arbre entre 1 erreur standard et l'erreur due à la validation croisée
+par(mfrow = c(1, 2))
+spe.norm_Nanga=decostand(Nanga_spec,"nor")
+spe.ch.mvrpart_Nanga.min=mvpart(data.matrix(spe.norm_Nanga)~.,Nanga.Env,margin = 0,08,cp=0,xv="1se",xval = nrow(Ndiki_spec),xvmult = 100,which = 4,big.pts=TRUE)
+```
+ 
+Lorsque nous observons le plus petit arbre qui se situe dans les limites de l'erreur standard, nous constatons que cet modèle comporte 3 groupes. Son erreur résiduel=0,568 signifit que ce modèle pourrait expliquer 43,7% (1-0,568) de la variance de la matrice des espèces.
+
+```{r Choix de l'arbre approprié pour une classification supervisée dans la FC de Nanga-Eboko}
+# selection du plus grand arbre 
+spe.ch.mvrpart_Nanga.max=mvpart(data.matrix(spe.norm_Nanga)~.,Nanga.Env,margin = 0,08,cp=0,xv="none",xval = nrow(Nanga_spec),xvmult = 100,which = 4,size=7,big.pts=TRUE)
+```
+
+Ce modèle d'arbre à 7 groupes a une puissance explicative élevée (R²=0,661), cependant il est difficile à interpreter.
+
+```{r Choix de l'arbre approprié pour une classification supervisée dans la FC de Nanga-Eboko}
+pe.ch.mvrpart_Nanga=mvpart(data.matrix(spe.norm_Nanga)~.,Nanga.Env,margin = 0,08,cp=0,xv="none",xval = nrow(Nanga_spec),xvmult = 100,which = 4,size=4,big.pts=TRUE)
+```
+
+Un modèle à 4 groupes intermediaire entre le minimum et le maximum de groupes possibles semble plus facile à interpreter. Sa puissance explicative R²=0,502 ce qui suggère qu'au moins 50% de la variance de la matrice des espèces pourrait trouver une justification dans ce modèle. La première discrimination est faite sur la base des catégories d'occupation des terres et permet d'isoler: un groupe de  5 parcelles appartenant aux Cultures (CU) et aux Savanes (SA) et un second groupe de 18 parcelles retrouvées dans les  Marécages (MAR), les Forêts galeries (FGA), les Forêts secondaires adultes (FSA) et les Forêts secondaires jeunes (FSJ). Sur la base d'un autre paramètre environnemental tel que les stocks de carbone dans le sol, deux sous-groupes ont pu se détacher du second groupe: le premier regroupe 3 parcelles dont les stocks de carbone du sol sont inférieurs à 3,795t/ha et le second est constitué de 11 parcelles dont les stocks de carbone du sol sont supérieurs ou égales à 3,795t/ha. Les marécages (MAR) se sont constitués comme un groupe à part de 5 parcelles.
+
+```{r Composition environnementale des groupes dans la FC de Nanga-Eboko}
+
+grps_Nanga=spe.ch.mvrpart_Nanga$where
+(groups.mrt=levels(as.factor(spe.ch.mvrpart_Nanga$where))) 
+Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[1]),]
+Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[2]),]
+Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[3]),]
+Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[4]),]
+```
+
+```{r Indicateurs d'espèces liés aux variables explicatives dans la FC de Nanga-Eboko}
+iva_Nanga=multipatt(Nanga_spec,grps_Nanga,max.order = 2,control = how(nperm = 999))
+```
+
+```{r Correction du p-value pour les tests multiples dans la FC de Nanga-Eboko}
+pval.adj_Nanga<- p.adjust(iva_Nanga$sign$p.value)
+summary(iva_Nanga,indvalcomp = TRUE)
+```
+D'après le modèle d'analyse de la composition spécifiques des différents groupes constitués dans la FC de Nanga-Eboko, il ressort que des 122 espèces identifiées, 13 ont été associées à la représentation d'un groupe. 3 espèces ont été identifiées comme caractéristiques du groupe 2 constitué de 5 parcelles appartenant aux marécages (MAR) et aux savanes (SAV): l'espèce *Annona senegalensis* est un très bon indicateur de ce groupe (p.value=0,001) suivie de *Terminalia glaucescens* (p.value=0,003). Le groupe 4 constitué de 4 parcelles est marqué par 4 espèces dont l'une d'elle *Raphia sp.* (p.value=0,001) est fortement liée aux conditions écologiques de ce groupe (Marécage). Les autres espèces caractéristiques de ce groupe sont: *Berlinia grandiflora* (p.value=0,005) et *Cola sp.* (p.value=0,040). Le groupe 6 est marqué par 6 espèces dont les plus caractéristiques sont *Beilschmedia sp.* (p.value=0,005) et *Uapaca guineensis* (p.value=0,005). le groupe 7 est constitué de 11 parcelles et l'espèce *Tchichilia tessmanni* (p.value=0,027) peut être considéré comme son indicateur.
+ 
+ 
+ 
+ 
+ 
+
 
 Add a numbered part: `# (PART) Act one {-}` (followed by `# A chapter`)
 
-Add an unnumbered part: `# (PART\*) Act one {-}` (followed by `# A chapter`)
+Add an unnumbered part: `# (PART\*) Act one {-}` (followed by
+`# A chapter`)
 
-Add an appendix as a special kind of un-numbered part: `# (APPENDIX) Other stuff {-}` (followed by `# A chapter`). Chapters in an appendix are prepended with letters instead of numbers.
-
-
-
+Add an appendix as a special kind of un-numbered part:
+`# (APPENDIX) Other stuff {-}` (followed by `# A chapter`). Chapters in
+an appendix are prepended with letters instead of numbers.
