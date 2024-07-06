@@ -705,7 +705,7 @@ Nanga_Arbre.t.test=ggboxplot(Nanga_StC.ligneux,x="Strates",y="StC_total_arbre.t.
 
 L'analyse de la distribution des stocks de carbone dans les 6 catégories d'occupation de terres dans la FC de Nanga-Eboko revèle dans l'ensemble peu de différences significatives dans la distribution des stocks de carbone des ligneux. En effet sur les 15 couples de comparaison entre les catégories d'utilisation des terres, seules 04 couples présentent des différences significatives: on a relevé une différénce significative entre les Forêts secondaires adultes (FSA)-Forêts galeries (FGA) et Forêts secondaires adultes (FSA)-Savanes (SAV) d'une part, Forêts secondaires jeunes (FSJ)-Forêts galeries (FGA) et Forêts secondaires jeunes (FSJ)-Savanes (SAV) d'autre part. Les zones savanicoles se distinguent des autres catégorie à cause de la taille limitée des ligneux qui les constituent. En effet les plus grands arbres ne dépassent pas 40cm de diamètre. Quant aux forêts galeries la différence de stocks de carbone entre les plus petits et les plus grands est supérieure à celle des Forêts secondaires adultes et les forêts secondaires jeunes.
 
-```{r Calcul des stocks moyens de carbone dans les TUT de la FC de Nanga-Eboko}
+```{r Calcul des stocks moyens de carbone des ligneux dans les TUT de la FC de Nanga-Eboko}
 Nanga_stable.ligneux<-desc_statby(Nanga_StC.ligneux,measure.var = "StC_total_arbre.t.C.ha",grps = "Strates")
 Nanga_stable.ligneux<-Nanga_stable.ligneux[,c("Strates","length","mean","sd","range")]
 Nanga_stable.ligneux<-Nanga_stable.ligneux%>%arrange(desc(length))
@@ -781,11 +781,300 @@ Ndiki_perfect.Herb=Ndiki_bp.Herb+scale_fill_discrete(name="Types d'Utilisation\n
 (Ndiki_perfect.Herb)
 ```
 
-L'estimation des stocks de carbone des herbacées dans la FC de Ndikiniméki a porté sur 160 quadrats de 1m² chacun repartis dans les 5 catégories d'utilisation des terres.
+L'estimation des stocks de carbone des herbacées dans la FC de Ndikiniméki a porté sur 160 quadrats de 1m² chacun repartis dans les 5 catégories d'utilisation des terres. Le stock total de carbone est de 10,58 tC/ha avec une moyenne de 0,06 tC/ha. Les quantités les plus importantes ont été enregistrées dans les Cacaoyères avec 2,96 tC/ha représentant environ 30 % des stocks de carbone. Les Cacaoyères étant pour la plupart des agroforêts,  une canopée ouverte favorise le développement des herbacées qui, à la faveur de la lumière prospèrent abondement surtout avant les opérations de désherbage. Les Forêts marécageuses par contre détiennent le plus faible taux de carbone dans les herbacées (1,03 tC/ha). Cela peut se justifier par les conditions du milieu, en effet le sol étant gorgé d'eau, il ne favorise pas le développement de la plupart des espèces forestières. L'analyse statistique de la distribution des stocks de carbone des herbacées montre qu'il existe une différence très significative entre les Forêts matures et les Forêts marécageuses, et significative entre Forêts matures-Forêts secondaires  et Forêts matures-Cacaoyères.  
 
-Le stock total de carbone est de 10,58 tC/ha avec une moyenne de 0,06 tC/ha. Les quantités les plus importantes ont été enregistrées dans les Cacaoyères avec 2,96 tC/ha représentant environ 30 % des stocks de carbone. Les Cacaoyères étant pour la plupart des agroforêts,  une canopée ouverte favorise le développement des herbacées qui, à la faveur de la lumière prospèrent abondement surtout avant les opérations de désherbage. Les Forêts marécageuses par contre détiennent le plus faible taux de carbone dans les herbacées (1,03 tC/ha). Cela peut se justifier par les conditions du milieu, en effet le sol étant gorgé d'eau, il ne favorise pas le développement de la plupart des espèces forestières. L'analyse
+### Estimation des stcoks de carbone des herbacées dans la FC de Nanga-Eboko
 
-Add a numbered part: `# (PART) Act one {-}` (followed by `# A chapter`)
+```{r Description des données des herbacées dans la FC de Nanga-Eboko}
+Nanga_Herb<-na.omit(Nanga_Herb)
+Nanga_StC.Herb=select(Nanga_Herb,Strates,StC.Herb.t.ha)
+describe(Nanga_StC.Herb,num.desc = c("mean","sd","median","min","max","valid.n"))
+ggdensity(Nanga_StC.Herb, x = "StC.Herb.t.ha",add = "mean", rug = TRUE,  color = "Strates", fill = "Strates", palette = "jco")
+Nanga_stable.Herb=desc_statby(Nanga_StC.Herb,measure.var = "StC.Herb.t.ha",grps = "Strates")
+Nanga_stable.Herb<-Nanga_stable.Herb[,c("Strates","length","mean","sd","range")]
+Nanga_stable.Herb=Nanga_stable.Herb%>%arrange(desc(length))
+Nanga_stable_p.Herb<-ggtexttable(Nanga_stable.Herb,rows = NULL,theme=ttheme("classic"))
+(Nanga_stable_p.Herb)
+Nanga_totals.Herb<-Nanga_StC.Herb%>%  group_by(Strates)%>%    summarise(Carbone.total=round(sum(StC.Herb.t.ha),2))
+Nanga_totals.Herb=Nanga_totals.Herb%>%arrange(desc(Carbone.total))
+(Nanga_totals.Herb)
+Nanga_Herb.t.test=ggboxplot(Nanga_StC.Herb,x="Strates",y="StC.Herb.t.ha",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Nanga,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Nanga_Herb.t.test)
+Nanga_bp.Herb=Nanga_totals.Herb%>%ggplot(aes(fct_rev(reorder(Strates,Carbone.total)),Carbone.total,fill=Strates))+geom_col()
+Nanga_perfect.Herb=Nanga_bp.Herb+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FSA","FGA","FSJ","MAR","SAV","CUL"),labels=c("FSA:Forêts Secondaires Adultes","FGA:Forêts Galeries","FSJ:Forêts Secondaires Jeunes","MAR:Marecages","SAV:Savanes","CUL:Cultures"))+geom_text(data = Nanga_totals.Herb,aes(x=Strates,label=Carbone.total,y=Carbone.total,fill=NULL),nudge_y = 0.125)+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Nanga_perfect.Herb)
+```
+
+L'estimation des stocks de carbone des herbacées dans la FC de Nanga-Eboko a porté sur 115 quadrats repartis entre les 06 catégories d'utilisation des terres. Le stock total a été estimé à 3,84 tC/ha pour une moyenne de 0,03 ± 0,06 tC/ha ce qui représente à peu près le tiers des stocks enregistrés dans la FC de Ndikiniméki. Les espaces savanicoles totalisent 2,33 tC/ha soit 60% des stocks de carbone enregistrés sur l'ensemble des herbacées de la Forêt communale. Les  05 autres catégories restantes se partagent les 40% restant. Le t.test de Student révèle en effet qu'il existe une difference très significative entre Savane-Forêts galeries, Savanes-Forêts secondaires adultes, Savanes-Forêts secondaires jeunes et Savanes-Cultures. Ces savanes appartiennent à la catégories des savanes herbeuses où les arbres sont distant et de faibles envergures ce qui favorise le développement d'une végétation herbeuse très abondante.
+
+### Estimation des stocks de carbone dans la litière de la FC de Ndikiniméki
+
+```{r Description des données de la litière dans la FC de Ndikiniméki}
+Ndiki_Lit<-na.omit(Ndiki_Lit)
+Ndiki_StC.Lit=select(Ndiki_Lit,Strates,StC_Lit.t.ha)
+describe(Ndiki_StC.Lit,num.desc = c("mean","sd","median","min","max","valid.n"))
+ggdensity(Ndiki_StC.Lit, x = "StC_Lit.t.ha",add = "mean", rug = TRUE,  color = "Strates", fill = "Strates", palette = "jco")
+Ndiki_stable.Lit=desc_statby(Ndiki_StC.Lit,measure.var = "StC_Lit.t.ha",grps = "Strates")
+Ndiki_stable.Lit<-Ndiki_stable.Lit[,c("Strates","length","mean","sd","range")]
+Ndiki_stable.Lit=Ndiki_stable.Lit%>%arrange(desc(length))
+Ndiki_stable_p.Lit<-ggtexttable(Ndiki_stable.Lit,rows = NULL,theme=ttheme("classic"))
+(Ndiki_stable_p.Lit)
+Ndiki_totals.Lit<-Ndiki_StC.Lit%>%  group_by(Strates)%>%    summarise(Carbone.total=round(sum(StC_Lit.t.ha),2))
+Ndiki_totals.Lit=Ndiki_totals.Lit%>%arrange(desc(Carbone.total))
+(Ndiki_totals.Lit)
+Ndiki_Lit.t.test=ggboxplot(Ndiki_StC.Lit,x="Strates",y="StC_Lit.t.ha",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Ndiki,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Ndiki_Lit.t.test)
+Ndiki_bp.Lit=Ndiki_totals.Lit%>%ggplot(aes(fct_rev(reorder(Strates,Carbone.total)),Carbone.total,fill=Strates))+geom_col()
+Ndiki_perfect.Lit=Ndiki_bp.Lit+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FM","FS","FMa","JA","CAC"),labels=c("FM:Forêt Mature","FS:Forêt Secondaire","FMa:Forêt Marécageuse","JA:Jachère","CAC:Cacaoyère"))+geom_text(data = Ndiki_totals.Lit,aes(x=Strates,label=Carbone.total,y=Carbone.total,fill=NULL),nudge_y = 0.125)+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Ndiki_perfect.Lit)
+```
+
+la distribution des stocks de carbone de la litière dans la FC de Ndikiniméki varit de 0,01 à 0,12 tC/ha pour une moyenne de 0,04 ± 0,02 tC/ha. Le stock total de carbone dans les 5 catégories d'utilisation des terres est de 6,65 tC/ha. Les Cacaoyères (CAC) cumulent 1,81 tC/ha avec seulement 25% des quadrats établis tandis que les Forêts matures (FM) totalisent 1,57 tC/ha pour 41% des quadrats. Bien qu'ayant la moyenne des stocks la plus élevée, les Jachères (JA) ont le total de stocks de carbone de litière le plus faible (0,68 tC/ha). Les tests statistques ont également montrés qu'il existe une différence très significative dans la distribution des stocks entre les Jachères et les Forêts matures, les Forêts secondaires et les Cacaoyères. Il existe également une différence très significative entre les Forêts matures et les Forêts secondaires d'une part et les Forêts matures et les Cacaoyères d'autre part. Cependant il n'existe pas de différence significative entre les Cacaoyères et les Forêts marécageuses d'une part, les Cacaoyères et les Forêts secondaires d'autre part. De même il n'existe pas de différence significative entre les Forêts secondaires et les Forêts marécageuses.
+
+### Estimation des stocks de carbone dans la litière de la FC de Nanga-Eboko
+
+```{r Description des données de la litière dans la FC de Nanga-Eboko}
+Nanga_Lit<-na.omit(Nanga_Lit)
+Nanga_StC.Lit=select(Nanga_Lit,Strates,StC_Lit.t.ha)
+describe(Nanga_StC.Lit,num.desc = c("mean","sd","median","min","max","valid.n"))
+ggdensity(Nanga_StC.Lit, x = "StC_Lit.t.ha",add = "mean", rug = TRUE,  color = "Strates", fill = "Strates", palette = "jco")
+Nanga_stable.Lit=desc_statby(Nanga_StC.Lit,measure.var = "StC_Lit.t.ha",grps = "Strates")
+Nanga_stable.Lit<-Nanga_stable.Lit[,c("Strates","length","mean","sd","range")]
+Nanga_stable.Lit=Nanga_stable.Lit%>%arrange(desc(length))
+Nanga_stable_p.Lit<-ggtexttable(Nanga_stable.Lit,rows = NULL,theme=ttheme("classic"))
+(Nanga_stable_p.Lit)
+Nanga_totals.Lit<-Nanga_StC.Lit%>%  group_by(Strates)%>%    summarise(Carbone.total=round(sum(StC_Lit.t.ha),2))
+Nanga_totals.Lit=Nanga_totals.Lit%>%arrange(desc(Carbone.total))
+(Nanga_totals.Lit)
+Nanga_Lit.t.test=ggboxplot(Nanga_StC.Lit,x="Strates",y="StC_Lit.t.ha",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Nanga,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Nanga_Lit.t.test)
+Nanga_bp.Lit=Nanga_totals.Lit%>%ggplot(aes(fct_rev(reorder(Strates,Carbone.total)),Carbone.total,fill=Strates))+geom_col()
+Nanga_perfect.Lit=Nanga_bp.Lit+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FSA","FGA","FSJ","MAR","SAV","CUL"),labels=c("FSA:Forêts Secondaires Adultes","FGA:Forêts Galeries","FSJ:Forêts Secondaires Jeunes","MAR:Marecages","SAV:Savanes","CUL:Cultures"))+geom_text(data = Nanga_totals.Lit,aes(x=Strates,label=Carbone.total,y=Carbone.total,fill=NULL),nudge_y = 0.05)+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Nanga_perfect.Lit)
+```
+
+La distribution des stocks de carbone de la litière dans la FC de Nanga-Eboko est à peu près équivalente à celle de la FC de Ndikiniméki avec des valeurs oscillant entre 0,01 et 0,03 tC/ha pour une moyenne de 0,03 ± 0,02 tC/ha. Les mesures de stocks éffectuées ont porté sur 115 quadrats de 1m² chacun dont 30% appartenaient aux Forêts secondaires adultes (FSA), 17% aux Forêts secondaires jeunes (FSJ), 17% aux zones marécageuses (MAR), 17% aux Forêts galeries (FGA), 13% aux savanes et 9% aux Cultures (CUL). Bien que les zones de cultures ont enregistré le stock moyen le plus élevé (0,04 ± 0,03 tC/ha),elles ont eu le stok total le plus faible et ce sont les Forêts secondaires adultes qui ont obtenues le stock cumulé le plus élevé (0,82 tC/ha) avec l'une des moyennes les plus faibles. Du point de vue de l'analyse statistique, en dehors des differences significatives entre  Forêts secondaires adultes-Forêts galeries et assez significatives entre Forêts secondaires adultes-Forêts secondaires jeunes, il n'a pas été relevé de differences significatives dans la distribution des stocks de carbone de la litière dans les 06 catégories d'utilisation des terres de la FC de Nanga-Eboko.
+
+### Estimation des stocks de carbone du sol dans la FC de Ndikiniméki
+
+```{r Description des données du sol dans la FC de Ndikiniméki}
+Ndiki_Sol<-na.omit(Ndiki_Sol)
+Ndiki_Sol$Depth<-as.factor(Ndiki_Sol$Depth)
+Ndiki_StC.Sol=select(Ndiki_Sol,Strates,Depth,MCsolHa)
+describe(Ndiki_StC.Sol,num.desc = c("mean","sd","median","min","max","valid.n"))
+ggdensity(Ndiki_StC.Sol, x = "MCsolHa",add = "mean", rug = TRUE,  color = "Strates", fill = "Strates", palette = "jco")
+Ndiki_stable.Sol=desc_statby(Ndiki_StC.Sol,measure.var = "MCsolHa",grps = "Strates")
+Ndiki_stable.Sol<-Ndiki_stable.Sol[,c("Strates","length","mean","sd","range")]
+Ndiki_stable.Sol=Ndiki_stable.Sol%>%arrange(desc(length))
+Ndiki_stable_p.Sol<-ggtexttable(Ndiki_stable.Sol,rows = NULL,theme=ttheme("classic"))
+(Ndiki_stable_p.Sol)
+Ndiki_Depth.Sol=tapply(Ndiki_StC.Sol$MCsolHa,list(Ndiki_StC.Sol$Strates,Ndiki_StC.Sol$Depth),mean)
+Ndiki_Depth.Sol=as.data.frame(Ndiki_Depth.Sol)
+Ndiki_Depth.Sol%>%arrange(desc(`0_10`))
+describe(Ndiki_Depth.Sol)
+Ndiki_totals.Sol<-Ndiki_StC.Sol%>%  group_by(Strates)%>%    summarise(Carbone.total=round(mean(MCsolHa),2))
+Ndiki_totals.Sol=Ndiki_totals.Sol%>%arrange(desc(Carbone.total))
+(Ndiki_totals.Sol)
+Ndiki_Sol.t.test=ggboxplot(Ndiki_StC.Sol,x="Strates",y="MCsolHa",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Ndiki,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Ndiki_Sol.t.test)
+Ndiki_bp.Sol=Ndiki_totals.Sol%>%ggplot(aes(fct_rev(reorder(Strates,Carbone.total)),Carbone.total,fill=Strates))+geom_col()
+Ndiki_perfect.Sol=Ndiki_bp.Sol+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FM","FS","FMa","JA","CAC"),labels=c("FM:Forêt Mature","FS:Forêt Secondaire","FMa:Forêt Marécageuse","JA:Jachère","CAC:Cacaoyère"))+geom_text(data = Ndiki_totals.Sol,aes(x=Strates,label=Carbone.total,y=Carbone.total,fill=NULL),nudge_y = 1)+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Ndiki_perfect.Sol)
+Ndiki_Carb.prof=ggplot(Ndiki_Sol, aes(x = Strates, y = MCsolHa)) +
+    geom_bar(
+        aes(color = Depth, fill = Depth),
+        stat = "summary",fun="mean", position = position_stack()
+    ) +
+    scale_color_manual(values = c("black", "gray","tan"))+
+    scale_fill_manual(values = c("black", "gray","tan"))+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Ndiki_Carb.prof)
+```
+
+L’analyse de la distribution des stocks de carbone  du sol dans la FC de Ndikiniméki s'est faite de manière générale  sur un total de 69 échantillons de terre prélevés dans chacun des trois horizons des 23 parcelles (0 – 10 cm ; 10 – 20 cm et 20 – 30 cm), dont 39% dans les Forêts matures (FM), 44% dans les Forêts secondaires (FS) et les Cacaoyères (CAC), et 18% dans les Forêts marécageuses (FMa) et les Jachères (JA). Les résultats montrent que les stocks de carbone varient de 10,46 à 48,38 tC/ha avec une moyenne de 19,75 ± 7,19 tC/ha. Les couches les plus proches de la surface ont enregistré les quantités les plus importantes avec une moyenne de 24,48 ± 5,44 tC/ha pour les profondeurs de 0 à 10 cm. La moyenne des stocks de carbone dans les couches moyennes (10 à 20 cm) et profondes (20 à 30 cm) sont respectivement de 18,13 ± 3 tC/ha et 15,80 ± 12,71 tC/ha. En termes de proportion, les forêts marécageuses présentent la moyenne des stocks de carbone la plus importante (24,32 ± 11,39 tC/ha) avec une courbe de distribution étalée qui traduit une répartition équilibrée des stocks de carbone dans les différentes profondeurs. Les jachères ont la moyenne de stocks la moins importante (13,65 ± 2,51 tC/ha) avec une courbe de distribution unimodale autour de la moyenne, ce qui laisse penser à une répartition des stocks de carbone fortement marquée par un paramètre du milieu (profondeur du sol ou altitude). Les courbes de répartition des stocks de carbone des forêts matures et des cacaoyères semblent obéir à la même logique que celle des jachères, cependant l’influence est moins marquée. La courbe de répartition des stocks carbone dans les forêts secondaires par contre est bimodale, ce qui pourrait supposer que les stocks de carbone dans cette catégorie seraient influencés par au moins deux paramètres (la profondeur du sol et l'altitude). Le t.test de Student ne montre pas de différence significative dans la répartition des stocks de carbone des 05 catégories d'utilisation des terres de la FC de Ndikiniméki sauf pour les jachères. En effet le test indique qu'il existe des differences significatives entre: Jachères-Cacaoyères, Jachères-Forêts secondaires et Jachères-Forêts matures.
+
+```{r Répartition des stocks de carbone en fonction de la profondeur du sol dans la FC de Ndikiniméki}
+library(lattice)
+Ndiki_xyplot.Sol<-xyplot(MCsolHa~Depth|Strates,layout=c(3,2),group=Strates,data = Ndiki_Sol,type=c("p","smooth"),scales = "free")
+(Ndiki_xyplot.Sol)
+```
+
+Lorsqu’on observe les courbes de  distribution des stocks de carbone dans le sol en fonction de la profondeur, on constate  de manière sommaire, que les stocks de carbone diminuent avec la profondeur dans toutes les catégories d’utilisation des terres sauf dans les forêts marécageuses où ils tendent à se stabiliser à partir de 20 cm de profondeur. En terme de stoks cumulés, les quantités les plus importantes sont localisées dans les forêts marécageuses avec une estimation de 72,97 tC/ha, suivies des forêts matures (61,15 tC/ha), les forêts secondaires (58,9 tC/ha) et les Cacaoyères avec environ (58 tC/ha). Les stocks de carbone les plus faibles sont localisés dans les jachères (40,95 tC/ha).
+
+#### Stocks de carbone du sol dans les profondeurs de 0 à 10 cm
+
+```{r Distribution des stocks de carbne du sol de 0 à 10 cm}
+Ndiki_StC_Sol.0_10=select(Ndiki_Sol,Strates,Depth,MCsolHa)%>% filter(Depth=="0_10")
+describe(Ndiki_StC_Sol.0_10,num.desc = c("mean","sd","median","min","max","valid.n"))
+Ndiki_total_Sol.0_10<-Ndiki_StC_Sol.0_10%>%
+     group_by(Strates)%>%
+     summarise(total.Carbone=round(mean(MCsolHa),2))
+Ndiki_total_Sol.0_10=Ndiki_total_Sol.0_10%>%arrange(desc(total.Carbone))
+(Ndiki_total_Sol.0_10)
+Ndiki_stable.Sol.0_10=desc_statby(Ndiki_StC_Sol.0_10,measure.var = "MCsolHa",grps = "Strates")
+Ndiki_stable.Sol.0_10<-Ndiki_stable.Sol.0_10[,c("Strates","length","mean","sd","range")]
+Ndiki_stable.Sol.0_10=Ndiki_stable.Sol.0_10%>%arrange(desc(length))
+Ndiki_stable_p.Sol.0_10<-ggtexttable(Ndiki_stable.Sol.0_10,rows = NULL,theme=ttheme("classic"))
+(Ndiki_stable_p.Sol.0_10)
+Ndiki_t.test_Sol.0_10=ggboxplot(Ndiki_StC_Sol.0_10,x="Strates",y="MCsolHa",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Ndiki,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Ndiki_t.test_Sol.0_10)
+```
+
+A la profondeur de 0 à 10 cm, 23 échantillons de terre ont été prélevés dans l'ensemble des 05 catégories d'utilisation des terres. L'analyse des échantillons montre que la distribution des stocks de carbone varie de  13,86 à 48,38 tC/ha pour une moyenne de 25,12 ± 7,75tC/ha. C’est l’horizon le plus proche de la surface où abondent les débris de matières organiques telles que les feuilles et les bois morts. La moyenne la plus élevée a été enregistrée dans les Forêts marécageuses (30,8 ± 12 tC/ha) qui sont des écosystèmes de basses altitudes et réceptacle des débris organiques transportés par l’eau ou le vent. Au niveau de cette couche superficielle, le test de Student indique une difference signicative dans la distribution des stocks de carbone entre les Cacaoyères et les Jachères. 
+
+#### Stocks de carbone du sol dans les profondeurs de 10 à 20cm
+
+```{r Distribution des stocks de carbne du sol de 10 à 20cm}
+Ndiki_StC_Sol.10_20=select(Ndiki_Sol,Strates,Depth,MCsolHa)%>% filter(Depth=="10_20")
+describe(Ndiki_StC_Sol.10_20,num.desc = c("mean","sd","median","min","max","valid.n"))
+Ndiki_total_Sol.10_20<-Ndiki_StC_Sol.10_20%>%
+     group_by(Strates)%>%
+     summarise(total.Carbone=round(mean(MCsolHa),2))
+Ndiki_total_Sol.10_20=Ndiki_total_Sol.10_20%>%arrange(desc(total.Carbone))
+(Ndiki_total_Sol.10_20)
+Ndiki_stable.Sol.10_20=desc_statby(Ndiki_StC_Sol.10_20,measure.var = "MCsolHa",grps = "Strates")
+Ndiki_stable.Sol.10_20<-Ndiki_stable.Sol.10_20[,c("Strates","length","mean","sd","range")]
+Ndiki_stable.Sol.10_20=Ndiki_stable.Sol.10_20%>%arrange(desc(length))
+Ndiki_stable_p.Sol.10_20<-ggtexttable(Ndiki_stable.Sol.10_20,rows = NULL,theme=ttheme("classic"))
+(Ndiki_stable_p.Sol.10_20)
+Ndiki_t.test_Sol.10_20=ggboxplot(Ndiki_StC_Sol.10_20,x="Strates",y="MCsolHa",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Ndiki,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Ndiki_t.test_Sol.10_20)
+```
+
+Dans cet horizon moyen l'écart entre le maximum et le minimum de stock enregistré est plus faible que celui de l'horizon superficiel. De même, cest un horizon moins riche en carbone, les distributions des stocks de carbone vont de 11,88 à 29,47 tC/ha pour une moyenne de 18,45 ± 4,82 tC/ha. Les Forêts marécageuses et les Forêts secondaires enregistrent les moyennes de stock les plus élevées (plus de 20 tC/ha). Les jachères demeurent les plus faibles en stocks de carbone  dans cet horizon. Cependant les analyses statisques ne montrent aucune difference significative dans la distribution des stocks de carbone dans l'horizon moyen.  
+
+#### Stocks de carbone du sol dans les profondeurs de 20 à 30cm
+
+```{r Distribution des stocks de carbne du sol de 20 à 30cm}
+Ndiki_StC_Sol.20_30=select(Ndiki_Sol,Strates,Depth,MCsolHa)%>% filter(Depth=="20_30")
+describe(Ndiki_StC_Sol.20_30,num.desc = c("mean","sd","median","min","max","valid.n"))
+Ndiki_total_Sol.20_30<-Ndiki_StC_Sol.20_30%>%
+     group_by(Strates)%>%
+     summarise(total.Carbone=round(mean(MCsolHa),2))
+Ndiki_total_Sol.20_30=Ndiki_total_Sol.20_30%>%arrange(desc(total.Carbone))
+(Ndiki_total_Sol.20_30)
+Ndiki_stable.Sol.20_30=desc_statby(Ndiki_StC_Sol.20_30,measure.var = "MCsolHa",grps = "Strates")
+Ndiki_stable.Sol.20_30<-Ndiki_stable.Sol.20_30[,c("Strates","length","mean","sd","range")]
+Ndiki_stable.Sol.20_30=Ndiki_stable.Sol.20_30%>%arrange(desc(length))
+Ndiki_stable_p.Sol.20_30<-ggtexttable(Ndiki_stable.Sol.20_30,rows = NULL,theme=ttheme("classic"))
+(Ndiki_stable_p.Sol.20_30)
+Ndiki_t.test_Sol.20_30=ggboxplot(Ndiki_StC_Sol.20_30,x="Strates",y="MCsolHa",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Ndiki,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Ndiki_t.test_Sol.20_30)
+```
+
+Dans les profondeurs de 20 à 30 cm les stocks oscillent entre 10,46 à 32,02 tC/ha avec une moyenne de 15,69 ± 5,24 tC/ha. Les valeurs moyennes par catégories les plus importantes se localisent dans les forêts marécageuses (21,24 ± 15,25 tC/ha) suivies des forêts secondaires (16 ± 1,83 tC/ha) et des forêts matures (15,93 ± 5,45). Les jachères demeurent la catégorie à faible taux de carbone (11,4 ± 1,3 tC/ha). Ce sont pour la plupart des terres remaniées ayant subies de fortes activités agricoles qui ont pour corolaire un appauvrissement en matières organiques. Les tests statistiques montrent dans l'ensemble qu’à la profondeur de 20 – 30 cm, il n’existe pas de différences significatives dans la distribution des stocks de carbone. Seules les forêts secondaires et jachères présentent une différence significative. 
+
+### Estimation des stocks de carbone du sol dans la FC de Nanga-Eboko
+
+```{r Description des données du sol dans la FC de Nanga-Eboko}
+Nanga_Sol$Depth<-as.factor(Nanga_Sol$Depth)
+Nanga_StC.Sol=select(Nanga_Sol,Strates,Depth,MCsolHa)
+describe(Nanga_StC.Sol,num.desc = c("mean","sd","median","min","max","valid.n"))
+ggdensity(Nanga_StC.Sol, x = "MCsolHa",add = "mean", rug = TRUE,  color = "Strates", fill = "Strates", palette = "jco")
+Nanga_stable.Sol=desc_statby(Nanga_StC.Sol,measure.var = "MCsolHa",grps = "Strates")
+Nanga_stable.Sol<-Nanga_stable.Sol[,c("Strates","length","mean","sd","range")]
+Nanga_stable.Sol=Nanga_stable.Sol%>%arrange(desc(length))
+Nanga_stable_p.Sol<-ggtexttable(Nanga_stable.Sol,rows = NULL,theme=ttheme("classic"))
+(Nanga_stable_p.Sol)
+Nanga_Depth.Sol=tapply(Nanga_StC.Sol$MCsolHa,list(Nanga_StC.Sol$Strates,Nanga_StC.Sol$Depth),mean)
+Nanga_Depth.Sol=as.data.frame(Nanga_Depth.Sol)
+Nanga_Depth.Sol%>%arrange(desc(`0_10`))
+describe(Nanga_Depth.Sol)
+Nanga_totals.Sol<-Nanga_StC.Sol%>%  group_by(Strates)%>%    summarise(Carbone.total=round(mean(MCsolHa),2))
+Nanga_totals.Sol=Nanga_totals.Sol%>%arrange(desc(Carbone.total))
+(Nanga_totals.Sol)
+Nanga_Sol.t.test=ggboxplot(Nanga_StC.Sol,x="Strates",y="MCsolHa",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Nanga,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Nanga_Sol.t.test)
+Nanga_bp.Sol=Nanga_totals.Sol%>%ggplot(aes(fct_rev(reorder(Strates,Carbone.total)),Carbone.total,fill=Strates))+geom_col()
+Nanga_perfect.Sol=Nanga_bp.Sol+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FSA","FGA","FSJ","MAR","SAV","CUL"),labels=c("FSA:Forêts Secondaires Adultes","FGA:Forêts Galeries","FSJ:Forêts Secondaires Jeunes","MAR:Marécages","SAV:Savanes","CUL:Cultures"))+geom_text(data = Nanga_totals.Sol,aes(x=Strates,label=Carbone.total,y=Carbone.total,fill=NULL),nudge_y = 1)+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Nanga_perfect.Sol)
+Nanga_Carb.prof=ggplot(Nanga_Sol, aes(x = Strates, y = MCsolHa)) +
+    geom_bar(
+        aes(color = Depth, fill = Depth),
+        stat = "summary",fun="mean", position = position_stack()
+    ) +
+    scale_color_manual(values = c("black", "gray","tan"))+
+    scale_fill_manual(values = c("black", "gray","tan"))+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Nanga_Carb.prof)
+```
+
+L'analyse de la distribution des stocks de carbone du sol dans la FC de Nanga-Eboko s'est faite dans les mêmes conditions que celle de la FC de Ndikiniméki à savoir 69 échantillons de terres prélevés repartis entre les 06 catégories d'occupation des terres. Parmi ces échantillons, 21 (environ 30%) appartiennent aux Forêts secondaires adultes, 24 (environ 34%) aux Forêts secondaires jeunes et aux zones marécageuses, 18 (environ 26%) aux Forêts galeries et Savanes, et 06 (environ 9%) aux zones de Cultures. Les résultats d'analyses de l'ensemble des échantillons montrent que les stocks de carbone du sol vont de 4,37 à 35,07 tC/ha pour une moyenne de 15,08 ± 5,92 tC/ha. En se rapportant aux catégories d'utilisation des terres, la moyenne de stock de carbone la plus élevée a été enregistrée dans les zones de cultures (16,38 ± 9,04 tC/ha). Elles sont suivies par les Forêts secondaires adultes (15,93 ± 5,9 tC/ha), les Forêts galeries (15,64 ± 5,43 tC/ha), les Forêts secondaires jeunes (15,37 ± 2,88 tC/ha), les Savanes (15,33 ± 4,77 tC/ha) et les Marécages (12,01 ± 7,52 tC/ha). En terme de stocks cumulés, les Cultures arrivent en tête avec près de 49,14 tC/ha tandis que les zones de Marécages enregistrent le plus faible taux (36,02 tC/ha). Les analyses statistiques montrent qu'il n'existe pas de différence significatives entre les différentes catégories d'utilisation des terres dans la distribution des stocks de carbone du sol.
+
+```{r Répartition des stocks de carbone en fonction de la profondeur du sol dans la FC de Nanga-Eboko}
+Nanga_xyplot.Sol<-xyplot(MCsolHa~Depth|Strates,layout=c(3,2),group=Strates,data = Nanga_Sol,type=c("p","smooth"),scales = "free")
+(Nanga_xyplot.Sol)
+```
+
+
+#### Stocks de carbone dans les profondeurs de 0 à 10 cm
+
+```{r Distribution des stocks de carbne du sol de 0 à 10 cm}
+Nanga_StC_Sol.0_10=select(Nanga_Sol,Strates,Depth,MCsolHa)%>% filter(Depth=="0_10")
+describe(Nanga_StC_Sol.0_10,num.desc = c("mean","sd","median","min","max","valid.n"))
+Nanga_total_Sol.0_10<-Nanga_StC_Sol.0_10%>%
+     group_by(Strates)%>%
+     summarise(total.Carbone=round(mean(MCsolHa),2))
+Nanga_total_Sol.0_10=Nanga_total_Sol.0_10%>%arrange(desc(total.Carbone))
+(Nanga_total_Sol.0_10)
+Nanga_stable.Sol.0_10=desc_statby(Nanga_StC_Sol.0_10,measure.var = "MCsolHa",grps = "Strates")
+Nanga_stable.Sol.0_10<-Nanga_stable.Sol.0_10[,c("Strates","length","mean","sd","range")]
+Nanga_stable.Sol.0_10=Nanga_stable.Sol.0_10%>%arrange(desc(length))
+Nanga_stable_p.Sol.0_10<-ggtexttable(Nanga_stable.Sol.0_10,rows = NULL,theme=ttheme("classic"))
+(Nanga_stable_p.Sol.0_10)
+Nanga_t.test_Sol.0_10=ggboxplot(Nanga_StC_Sol.0_10,x="Strates",y="MCsolHa",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Nanga,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Nanga_t.test_Sol.0_10)
+```
+
+Les résultats montrent que les stocks de carbone dans la première couche varit de 8,15 à 35,07 tC/ha pour une moyenne de 19,17 ± 6,76 tC/ha respectivement dans les Marécages et les Forêts secondaires adultes. La moyenne de stocks la plus élevée se situe dans les Cultures (22,48 ± 13,18 tC/ha) tandis que la plus faible est dans les Forêts secondaires jeunes (16,6 ± 2,37 tC/ha). Les tests statistiques ne montrent aucune différence significative dans la distribution des stocks de carbone pour cette couche.
+
+
+#### Stocks de carbone dans les profondeurs de 10 à 20 cm
+
+```{r Distribution des stocks de carbne du sol de 10 à 20 cm}
+Nanga_StC_Sol.10_20=select(Nanga_Sol,Strates,Depth,MCsolHa)%>% filter(Depth=="10_20")
+describe(Nanga_StC_Sol.10_20,num.desc = c("mean","sd","median","min","max","valid.n"))
+Nanga_total_Sol.10_20<-Nanga_StC_Sol.10_20%>%
+     group_by(Strates)%>%
+     summarise(total.Carbone=round(mean(MCsolHa),2))
+Nanga_total_Sol.10_20=Nanga_total_Sol.10_20%>%arrange(desc(total.Carbone))
+(Nanga_total_Sol.10_20)
+Nanga_stable.Sol.10_20=desc_statby(Nanga_StC_Sol.10_20,measure.var = "MCsolHa",grps = "Strates")
+Nanga_stable.Sol.10_20<-Nanga_stable.Sol.10_20[,c("Strates","length","mean","sd","range")]
+Nanga_stable.Sol.10_20=Nanga_stable.Sol.10_20%>%arrange(desc(length))
+Nanga_stable_p.Sol.10_20<-ggtexttable(Nanga_stable.Sol.10_20,rows = NULL,theme=ttheme("classic"))
+(Nanga_stable_p.Sol.10_20)
+Nanga_t.test_Sol.10_20=ggboxplot(Nanga_StC_Sol.10_20,x="Strates",y="MCsolHa",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Nanga,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Nanga_t.test_Sol.10_20)
+```
+
+Dans la couche intermédiaire les stocks de carbone varient de 4,37 tC/ha dans les Marécages à 21,85 tC/ha dans les Cultures pour une moyenne générale de 14,35 ± 4,41 tC/ha. Les Forêts secondaires jeunes détiennent la moyenne de carbone du sol la plus élevée dans cette couche (16,47 ± 3,37 tC/ha) tandis que les Marécages en renferment beaucoup moins (10,52 ± 5,01 tC/ha). Du point de vue statistique il n'existe pas de différence significative dans la distribution des stocks de carbone entre les différentes strates qui constituent la FC de Nanga-Eboko.
+
+#### Stocks de carbone dans les profondeurs de 20 à 30 cm
+
+```{r Distribution des stocks de carbne du sol de 20 à 30 cm}
+Nanga_StC_Sol.20_30=select(Nanga_Sol,Strates,Depth,MCsolHa)%>% filter(Depth=="20_30")
+describe(Nanga_StC_Sol.0_10,num.desc = c("mean","sd","median","min","max","valid.n"))
+Nanga_total_Sol.20_30<-Nanga_StC_Sol.20_30%>%
+     group_by(Strates)%>%
+     summarise(total.Carbone=round(mean(MCsolHa),2))
+Nanga_total_Sol.20_30=Nanga_total_Sol.20_30%>%arrange(desc(total.Carbone))
+(Nanga_total_Sol.20_30)
+Nanga_stable.Sol.20_30=desc_statby(Nanga_StC_Sol.20_30,measure.var = "MCsolHa",grps = "Strates")
+Nanga_stable.Sol.20_30<-Nanga_stable.Sol.20_30[,c("Strates","length","mean","sd","range")]
+Nanga_stable.Sol.20_30=Nanga_stable.Sol.20_30%>%arrange(desc(length))
+Nanga_stable_p.Sol.20_30<-ggtexttable(Nanga_stable.Sol.20_30,rows = NULL,theme=ttheme("classic"))
+(Nanga_stable_p.Sol.20_30)
+Nanga_t.test_Sol.20_30=ggboxplot(Nanga_StC_Sol.20_30,x="Strates",y="MCsolHa",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Nanga,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
+(Nanga_t.test_Sol.20_30)
+```
+
+Dans la dernière couche (20 à 30 cm) les stocks de carbone varient de 8,15 tC/ha dans les Marécages à 35,07 tC/ha dans les forêts secondaires adultes pour une moyenne de 19,17 ± 6,76 tC/ha. La moyenne la plus élévée parmi les strates se situe dans les forêts secondaires adultes (13,19 tC/ha) tandis que la plus faible est de 7,16 tC/ha et se localise dans les Marécages. Contrairement aux deux couches précédentes, les tests statistiques montrent des différences significatives dans la distribution des stocks de carbone entre les Marécages-Forêts secondaires adultes d'une part et Marécages-Forêts secondaires jeunes d'autre part. Cette difference pourrait traduire l'influence de la nature du sol dans le processus de stockage du carbone organique. En effet les sols des zones marécageuses étaient de type sableux tandis ceux des strates forestières étaient de nature argilo-sableux. Les sols forestiers connaissent un apport constant de matières oraganiques provenant soit du bois mort soit de la chute des feuilles des arbres. En se décomposant lentement, ces débris enrichissent les couches superficielles et profondes du sol par un processus d'enfouissement. Le fait que les sols sableux des zones marécageuses de la FC de Nanga-Eboko sont moins riches en carbone peut laisser penser qu'il s'agirait d'un dépôt récent de sédiment qui recouvrirait des couches plus anciennes et probablement riches en matières organiques comme cela a pu être observé sur les terrains marécageux de la FC de Ndikiniméki. 
+
+
+
+
+
+
+Add a numbered part: `# (PART) Act one {-}`  (followed by `# A chapter`)
 
 Add an unnumbered part: `# (PART\*) Act one {-}` (followed by `# A chapter`)
 
