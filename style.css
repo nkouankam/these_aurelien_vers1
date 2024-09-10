@@ -43,3 +43,8 @@ caption {
 body {
   text-align: justify;
 }
+
+/* Masquer tous les messages */
+.message {
+  display: none;
+}
