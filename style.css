@@ -12,10 +12,7 @@ pre {
 pre code {
   white-space: inherit;
 }
-/* Ajuster la taille des images */
-img {
-  max-width: 80%;
-}
+
 /* Centrer les images */
 img {
   display: block;
