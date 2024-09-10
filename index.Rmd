@@ -1,67 +1,68 @@
 ---
-title: "DISTRIBUTION DE LA DIVERSITE LIGNEUSE ET DES STOCKS DE CARBONE DANS LES ZONES DE TRANSITION FORETS-SAVANE: CAS DES FORETS COMMUNALES DE NANGA-EBOKO ET NDIKINIMEKI"
+title: ""DISTRIBUTION DE LA DIVERSITE LIGNEUSE ET DES STOCKS DE CARBONE DANS LES ZONES"
+  DE TRANSITION FORETS-SAVANE: CAS DES FORETS COMMUNALES DE NANGA-EBOKO ET NDIKINIMEKI"
 author: "Nkouankam Aurelien"
 date: "`r format(Sys.Date(), '%d/%m/%Y')`"
 url: https://github.com/nkouankam/these_aurelien_vers1.git
 github-repo: nkouankam/these_aurelien_vers1
-lang: fr-FR
-otherlangs: [en-US]
+lang: "fr-FR"
+otherlangs: "en-US"
 papersize: A4
 fontsize: 12pt
-mainfont: texgyretermes 
+mainfont: texgyretermes
 mainfontoptions:
-  - Extension=.otf
-  - UprightFont=*-regular
-  - BoldFont=*-bold
-  - BoldItalicFont=*-bolditalic
-  - ItalicFont=*-italic
-mathfont: texgyretermes-math.otf
+- Extension=.otf
+- "UprightFont=*-regular"
+- "BoldFont=*-bold"
+- "BoldItalicFont=*-bolditalic"
+- "ItalicFont=*-italic"
+mathfont: "texgyretermes-math.otf"
 MemoirChapStyle: daleif1
 MemoirPageStyle: Ruled
-largemargins: false 
+largemargins: no
 smallmargin: 1.5in
 largemargin: 3in
-marginnote:  1.8in
+marginnote: 1.8in
 spinemargin: 1.5in
 uppermargin: 1.5in
 lowermargin: 1in
 toc-depth: 2
 secnum-depth: subsection
-lot: true
-lof: true
+lot: yes
+lof: yes
 site: bookdown::bookdown_site
 documentclass: book
 classoption:
-  - extrafontsizes
-  - onecolumn
-  - openright
-always_allow_html: true
-graphics: true
-link-citations: true
-colorlinks: true
-csquotes: true  
-bibliography: [references.bib,packages.bib]
-biblio-style: apalike 
-# url: your book url like https://bookdown.org/yihui/bookdown
-# cover-image: path to the social sharing image like images/cover.jpg
+- extrafontsizes
+- onecolumn
+- openright
+always_allow_html: yes
+graphics: yes
+link-citations: yes
+colorlinks: yes
+csquotes: yes
+bibliography:
+- references.bib
+- xpackages.bib
+biblio-style: apalike
 description: |
   rédaction d'une thèse sur la biodiversité végétale et les stocks de carbone dans certaines forêts communales du Cameroun.
   set in the _output.yml file.
   The HTML output format for this example is bookdown::bs4_book,
 biblatexoptions:
-  - backend=biber
-  - style=authoryear-ibid
-  - isbn=false
-  - backref=true
-  - giveninits=true
-  - uniquename=init
-  - maxcitenames=2
-  - maxbibnames=150
-  - sorting=nyt
-  - sortcites=false
-chaptersummary: "L'essentiel"  
-editor_options: 
-  markdown: 
+- backend=biber
+- "style=authoryear-ibid"
+- isbn=false
+- backref=true
+- giveninits=true
+- uniquename=init
+- maxcitenames=2
+- maxbibnames=150
+- sorting=nyt
+- sortcites=false
+chaptersummary: L'essentiel
+editor_options:
+  markdown:
     wrap: sentence
 ---
 
