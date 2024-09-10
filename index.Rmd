@@ -41,6 +41,7 @@ link-citations: true
 colorlinks: true
 csquotes: true  
 bibliography: [references.bib,packages.bib]
+biblio-style: apalike 
 # url: your book url like https://bookdown.org/yihui/bookdown
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
