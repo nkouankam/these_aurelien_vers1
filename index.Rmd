@@ -1,6 +1,5 @@
 ---
-title: ""DISTRIBUTION DE LA DIVERSITE LIGNEUSE ET DES STOCKS DE CARBONE DANS LES ZONES"
-  DE TRANSITION FORETS-SAVANE: CAS DES FORETS COMMUNALES DE NANGA-EBOKO ET NDIKINIMEKI"
+title: "DISTRIBUTION DE LA DIVERSITE LIGNEUSE ET DES STOCKS DE CARBONE DANS LES ZONES  DE TRANSITION FORETS-SAVANE: CAS DES FORETS COMMUNALES DE NANGA-EBOKO ET NDIKINIMEKI"
 author: "Nkouankam Aurelien"
 date: "`r format(Sys.Date(), '%d/%m/%Y')`"
 url: https://github.com/nkouankam/these_aurelien_vers1.git
@@ -111,7 +110,7 @@ InstallPackages(Packages)
 # knitr options
 knitr::opts_chunk$set(
   cache = FALSE,   # Cache chunk results
-  echo = TRUE,     # Show/Hide R chunks
+  echo = FALSE,     # Show/Hide R chunks
   warning = FALSE, # Show/Hide warnings
   # Figure alignment and size
   fig.align='center', out.width='80%', fig.asp=.75,
