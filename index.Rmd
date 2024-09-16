@@ -109,7 +109,7 @@ InstallPackages(Packages)
 
 # knitr options
 knitr::opts_chunk$set(
-  cache = FALSE,   # Cache chunk results
+  cache = TRUE,   # Cache chunk results
   echo = FALSE,     # Show/Hide R chunks
   warning = FALSE, # Show/Hide warnings
   # Figure alignment and size
