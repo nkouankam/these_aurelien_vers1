@@ -110,13 +110,13 @@ AGB=VOB×WB×BEF(VEF)
 (\#eq:Brown-Lugo1)
 \end{equation}
 ```
-AGB:Biomasse épigée;
+$AGB$:Biomasse épigée;
 
-VOB:Volume bois fort;
+$VOB$:Volume bois fort;
 
-WD: Densité du bois;
+$WD$: Densité du bois;
 
-VEF:Facteur d'expansion de volume.
+$VEF$:Facteur d'expansion de volume.
 
 La seconde technique (Figure: \@ref(fig:Methode-Chave2014)) est celle consistant à estimer la biomasse à partir des tables d'inventaires et d'un modèle allométrique [@Chave2005]. Elle repose sur l'utilisation du résultat d'un inventaire en nombre de tiges par essence et par catégorie de diamètre auquel on associe la biomasse épigée totale d'un arbre (AGB) estimée à partir d'une ou plusieurs données d'entrées : le Diamètre (D), la Hauteur (H), la Densité du bois (ρ). Equation: \@ref(eq:Chave-al2005).
 
@@ -126,7 +126,11 @@ AGB=0,0673×(ρD^2 H)0,976≡0,559×(ρD^2 H)
 (\#eq:Chave-al2005)
 \end{equation}
 ```
-D: diamètre à hauteur de poitrine ou au-dessus des contreforts (m); H: hauteur (m); ρ: densité spécifique (g/cm^3^). [l'intervalle de validité de l'équation: 5 à 156 cm de diamètre].
+$D$: diamètre à hauteur de poitrine ou au-dessus des contreforts (m); 
+$H$: hauteur (m);
+$ρ$: densité spécifique (g/cm^3^).
+
+[l'intervalle de validité de l'équation: 5 à 156 cm de diamètre].
 
 Lorsque les données de hauteur ne sont pas disponibles, @Chave2014 a récemment développé une équation permettant d'estimer la biomasse épigée à partir du diamètre de l'arbre et un facteur de stress environnemental. Equation: \@ref(eq:Chave-al2014).
 
@@ -136,7 +140,8 @@ AGB=℮^[-1,803-0,976×E+0,976×ln⁡(ρ)+2,673×ln⁡(D)-0,0299×(ln(D))²]
 (\#eq:Chave-al2014)
 \end{equation} 
 ```
-AGB, ρ, D, H et E sont respectivement la biomasse aérienne (kg), la densité du bois spécifique (g/cm^3^), le diamètre de l'arbre (cm), la hauteur totale de l'arbre (m) et une variable qui quantifie le stress environnemental (elle varie entre -0,2 et 1). [L'intervalle de validité de cette équation est de 5 à 180 cm de diamètre].
+$AGB$, $ρ$, $D$, $H$ et $E$ sont respectivement la biomasse aérienne (kg), la densité du bois spécifique (g/cm^3^), le diamètre de l'arbre (cm), la hauteur totale de l'arbre (m) et une variable qui quantifie le stress environnemental (elle varie entre -0,2 et 1). 
+[L'intervalle de validité de cette équation est de 5 à 180 cm de diamètre].
 
 Comparativement à la technique de @Brown_Lugo1992, les équations de Chave permettent d'estimer la biomasse totale de l'arbre en fonction du diamètre et/ou la hauteur et un facteur de stress environnemental sans appliquer de facteur de conversion global (Figure: \@ref(fig:Methode-Chave2014)). C'est une méthode qui s'applique aisément aux données brutes d'inventaires forestiers et est très adaptée aux dispositifs scientifiques du type « placettes permanentes ». Cependant sa mise en œuvre exige des corrections d'imprécision liées à l'affectation de chaque tige à une classe de diamètre plus ou moins large (5 ou 10 cm).
 
