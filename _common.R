@@ -26,7 +26,7 @@ InstallPackages(Packages)
 
 # example R options set globally
 knitr::opts_chunk$set(
-  cache = TRUE,   # Cache chunk results
+  cache = FALSE,   # Cache chunk results
   echo = FALSE,     # Show/Hide R chunks
   warning = FALSE, # Show/Hide warnings
   # Figure alignment and size
