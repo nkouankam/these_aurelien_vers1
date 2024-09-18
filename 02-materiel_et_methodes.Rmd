@@ -18,7 +18,13 @@ Les Forêts Communales de Nanga et Boko et Ndikiniméki sont toutes deux située
 Pour atteindre les objectifs fixés, le matériel inscrits dans le Tableau : \@ref(tab:Liste-desoutils2) a été utilisé
 
 ```{r Liste-desoutils2}
-knitr::kable(data.frame(Outils=c("Global Positionning System (GPS)"," Boussole","Appareil photo","Machette","Penta-décamètre de 50 m","Compas forestier","Ficelle ","Clinomètre","Sécateur","Etuve","Marqueurs","Plastique polyéthylique","Planche à herbier, papiers-presse et alcool","Balance ","Carnets, crayons et gommes"),Fonctions=c("enregistrement des coordonnées géographiques des points et des parcelles d'échantillonnage","Orientation des layons d'ouverture "," Prise de vues ","ouverture des layons et confection des jalons","Délimitation des aires d'échantillonnage","Mesure des diamètres ou circonférences des arbres","Délimitation des sous-parcelles","Mesure les pentes des parcelles","Collecte des échantillons sur le terrain","Séchage des échantillons","Etiquetage des échantillons collectés","Collecte des échantillons de litière et sol","Pressage, séchage et conservation des spécimens","Pesage des échantillons","prises de notes")),caption="Liste des outils utilisés et leurs fonctions",booktabs=TRUE,caption.short=NULL)
+
+knitr::kable(
+  data.frame(
+    Outils=c("Global Positionning System (GPS)"," Boussole","Appareil photo","Machette","Penta-décamètre de 50 m","Compas forestier","Ficelle ","Clinomètre","Sécateur","Etuve","Marqueurs","Plastique polyéthylique","Planche à herbier, papiers-presse et alcool","Balance ","Carnets, crayons et gommes"),
+    Fonctions=c("enregistrement des coordonnées géographiques des points et des parcelles d'échantillonnage","Orientation des layons d'ouverture "," Prise de vues ","ouverture des layons et confection des jalons","Délimitation des aires d'échantillonnage","Mesure des diamètres ou circonférences des arbres","Délimitation des sous-parcelles","Mesure les pentes des parcelles","Collecte des échantillons sur le terrain","Séchage des échantillons","Etiquetage des échantillons collectés","Collecte des échantillons de litière et sol","Pressage, séchage et conservation des spécimens","Pesage des échantillons","prises de notes")),
+  caption="Liste des outils utilisés et leurs fonctions",
+  booktabs=TRUE,caption.short="Outils et fonctions utilisés",escape = FALSE)
 ```
 
 ## Méthodes
