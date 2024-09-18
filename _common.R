@@ -18,9 +18,6 @@ knitr::knit_hooks$set(chunk = function(x, options) {
   ifelse(options$size != "normalsize", paste0("\n \\", options$size,"\n\n", x, "\n\n \\normalsize"), x)
 })
 
-# Figures with side captions
-if (rmarkdown::metadata$largemargins)
-  knitr::opts_chunk$set(fig.env='SCfigure')
 # Add necessary packages here
 Packages <- c("compiler",  "doParallel", "foreach", "future", "future.apply", "gridExtra", "htmlwidgets",  "methods",  "testthat",  "usethis", "BiodiversityR", "vegan","dplyr", "tidyverse", "magrittr","here", "data.table", "ggplot2", "prettyR", "pastecs","ggpubr", "PerformanceAnalytics", "taxize", "FD", "vegetarian","adespatial", "adegraphics", "ade4", "readxl", "ggsci", "labdsv", "indicspecies", "kableExtra", "knitr", "mvpart","tinytex","bookdown","pandoc")
 
