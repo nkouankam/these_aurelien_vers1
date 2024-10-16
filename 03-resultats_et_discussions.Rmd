@@ -1,3 +1,12 @@
+---
+bibliography: references.bib
+output:
+  word_document: default
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
 # Résultats et Discussions
 
 ## Résultats
@@ -54,15 +63,37 @@ Ndiki_Sol<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_ver
 Nanga_Sol<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_vers1/Nanga_data/Nanga_sol.csv",check.names = FALSE)
 ```
 
-Dans la Forêt Communale de Ndikiniméki notre étude floristique a couvert un ensemble de 32 parcelles d'inventaires (Figure:\@ref(fig:Nomenclatureparcelles-Ndikinimeki3)) reparties sur 05 catégories d'utilisation des terres (Figure:\@ref(fig:CategoriesUtilisation-TerreNdikinimeki3)):
+Dans la Forêt Communale de Ndikiniméki notre étude floristique a couvert un ensemble de 32 parcelles d'inventaires (Tableau:\@ref(tab:Nomenclatureparcelles-Ndikinimeki3)) reparties sur 05 catégories d'utilisation des terres
 
+```{r Nomenclatureparcelles-Ndikinimeki3}
+knitr::kable(rownames(Ndiki_spec),caption ='Nomenclature des parcelles dans la FC de Ndikiniméki. (x: Numéro des parcelles)',booktabs=TRUE,caption.short=NULL)
+```
+
+**Description:**
+Catégories et proportions des types d'utilisation des terres dans la FC de Ndikiniméki
+
+```{r CategoriesUtilisation-TerreNdikinimeki3,fig.cap="Catégories et proportions des types d'utilisation des terres dans la FC de Ndikiniméki"}
+library(prettyR)
+describe(Ndiki.Env$TUT)
+```
 -   13 parcelles de Forêts Matures (FM);
 -   07 parcelles de Forêts Secondaires (FS);
 -   02 parcelles de Forêts Marécageuses (FMa);
 -   08 parcelles de Cacaoyères (CAC);
 -   et 02 parcelles de Jachères (JA).
 
-Dans la FC de Nanga-Eboko l'étude floristique a couvert 23 parcelles au total (Figure:\@ref(fig:NomenclatureparcellesNanga-Eboko3)) reparties en 06 catégories d'utlisation des terres (Figure:\@ref(fig:CategoriesUtilisationTerreNanga-Eboko3):
+Dans la FC de Nanga-Eboko l'étude floristique a couvert 23 parcelles au total (Tableau:\@ref(tab:NomenclatureparcellesNanga-Eboko3)) reparties en 06 catégories d'utlisation des terres 
+
+```{r NomenclatureparcellesNanga-Eboko3,}
+knitr::kable(row.names(Nanga_spec),caption ='Nomenclature des  parcelles  dans la FC de Nanga-Eboko. (x: Numéro de parcelles)',booktabs=TRUE,caption.short=NULL) 
+```
+
+**Description:**
+Catégories et proportion des Types d'Utilisation des Terre dans FC de Nanga-Eboko
+
+```{r CategoriesUtilisationTerreNanga-Eboko3}
+describe(Nanga.Env$TUT)
+```
 
 -   07 parcelles de Forêts Secondaires Adultes (FSA);
 -   04 parcelles de Forêts Secondaires Jeunes (FSJ);
@@ -71,66 +102,55 @@ Dans la FC de Nanga-Eboko l'étude floristique a couvert 23 parcelles au total (
 -   03 parcelles de Savanes (SAV);
 -   et 02 parcelles de cultures (CUL).
 
-```{r Nomenclatureparcelles-Ndikinimeki3,fig.cap='Nomenclature des parcelles dans la FC de Ndikinimeki'}
-rownames(Ndiki_spec)
-```
+Dans la FC de Ndikiniméki l'on a identifié 148 espèces (Tableau:\@ref(tab:Especes-Ndikinimeki3)) appartenant à 43 familles (Tableau:\@ref(tab:Familles-Ndikinimeki3)).
 
-```{r NomenclatureparcellesNanga-Eboko3,fig.cap='Nomenclature des  parcelles  dans la FC de Nanga-Eboko'}
-row.names(Nanga_spec)
-```
-
-```{r CategoriesUtilisation-TerreNdikinimeki3,fig.cap="Catégories et proportions des types d'utilisation des terres dans la FC de Ndikiniméki"}
-library(prettyR)
-describe(Ndiki.Env$TUT)
-```
-
-```{r CategoriesUtilisationTerreNanga-Eboko3,fig.cap="Catégories et proportion des Types d'Utilisation des Terre dans FC de Nanga-Eboko"}
-describe(Nanga.Env$TUT)
-```
-
-Dans la FC de Ndikinimeki l'on a identifié 148 espèces (Figure:\@ref(fig:Especes-Ndikinimeki3)) appartenant à 43 familles (Figure:\@ref(fig:Familles-Ndikinimeki3)), tandis que dans la FC de Nanga-Eboko 122 espèces (Figure:\@ref(fig:EspecesNanga-Eboko3)) rattachées à 39 familles ont été enregistrées (Figure:\@ref(fig:FamillesNanga-Eboko3)).
-
-```{r Especes-Ndikinimeki3,fig.cap='identification des espèces enregistrées dans la FC de Ndikinimeki'}
+```{r Especes-Ndikinimeki3}
 # Noms des espèces identifiées à Ndikinimeki
-colnames(Ndiki_spec)
+knitr::kable(colnames(Ndiki_spec),caption ='Identification des espèces enregistrées dans la FC de Ndikinimeki. (x: Nom des espèces)',booktabs=TRUE,caption.short=NULL) 
 ```
 
-```{r EspecesNanga-Eboko3,fig.cap='identification des espèces enregistrées dans la FC de Nanga-Eboko'}
-# Noms des espèces identifiées à Nanga-Eboko
-colnames(Nanga_spec)
-```
-
-```{r Familles-Ndikinimeki3,fig.cap='Identification des familles dans la FC de Ndikinimeki'}
+```{r Familles-Ndikinimeki3}
 # Nom des familles enregistrées à Ndikinimeki
-colnames(Ndiki_fami)
+knitr::kable(colnames(Ndiki_fami),caption = "Identification des familles dans la FC de Ndikinimeki. (x: Nom des familles d'espèces)",booktabs=TRUE,caption.short=NULL)
 ```
 
-```{r FamillesNanga-Eboko3,fig.cap='Identification des familles dans la FC de Nanga-Eboko'}
+Dans la FC de Nanga-Eboko 122 espèces (Tableau:\@ref(tab:EspecesNanga-Eboko3)) rattachées à 39 familles ont été enregistrées (Tableau:\@ref(tab:FamillesNanga-Eboko3)).
+
+```{r EspecesNanga-Eboko3}
+# Noms des espèces identifiées à Nanga-Eboko
+knitr::kable(colnames(Nanga_spec),caption = 'Identification des espèces enregistrées dans la FC de Nanga-Eboko. (x: Nom des espèces)',booktabs=TRUE,caption.short=NULL)
+```
+
+```{r FamillesNanga-Eboko3}
 # Noms des familles identifiées à Nanga-Eboko
-colnames(Nanga_fami)
+knitr::kable(colnames(Nanga_fami),caption = "Identification des familles dans la FC de Nanga-Eboko. (x: Nom des familles d'espèces)",booktabs=TRUE,caption.short=NULL)
 ```
 
-Soit $X_i$ le nombre d'individus de $i$ espèces observées dans l'échantillon, $i=1,2,...,n;$ $X_i$ est considéré comme la fréquence des espèces de l'échantillon. Soit $f_k$ le nombre d'espèces représentées exactement par $k$ individus dans l'échantillon, $k=0,1,...,N;$ $f_k$ est considéré comme la fréquence d'abondance observée. $f_1=390\ et\ f_1=189$ est le nombre d'espèces représentées exactement par 1 individu (singletons) dans une parcelle unique parmi celles inventoriées respectivement pour les FC de Ndikinikimeki et Nanga-Eboko. $f_2=93\ et\ f_2=57$ est le nombre d'espèces représentées par 2 individus (doublons) dans l'échantillon d'inventaire respectivement pour les FC de Ndikinimeki et Nanga-Eboko. Pour la FC de Ndikinimeki le nombre d'observation de présence est de 608 tandis que la fréquence non-observable $f_0=4128$ (Figure:\@ref(fig:ClassesAbondance-Ndikinimeki3)) dénote le nombre d'espèces présentes dans l'assemblage des individus mais non observées dans l'échantillon d'inventaire. Elle représente près de 87% des données de la matrice d'inventaire et la valeur maximale d'abondance a été enregistrée dans une parcelle où une espèce a été observée 29 fois de suite (Figure:\@ref(fig:Histogramme-Abondance3)). Pour la FC de Nanga-Eboko la fréquence non-observable est 2473 tandis que la valeur maximale d'abondance est de 25 (Figure:\@ref(fig:ClassesAbondanceNanga-Eboko3)).
+Soit $X_i$ le nombre d'individus de $i$ espèces observées dans l'échantillon, $i=1,2,...,n;$ $X_i$ est considéré comme la fréquence des espèces de l'échantillon. Soit $f_k$ le nombre d'espèces représentées exactement par $k$ individus dans l'échantillon, $k=0,1,...,N;$ $f_k$ est considéré comme la fréquence d'abondance observée. $f_1=390\ et\ f_1=189$ est le nombre d'espèces représentées exactement par 1 individu (singletons) dans une parcelle unique parmi celles inventoriées respectivement pour les FC de Ndikinikimeki et Nanga-Eboko. $f_2=93\ et\ f_2=57$ est le nombre d'espèces représentées par 2 individus (doublons) dans l'échantillon d'inventaire respectivement pour les FC de Ndikinimeki et Nanga-Eboko. Pour la FC de Ndikinimeki le nombre d'observation de présence est de 608 tandis que la fréquence non-observable $f_0=4128$ (Tableau:\@ref(tab:ClassesAbondance-Ndikinimeki3)) dénote le nombre d'espèces présentes dans l'assemblage des individus mais non observées dans l'échantillon d'inventaire. Elle représente près de 87% des données de la matrice d'inventaire et la valeur maximale d'abondance a été enregistrée dans une parcelle où une espèce a été observée 29 fois de suite (Figure:\@ref(fig:Histogramme-Abondance3)). 
 
-```{r ClasseAbondance-Ndikinimeki3,fig.cap="dénombrement des classes d'abondance dans la FC de Ndikinimeki." }
-(ab_Ndiki<-table(unlist(Ndiki_spec)))
-```
-
-```{r ClassesAbondanceNanga-Eboko3,fig.cap="dénombrement des classes d'abondance dans la FC de Nanga-Eboko."}
-(ab_Nanga<-table(unlist(Nanga_spec)))
+```{r ClasseAbondance-Ndikinimeki3}
+ab_Ndiki<-table(unlist(Ndiki_spec))
+knitr::kable(ab_Ndiki,caption = "Dénombrement des classes d'abondance dans la FC de Ndikiniméki. (Varl:Classes d'abondance; Freq:Fréquences d'abondance)",booktabs=TRUE,caption.short=NULL)
 ```
 
 ```{r Histogramme-Abondance3,fig.cap="Histogrammes des effectifs des classes d'abondance de toutes les espèces."}
 par(mfrow=c(1,2))
-barplot(ab_Ndiki,las=1,xlab = "Classes d'abondance",ylab = "Fréquences",col = gray(5:0/5),main = "FC Ndikinimeki")
+barplot(ab_Ndiki,las=1,xlab = "Classes d'abondance",ylab = "Fréquences",col = gray(5:0/5),main = "FC Ndikiniméki")
 barplot(ab_Nanga,las=1,xlab = "Classes d'abondance",ylab = "Fréquences",col = gray(5:0/5),main = "FC Nanga-Eboko")
+```
+
+Pour la FC de Nanga-Eboko la fréquence non-observable est 2473 tandis que la valeur maximale d'abondance est de 25 (Tableau:\@ref(tab:ClassesAbondanceNanga-Eboko3)).
+
+```{r ClassesAbondanceNanga-Eboko3}
+ab_Nanga<-table(unlist(Nanga_spec))
+knitr::kable(ab_Nanga,caption = "Dénombrement des classes d'abondance dans la FC de Nanga-Eboko. (Varl:Classes d'abondance; Freq:Fréquences d'abondance)",booktabs=TRUE,caption.short=NULL)
 ```
 
 Une projection des Coordonnées géographiques des parcelles (données GPS recueillies sur le terrain) permet de confirmer la localisation des parcelles d'inventaires dans la zone de transition Forêts-Savane (Figures:\@ref:(fig:Coordonnees-parcelles3) et \@ref(fig:Localisation-occupationsols3)).
 
 ```{r Coordonnees-parcelles3,fig.cap="Localisation géographique des parcelles d'inventaires "}
 par(mfrow=c(1,2))
-plot.default(spa_Ndiki,asp = 1,type = "p",main = "Localisation sites Ndikinimeki",xlab = "Longitude",ylab = "Latitude")
+plot.default(spa_Ndiki,asp = 1,type = "p",main = "Localisation sites Ndikiniméki",xlab = "Longitude",ylab = "Latitude")
 plot.default(spa_Nanga,asp = 1,type = "p",main = "Localisation sites Nanga-Eboko",xlab = "Longitude",ylab = "Latitude")
 ```
 
@@ -142,9 +162,11 @@ my_sf_Nanga=st_as_sf(spa_Nanga,coords= c("Longitude","Latitude"))
 library(ggplot2)
 theme_set(theme_bw())
 par(mfrow=c(1,2))
-ggplot(my_sf_Ndiki)+geom_sf(aes(fill=Ndiki.Env$TUT))+geom_sf_label(aes(label=Ndiki.Env$TUT))+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FM","FS","FMa","JA","CAC"),labels=c("FM:Forêt Mature","FS:Forêt Secondaire","FMa:Forêt Marécageuse","JA:Jachère","CAC:Cacaoyère"))+labs(x="Longitude",y="Latitude",title = "FC de Ndikinimeki",caption = "Localisation des sites par catégories d'occupation des terres")
+ggplot(my_sf_Ndiki)+geom_sf(aes(fill=Ndiki.Env$TUT))+geom_sf_label(aes(label=Ndiki.Env$TUT))+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FM","FS","FMa","JA","CAC"),labels=c("FM:Forêt Mature","FS:Forêt Secondaire","FMa:Forêt Marécageuse","JA:Jachère","CAC:Cacaoyère"))+labs(x="Longitude",y="Latitude",title = "FC de Ndikiniméki",caption = "Localisation des sites par catégories d'occupation des terres")
 ggplot(my_sf_Nanga)+geom_sf(aes(fill=Nanga.Env$TUT))+geom_sf_label(aes(label=Nanga.Env$TUT))+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FSA","FSJ","MAR","FGA","SAV","CUL"),labels=c("FSA:Forêt Secondaire Adulte","FSJ:Forêt Secondaire Jeune","MAR:Marécages","FGA:Forêts Galeries","SAV:Savanes","CUL:Cultures"))+labs(x="Longitude",y="Latitude",title = "FC de Nanga-Eboko",caption ="Localisation des sites par catégories d'occupation des terres")
 ```
+
+En examinant l'allure de la répartition des fréquences d'occurrences des espèces (Figure:\@ref(fig:Frequences-occurences3)), ordonnées en rang de fréquences croissants, on observe que le nombre d'espèces est inversement proportionnel à la fréquence d'occurrence. Lorsque la fréquence d'occurrence commence à augmenter, le nombre d'espèces diminue (Figure:\@ref(fig:Nombres-occurences3). En effet 3/4 des espèces repertoriées ont une fréquence d'occurence inférieure à 10%.
 
 ```{r Nombres-occurences3}
 # Déterminer le nombre de sites où chaque espèce est présente
@@ -159,7 +181,7 @@ spe_relf_Nanga=round(sort(spe_relf_Nanga), 1)
 # Construction des histogrammes
 par(mfrow = c(1,2))
 hist(spe_pres_Ndiki, 
-main = "FC Ndikinimeki", 
+main = "FC Ndikiniméki", 
 right = FALSE, 
 las = 1, 
 xlab = "Nombres d'occurrences", 
@@ -181,7 +203,7 @@ col = "bisque"
 ```{r Frequences-occurences3,fig.cap="Fréquences d'occurences des espèces."}
 par(mfrow = c(1,2))
 hist(spe_relf_Ndiki, 
-main = "FC Ndikinimeki", 
+main = "FC Ndikiniméki", 
 right = FALSE, 
 las = 1,
 xlab = "Frequences  d'occurrences (%)", 
@@ -200,15 +222,15 @@ col = "bisque"
 )
 ```
 
-En examinant l'allure de la répartition des fréquences d'occurrences des espèces (Figure:\@ref(fig:Frequences-occurences3)), ordonnées en rang de fréquences croissants, on observe que le nombre d'espèces est inversement proportionnel à la fréquence d'occurrence. Lorsque la fréquence d'occurrence commence à augmenter, le nombre d'espèces diminue (Figure:\@ref(fig:Nombres-occurences3). En effet 3/4 des espèces repertoriées ont une fréquence d'occurence inférieure à 10%.
+Parmi les 32 parcelles prises séparément dans la FC de Ndikiniméki, la richesse spécifique observée la plus faible a été retrouvée dans la parcelle (P19) avec 05 espèces enregitrées tandis que la plus élévée est de 33 espèces et se situe dans la parcelle (P25) Figure:\@ref(fig:Minrichesse-Ndikinimeki3). 75% des parcelles inventoriées comptent 22 espèces et la moyenne se situe autour de 19 espèces dans l'ensemble (Figure:\@ref(fig:Cartogrphiepools-specifiques3). Dans la FC de Nanga-Eboko, la richesse spécifique observée la plus faible a été enregistrée dans la parcelle (P3) avec 1 seule espèce tandis que la richesse spécifique maximale a été relevée dans la parcelle (P11) avec 32 espèces.
 
 ```{r Nombre d_espèces par parcelles}
 # Déterminer le nombre d'espèces par parcelles
 sit_pres_Ndiki <- apply(Ndiki_spec > 0,1,sum)
 sit_pres_Nanga <- apply(Nanga_spec > 0,1,sum)
 # Classement des résultats par ordre croissant
-sort(sit_pres_Ndiki)
-sort(sit_pres_Nanga)
+knitr::kable(sort(sit_pres_Ndiki),caption = "Classement de la richesse spécifiques par parcelles dans la FC de Ndikiniméki.(x:Richesse spécifiques par parcelles)",booktabs=TRUE,caption.short=NULL)
+knitr::kable(sort(sit_pres_Nanga),caption = "Classement de la richesse spécifiques par parcelles dans la FC de Nanga-Eboko.(x:Richesse spécifiques par parcelles)",booktabs=TRUE,caption.short=NULL)
 ```
 
 ```{r Richesses spécifiques par parcelles,fig.cap="Nombre d'espèces par parcelles"}
@@ -216,7 +238,7 @@ par(mfrow=c(1,2))
 plot(sit_pres_Ndiki,type = "s",
 las = 1, 
 col = "gray",
-main = "FC Ndikinimeki",
+main = "FC Ndikiniméki",
 xlab = "Numéros des parcelles", 
 ylab = "Richesses spécifiques"
 )
@@ -235,7 +257,7 @@ text(sit_pres_Nanga, row.names(Nanga_spec), cex = .8, col = "blue")
 par(mfrow=c(1,2))
 plot.default(spa_Ndiki, 
 asp = 1, 
-main = "FC Ndikinimeki", 
+main = "FC Ndikiniméki", 
 pch = 21, 
 col = "white", 
 bg = "brown", 
@@ -255,11 +277,10 @@ ylab = "Latitude"
 )
 ```
 
-Parmi les 32 parcelles prises séparément dans la FC de Ndikinimeki, la richesse spécifique observée la plus faible a été retrouvée dans la parcelle (P19) avec 05 espèces enregitrées tandis que la plus élévée est de 33 espèces et se situe dans la parcelle (P25) Figure:\@ref(fig:Minrichesse-Ndikinimeki3). 75% des parcelles inventoriées comptent 22 espèces et la moyenne se situe autour de 19 espèces dans l'ensemble (Figure:\@ref(fig:Cartogrphiepools-specifiques3). Dans la FC de Nanga-Eboko, la richesse spécifique observée la plus faible a été enregistrée dans la parcelle (P3) avec 1 seule espèce tandis que la richesse spécifique maximale a été relevée dans la parcelle (P11) avec 32 espèces.
+
 
 ```{r Analyse du nombre d_especes observees dans la FC de Ndikinimeki}
-# nombre d'espèces dans FC de Ndikinimeki
-library(vegan)
+# nombre d'espèces par parcelles dans FC de Ndikiniméki
 (Ndiki_nbsp<-specnumber(Ndiki_spec))
 ```
 
@@ -858,7 +879,7 @@ Ndiki_StC.Herb=select(Ndiki_Herb,Strates,StC.Herb.t.ha)
 describe(Ndiki_StC.Herb,num.desc = c("mean","sd","median","min","max","valid.n"))
 ```
 
-Les quantités de carbone les plus importantes ont été enregistrées dans les Cacaoyères avec 2,96 tC/ha représentant environ 30 % des stocks de carbone (Figure:\@ref(fig:Barplotcarboneherbacees-Ndikinimeki3)). Les Cacaoyères étant pour la plupart des agroforêts, une canopée ouverte favorise le développement des herbacées qui, à la faveur de la lumière prospèrent abondement surtout avant les opérations de désherbage (Figure:\@ref(fig:Graphiquedensiteherbacees-Ndikinimeki3)). Les Forêts marécageuses par contre détiennent le plus faible taux de carbone dans les herbacées (1,03 tC/ha). Cela peut se justifier par les conditions du milieu, en effet le sol étant gorgé d'eau, il ne favorise pas le développement de la plupart des espèces forestières (Figure:\@ref(fig:Stockscarboneherbacees-Ndikinimeki3)). L'analyse statistique de la distribution des stocks de carbone des herbacées montre qu'il existe une différence très significative entre les Forêts matures et les Forêts marécageuses, et significative entre Forêts matures-Forêts secondaires et Forêts matures-Cacaoyères (Figure:\@ref(fig:ttestherbacees-Ndikinimeki3).
+Les quantités de carbone les plus importantes ont été enregistrées dans les Cacaoyères avec 2,96 tC/ha représentant environ 30 % des stocks de carbone (Figure:\@ref(fig:Barplotcarboneherbacees-Ndikinimeki3)). Les Cacaoyères étant pour la plupart des agroforêts, une canopée ouverte favorise le développement des herbacées qui, à la faveur de la lumière prospèrent abondement surtout avant les opérations de désherbage (Figure:\@ref(fig:Graphiquedensiteherbacees-Ndikinimeki3)). Les Forêts marécageuses par contre détiennent le plus faible taux de carbone dans les herbacées (1,03 tC/ha). Cela peut se justifier par les conditions du milieu, en effet le sol étant gorgé d'eau, il ne favorise pas le développement de la plupart des espèces forestières (Figure:\@ref(fig:Stockscarboneherbacees-Ndikinimeki3)). L'analyse statistique de la distribution des stocks de carbone des herbacées montre qu'il existe une différence très significative entre les Forêts matures et les Forêts marécageuses, et significative entre Forêts matures-Forêts secondaires et Forêts matures-Cacaoyères (Figure:\@ref(fig:ttestherbacees-Ndikinimeki3)).
 
 ```{r Graphiquedensiteherbacees-Ndikinimeki3,fig.cap="Graphiques de densité des stocks de carbone des herbacées dans la FC de Ndikiniméki."}
 ggdensity(Ndiki_StC.Herb, x = "StC.Herb.t.ha",add = "mean", rug = TRUE,  color = "Strates", fill = "Strates", palette = "jco")
@@ -929,7 +950,7 @@ Nanga_perfect.Herb=Nanga_bp.Herb+scale_fill_discrete(name="Types d'Utilisation\n
 
 ### Estimation des stocks de carbone dans la litière de la FC de Ndikiniméki
 
-La distribution des stocks de carbone de la litière dans la FC de Ndikiniméki varit de 0,01 à 0,12 tC/ha pour une moyenne de 0,04 ± 0,02 tC/ha (Figure:\@ref(fig:Descriptionlitiere-Ndikinimeki3)). Le stock total de carbone dans les 5 catégories d'utilisation des terres est de 6,65 tC/ha. Les Cacaoyères (CAC) cumulent 1,81 tC/ha avec seulement 25% des quadrats établis tandis que les Forêts matures (FM) totalisent 1,57 tC/ha pour 41% des quadrats (Figure:\@ref(fig:Barplot carbone litière Ndikiniméki)). Bien qu'ayant la moyenne des stocks la plus élevée, les Jachères (JA) ont le total de stocks de carbone de litière le plus faible (0,68 tC/ha) Figure:\@ref(fig:Graphiquedensitelitiere-Ndikinimeki3). Les tests statistques ont également montrés qu'il existe une différence très significative dans la distribution des stocks entre les Jachères et les Forêts matures, les Forêts secondaires et les Cacaoyères. Il existe également une différence très significative entre les Forêts matures et les Forêts secondaires d'une part et les Forêts matures et les Cacaoyères d'autre part. Cependant il n'existe pas de différence significative entre les Cacaoyères et les Forêts marécageuses d'une part, les Cacaoyères et les Forêts secondaires d'autre part. De même il n'existe pas de différence significative entre les Forêts secondaires et les Forêts marécageuses (Figure:\@ref(fig:ttestlitiereNdikinimeki3).
+La distribution des stocks de carbone de la litière dans la FC de Ndikiniméki varit de 0,01 à 0,12 tC/ha pour une moyenne de 0,04 ± 0,02 tC/ha (Figure:\@ref(fig:Descriptionlitiere-Ndikinimeki3)). Le stock total de carbone dans les 5 catégories d'utilisation des terres est de 6,65 tC/ha. Les Cacaoyères (CAC) cumulent 1,81 tC/ha avec seulement 25% des quadrats établis tandis que les Forêts matures (FM) totalisent 1,57 tC/ha pour 41% des quadrats (Figure:\@ref(fig:Barplot carbone litière Ndikiniméki)). Bien qu'ayant la moyenne des stocks la plus élevée, les Jachères (JA) ont le total de stocks de carbone de litière le plus faible (0,68 tC/ha) Figure:\@ref(fig:Graphiquedensitelitiere-Ndikinimeki3). Les tests statistques ont également montrés qu'il existe une différence très significative dans la distribution des stocks entre les Jachères et les Forêts matures, les Forêts secondaires et les Cacaoyères. Il existe également une différence très significative entre les Forêts matures et les Forêts secondaires d'une part et les Forêts matures et les Cacaoyères d'autre part. Cependant il n'existe pas de différence significative entre les Cacaoyères et les Forêts marécageuses d'une part, les Cacaoyères et les Forêts secondaires d'autre part. De même il n'existe pas de différence significative entre les Forêts secondaires et les Forêts marécageuses (Figure:\@ref(fig:ttestlitiereNdikinimeki3)).
 
 ```{r Descriptionlitiere-Ndikinimeki3,fig.cap='Description des données de la litière dans la FC de Ndikiniméki.'}
 Ndiki_Lit<-na.omit(Ndiki_Lit)
@@ -1314,6 +1335,9 @@ knitr::kable(Nanga_stable.Sol.20_30,digits = 2,caption='Calcul des stocks moyens
 Nanga_t.test_Sol.20_30=ggboxplot(Nanga_StC_Sol.20_30,x="Strates",y="MCsolHa",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Nanga,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
 (Nanga_t.test_Sol.20_30)
 ```
+
+
+
 
 Add a numbered part: `# (PART) Act one {-}` (followed by `# A chapter`)
 
