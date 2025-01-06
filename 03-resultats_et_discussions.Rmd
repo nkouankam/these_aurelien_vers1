@@ -84,18 +84,19 @@ describe(Ndiki.Env$TUT)
 -   08 parcelles de Cacaoyères (CAC);
 -   et 02 parcelles de Jachères (JA).
 
-Dans la FC de Nanga-Eboko l'étude floristique a couvert 23 parcelles au total (Tableau:\@ref(tab:NomenclatureparcellesNanga-Eboko3)) reparties en 06 catégories d'utlisation des terres 
+Dans la FC de Nanga-Eboko l'étude floristique a couvert 23 parcelles (Tableau:\@ref(tab:NomenclatureparcellesNanga-Eboko3)) reparties en 06 catégories d'utlisation des terres 
 
 ```{r NomenclatureparcellesNanga-Eboko3,}
 knitr::kable(row.names(Nanga_spec),caption ='Nomenclature des  parcelles  dans la FC de Nanga-Eboko. (x: Numéro de parcelles)',booktabs=TRUE,caption.short=NULL) 
 ```
 
-**Description:**
+::: {.rmdnote}
 Catégories et proportion des Types d'Utilisation des Terre dans FC de Nanga-Eboko
 
 ```{r CategoriesUtilisationTerreNanga-Eboko3}
 describe(Nanga.Env$TUT)
 ```
+:::
 
 -   07 parcelles de Forêts Secondaires Adultes (FSA);
 -   04 parcelles de Forêts Secondaires Jeunes (FSJ);
@@ -108,19 +109,19 @@ Dans la FC de Ndikiniméki l'on a identifié 148 espèces (Tableau:\@ref(tab:Esp
 
 ```{r Especes-Ndikinimeki3}
 # Noms des espèces identifiées à Ndikinimeki
-knitr::kable(colnames(Ndiki_spec),caption ='Identification des espèces enregistrées dans la FC de Ndikinimeki. (x: Nom des espèces)',booktabs=TRUE,caption.short=NULL) 
+knitr::kable(colnames(Ndiki_spec),caption ="Identification des espèces enregistrées dans la FC de Ndikiniméki. (x: Nom des espèces)",booktabs=TRUE,caption.short=NULL) 
 ```
 
 ```{r Familles-Ndikinimeki3}
 # Nom des familles enregistrées à Ndikinimeki
-knitr::kable(colnames(Ndiki_fami),caption = "Identification des familles dans la FC de Ndikinimeki. (x: Nom des familles d'espèces)",booktabs=TRUE,caption.short=NULL)
+knitr::kable(colnames(Ndiki_fami),caption = "Identification des familles dans la FC de Ndikiniméki. (x: Nom des familles d'espèces)",booktabs=TRUE,caption.short=NULL)
 ```
 
 Dans la FC de Nanga-Eboko 122 espèces (Tableau:\@ref(tab:EspecesNanga-Eboko3)) rattachées à 39 familles ont été enregistrées (Tableau:\@ref(tab:FamillesNanga-Eboko3)).
 
 ```{r EspecesNanga-Eboko3}
 # Noms des espèces identifiées à Nanga-Eboko
-knitr::kable(colnames(Nanga_spec),caption = 'Identification des espèces enregistrées dans la FC de Nanga-Eboko. (x: Nom des espèces)',booktabs=TRUE,caption.short=NULL)
+knitr::kable(colnames(Nanga_spec),caption = "Identification des espèces enregistrées dans la FC de Nanga-Eboko. (x: Nom des espèces)",booktabs=TRUE,caption.short=NULL)
 ```
 
 ```{r FamillesNanga-Eboko3}
@@ -128,7 +129,7 @@ knitr::kable(colnames(Nanga_spec),caption = 'Identification des espèces enregis
 knitr::kable(colnames(Nanga_fami),caption = "Identification des familles dans la FC de Nanga-Eboko. (x: Nom des familles d'espèces)",booktabs=TRUE,caption.short=NULL)
 ```
 
-Soit $X_i$ le nombre d'individus de $i$ espèces observées dans l'échantillon, $i=1,2,...,n;$ $X_i$ est considéré comme la fréquence des espèces de l'échantillon. Soit $f_k$ le nombre d'espèces représentées exactement par $k$ individus dans l'échantillon, $k=0,1,...,N;$ $f_k$ est considéré comme la fréquence d'abondance observée. $f_1=390\ et\ f_1=189$ est le nombre d'espèces représentées exactement par 1 individu (singletons) dans une parcelle unique parmi celles inventoriées respectivement pour les FC de Ndikinikimeki et Nanga-Eboko. $f_2=93\ et\ f_2=57$ est le nombre d'espèces représentées par 2 individus (doublons) dans l'échantillon d'inventaire respectivement pour les FC de Ndikinimeki et Nanga-Eboko. Pour la FC de Ndikinimeki le nombre d'observation de présence est de 608 tandis que la fréquence non-observable $f_0=4128$ (Tableau:\@ref(tab:ClassesAbondance-Ndikinimeki3)) dénote le nombre d'espèces présentes dans l'assemblage des individus mais non observées dans l'échantillon d'inventaire. Elle représente près de 87% des données de la matrice d'inventaire et la valeur maximale d'abondance a été enregistrée dans une parcelle où une espèce a été observée 29 fois de suite (Figure:\@ref(fig:Histogramme-Abondance3)). 
+Soit $X_i$ le nombre d'individus de $i$ espèces observées dans l'échantillon, $i=1,2,...,n;$ $X_i$ est considéré comme la fréquence des espèces de l'échantillon. Soit $f_k$ le nombre d'espèces représentées exactement par $k$ individus dans l'échantillon, $k=0,1,...,N;$ $f_k$ est considéré comme la fréquence d'abondance observée. $f_1=390\ et\ f_1=189$ est le nombre d'espèces représentées exactement par 1 individu (singletons) dans une parcelle unique parmi celles inventoriées respectivement pour les FC de Ndikinikimeki et Nanga-Eboko. $f_2=93\ et\ f_2=57$ est le nombre d'espèces représentées par 2 individus (doublons) dans l'échantillon d'inventaire respectivement pour les FC de Ndikinimeki et Nanga-Eboko. Pour la FC de Ndikinimeki le nombre d'observation de présence est de 608 tandis que la fréquence non-observable $f_0=4128$ (Tableau:\@ref(tab:ClassesAbondance-Ndikinimeki3)) dénote le nombre d'espèces présentes dans l'assemblage des individus mais non observées dans l'échantillon d'inventaire. Ces absences représentent près de 87% des données de la matrice d'inventaire et la valeur maximale d'abondance a été enregistrée dans une parcelle où une espèce a été observée 29 fois de suite (Figure:\@ref(fig:Histogramme-Abondance3)). 
 
 ```{r ClassesAbondance-Ndikinimeki3}
 ab_Ndiki<-table(unlist(Ndiki_spec))
@@ -140,7 +141,7 @@ ab_Nanga<-table(unlist(Nanga_spec))
 knitr::kable(ab_Nanga,caption = "Dénombrement des classes d'abondance dans la FC de Nanga-Eboko. (Var1:Classes d'abondance; Freq:Fréquences d'abondance)",booktabs=TRUE,caption.short=NULL)
 ```
 
-```{r Histogramme-Abondance3,fig.cap="Histogrammes des effectifs des classes d'abondance de toutes les espèces."}
+```{r Histogramme-Abondance3,fig.cap="Histogrammes des effectifs des classes d'abondance des espèces."}
 par(mfrow=c(1,2))
 barplot(ab_Ndiki,las=1,xlab = "Classes d'abondance",ylab = "Fréquences",col = gray(5:0/5),main = "FC Ndikiniméki")
 barplot(ab_Nanga,las=1,xlab = "Classes d'abondance",ylab = "Fréquences",col = gray(5:0/5),main = "FC Nanga-Eboko")
@@ -148,7 +149,7 @@ barplot(ab_Nanga,las=1,xlab = "Classes d'abondance",ylab = "Fréquences",col = g
 
 Pour la FC de Nanga-Eboko la fréquence non-observable est de 2473 tandis que la valeur maximale d'abondance est de 25 (Tableau:\@ref(tab:ClassesAbondanceNanga-Eboko3)).
 
-Une projection des Coordonnées géographiques des parcelles (données GPS recueillies sur le terrain) permet de confirmer la localisation des parcelles d'inventaires dans la zone de transition Forêts-Savane (Figures:\@ref(fig:Coordonnees-parcelles3) et \@ref(fig:Localisation-occupationsols3)).
+Une projection des Coordonnées géographiques des parcelles (données GPS recueillies sur le terrain) permet de confirmer la localisation des parcelles d'inventaires dans la zone de transition Forêts-Savane (Figure:\@ref(fig:Coordonnees-parcelles3) et Figure:\@ref(fig:Localisation-occupationsols3)).
 
 ```{r Coordonnees-parcelles3,fig.cap="Localisation géographique des parcelles d'inventaires "}
 par(mfrow=c(1,2))
@@ -168,9 +169,9 @@ ggplot(my_sf_Ndiki)+geom_sf(aes(fill=Ndiki.Env$TUT))+geom_sf_label(aes(label=Ndi
 ggplot(my_sf_Nanga)+geom_sf(aes(fill=Nanga.Env$TUT))+geom_sf_label(aes(label=Nanga.Env$TUT))+scale_fill_discrete(name="Types d'Utilisation\ndes Terres",breaks=c("FSA","FSJ","MAR","FGA","SAV","CUL"),labels=c("FSA:Forêt Secondaire Adulte","FSJ:Forêt Secondaire Jeune","MAR:Marécages","FGA:Forêts Galeries","SAV:Savanes","CUL:Cultures"))+labs(x="Longitude",y="Latitude",title = "FC de Nanga-Eboko")
 ```
 
-En examinant l'allure du diagramme de répartition des fréquences d'occurrences des espèces (Figure:\@ref(fig:Frequences-occurences3)), ordonnées en rang de fréquences croissants, on observe que le nombre d'espèces est inversement proportionnel à la fréquence d'occurrence. Lorsque la fréquence d'occurrence commence à augmenter, le nombre d'espèces diminue (Figure:\@ref(fig:Nombres-occurences3)). En effet 3/4 des espèces repertoriées ont une fréquence d'occurence inférieure à 10%.
+En examinant l'allure des diagrammes de répartition des fréquences d'occurrences des espèces (Figure:\@ref(fig:Frequences-occurences3)), classées en rang de fréquences croissants, on observe que le nombre d'espèces est inversement proportionnel à la fréquence d'occurrence. Lorsque la fréquence d'occurrence commence à augmenter, le nombre d'espèces diminue (Figure:\@ref(fig:Nombres-occurences3)). En effet 3/4 des espèces repertoriées ont une fréquence d'occurence inférieure à 10%.
 
-```{r Nombres-occurences3}
+```{r ComposantesNombres-occurences3}
 # Déterminer le nombre de sites où chaque espèce est présente
 spe_pres_Ndiki <- apply(Ndiki_spec > 0, 2, sum)
 spe_pres_Nanga <- apply(Nanga_spec > 0, 2, sum)
@@ -180,6 +181,9 @@ spe_relf_Nanga <- 100 * spe_pres_Nanga/nrow(Nanga_spec)
 # Arrondir le résultat à 1/10^e près
 spe_relf_Ndiki=round(sort(spe_relf_Ndiki), 1)
 spe_relf_Nanga=round(sort(spe_relf_Nanga), 1)
+```
+
+```{r Nombres-occurences3,fig.cap="Histogrammes des nombres d'occurences" }
 # Construction des histogrammes
 par(mfrow = c(1,2))
 hist(spe_pres_Ndiki, 
@@ -224,21 +228,24 @@ col = "bisque"
 )
 ```
 
-Parmi les 32 parcelles prises séparément dans la FC de Ndikiniméki, la richesse spécifique observée la plus faible a été retrouvée dans la parcelle (P19) avec 05 espèces enregitrées tandis que la plus élévée est de 33 espèces et se situe dans la parcelle (P25) Figure:\@ref(fig:Minrichesse-Ndikinimeki3). 75% des parcelles inventoriées comptent 22 espèces et la moyenne se situe autour de 19 espèces dans l'ensemble (Figure:\@ref(fig:Cartogrphiepools-specifiques3). Dans la FC de Nanga-Eboko, la richesse spécifique observée la plus faible a été enregistrée dans la parcelle (P3) avec 1 seule espèce tandis que la richesse spécifique maximale a été relevée dans la parcelle (P11) avec 32 espèces.
+En considérant les 32 parcelles prises chacune séparément dans la FC de Ndikiniméki, la richesse spécifique observée la plus faible a été retrouvée dans la parcelle (P19) avec 05 espèces enregitrées tandis que la plus élévée est de 33 espèces et se situe dans la parcelle (P25) Figure:\@ref(fig:Richesses-specifiquesparcelles3). 75% des parcelles inventoriées comptent 22 espèces et la moyenne se situe autour de 19 espèces dans l'ensemble (Figure:\@ref(fig:Cartogrphiepools-specifiques3)). Dans la FC de Nanga-Eboko, la richesse spécifique observée la plus faible a été enregistrée dans la parcelle (P3) avec 1 seule espèce tandis que la richesse spécifique maximale a été relevée dans la parcelle (P11) avec 32 espèces.
 
-```{r Nombre_especesparcelles3}
-# Déterminer le nombre d'espèces par parcelles nb
+```{r Nombre-especesparcelles3}
+# Déterminer le nombre d'espèces par parcelles 
 sit_pres_Ndiki <- apply(Ndiki_spec > 0,1,sum)
 sit_pres_Nanga <- apply(Nanga_spec > 0,1,sum)
 # Classement des résultats par ordre croissant
 ```
 
-```{r SuiteNombred_espècesparcelles3}
+```{r NdikiNombre-especesparcelles3}
 knitr::kable(sort(sit_pres_Ndiki),caption = "Classement de la richesse spécifiques par parcelles dans la FC de Ndikiniméki.(x:Richesse spécifiques par parcelles)",booktabs=TRUE,caption.short=NULL)
+```
+
+```{r NangaNombre-especesparcelles3}
 knitr::kable(sort(sit_pres_Nanga),caption = "Classement de la richesse spécifiques par parcelles dans la FC de Nanga-Eboko.(x:Richesse spécifiques par parcelles)",booktabs=TRUE,caption.short=NULL)
 ```
 
-```{r Richesses_specifiquesparcelles3,fig.cap="Nombre d'espèces par parcelles"}
+```{r Richesses-specifiquesparcelles3,fig.cap="Nombres d'espèces par parcelles"}
 par(mfrow=c(1,2))
 plot(sit_pres_Ndiki,type = "s",
 las = 1, 
@@ -282,10 +289,8 @@ ylab = "Latitude"
 )
 ```
 
-::: {.rmdnote}
-Effectif des espèces enregistrées par parcelles dans la FC de Ndikiniméki
 
-```{r Analyse du nombre d_especes observees dans la FC de Ndikinimeki}
+```{r Analyse du nombre despeces observees dans la FC de Ndikinimeki,fig.cap="Effectifs des espèces enregistrées par parcelles dans la FC de Ndikiniméki",include=FALSE}
 # nombre d'espèces par parcelles dans FC de Ndikiniméki (les parcelles sont numérotées de 1 à 32)
 library(vegan)
 (Ndiki_nbsp<-specnumber(Ndiki_spec))
@@ -296,12 +301,8 @@ Ndiki_nbsp[Ndiki_nbsp==max(Ndiki_nbsp)]
 # Minimum et Maximum de richesse spécifiqies dans la FC de Ndikiniméki
 range(Ndiki_nbsp)
 ```
-:::
 
-::: {.rmdnote}
-Effectif des espèces enregistrées par parcelles dans la FC de Nanga-Eboko
-
-```{r Analyse du nombre d_especes observees dans la FC de Nanga-Eboko }
+```{r Analyse du nombre despeces observees dans la FC de Nanga-Eboko,fig.cap="Effectifs des espèces enregistrées par parcelles dans la FC de Nanga-Eboko",include=FALSE}
 # nombre d'espèces par parcelles dans FC de Nanga-Eboko
 (Nanga_nbsp<-specnumber(Nanga_spec))
 # Parcelle avec le Maximum de richesse spécifiques observées dans la FC de Nanga-Eboko
@@ -311,9 +312,11 @@ Nanga_nbsp[Nanga_nbsp==min(Nanga_nbsp)]
 # Minimum et Maximum de richesse spécifiqies dans la FC de Nanga-Eboko
 range(Nanga_nbsp)
 ```
-:::
 
-Nous observons que sur les 1348 individus constituant la taille de l'échantillon dans la FC de Ndikiniméki, la parcelle (P27) a l'effectif le plus faible (27 individus) et présente une richesse spécifiques de 14 espèces (Figure:\@ref(fig:Abondance-Ndikinimeki3)) tandis que la parcelle (P19) avec un éffectif presque équivalent (34 individus) présente la richesse spécifiques observée la plus faible (5 espèces) Figure:\@ref(fig:Minrichesse-Ndikinimeki3). La parcelle (P32) est celle présentant la plus forte abondance (61 espèces) Figure:\@ref(fig:Abondance-Ndikinimeki3) avec une richesse spécifiques observée de 31 espèces. Dans la FC de Nanga-Eboko avec les 843 individus constituant l'échantillon (Figure:\@ref(fig:Abondancetotal-Nanga3)), c'est la parcelle (P3) avec l'effectif le plus réduit (01 individu) qui a enregistrée la richesse spécifique la plus faible (01 espèce). De même la parcelle présentant l'abondance la plus importante (P11) a une richesse spécifique de 47 espèces (Figure:\@ref(fig:Abondanceparcelle-plusricheNanga3).
+Nous observons que sur les 1348 individus constituant la taille de l'échantillon dans la FC de Ndikiniméki, la parcelle (P27) enregistre l'effectif le plus faible (27 individus) et présente une richesse spécifiques de 14 espèces (Figure:\@ref(fig:Abondance-Ndikinimeki3)) tandis que la parcelle (P19) avec un éffectif presque équivalent (34 individus) présente la richesse spécifiques observée la plus faible (5 espèces). La parcelle (P32) est celle présentant la plus forte abondance (61 individus) avec une richesse spécifiques observée de 31 espèces. Dans la FC de Nanga-Eboko 843 individus ont constitué  la taille de l'échantillon. La parcelle (P3) a affiché l'effectif le plus réduit (01 individu) et la richesse spécifique la plus faible (01 espèce). De même la parcelle (P20) présente l'abondance la plus importante (65 individus) pour une richesse spécifiques de 24 espèces tandis que la parcelle (P11) compte 47 individus pour une richesse spécifique de 32 espèces qui est la plus importante de toutes les parcelles de FC de Nanga-Eboko (Figure:\@ref(fig:Abondance-individus3).
+
+:::{.rmdnote}
+Distribution du nombre d'abondance par parcelle dans la FC de Ndikiniméki
 
 ```{r Abondance-Ndikinimeki3}
 # nombre d'abondance par parcelles dans FC de Ndikiniméki
@@ -327,9 +330,32 @@ Ndiki_abund[Ndiki_nbsp==min(Ndiki_nbsp)]
 # Abondance dans le site ayant la plus grande richesse spécifique observee dans la FC de Ndikiniméki
 Ndiki_abund[Ndiki_nbsp==max(Ndiki_nbsp)]
 ```
+:::
 
+```{r Abondance-individus3,include=TRUE,fig.cap="Nombres d'individus par parcelle"}
+par(mfrow=c(1,2))
+plot(Ndiki.abund,type = "s",
+las = 1, 
+col = "gray",
+main = "FC Ndikiniméki",
+xlab = "Numéros des parcelles", 
+ylab = "Nombres d'invidus"
+)
+text(Ndiki.abund, row.names(Ndiki_spec), cex = .8, col = "red")
+plot(Nanga_abund,type = "s",
+las = 1, 
+col = "gray",
+main = "FC Nanga-Eboko",
+xlab = "Numéros des parcelles", 
+ylab = "Nombres d'individus"
+)
+text(Nanga_abund, row.names(Nanga_spec), cex = .8, col = "blue")
+```
 
-```{r Abondancetotal-Nanga3,fig.cap='Abondance totale des individus dans la FC de Nanga-Eboko'}
+:::{.rmdnote}
+Distribution du nombre d'abondance par parcelle dans la FC de Nanga-Eboko
+
+```{r Abondancetotal-Nanga3}
 # nombre d'abondance par parcelles dans FC de Nanga-Eboko
 (Nanga_abund<-rowSums(Nanga_spec))
 # Abondance totale des individus dans la FC de Nanga-Eboko
@@ -341,8 +367,12 @@ Nanga_abund[Nanga_nbsp==min(Nanga_nbsp)]
 # Abondance dans la parcelle ayant la plus grande richesse spécifique observée dans la FC de Nanga-Eboko
 Nanga_abund[Nanga_nbsp==max(Nanga_nbsp)]
 ```
+:::
 
-Après avoir standardisé les unités d'échantillonnages de la FC de Ndikinimeki à un effectif de 47 individus correspondant au nombre d'individus enregistrés dans les 3/4 des parcelles inventoriées (Figure:\@ref(fig:Rarefaction-Ndikinimeki3)), on constate que la richesse spécifiques varie de 5 à 32 espèces respectivement pour l'unité la plus pauvre et l'unité la plus riche (Figure:\@ref(fig:Comparaison-rarefactionNdikinimeki3)). On observe également que l'unité la plus pauvre en terme de richesse spécifiques observées (5 espèces) demeure la parcelle (P19), cependant la plus riche correspond désormais à la parcelle (P21) avec 32 espèces trouvées (Figure:\@ref(fig:MinMaxrichesse-estimeeNdikinimeki3)). De même dans la FC de Nanga-Eboko les unités ont été ramenées à un effectif de 48 individus par unité d'échantillonnage (Figure:\@ref(fig:RarefactionNanga-Eboko3)). Les résultats obtenus en terme de richesse spécifiques ont été les mêmes que ceux observés dans les parcelles pour ce qui concerne le minimum et le maximum de richesse (figure:\@ref(fig:ComparaisonrarefactionNanga-Eboko3)): ce sont respectivement les parcelles (P3) et (P11) Figure:\@ref(fig:MinMaxrichesse-estiméeNanga-Eboko3).
+Pour analyser la rarefaction des espèces par rapport au nombre d'individus et non le nombre parcelles d'échantillonnage comme précédemment, nous avons standardisé les unités d'échantillonnages de la FC de Ndikinimeki à un effectif de 47 individus correspondant au nombre moyen d'individus enregistrés dans les 3/4 des parcelles inventoriées. On a constaté dans ces conditions que la richesse spécifiques varie de 5 à 32 espèces respectivement pour l'unité la plus pauvre et l'unité la plus riche. On a observé également que l'unité la plus pauvre en terme de richesse spécifiques observées (5 espèces) demeure la parcelle (P19), cependant la plus riche correspond désormais à la parcelle (P21) avec 32 espèces trouvées. De même dans la FC de Nanga-Eboko les unités ont été ramenées à un effectif de 48 individus par unité d'échantillonnage. Les résultats obtenus en terme de richesse spécifiques ont été les mêmes que ceux observés dans les parcelles pour ce qui concerne le minimum et le maximum de richesse : ce sont respectivement les parcelles (P3) et (P11).
+
+:::{.rmdnote}
+Analyse de la rarefaction au troisième quartile dans la Forêt Communale de Ndikiniméki
 
 ```{r Rarefaction-Ndikinimeki3}
 # Analyse de la rarefaction au $3^ème^$ quartile dans la FC de Ndikiniméki
@@ -357,14 +387,18 @@ Ndiki_rare47[Ndiki_rare47==min(Ndiki_rare47)]
 # site ayant le Max de richesses spécifiques observées dans la FC de Ndikiniméki
 Ndiki_rare47[Ndiki_rare47==max(Ndiki_rare47)]
 ```
+:::
 
-```{r Site predit ayant la plus petite richesse specifique dans la FC de Ndikinimeki}
+```{r Site predit ayant la plus petite richesse specifique dans la FC de Ndikinimeki,include=FALSE}
 P_19=Ndiki_spec[which(Ndiki_rare47==min(Ndiki_rare47)),]
 ```
 
-```{r Site predit ayant la plus grande richesse specifique dans la FC de Ndikinimeki}
+```{r Site predit ayant la plus grande richesse specifique dans la FC de Ndikinimeki,include=FALSE}
 P_21=Ndiki_spec[which(Ndiki_rare47==max(Ndiki_rare47)),]
 ```
+
+:::{.rmdnote}
+Analyse de la rarefaction au troisième quartile dans la Forêt Communale de Nanga-Eboko
 
 ```{r RarefactionNanga-Eboko3}
 # Analyse de la rarefaction au $3^ème^$ quartile dans la FC de Nanga-Eboko
@@ -379,12 +413,13 @@ Nanga_rare48[Nanga_rare48==min(Nanga_rare48)]
 # Site ayant le Max de richesses spécifiques estimées dans la FC de Nanga-Eboko
 Nanga_rare48[Nanga_rare48==max(Nanga_rare48)]
 ```
+:::
 
-```{r Site predit ayant la plus petite richesse specifique dans la FC de Nanga-Eboko}
+```{r Site predit ayant la plus petite richesse specifique dans la FC de Nanga-Eboko,include=FALSE}
 P_3=Nanga_spec[which(Nanga_rare48==min(Nanga_rare48)),]
 ```
 
-```{r Site predit ayant la plus grande richesse specifique dans la FC de Nanga-Eboko}
+```{r Site predit ayant la plus grande richesse specifique dans la FC de Nanga-Eboko,include=FALSE}
 P_11=Nanga_spec[which(Nanga_rare48==max(Nanga_rare48)),]
 ```
 
