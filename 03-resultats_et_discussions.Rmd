@@ -69,7 +69,7 @@ Dans la Forêt Communale de Ndikiniméki notre étude floristique a couvert un e
 knitr::kable(rownames(Ndiki_spec),caption ='Nomenclature des parcelles dans la FC de Ndikiniméki. (x: Numéro des parcelles)',booktabs=TRUE,caption.short=NULL)
 ```
 
-::: {.rmdnote}
+::: rmdnote
 Catégories et proportions des types d'utilisation des terres dans la FC de Ndikiniméki
 
 ```{r CategoriesUtilisation-TerreNdikinimeki3,fig.cap="Catégories et proportions des types d'utilisation des terres dans la FC de Ndikiniméki"}
@@ -84,13 +84,13 @@ describe(Ndiki.Env$TUT)
 -   08 parcelles de Cacaoyères (CAC);
 -   et 02 parcelles de Jachères (JA).
 
-Dans la FC de Nanga-Eboko l'étude floristique a couvert 23 parcelles (Tableau:\@ref(tab:NomenclatureparcellesNanga-Eboko3)) reparties en 06 catégories d'utlisation des terres 
+Dans la FC de Nanga-Eboko l'étude floristique a couvert 23 parcelles (Tableau:\@ref(tab:NomenclatureparcellesNanga-Eboko3)) reparties en 06 catégories d'utlisation des terres
 
 ```{r NomenclatureparcellesNanga-Eboko3,}
 knitr::kable(row.names(Nanga_spec),caption ='Nomenclature des  parcelles  dans la FC de Nanga-Eboko. (x: Numéro de parcelles)',booktabs=TRUE,caption.short=NULL) 
 ```
 
-::: {.rmdnote}
+::: rmdnote
 Catégories et proportion des Types d'Utilisation des Terre dans FC de Nanga-Eboko
 
 ```{r CategoriesUtilisationTerreNanga-Eboko3}
@@ -129,7 +129,7 @@ knitr::kable(colnames(Nanga_spec),caption = "Identification des espèces enregis
 knitr::kable(colnames(Nanga_fami),caption = "Identification des familles dans la FC de Nanga-Eboko. (x: Nom des familles d'espèces)",booktabs=TRUE,caption.short=NULL)
 ```
 
-Soit $X_i$ le nombre d'individus de $i$ espèces observées dans l'échantillon, $i=1,2,...,n;$ $X_i$ est considéré comme la fréquence des espèces de l'échantillon. Soit $f_k$ le nombre d'espèces représentées exactement par $k$ individus dans l'échantillon, $k=0,1,...,N;$ $f_k$ est considéré comme la fréquence d'abondance observée. $f_1=390\ et\ f_1=189$ est le nombre d'espèces représentées exactement par 1 individu (singletons) dans une parcelle unique parmi celles inventoriées respectivement pour les FC de Ndikinikimeki et Nanga-Eboko. $f_2=93\ et\ f_2=57$ est le nombre d'espèces représentées par 2 individus (doublons) dans l'échantillon d'inventaire respectivement pour les FC de Ndikinimeki et Nanga-Eboko. Pour la FC de Ndikinimeki le nombre d'observation de présence est de 608 tandis que la fréquence non-observable $f_0=4128$ (Tableau:\@ref(tab:ClassesAbondance-Ndikinimeki3)) dénote le nombre d'espèces présentes dans l'assemblage des individus mais non observées dans l'échantillon d'inventaire. Ces absences représentent près de 87% des données de la matrice d'inventaire et la valeur maximale d'abondance a été enregistrée dans une parcelle où une espèce a été observée 29 fois de suite (Figure:\@ref(fig:Histogramme-Abondance3)). 
+Soit $X_i$ le nombre d'individus de $i$ espèces observées dans l'échantillon, $i=1,2,...,n;$ $X_i$ est considéré comme la fréquence des espèces de l'échantillon. Soit $f_k$ le nombre d'espèces représentées exactement par $k$ individus dans l'échantillon, $k=0,1,...,N;$ $f_k$ est considéré comme la fréquence d'abondance observée. $f_1=390\ et\ f_1=189$ est le nombre d'espèces représentées exactement par 1 individu (singletons) dans une parcelle unique parmi celles inventoriées respectivement pour les FC de Ndikinikimeki et Nanga-Eboko. $f_2=93\ et\ f_2=57$ est le nombre d'espèces représentées par 2 individus (doublons) dans l'échantillon d'inventaire respectivement pour les FC de Ndikinimeki et Nanga-Eboko. Pour la FC de Ndikinimeki le nombre d'observation de présence est de 608 tandis que la fréquence non-observable $f_0=4128$ (Tableau:\@ref(tab:ClassesAbondance-Ndikinimeki3)) dénote le nombre d'espèces présentes dans l'assemblage des individus mais non observées dans l'échantillon d'inventaire. Ces absences représentent près de 87% des données de la matrice d'inventaire et la valeur maximale d'abondance a été enregistrée dans une parcelle où une espèce a été observée 29 fois de suite (Figure:\@ref(fig:Histogramme-Abondance3)).
 
 ```{r ClassesAbondance-Ndikinimeki3}
 ab_Ndiki<-table(unlist(Ndiki_spec))
@@ -289,7 +289,6 @@ ylab = "Latitude"
 )
 ```
 
-
 ```{r Analyse du nombre despeces observees dans la FC de Ndikinimeki,fig.cap="Effectifs des espèces enregistrées par parcelles dans la FC de Ndikiniméki",include=FALSE}
 # nombre d'espèces par parcelles dans FC de Ndikiniméki (les parcelles sont numérotées de 1 à 32)
 library(vegan)
@@ -313,9 +312,9 @@ Nanga_nbsp[Nanga_nbsp==min(Nanga_nbsp)]
 range(Nanga_nbsp)
 ```
 
-Nous observons que sur les 1348 individus constituant la taille de l'échantillon dans la FC de Ndikiniméki, la parcelle (P27) enregistre l'effectif le plus faible (27 individus) et présente une richesse spécifiques de 14 espèces (Figure:\@ref(fig:Abondance-Ndikinimeki3)) tandis que la parcelle (P19) avec un éffectif presque équivalent (34 individus) présente la richesse spécifiques observée la plus faible (5 espèces). La parcelle (P32) est celle présentant la plus forte abondance (61 individus) avec une richesse spécifiques observée de 31 espèces. Dans la FC de Nanga-Eboko 843 individus ont constitué  la taille de l'échantillon. La parcelle (P3) a affiché l'effectif le plus réduit (01 individu) et la richesse spécifique la plus faible (01 espèce). De même la parcelle (P20) présente l'abondance la plus importante (65 individus) pour une richesse spécifiques de 24 espèces tandis que la parcelle (P11) compte 47 individus pour une richesse spécifique de 32 espèces qui est la plus importante de toutes les parcelles de FC de Nanga-Eboko (Figure:\@ref(fig:Abondance-individus3).
+Nous observons que sur les 1348 individus constituant la taille de l'échantillon dans la FC de Ndikiniméki, la parcelle (P27) enregistre l'effectif le plus faible (27 individus) et présente une richesse spécifiques de 14 espèces (Figure:\@ref(fig:Abondance-Ndikinimeki3)) tandis que la parcelle (P19) avec un éffectif presque équivalent (34 individus) présente la richesse spécifiques observée la plus faible (5 espèces). La parcelle (P32) est celle présentant la plus forte abondance (61 individus) avec une richesse spécifiques observée de 31 espèces. Dans la FC de Nanga-Eboko 843 individus ont constitué la taille de l'échantillon. La parcelle (P3) a affiché l'effectif le plus réduit (01 individu) et la richesse spécifique la plus faible (01 espèce). De même la parcelle (P20) présente l'abondance la plus importante (65 individus) pour une richesse spécifiques de 24 espèces tandis que la parcelle (P11) compte 47 individus pour une richesse spécifique de 32 espèces qui est la plus importante de toutes les parcelles de FC de Nanga-Eboko (Figure:\@ref(fig:Abondance-individus3).
 
-:::{.rmdnote}
+::: rmdnote
 Distribution du nombre d'abondance par parcelle dans la FC de Ndikiniméki
 
 ```{r Abondance-Ndikinimeki3}
@@ -352,7 +351,7 @@ ylab = "Nombres d'individus"
 text(Nanga_abund, row.names(Nanga_spec), cex = .8, col = "blue")
 ```
 
-:::{.rmdnote}
+::: rmdnote
 Distribution du nombre d'abondance par parcelle dans la FC de Nanga-Eboko
 
 ```{r Abondancetotal-Nanga3}
@@ -371,7 +370,7 @@ Nanga_abund[Nanga_nbsp==max(Nanga_nbsp)]
 
 Pour analyser la rarefaction des espèces par rapport au nombre d'individus et non le nombre parcelles d'échantillonnage comme précédemment, nous avons standardisé les unités d'échantillonnages de la FC de Ndikinimeki à un effectif de 47 individus correspondant au nombre moyen d'individus enregistrés dans les 3/4 des parcelles inventoriées. On a constaté dans ces conditions que la richesse spécifiques varie de 5 à 32 espèces respectivement pour l'unité la plus pauvre et l'unité la plus riche. On a observé également que l'unité la plus pauvre en terme de richesse spécifiques observées (5 espèces) demeure la parcelle (P19), cependant la plus riche correspond désormais à la parcelle (P21) avec 32 espèces trouvées. De même dans la FC de Nanga-Eboko les unités ont été ramenées à un effectif de 48 individus par unité d'échantillonnage. Les résultats obtenus en terme de richesse spécifiques ont été les mêmes que ceux observés dans les parcelles pour ce qui concerne le minimum et le maximum de richesse : ce sont respectivement les parcelles (P3) et (P11).
 
-:::{.rmdnote}
+::: rmdnote
 Analyse de la rarefaction au troisième quartile dans la Forêt Communale de Ndikiniméki
 
 ```{r Rarefaction-Ndikinimeki3}
@@ -397,7 +396,7 @@ P_19=Ndiki_spec[which(Ndiki_rare47==min(Ndiki_rare47)),]
 P_21=Ndiki_spec[which(Ndiki_rare47==max(Ndiki_rare47)),]
 ```
 
-:::{.rmdnote}
+::: rmdnote
 Analyse de la rarefaction au troisième quartile dans la Forêt Communale de Nanga-Eboko
 
 ```{r RarefactionNanga-Eboko3}
@@ -423,9 +422,21 @@ P_3=Nanga_spec[which(Nanga_rare48==min(Nanga_rare48)),]
 P_11=Nanga_spec[which(Nanga_rare48==max(Nanga_rare48)),]
 ```
 
+Un graphique matriciel contenant des nuages de points et des coéfficients de correlation de Pearson établis à partir des paires d'indices de diversité et d'équité pour quantifier la force et la direction des relations entre les différents indices:
 
+-   NO: Richesse spécifique;
+-   N1: Diversité de Shannon (base e);
+-   N1b2: Diversité de Shannon (base 2);
+-   N2: Diversité de Simpson;
+-   H: Entropie de Shannon (base e);
+-   Hb2: Entropie de Shannon (base 2);
+-   J: Equitabilité de Pielou;
+-   E10: Equitabilité de Shannon (Ratio de Hill);
+-   E20: Equitabilité de Simpson (Ratio de Hill)
 
-```{r Calcul des indices de diversité dans la FC de Ndikinimeki}
+La matrice de correlation des indices de diversité et d'équitabilité dans la FC de Ndikiniméki (Figure: \@ref(fig:Matrice_corrNdiki3)) nous montre une très forte correlation entre la richesse spécifique (N0) et la diversité de Shannon (N1) corr=0,971. Ceci laisse penser qu'il y aurait un équilibre entre le nombre d'espèces et leur abondance relative, traduisant ainsi une meilleure resilience et une stabilité de l'écosystème face aux perturbations environnementales. De même la très forte correlation (corr=1) entre les deux méthodes de mesure de la diversité de Shannon (N1b2 et N1) permet d'affirmer que les différences observées dans les valeurs des indices sont effectivement significatives et non liées aux variations de méthodes. On relève également une très forte correlation entre la diversité de Simpson (N2) et la diversité de Shannon (N1), corr=0,949. Ce résultat signifit que lorsque l'indice de Simpson augmente (diminution de la dominance des espèces), l'indice de Shannon a tendance également à augmenter (augmentation de l'équité). Par contre on note une faible correlation entre l'entropie de Shannon et l'équitabilité de Pielou (corr=0,117) ce qui signifit que ces deux mesures de diversité ne sont pas liées et capturent chacun des aspects différents de la biodiversité. En effet l'entropie de Shannon évalue la biodiversté en tenant compte à la fois de la richesse spécifique et l'équité, en revanche l'équitabilité de Pielou mesure la répartition des individus entre les différentes espèces, en fonction de la proportion de chaque espèce.
+ 
+```{r Calcul des indices de diversité dans la FC de Ndikinimeki,include=FALSE}
 # Richesses spécifiques
 N0 <- rowSums(Ndiki_spec > 0) 
 # Richesses spécifiques (alterné) 
@@ -456,12 +467,27 @@ library(gclus)
 div_o_nd <- order.single(div_pearson_nd)
 library(PerformanceAnalytics)
 chart.Correlation(div_pearson_nd[,div_o_nd],histogram = TRUE,pch=19)
+```
+
+```{r Matrice_corrNdiki3,include=TRUE,fig.cap="Matrice de correlation des indices de diversité et d'équité dans la FC de Ndikiniméki"}
 library(ggplot2)
 library(GGally)
 ggpairs(div_pearson_nd[,div_o_nd])+theme_bw()
 ```
 
-```{r Calcul des indices de diversité dans la FC Nanga-Eboko}
+Dans la matrice de correlation de la FC de Nanga-Eboko, les annotations suivantes ont été utilisées:
+
+-   NO_ng: Richesse spécifique;
+-   N1_ng: Diversité de Shannon (base e);
+-   N1b2_ng: Diversité de Shannon (base 2);
+-   N2_ng: Diversité de Simpson;
+-   H_ng: Entropie de Shannon (base e);
+-   Hb2_ng: Entropie de Shannon (base 2);
+-   J_ng: Equitabilité de Pielou;
+-   E10_ng: Equitabilité de Shannon (Ratio de Hill);
+-   E20_ng: Equitabilité de Simpson (Ratio de Hill)
+
+```{r Calcul des indices de diversité dans la FC Nanga-Eboko,include=FALSE}
 # Richesses spécifiques
 N0_ng <- rowSums(Nanga_spec > 0) 
 # # Richesses spécifiques (alterné) 
@@ -492,8 +518,9 @@ library(gclus)
 div_o_ng <- order.single(div_pearson_ng)
 library(PerformanceAnalytics)
 chart.Correlation(div_pearson_ng[,div_o_ng],histogram = TRUE,pch=19)
-library(ggplot2)
-library(GGally)
+```
+
+```{r Matrice_corrNanga3,include=TRUE,fig.cap="Matrice de correlation des indices de diversité et d'équité dans la FC de Nanga-Eboko"}
 ggpairs(div_pearson_ng[,div_o_ng])+theme_bw()
 ```
 
@@ -1369,9 +1396,6 @@ knitr::kable(Nanga_stable.Sol.20_30,digits = 2,caption='Calcul des stocks moyens
 Nanga_t.test_Sol.20_30=ggboxplot(Nanga_StC_Sol.20_30,x="Strates",y="MCsolHa",color = "Strates",palette = "jco",add = "jitter")+stat_compare_means(aes(label=..p.signif..),comparisons = my_comparaison.Nanga,method = "t.test")+labs(x="Types d'Utilisation des Terres",y="Stocks Carbone(tC/ha)")
 (Nanga_t.test_Sol.20_30)
 ```
-
-
-
 
 Add a numbered part: `# (PART) Act one {-}` (followed by `# A chapter`)
 
