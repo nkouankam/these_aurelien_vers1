@@ -635,7 +635,7 @@ Rankabond.1f_Nanga<-rankabundance(Nanga_fami)
 rankabunplot(Rankabond.1f_Nanga,scale = "abundance",specnames = c(1:3))
 ```
 
-Afin de prédire la présence ou l'abondance des espèces en fonction des variables environnementales telles que le type d'utilisation des terres ou l'altitude, l'Abre de Regression Multivarié (ARM) a été d'une importance déterminante. Les statistiques à la base de l'ARM sont respectivement: l'erreur résiduel ($Error$), l'erreur due à la validation croisée ($CV Error$) et l'erreur standard ($SE$). A partir de la Figure:\@ref(fig:ChoixpluspetitARM-Ndikinimeki3) nous constatons que la matrice des espèces a été partitionnée suivant les Types d'utilisation des terres (TUT) qui sont des catégories bien établies et distinctes. Cet arbre présente 2 groupes. Le premier regroupe les cacaoyères (CAC) et les jachères (JA) tandis que le second rassemble les forêts matures (FM), les forêts marécageuses (FMa) et les forêts secondaires (FS). Chaque groupe est caractérisé par un diagramme à bâtonnets qui indique l'abondance des espèces dans les groupes constitués, le nombre de parcelles ($n$) et l'erreur relative du groupe. $L'erreur résiduel = 0,754$ ce qui signifit que le modèle R² ($1-0,754$) explique 24,6% de la variance de la matrice des espèces.
+Afin de prédire la présence ou l'abondance des espèces en fonction des variables environnementales telles que le type d'utilisation des terres, l'altitude (*elevation*), le stock de carbone des arbres et le carbone du sol  l'Abre de Regression Multivarié (ARM) a été d'une importance déterminante. Les statistiques à la base de l'ARM sont respectivement: l'erreur résiduel ($Error$), l'erreur due à la validation croisée ($CV Error$) et l'erreur standard ($SE$). A partir de la Figure:\@ref(fig:ChoixpluspetitARM-Ndikinimeki3) nous constatons que la matrice des espèces a été partitionnée suivant les Types d'utilisation des terres (TUT) qui sont des catégories bien établies et distinctes. Cet arbre présente 2 groupes. Le premier regroupe les cacaoyères (CAC) et les jachères (JA) tandis que le second rassemble les forêts matures (FM), les forêts marécageuses (FMa) et les forêts secondaires (FS). Chaque groupe est caractérisé par un diagramme à bâtonnets qui indique l'abondance des espèces dans les groupes constitués, le nombre de parcelles ($n$) et l'erreur relative du groupe. $L'erreur résiduel = 0,754$ ce qui signifit que le modèle R² ($1-0,754$) explique 24,6% de la variance de la matrice des espèces.
 
 ```{r ChoixpluspetitARM-Ndikinimeki3,fig.cap="Plus petit arbre entre une erreur standard et l'erreur due à la validation croisée pour la FC de Ndikiniméki."}
 par(mfrow = c(1, 2))
@@ -644,39 +644,41 @@ library(mvpart)
 spe.ch.mvrpart_Ndiki.min=mvpart(data.matrix(spe.norm_Ndiki)~.,Ndiki.Env,margin = 0,08,cp=0,xv="1se",xval = nrow(Ndiki_spec),xvmult = 100,which = 4,big.pts=TRUE)
 ```
 
-Le plus grand arbre de regression multivariée est difficile à interpreter. Il comprend un nombre important de groupes bien qu'il offre une puissance explicative élevée (R²=60%) et superieur à celle de la solution à 2 groupes (Figure:\@ref(fig:ChoixplusgrandARM-Ndikinimeki3)).
+Le plus grand arbre de regression multivariée est difficile à interpreter. Du fait qu'il intègre au moins 4 éléments discriminants il en découle un nombre important de groupes bien qu'il offre une puissance explicative élevée (R²=60%) et superieur à celle de la solution à 2 groupes (Figure:\@ref(fig:ChoixplusgrandARM-Ndikinimeki3)).
 
 ```{r ChoixplusgrandARM-Ndikinimeki3,fig.cap='Plus grand arbre de regression multivariée pour la FC de Ndikiniméki.'}
 # selection du plus grand arbre 
 spe.ch.mvrpart_Ndiki.max=mvpart(data.matrix(spe.norm_Ndiki)~.,Ndiki.Env,margin = 0,08,cp=0,xv="none",xval = nrow(Ndiki_spec),xvmult = 100,which = 4,size=8,big.pts=TRUE)
 ```
 
-Entre les deux solutions précédentes, une répartition en 4 groupes produit un graphe qui pourrait être interpreté comme des differences de composition en espèces à travers les groupes constitués, le R² de cet arbre ($1-erreur\ relative$) est 0,367 (Figure:\@ref(fig:Choixarbreapproprie-Ndikinimeki3)). Le premier découpage s'est fait sur la base du type d'utilisation des sols: il a permis d'isoler un groupe de 10 parcelles localisées dans les Cacaoyères (CAC) et les Jachères (JA) et un second groupe de 22 parcelles retrouvées dans les Forêts marécageuses (Fma), les Forêts matures (FM) et les Forêts secondaires. Sur la base des stocks de carbone, le premier groupe de 10 parcelles a été scindé en deux sous-groupes:le premier regroupe 7 parcelles établies dans les Cacaoyères (groupe 3) dont les stocks de carbone sont inférieurs à 20,85t/ha (Tableau:\@ref(tab:Groupe3-Ndikinimeki)) et un second de 3 parcelles (groupe 4) éssentiellement dans les Jachères avec des stocks de carbone superieurs à 20,85 t/ha (Tableau:\@ref(tab:Groupe4-Ndikinimeki). Le bloc de 22 parcelles a permis d'isolé un sous-groupe de 2 parcelles (groupe 6) appartenant aux forêts marécageuses (Tableau:\@ref(tab:Groupe6-Ndikinimeki)). Les 20 parcelles restantes (groupe 7) forment un bloc réparti entre les Forêts matures et les forêts secondaires (Tableau:\@ref(tab:Groupe7-Ndikinimeki)).
+Entre les deux solutions précédentes, une répartition en 4 groupes produit un graphe qui pourrait être interpreté comme des differences de composition en espèces à travers les groupes constitués, le R² de cet arbre ($1-erreur\ relative$) est 0,367 (Figure:\@ref(fig:Choixarbreapproprie-Ndikinimeki3)). Le premier découpage s'est fait sur la base du type d'utilisation des sols (TUT): il a permis d'isoler un groupe de 10 parcelles localisées dans les Cacaoyères (CAC) et les Jachères (JA) et un second groupe de 22 parcelles retrouvées dans les Forêts marécageuses (Fma), les Forêts matures (FM) et les Forêts secondaires. Sur la base des stocks de carbone, le premier groupe de 10 parcelles a de nouveau été scindé en deux sous-groupes:le premier regroupe 7 parcelles établies dans les Cacaoyères (groupe 3) dont les stocks de carbone sont inférieurs à 20,85t/ha (Tableau:\@ref(tab:Groupe3-Ndikinimeki)) et un second de 3 parcelles (groupe 4) éssentiellement dans les Jachères avec des stocks de carbone superieurs à 20,85 t/ha (Tableau:\@ref(tab:Groupe4-Ndikinimeki). Le bloc de 22 parcelles a permis d'isolé un sous-groupe de 2 parcelles (groupe 6) appartenant aux forêts marécageuses (Tableau:\@ref(tab:Groupe6-Ndikinimeki)). Les 20 parcelles restantes (groupe 7) forment un bloc réparti entre les Forêts matures et les forêts secondaires (Tableau:\@ref(tab:Groupe7-Ndikinimeki)).
 
-```{r Choixarbreapproprie-Ndikinimeki3,fig.cap='Arbre approprié pour une classification supervisée dans la FC de Ndikinimeki.'}
+```{r Choixarbreapproprie-Ndikinimeki3,fig.cap='Arbre approprié pour une classification supervisée dans la FC de Ndikiniméki.'}
 spe.ch.mvrpart_Ndiki=mvpart(data.matrix(spe.norm_Ndiki)~.,Ndiki.Env,margin = 0,08,cp=0,xv="none",xval = nrow(Ndiki_spec),xvmult = 100,which = 4,size = 4,big.pts=TRUE)
 ```
 
-```{r Groupe3-Ndikinimeki,caption = 'Composition environnementale du groupe 3 dans la FC de Ndikinimeki.'}
+```{r Groupe3-Ndikinimeki}
 grps_Ndiki=spe.ch.mvrpart_Ndiki$where
 groups.mrt=levels(as.factor(spe.ch.mvrpart_Ndiki$where)) 
-knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[1]),-5])
+knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[1]),-5],caption = "Composition environnementale du groupe 3 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short=NULL)
 ```
 
-```{r Groupe4-Ndikinimeki,caption = 'Composition environnementale du groupe 4 dans la FC de Ndikinimeki.'}
-knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[2]),-5])
+```{r Groupe4-Ndikinimeki}
+knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[2]),-5],caption = "Composition environnementale du groupe 4 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short=NULL)
 ```
 
-```{r Groupe6-Ndikinimeki,caption = 'Composition environnementale du groupe 6 dans la FC de Ndikinimeki.'}
-knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[3]),-5])
+```{r Groupe6-Ndikinimeki}
+knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[3]),-5],caption = "Composition environnementale du groupe 6 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short=NULL)
 ```
 
-```{r Groupe7-Ndikinimeki,caption = 'Composition environnementale du groupe 7 dans la FC de Ndikinimeki.'}
-knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[4]),-5])
+```{r Groupe7-Ndikinimeki}
+knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[4]),-5],caption = "Composition environnementale du groupe 7 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short=NULL)
 ```
 
-Parmi les 148 espèces identifiées dans la FC de Ndikiniméki, 7 ont été retenues comme représentives ou caractéristiques de certains groupes de parcelles appartenant à des Types t'Utilisation de Terres (TUT).Parmi ces espèces selectionnées 3 espèces sont associées exclusivement à un groupe, 4 sont associées à 2 groupes et aucune espèce n'a été associée à 3 groupes (Figure:\@ref(fig:Correctionp-valueNdikinimeki3)). L'espèce *Klainedoxa gabonensis* ($p.value=0,027$) est un bon indicateur du groupe 4 (Jachères) avec une composante spécifique élevée ($A=0,8696$) et une fidélité au dessus de la moyenne ($B=0,6667$). Les espèces telles que: *Nauclea pobeguinii*($A=1,0000 et B=1,0000$) et *Vernonia conferta* ($A=0,9545 et B=1,0000$) sont de très bons indicateurs ($p.value=0,002$) du groupe 6 (Forêts marécageuses) parce qu'ils apparaissent dans toutes les parcelles qui constituent ce groupe ($B=1,0000$).Avec une composante de spécificité $A=1,0000$, ces espèces ne sont rencontrées presque exclusivement que dans les Forêts marécageuses. les espèces telles que: *Theobroma cacao*, *Musa sp.* et *Dacryodes edulis* sont des indicateurs des groupe 3+4 (Cacaoyères et Jachères). Dans cette association de deux groupes constituée de 10 parcelles au total, *Theobroma* est rencontrée dans presque tous les sites et nulle part ailleur ($A=0,9451 et B=1,000$) cependant *Musa sp.* et *Dacryodes edulis* ne sont pas présentent dans toutes les parcelles qui constituent ce regroupement. Une association des groupes 4 et 7 (Jachères, Forêts matures et Forêts secondaires) a pour indicateur l'espèce *Pycnanthus angolensis*. Cette espèce est présente dans toutes les parcelles constituant ce regroupement ($B=1,0000$) mais on la retrouve dans des parcelles en dehors de ce groupe ($A=0,7606$).
+Parmi les 148 espèces identifiées dans la FC de Ndikiniméki, 7 ont été retenues comme représentives ou caractéristiques de certains groupes de parcelles appartenant à des Types t'Utilisation de Terres (TUT).Parmi ces espèces selectionnées, 3 sont exclusivement associées à un groupe, 4 sont associées à 2 groupes et aucune espèce n'a été associée à 3 groupes à la fois (Figure:\@ref(fig:Correctionp-valueNdikinimeki3)). L'espèce *Klainedoxa gabonensis* ($p.value=0,027$) est un bon indicateur du groupe 4 (Jachères) avec une composante spécifique élevée ($A=0,8696$) et une fidélité au dessus de la moyenne ($B=0,6667$). Les espèces telles que: *Nauclea pobeguinii*($A=1,0000 et B=1,0000$) et *Vernonia conferta* ($A=0,9545 et B=1,0000$) sont de très bons indicateurs ($p.value=0,002$) du groupe 6 (Forêts marécageuses) parce qu'ils apparaissent dans toutes les parcelles qui constituent ce groupe ($B=1,0000$).Avec une composante de spécificité $A=1,0000$, ces espèces ne sont rencontrées presque exclusivement que dans les Forêts marécageuses. les espèces telles que: *Theobroma cacao*, *Musa sp.* et *Dacryodes edulis* sont des indicateurs des groupe 3+4 (Cacaoyères et Jachères). Dans cette association de deux groupes constituée de 10 parcelles au total, *Theobroma* est rencontrée dans presque tous les sites et nulle part ailleur ($A=0,9451 et B=1,000$) cependant *Musa sp.* et *Dacryodes edulis* ne sont pas présentent dans toutes les parcelles qui constituent ce regroupement. Une association des groupes 4 et 7 (Jachères, Forêts matures et Forêts secondaires) a pour indicateur l'espèce *Pycnanthus angolensis*. Cette espèce est présente dans toutes les parcelles constituant ce regroupement ($B=1,0000$) mais on la retrouve dans des parcelles en dehors de ce groupe ($A=0,7606$).
 
+::: rmdnote
+Indicateurs d'espèces liés aux variables explicatives dans la FC de Ndikiniméki.
 ```{r Correctionp-valueNdikinimeki3,fig.cap="Indicateurs d'espèces liés aux variables explicatives dans la FC de Ndikinimeki."}
 # Indicateurs d'espèces liés aux variables explicatives dans la FC de Ndikinimeki
 library(indicspecies)
@@ -684,8 +686,9 @@ iva_Ndiki=multipatt(Ndiki_spec,grps_Ndiki,max.order = 2,control = how(nperm = 99
 pval.adj_Ndiki<- p.adjust(iva_Ndiki$sign$p.value)
 summary(iva_Ndiki,indvalcomp = TRUE)
 ```
+:::
 
-Dans le cas de la FC de Nanga-Eboko, lorsque nous observons le plus petit arbre qui se situe dans les limites de l'erreur standard, nous constatons que cet modèle comporte 3 groupes. Son erreur résiduel est égale à 0,568 signifit que ce modèle pourrait expliquer 43,7% ($1-0,568$) de la variance de la matrice des espèces (Figure:\@ref(fig:ChoixpluspetitARMNanga-Eboko3)).
+Dans le cas de la FC de Nanga-Eboko, lorsque nous observons le plus petit arbre qui se situe dans les limites de l'erreur standard, nous constatons que cet modèle comporte 3 groupes. Le premier est regroupe les cultures (CUL) et les savanes (SAV), le second représente les marécages (MAR) tandis que le troisième rassemble les forêts galeries (FGA), les forêts secondaires adultes (FSA) et les forêts secondaires jeunes (FSJ). Son erreur résiduel est égale à 0,568 et signifit que ce modèle pourrait expliquer 43,7% ($1-0,568$) de la variance de la matrice des espèces (Figure:\@ref(fig:ChoixpluspetitARMNanga-Eboko3)).
 
 ```{r ChoixpluspetitARMNanga-Eboko3,fig.cap="Plus petit arbre entre une erreur standard et l'erreur due à la validation croisée pour la FC de Nanga-Eboko."}
 par(mfrow = c(1, 2))
@@ -693,14 +696,14 @@ spe.norm_Nanga=decostand(Nanga_spec,"nor")
 spe.ch.mvrpart_Nanga.min=mvpart(data.matrix(spe.norm_Nanga)~.,Nanga.Env,margin = 0,08,cp=0,xv="1se",xval = nrow(Nanga_spec),xvmult = 100,which = 4,big.pts=TRUE)
 ```
 
-Le modèle d'arbre le plus grand est celui à 7 groupes. Il a une puissance explicative élevée ($R²=0,661$), cependant il est difficile à interpreter (Figure:\@ref(fig:ChoixplusgrandARMNanga-Eboko3)).
+Le modèle d'arbre le plus grand est celui à 7 groupes. Il a une puissance explicative élevée ($R²=0,661$), cependant la plurarité des facteurs explicatifs rend difficile son interpretation (Figure:\@ref(fig:ChoixplusgrandARMNanga-Eboko3)).
 
 ```{r ChoixplusgrandARMNanga-Eboko3,fig.cap='Plus grand arbre de regression multivariée pour la FC de Nanga-Eboko.'}
 # selection du plus grand arbre 
 spe.ch.mvrpart_Nanga.max=mvpart(data.matrix(spe.norm_Nanga)~.,Nanga.Env,margin = 0,08,cp=0,xv="none",xval = nrow(Nanga_spec),xvmult = 100,which = 4,size=7,big.pts=TRUE)
 ```
 
-Un modèle à 4 groupes intermediaire entre le minimum et le maximum de groupes possibles semble plus facile à interpreter. Sa puissance explicative $R²=0,502$ ce qui suggère qu'au moins 50% de la variance de la matrice des espèces pourrait trouver une justification dans ce modèle (Figure:\@ref(fig:ChoixarbreapproprieNanga-Eboko3)). La première discrimination est faite sur la base des catégories d'occupation des terres et permet d'isoler: un groupe de 5 parcelles appartenant aux Cultures (CU) et aux Savanes (SA) et un second groupe de 18 parcelles retrouvées dans les Marécages (MAR), les Forêts galeries (FGA), les Forêts secondaires adultes (FSA) et les Forêts secondaires jeunes (FSJ). Sur la base d'un autre paramètre environnemental tel que les stocks de carbone dans le sol, deux sous-groupes ont pu se détacher du second groupe: le premier regroupe 3 parcelles dont les stocks de carbone du sol sont inférieurs à 3,795t/ha et le second est constitué de 11 parcelles dont les stocks de carbone du sol sont supérieurs ou égales à 3,795t/ha. Les marécages (MAR) se sont constitués comme un groupe à part de 5 parcelles.
+Un modèle à 4 groupes intermediaire entre le minimum et le maximum de groupes possibles semble plus facile à interpreter. Sa puissance explicative est de  $R²=0,502$ ce qui suggère qu'au moins 50% de la variance de la matrice des espèces pourrait trouver une justification dans ce modèle (Figure:\@ref(fig:ChoixarbreapproprieNanga-Eboko3)). La première discrimination est faite sur la base des catégories d'occupation des terres et permet d'isoler: un groupe de 5 parcelles appartenant aux Cultures (CUL) et aux Savanes (SAV) et un second groupe de 18 parcelles retrouvées dans les Marécages (MAR), les Forêts galeries (FGA), les Forêts secondaires adultes (FSA) et les Forêts secondaires jeunes (FSJ). Sur la base d'un autre paramètre environnemental tel que les stocks de carbone dans le sol, deux sous-groupes ont pu se détacher du second groupe: le premier regroupe 3 parcelles dont les stocks de carbone du sol sont inférieurs à 3,795t/ha et le second est constitué de 11 parcelles dont les stocks de carbone du sol sont supérieurs ou égales à 3,795t/ha. Les marécages (MAR) se sont constitués comme un groupe à part entière de 5 parcelles.
 
 ```{r ChoixarbreapproprieNanga-Eboko3,fig.cap='Arbre approprié pour une classification supervisée dans la FC de Nanga-Eboko.'}
 spe.ch.mvrpart_Nanga=mvpart(data.matrix(spe.norm_Nanga)~.,Nanga.Env,margin = 0,08,cp=0,xv="none",xval = nrow(Nanga_spec),xvmult = 100,which = 4,size=4,big.pts=TRUE)
