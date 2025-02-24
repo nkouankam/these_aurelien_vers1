@@ -109,28 +109,32 @@ Dans la FC de Ndikiniméki l'on a identifié 148 espèces (Tableau:\@ref(tab:Esp
 
 ```{r Especes-Ndikinimeki3}
 # Noms des espèces identifiées à Ndikinimeki
-knitr::kable(colnames(Ndiki_spec),caption ="Identification des espèces enregistrées dans la FC de Ndikiniméki. (x: Nom des espèces)",booktabs=TRUE,caption.short=NULL,format = "htlm") %>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F)
+knitr::kable(colnames(Ndiki_spec),caption ="Identification des espèces enregistrées dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short=NULL,format = "html") %>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F)%>%
+ kableExtra::footnote(general = "x: Nom des espèces")
 ```
 
 ```{r Familles-Ndikinimeki3}
 # Nom des familles enregistrées à Ndikinimeki
-knitr::kable(colnames(Ndiki_fami),caption = "Identification des familles dans la FC de Ndikiniméki. (x: Nom des familles d'espèces)",booktabs=TRUE,caption.short=NULL,format = "htlm")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)
+knitr::kable(colnames(Ndiki_fami),caption = "Identification des familles dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short=NULL,format = "html")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)%>%
+  footnote(general = "x: Nom des familles d'espèces")
 ```
 
 Dans la FC de Nanga-Eboko 122 espèces (Tableau:\@ref(tab:EspecesNanga-Eboko3)) rattachées à 39 familles ont été enregistrées (Tableau:\@ref(tab:FamillesNanga-Eboko3)).
 
 ```{r EspecesNanga-Eboko3}
 # Noms des espèces identifiées à Nanga-Eboko
-knitr::kable(colnames(Nanga_spec),caption = "Identification des espèces enregistrées dans la FC de Nanga-Eboko. (x: Nom des espèces)",booktabs=TRUE,caption.short=NULL,format = "htlm")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)
+knitr::kable(colnames(Nanga_spec),caption = "Identification des espèces enregistrées dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short=NULL,format = "html")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)%>%
+  footnote(general = "x: Nom des espèces")
 ```
 
 ```{r FamillesNanga-Eboko3}
 # Noms des familles identifiées à Nanga-Eboko
-knitr::kable(colnames(Nanga_fami),caption = "Identification des familles dans la FC de Nanga-Eboko. (x: Nom des familles d'espèces)",booktabs=TRUE,caption.short=NULL,format = "htlm")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)
+knitr::kable(colnames(Nanga_fami),caption = "Identification des familles dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short=NULL,format = "html")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)%>%
+  footnote(general = "x: Nom des familles d'espèces")
 ```
 
 Soit $X_i$ le nombre d'individus de $i$ espèces observées dans l'échantillon, $i=1,2,...,n;$ $X_i$ est considéré comme la fréquence des espèces de l'échantillon. Soit $f_k$ le nombre d'espèces représentées exactement par $k$ individus dans l'échantillon, $k=0,1,...,N;$ $f_k$ est considéré comme la fréquence d'abondance observée. $f_1=390\ et\ f_1=189$ est le nombre d'espèces représentées exactement par 1 individu (singletons) dans une parcelle unique parmi celles inventoriées respectivement pour les FC de Ndikinikimeki et Nanga-Eboko. $f_2=93\ et\ f_2=57$ est le nombre d'espèces représentées par 2 individus (doublons) dans l'échantillon d'inventaire respectivement pour les FC de Ndikinimeki et Nanga-Eboko. Pour la FC de Ndikinimeki le nombre d'observation de présence est de 608 tandis que la fréquence non-observable $f_0=4128$ (Tableau:\@ref(tab:ClassesAbondance-Ndikinimeki3)) dénote le nombre d'espèces présentes dans l'assemblage des individus mais non observées dans l'échantillon d'inventaire. Ces absences représentent près de 87% des données de la matrice d'inventaire et la valeur maximale d'abondance a été enregistrée dans une parcelle où une espèce a été observée 29 fois de suite (Figure:\@ref(fig:Histogramme-Abondance3)).
@@ -143,8 +147,9 @@ knitr::kable(ab_Ndiki,caption = "Dénombrement des classes d'abondance dans la F
 
 ```{r ClassesAbondanceNanga-Eboko3}
 ab_Nanga<-table(unlist(Nanga_spec))
-knitr::kable(ab_Nanga,caption = "Dénombrement des classes d'abondance dans la FC de Nanga-Eboko. (Var1:Classes d'abondance; Freq:Fréquences d'abondance)",booktabs=TRUE,caption.short=NULL,format = "html")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)
+knitr::kable(ab_Nanga,caption = "Dénombrement des classes d'abondance dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short=NULL,format = "html")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)%>%
+  footnote(general = "Var1: Classes d'abondance; Freq: Fréquences d'abondance")
 ```
 
 ```{r Histogramme-Abondance3,fig.cap="Histogrammes des effectifs des classes d'abondance des espèces."}
@@ -249,8 +254,9 @@ knitr::kable(sort(sit_pres_Ndiki),caption = "Classement de la richesse spécifiq
 ```
 
 ```{r NangaNombre-especesparcelles3}
-knitr::kable(sort(sit_pres_Nanga),caption = "Classement de la richesse spécifiques par parcelles dans la FC de Nanga-Eboko.(x:Richesse spécifiques par parcelles)",booktabs=TRUE,caption.short=NULL,format = "html")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)
+knitr::kable(sort(sit_pres_Nanga),caption = "Classement de la richesse spécifiques par parcelles dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short=NULL,format = "html")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)%>%
+  footnote(general = "x:Richesse spécifiques par parcelles")
 ```
 
 ```{r Richesses-specifiquesparcelles3,fig.cap="Nombres d'espèces par parcelles"}
@@ -541,8 +547,9 @@ Diversity.3_Ng<- diversitycomp(Nanga_spec,y=Nanga.Env,factor1 = "Management_type
 ```
 
 ```{r Comparaisonrichesse-observeeNdikinimeki3}
-knitr::kable(Diversity.3_Nd, caption="Richesse spécifiques observées des differentes catégories d'utilisation des terres dans la FC de Ndikiniméki. (n:nombre de parcelle)", booktabs=TRUE,caption.short=NULL,format = "html")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)
+knitr::kable(Diversity.3_Nd, caption="Richesse spécifiques observées des differentes catégories d'utilisation des terres dans la FC de Ndikiniméki.", booktabs=TRUE,caption.short=NULL,format = "html")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)%>%
+  footnote(general = "n:nombre de parcelle")
 ```
 
 ```{r ComparaisonrichesseNanga-Eboko3}
@@ -634,7 +641,8 @@ rankabunplot(Rankabond.1f_Ndiki,scale = "abundance",specnames = c(1:3))
 ```{r TableauabondancesNanga-Eboko3}
 Rankabond.1_Nanga<-rankabundance(Nanga_spec) 
 knitr::kable(head(Rankabond.1_Nanga,10),caption = "Les 10 plus abondantes espèces de la FC de Nanga-Eboko.",booktabs=TRUE,caption.short=NULL)%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)%>%
+  footnote(general = "rank: rang; abundance: abondance; plower: limite inferieure de confiance pour le rang de l'espèce; pupper: limite supérieure de confiance; accumfreq: fréquence cumulée; logabun: logarithme de l'abondance; rankfreq: fréquence du rang")
 ```
 
 ```{r CourbesabondanceNanga-Eboko3,fig.cap="Courbes d'abondance des espèces et familles dans la FC de Nanga-Eboko."}
@@ -670,22 +678,26 @@ spe.ch.mvrpart_Ndiki=mvpart(data.matrix(spe.norm_Ndiki)~.,Ndiki.Env,margin = 0,0
 grps_Ndiki=spe.ch.mvrpart_Ndiki$where
 groups.mrt=levels(as.factor(spe.ch.mvrpart_Ndiki$where)) 
 knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[1]),-5],caption = "Composition environnementale du groupe 3 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short=NULL,format="html")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)%>%
+  footnote(general="TUT: Type d'utilisation des terres; carbone_sol: stocks de carbone du sol (tC/ha); carbone: stock de carbone de ligneux (tC/ha); elevation: altitude")
 ```
 
 ```{r Groupe4-Ndikinimeki}
 knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[2]),-5],caption = "Composition environnementale du groupe 4 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short=NULL,format="html")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)%>%
+  footnote(general="TUT: Type d'utilisation des terres; carbone_sol: stocks de carbone du sol (tC/ha); carbone: stock de carbone de ligneux (tC/ha); elevation: altitude")
 ```
 
 ```{r Groupe6-Ndikinimeki}
 knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[3]),-5],caption = "Composition environnementale du groupe 6 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short=NULL,format = "html")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)%>%
+  footnote(general="TUT: Type d'utilisation des terres; carbone_sol: stocks de carbone du sol (tC/ha); carbone: stock de carbone de ligneux (tC/ha); elevation: altitude")
 ```
 
 ```{r Groupe7-Ndikinimeki}
 knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[4]),-5],caption = "Composition environnementale du groupe 7 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short=NULL,format = "html")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)%>%
+  footnote(general="TUT: Type d'utilisation des terres; carbone_sol: stocks de carbone du sol (tC/ha); carbone: stock de carbone de ligneux (tC/ha); elevation: altitude")
 ```
 
 Parmi les 148 espèces identifiées dans la FC de Ndikiniméki, 7 ont été retenues comme représentives ou caractéristiques de certains groupes de parcelles appartenant à des Types t'Utilisation de Terres (TUT).Parmi ces espèces selectionnées, 3 sont exclusivement associées à un groupe, 4 sont associées à 2 groupes et aucune espèce n'a été associée à 3 groupes à la fois (Figure:\@ref(fig:Correctionp-valueNdikinimeki3). L'espèce *Klainedoxa gabonensis* ($p.value=0,027$) s'est revelé comme un bon indicateur du groupe 4 (Jachères) avec une composante spécifique élevée ($A=0,8696$) et une fidélité au dessus de la moyenne ($B=0,6667$). Les espèces telles que: *Nauclea pobeguinii*($A=1,0000 et B=1,0000$) et *Vernonia conferta* ($A=0,9545 et B=1,0000$) sont de très bons indicateurs ($p.value=0,002$) du groupe 6 (Forêts marécageuses) parce qu'elles apparaissent dans toutes les parcelles qui constituent ce groupe ($B=1,0000$).Avec une composante de spécificité $A=1,0000$, ces espèces ne sont rencontrées presque exclusivement que dans les Forêts marécageuses. les espèces telles que: *Theobroma cacao*, *Musa sp.* et *Dacryodes edulis* sont des indicateurs des groupe 3+4 (Cacaoyères et Jachères). Dans cette association de deux groupes constituée de 10 parcelles au total, *Theobroma* est rencontrée dans presque tous les sites et nulle part ailleur ($A=0,9451 et B=1,000$) cependant *Musa sp.* et *Dacryodes edulis* ne sont pas présentent dans toutes les parcelles qui constituent ce regroupement. Une association des groupes 4 et 7 (Jachères, Forêts matures et Forêts secondaires) a pour indicateur l'espèce *Pycnanthus angolensis*. Cette espèce est présente dans toutes les parcelles constituant ce regroupement ($B=1,0000$) mais cependant on pourrait la retrouver dans des parcelles en dehors de ce groupe ($A=0,7606$).
@@ -727,22 +739,26 @@ spe.ch.mvrpart_Nanga=mvpart(data.matrix(spe.norm_Nanga)~.,Nanga.Env,margin = 0,0
 grps_Nanga=spe.ch.mvrpart_Nanga$where
 groups.mrt=levels(as.factor(spe.ch.mvrpart_Nanga$where)) 
 knitr::kable(Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[1]),-5],caption="Composition environnementale du groupe 1N dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short=NULL,format = "html")%>%
-kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)  
+kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)%>%
+  footnote(general="TUT: Type d'utilisation des terres; Carbone_sol: stocks de carbone du sol (tC/ha); Carbone: stock de carbone de ligneux (tC/ha); Elevation: altitude")  
 ```
 
 ```{r Groupe2N-Nanga}
 knitr::kable(Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[2]),-5],caption="Composition environnementale du groupe 2N dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short=NULL,format = "html")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)%>%
+  footnote(general="TUT: Type d'utilisation des terres; Carbone_sol: stocks de carbone du sol (tC/ha); Carbone: stock de carbone de ligneux (tC/ha); Elevation: altitude")  
 ```
 
 ```{r Groupe3N-Nanga}
 knitr::kable(Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[3]),-5],caption="Composition environnementale du groupe 3N dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short=NULL,format = "html")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)%>%
+  footnote(general="TUT: Type d'utilisation des terres; Carbone_sol: stocks de carbone du sol (tC/ha); Carbone: stock de carbone de ligneux (tC/ha); Elevation: altitude")  
 ```
 
 ```{r Groupe4N-Nanga}
 knitr::kable(Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[4]),-5],caption="Composition environnementale du groupe 4N dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short=NULL,format = "html")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE)%>%
+  footnote(general="TUT: Type d'utilisation des terres; Carbone_sol: stocks de carbone du sol (tC/ha); Carbone: stock de carbone de ligneux (tC/ha); Elevation: altitude")  
 ```
 
 ```{r Indicateurs especes lies aux variables explicatives dans la FC de Nanga-Eboko}
@@ -958,7 +974,9 @@ Nanga_stable.BM=desc_statby(Nanga_StC.BM,measure.var = "StC.BM.t.ha",grps = "Str
 ```{r Stocks moyens BM FC Nanga-Eboko,caption='Calcul des stocks moyens de carbone des bois morts dans les TUT de la FC de Nanga-Eboko.'}
 Nanga_stable.BM<-Nanga_stable.BM[,c("Strates","length","mean","sd","range")]
 Nanga_stable.BM=Nanga_stable.BM%>%arrange(desc(length))
-knitr::kable(Nanga_stable.BM,digits = 2,caption='Calcul des stocks moyens de carbone des bois morts dans les TUT de la FC de Nanga-Eboko.')
+knitr::kable(Nanga_stable.BM,digits = 2,caption='Calcul des stocks moyens de carbone des bois morts dans les TUT de la FC de Nanga-Eboko.',booktabs=T,caption.short=NULL,format="html")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)%>%
+  footnote(general = "length: taille de l'échantillon; mean: moyenne; sd: écart type; range: amplitude; FSA: Forêts Secondaires Adultes; FGA: Forêts Galeries; FSJ: Forêts Secondaires Jeunes; MAR: Marecages; SAV: Savanes; CUL: Cultures.")
 ```
 
 ```{r StockscarboneBMNanga-Eboko3,caption="Stocks de carbone des bois morts dans les différentes catégories d'utilisation de terres dans la FC de Nanga-Eboko."}
@@ -1033,7 +1051,7 @@ Nanga_StC.Herb=select(Nanga_Herb,Strates,StC.Herb.t.ha)
 describe(Nanga_StC.Herb,num.desc = c("mean","sd","median","min","max","valid.n"))
 ```
 
-Les stocks ont été estimés à 3,84 tC/ha pour une moyenne de 0,03 ± 0,06 tC/ha ce qui représente à peu près le tiers des stocks enregistrés dans la FC de Ndikiniméki (Figure:\@ref(fig:StockscarboneherbaceesNanga-Eboko3)). Les espaces savanicoles totalisent 2,33 tC/ha soit 60% des stocks de carbone enregistrés sur l'ensemble des herbacées de la Forêt communale de Nanga-Eboko (Figure:\@ref(fig:BarplotcarboneherbaceesNanga-Eboko3)). Les 05 autres catégories restantes se partagent les 40% restant. Le t.test de Student révèle en effet qu'il existe une difference très significative entre Savane-Forêts galeries, Savanes-Forêts secondaires adultes, Savanes-Forêts secondaires jeunes et Savanes-Cultures (Figure:\@ref(fig:ttestherbaceesNanga-Eboko3)). Ces savanes appartiennent à la catégories des savanes herbeuses où les arbres sont distant et de faibles envergures ce qui favorise le développement d'une végétation herbeuse très abondante.
+Les stocks de carbone ont été estimés à 3,84 tC/ha pour une moyenne de 0,03 ± 0,06 tC/ha ce qui représente à peu près le tiers des stocks enregistrés dans la FC de Ndikiniméki (Figure:\@ref(fig:StockscarboneherbaceesNanga-Eboko3)). Les espaces savanicoles totalisent 2,33 tC/ha soit 60% des stocks de carbone enregistrés sur l'ensemble des herbacées de la Forêt communale de Nanga-Eboko (Figure:\@ref(fig:BarplotcarboneherbaceesNanga-Eboko3)). Les 05 autres catégories se partagent les 40% restant. Le t.test de Student révèle en effet qu'il existe une difference très significative entre Savane-Forêts galeries, Savanes-Forêts secondaires adultes, Savanes-Forêts secondaires jeunes et Savanes-Cultures (Figure:\@ref(fig:ttestherbaceesNanga-Eboko3)). Ces savanes appartiennent à la catégories des savanes herbeuses où les arbres sont distants et de faibles envergures ce qui favorise le développement d'une végétation herbeuse très abondante.
 
 ```{r Graphique densité herbacées Nanga-Eboko,fig.cap="Graphiques de densité des stocks de carbone des herbacées dans la FC de Nanga-Eboko."}
 ggdensity(Nanga_StC.Herb, x = "StC.Herb.t.ha",add = "mean", rug = TRUE,  color = "Strates", fill = "Strates", palette = "jco")
@@ -1043,13 +1061,17 @@ ggdensity(Nanga_StC.Herb, x = "StC.Herb.t.ha",add = "mean", rug = TRUE,  color =
 Nanga_stable.Herb=desc_statby(Nanga_StC.Herb,measure.var = "StC.Herb.t.ha",grps = "Strates")
 Nanga_stable.Herb<-Nanga_stable.Herb[,c("Strates","length","mean","sd","range")]
 Nanga_stable.Herb=Nanga_stable.Herb%>%arrange(desc(length))
-knitr::kable(Nanga_stable.Herb,digits = 2,caption='Calcul des stocks moyens de carbone des herbacées dans les TUT de la FC de Nanga-Eboko.')
+knitr::kable(Nanga_stable.Herb,digits = 2,caption='Calcul des stocks moyens de carbone des herbacées dans les TUT de la FC de Nanga-Eboko.',booktabs=T,caption.short=NULL,format="html")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)%>%
+  footnote(general = "length: taille de l'échantillon; mean: moyenne; sd: écart type; range: amplitude; FSA: Forêts Secondaires Adultes; FGA: Forêts Galeries; FSJ: Forêts Secondaires Jeunes; MAR: Marecages; SAV: Savanes; CUL: Cultures.")
 ```
 
 ```{r StockscarboneherbaceesNanga-Eboko3,caption="Stocks de carbone des herbacées dans les différentes catégories d'utilisation de terres dans la FC de Nanga-Eboko."}
 Nanga_totals.Herb<-Nanga_StC.Herb%>%  group_by(Strates)%>%    summarise(Carbone.total=round(sum(StC.Herb.t.ha),2))
 Nanga_totals.Herb=Nanga_totals.Herb%>%arrange(desc(Carbone.total))
-knitr::kable(Nanga_totals.Herb,caption="Stocks de carbone des herbacées dans les différentes catégories d'utilisation de terres dans la FC de Nanga-Eboko.")
+knitr::kable(Nanga_totals.Herb,caption="Stocks de carbone des herbacées dans les différentes catégories d'utilisation de terres dans la FC de Nanga-Eboko.",booktabs=T,caption.short=NULL,format="html")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)%>%
+  footnote(general = "FSA: Forêts Secondaires Adultes; FGA: Forêts Galeries; FSJ: Forêts Secondaires Jeunes; MAR: Marecages; SAV: Savanes; CUL: Cultures; Carbone.total: stock de carbone total en tC/ha.")
 ```
 
 ```{r ttestherbaceesNanga-Eboko3,fig.cap="t.test des stocks de carbone des herbacées dans la FC de Nanga-Eboko."}
@@ -1081,13 +1103,17 @@ ggdensity(Ndiki_StC.Lit, x = "StC_Lit.t.ha",add = "mean", rug = TRUE,  color = "
 Ndiki_stable.Lit=desc_statby(Ndiki_StC.Lit,measure.var = "StC_Lit.t.ha",grps = "Strates")
 Ndiki_stable.Lit<-Ndiki_stable.Lit[,c("Strates","length","mean","sd","range")]
 Ndiki_stable.Lit=Ndiki_stable.Lit%>%arrange(desc(length))
-knitr::kable(Ndiki_stable.Lit,digits = 2,caption='Calcul des stocks moyens de carbone de la litière dans les TUT de la FC de Ndikiniméki.')
+knitr::kable(Ndiki_stable.Lit,digits = 2,caption='Calcul des stocks moyens de carbone de la litière dans les TUT de la FC de Ndikiniméki.',booktabs=T,caption.short=NULL,format="html")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)%>%
+  footnote(general ="length: taille de l'échantillon; mean: moyenne; sd: écart type; range: amplitude; FM: Forêt Mature; FS: Forêt Secondaire; FMa: Forêt Marécageuse; JA: Jachère; CAC: Cacaoyère.")
 ```
 
 ```{r Stocks carbone litière Ndikiniméki,caption="Stocks de carbone de la litière dans les différentes catégories d'utilisation de terres dans la FC de Ndikiniméki."}
 Ndiki_totals.Lit<-Ndiki_StC.Lit%>%  group_by(Strates)%>%    summarise(Carbone.total=round(sum(StC_Lit.t.ha),2))
 Ndiki_totals.Lit=Ndiki_totals.Lit%>%arrange(desc(Carbone.total))
-knitr::kable(Ndiki_totals.Lit,caption="Stocks de carbone de la litière dans les différentes catégories d'utilisation de terres dans la FC de Ndikiniméki.")
+knitr::kable(Ndiki_totals.Lit,caption="Stocks de carbone de la litière dans les différentes catégories d'utilisation de terres dans la FC de Ndikiniméki.",booktabs=T,caption.short=NULL,format="html")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)%>%
+  footnote(general ="FM: Forêt Mature; FS: Forêt Secondaire; FMa: Forêt Marécageuse; JA: Jachère; CAC: Cacaoyère; Carbone.total:stock de carbone total en tC/ha.")
 ```
 
 ```{r ttestlitiereNdikinimeki3,fig.cap="t.test des stocks de carbone de la litière dans la FC de Ndikiniméki."}
