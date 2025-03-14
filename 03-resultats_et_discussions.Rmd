@@ -3,8 +3,7 @@ bibliography: references.bib
 output:
   html_document:
     df_print: paged
-  word_document: default
-  pdf_document: default
+  always_allow_html: true  
 ---
 
 # Résultats et Discussions
@@ -879,7 +878,7 @@ Ndiki_Arbre.t.test=ggboxplot(Ndiki_StC.ligneux,x="Strates",y="StC_total_arbre.t.
 Ndiki_stable.ligneux<-desc_statby(Ndiki_StC.ligneux,measure.var = "StC_total_arbre.t.C.ha",grps = "Strates")
 Ndiki_stable.ligneux<-Ndiki_stable.ligneux[,c("Strates","length","mean","sd","range")]
 Ndiki_stable.ligneux<-Ndiki_stable.ligneux%>%arrange(desc(length))
-knitr::kable(Ndiki_stable.ligneux,digits = 2,caption = "Calcul des stocks moyens de carbone des ligneux dans les TUT de la FC de Ndikiniméki.",booktabs=T,caption.short=NULL,format="html")%>%
+knitr::kable(Ndiki_stable.ligneux,digits = 2,caption = "Calcul des stocks moyens de carbone des ligneux dans les TUT de la FC de Ndikiniméki.",booktabs=T,caption.short=NULL,format="markdown")%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)%>%
   kableExtra::footnote(general ="length: taille de l'échantillon; mean: moyenne; sd: écart type; range: amplitude; FM: Forêt Mature; FS: Forêt Secondaire; FMa: Forêt Marécageuse; JA: Jachère; CAC: Cacaoyère")
 ```
