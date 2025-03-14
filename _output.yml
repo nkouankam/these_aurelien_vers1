@@ -9,7 +9,7 @@ bookdown::pdf_book:
     in_header: preamble.tex
   latex_engine: tinytex 
   citation_package: natbib
-  keep_tex: yes
+  keep_tex: yes 
 bookdown::epub_book: default
 bookdown::word_document2:
     keep_md: yes
