@@ -1,14 +1,17 @@
 ---
 bibliography: references.bib
+output:
+  html_document:
+    df_print: paged
 ---
 
-# Chapitre I. Généralités
+# Chapitre I: Généralités
 
 ## Présentation de la Forêt Communale de Nanga-Eboko
 
 ### Localisation
 
-La forêt communale de Nanga-Eboko est constituée de deux blocs distincts (Figure: \@ref(fig:Localisation-FCNanga1)) couvrant une superficie total de 20000 ha (11000 ha et 9000 ha). C'est le décret n°2009/2046/PM du 16 Novembre 2009 qui marque sa création et confi sa tutelle à la mairie de Nanga-Eboko. Elle est située dans la région du Centre, Département de la La Forêt Communale Haute Sanaga, Arrondissement de Nanga-Eboko [@Yemafack_Alemagi2016].
+La forêt communale de Nanga-Eboko est constituée de deux blocs distincts (Figure: \@ref(fig:Localisation-FCNanga1)) couvrant une superficie totale de 20000 ha (11000 ha et 9000 ha). C'est le décret n°2009/2046/PM du 16 Novembre 2009 qui marque sa création et confi sa tutelle à la mairie de Nanga-Eboko. Elle est située dans la région du Centre, Département de la Haute Sanaga, Arrondissement de Nanga-Eboko [@Yemafack_Alemagi2016].
 
 ```{r Localisation-FCNanga1,fig.cap="Localisation de la Forêt communale de Nanga-Eboko (Yemefack et Alemagi, 2016)"}
 knitr::include_graphics('images/localisation_nanga-01.png')
@@ -22,7 +25,7 @@ C'est le relief inégal du grand plateau méridional qui est une vaste surface d
 
 #### Climat
 
-Par son appartenance au domaine subéquatorial, la Forêt Communale de Nanga-Eboko connait quatre saisons: deux saisons pluvieuses séparées par deux saisons sèches d'inégale importance. C'est le climat équatorial de type guinéen. La topographie de cuvette et l'abaissement imporatant de l'altitude par rapport aux hautes terres voisines favorisent l'échauffement et l'évolution dynamique diurne. Par conséquent c'est une zone relativement chaude: la température moyenne annuelle se situe autour de 24°C avec une amplitude de 3,4°C. Les fortes chaleurs sont enrégitrés pendant les mois de janvier, février et mars (25°C-26°C) tandis que les basses températures sont relevées en juillet et août (22,6°C - 22,8°C). Les valeurs de pluviosité sont faibles avec des précipitations oscillant entre 1113 et 1827 mm. Avec des pluies étalées d'avril à juin et de mi-août à novembre, le nombre de jours pluvieux sur l'ensemble de la zone d'étude est de 133 jours.
+Par son appartenance au domaine subéquatorial, la Forêt Communale de Nanga-Eboko connait quatre saisons: deux saisons pluvieuses séparées par deux saisons sèches d'inégales importances. C'est le climat équatorial de type guinéen. La topographie de cuvette et l'abaissement imporatant de l'altitude par rapport aux hautes terres voisines favorisent l'échauffement et l'évolution dynamique diurne. Par conséquent c'est une zone relativement chaude: la température moyenne annuelle se situe autour de 24°C avec une amplitude de 3,4°C. Les fortes chaleurs sont enrégitrés pendant les mois de janvier, février et mars (25°C-26°C) tandis que les basses températures sont relevées en juillet et août (22,6°C - 22,8°C). Les valeurs de pluviosité sont faibles avec des précipitations oscillant entre 1113 et 1827 mm. Avec des pluies étalées d'avril à juin et de mi-août à novembre, le nombre de jours pluvieux sur l'ensemble de la zone d'étude est de 133 jours.
 
 #### Végétation
 
@@ -110,11 +113,11 @@ AGB=VOB×WB×BEF(VEF)
 (\#eq:Brown-Lugo1)
 \end{equation}
 ```
-$AGB$:Biomasse épigée;
+$AGB$ : Biomasse épigée;
 
-$VOB$:Volume bois fort;
+$VOB$ : Volume bois fort;
 
-$WD$: Densité du bois;
+$WD$ : Densité du bois;
 
 $VEF$:Facteur d'expansion de volume.
 
@@ -126,9 +129,9 @@ AGB=0,0673×(ρD^2 H)0,976≡0,559×(ρD^2 H)
 (\#eq:Chave-al2005)
 \end{equation}
 ```
-$D$: diamètre à hauteur de poitrine ou au-dessus des contreforts (m); 
-$H$: hauteur (m);
-$ρ$: densité spécifique (g/cm^3^).
+$D$ : diamètre à hauteur de poitrine ou au-dessus des contreforts (m); 
+$H$ : hauteur (m);
+$ρ$ : densité spécifique (g/cm^3^).
 
 [l'intervalle de validité de l'équation: 5 à 156 cm de diamètre].
 
