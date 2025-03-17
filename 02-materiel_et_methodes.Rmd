@@ -3,9 +3,10 @@ bibliography: references.bib
 output:
   html_document:
     df_print: paged
+  pdf_document: default
 ---
 
-# Chapitre II. Matériel et méthodes
+# Chapitre II: Matériel et méthodes
 
 ## Matériel
 
@@ -146,15 +147,15 @@ H=-\sum_{i=1}^q\frac{n_i}{N}ln\frac{n_i}{N}
 \end{equation}
 ```
 
-$H$:indice de Shannon;
+$H$ : indice de Shannon;
 
-$q$:nombre d'espèces;
+$q$ : nombre d'espèces;
 
-$n_i$:nombre d'individus d'une espèce;
+$n_i$ : nombre d'individus d'une espèce;
 
-$N$:nombre total des individus enregistrés.
+$N$ : nombre total des individus enregistrés.
 
-Quel que soit le nombre d'individus enregistré dans une unité d'échantillonnage, l'indice de Shannon ($H$) atteint son maximum($H_max$) lorsque toutes les espèces sont représentées par le même nombre d'effectif \@ref(eq:max-Shannon2).
+Quel que soit le nombre d'individus enregistré dans une unité d'échantillonnage, l'indice de Shannon ($H$) atteint son maximum ($H_max$) lorsque toutes les espèces sont représentées par le même nombre d'effectif \@ref(eq:max-Shannon2).
 
 ```{=tex}
 \begin{equation}
@@ -172,7 +173,7 @@ J=\frac{H}{H_{max}}
 \end{equation}
 ```
 
-$J$:indice de Pielou
+$J$ : indice de Pielou
 
 Malgrè le fait qu'il soit fortement dépendant de la richesse spécifique, l'équitabilité de Pielou reste très usité comme indice d'équitabilité. D'autre part l'équitabilité peut être relié à la forme de la courbe d'abondance des espèces, qui est une fonction décrivant l'allure rang/abondance où l'abscisse range les espèces en ordre décroissant d'abondance et l'ordonnée représente le logarithme transformé d'abondance. Les principaux modèles de courbes observés varient des séries géométriques où peu espèces sont dominantes et d'autres quasi rares, vers les modèles de Broken Stick où les espèces ont les mêmes abondances. Lorsque $J$ tend vers 0, un phénomène de dominance est observé, par contre lorqu'il tend vers 1 on relève une répartition régulière des éffectifs entre les espèces.
 
@@ -187,11 +188,11 @@ Il permet de mesurer la probabilité que deux individus sélectionnés de maniè
 \end{equation}
 ```
 
-𝛌:indice de Simpson;
+$𝛌$ : indice de Simpson;
 
-$p_i$: fréquence relative de l'espèce i;
+$p_i$ : fréquence relative de l'espèce i;
 
-$q$:nombre des espèces.
+$q$ : nombre des espèces.
 
 La valeur de 𝛌 s'accroit lorsque la probabilité que deux individus soient de la même espèce est élevée. Généralement la diversité de Simpson est transformée sous la forme: $D=1-𝛌$, $D$ variant de 0 à 1. Plus $D$ augmente, plus le milieu est hétérogène et la diversité grande. La richesse spécifique, l'entropie de Shannon et la diversité de Simpson ont été regroupées dans la formule de l'entropie généralisée de Rényi [@Renyi1961] et reprise par Hill(1973) et Pielou (1975):
 
@@ -244,9 +245,9 @@ BA=℮^{\left(a+b⨯ln(\rho)+c⨯ln(D)+d⨯ln(D)+e⨯E\right)}
 \end{equation}
 ```
 
-$BA$: Biomasse épigée en kg;
+$BA$ : Biomasse épigée en kg;
 
-$D$: Diamètre(cm);
+$D$ : Diamètre(cm);
 
 $ρ$ : densité spécifique d'une espèce exprimée en g/cm^3^ ;
 
@@ -288,11 +289,11 @@ TB=AGB+BGB
 \end{equation}
 ```
 
-$TB$: Total Biomass ou Biomasse totale (kg) ;
+$TB$ : Total Biomass ou Biomasse totale (kg) ;
 
-$BGB$: Below Ground Biomass ou Biomasse Souterraine (kg) ;
+$BGB$ : Below Ground Biomass ou Biomasse Souterraine (kg) ;
 
-$AGB$: Above Ground Biomass ou Biomasse Aérienne (kg).
+$AGB$ : Above Ground Biomass ou Biomasse Aérienne (kg).
 
 Les valeurs de densité du bois des arbres échantillonnés ont été puisées dans la littérature. Pour les espèces dont les valeurs de densité n'ont pas été retrouvées dans la littérature,une valeur par défaut ($ρ\ défaut = 0,58 g/cm^3$) pour les forêts tropicales d'Afrique, a été utilisée [@Mounmemi2021].
 
@@ -301,7 +302,7 @@ Les valeurs de densité du bois des arbres échantillonnés ont été puisées d
 Le Tableau: \@ref(tab:Biomasse-especesarborescentes2) présente les équations allométriques utilisées pour estimer la biomasse aérienne des palmiers et bananiers.
 
 ```{r  Biomasse-especesarborescentes2}
-knitr::kable(data.frame(Espèces=c('Bananiers (Musaceae)','Palmiers (Arecaceae)'),Equations=c('$ABG=0,0303⨯DHP^{2,1345}$ ','$AGB=23,487+41,851⨯(lnH^2)$'),Sources=c(' Arifin (2001)','Pearson et Brown (2005)')),caption = 'Equations allométriques de quelques espèces végétales arborescentes. (AGB = Above Ground Biomass (kg) ; DHP = Diamètre à Hauteur de Poitrine (cm) ; H = hauteur du tronc de palmier de sa souche à la base de la partie non visible du tronc (cm))',booktabs=TRUE,caption.short=NULL)
+knitr::kable(data.frame(Espèces=c('Bananiers (Musaceae)','Palmiers (Arecaceae)'),Equations=c('$ABG=0,0303⨯DHP^{2,1345}$ ','$AGB=23,487+41,851⨯(lnH^2)$'),Sources=c(' Arifin (2001)','Pearson et Brown (2005)')),caption = 'Equations allométriques de quelques espèces végétales arborescentes. (AGB = Above Ground Biomass (kg) ; DHP = Diamètre à Hauteur de Poitrine (cm) ; H = hauteur du tronc de palmier de sa souche à la base de la partie non visible du tronc (cm))',booktabs=TRUE,caption.short="")
 ```
 
 ##### Biomasse des herbacées et de la litière
@@ -332,11 +333,11 @@ Biomasse=\frac{\pi}{4}⨯D^2⨯L⨯\rho
 (\#eq:arbres-morts2)
 \end{equation}
 ```
-$D$: diamètre moyen de l'arbre mort ( cm);
+$D$ : diamètre moyen de l'arbre mort ( cm);
 
-$L$: longueur de l'arbre dans la placette d'échantillonnage (cm);
+$L$ : longueur de l'arbre dans la placette d'échantillonnage (cm);
 
-$\rho$: densité spécifique (g/cm^3^) lié au niveau de décomposition de l'arbre, 0,8: décomposition peu avancée; 0,5: décomposition moyennement avancée; 0,3: décomposition très avancée.
+$\rho$ : densité spécifique (g/cm^3^) lié au niveau de décomposition de l'arbre, 0,8: décomposition peu avancée; 0,5: décomposition moyennement avancée; 0,3: décomposition très avancée.
 
 #### Cartographie de la distribution spatiale des stocks de carbone
 
