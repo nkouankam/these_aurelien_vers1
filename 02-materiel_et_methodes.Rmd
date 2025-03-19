@@ -116,21 +116,16 @@ La diversité floristique renvoie à la richesse (nombre d'espèces végétales)
 
 La composition floristique a été déterminée à partir de la liste des espèces ligneuses inventoriées dans chaque parcelle. Le nombre d'espèces, de genres et de familles ont été relevés. Les différences entre les parcelles en terme de composition d'espèces ont été investiguées par une valeur statistique issue du calcul des distances écologiques entre les sites. En effet pour des sites qui partagent un grand nombre d'espèces cette distance devrait être petite. Par contre lorsque les sites ont peu d'espèces en commun cette distance devrait être grande. @Magurran2004 a relevé une difference entre la densité des espèces et la richesse spécifique numérique. La densité des espèces est le nombre d'espèces présents dans une unité d'échantillonnage ou surface donnée[@Hurlbert1971]. La richesse spécifique numérique est le nombre d'espèces par rapport à un effectif prédéfinit ou unité de biomasse[@Kempton1979]. D'après @Borcard2018, pour garantir la comparaison de deux parcelles d'échantillonnages, @Sanders1968 a proposé une méthode de rarefaction qui estime le nombre d'espèces dans des unités d'échantillonnages renfermant le même nombre d'individus. Etant donné que la rarefaction ne peut être calculé qu'à partir des éffectifs réels(non transformés), la formule de @Sanders1968 a été revue par @Hurlbert1971. Cette relation estime le nombre *q'* des espèces dans une unité d'échantillonnage standard de *n'* individus reposant sur une unité d'échantillonnage réelle de *n* individus appartenant à *q* espèces et n_i individus appartenant à l'espèce *i*. L'équation d'Hurlbert \@ref(eq:equation-Hurlbert2) et sa forme simplifiée \@ref(eq:equation-Hurlbertsimplifiee2).
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 E(q')=\sum_{i=1}^q\left[1-\frac{\binom{n-n_i}{n}}{\binom{n}{n'}}\right]
-(\#eq:equation-Hurlbert2)
-\end{equation}
-```
+\end{equation}$$ {#eq:equation-Hurlbert2}
 
 avec $n'\le(n-n_1)$, $n_1$ étant l'effectif de l'espèce la plus abondante.
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 \binom {n}{n'}=\frac{n!}{n'!(n-n')!};\binom{n-n_i}{n'}=\frac{(n-n_i)!}{n'!(n-n_i-n')!}
-(\#eq:equation-Hurlbertsimplifiee2)
-\end{equation}
-```
+\end{equation}$$ {#eq:equation-Hurlbertsimplifiee2}
+
 
 ##### Indices de diversité
 
@@ -140,38 +135,26 @@ La détermination des indices de diversité permet d'obtenir des informations so
 
 L'indice de diversité de Shannon est une valeur statistique indépendante de la taille de l'échantillon analysé, par conséquent il est indiqué pour les études comparatives de peuplements forestiers. Tout en permettant de quantifier l'hétérogénéité de la biodiversité d'un milieu, l'indice de Shannon permet de mesurer la composition en espèces en combinant l'abondance relative des espèces à la richesse spécifique. Pour les échantillons de faible taille, l'indice de Shannon varit entre 1 et 4,5 [@Riera_Alexandre2004]. Pour des parcelles ayant le même nombre d'espèces, la plus diversifiée sera celle dont les effectifs de chaque catégorie d'espèces seront à peu près les mêmes. la formule mathématique de l'indice de Shannon [@Shannon1948] est donnée par la relation \@ref(eq:Indice-deShannon2).
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 H=-\sum_{i=1}^q\frac{n_i}{N}ln\frac{n_i}{N}
-(\#eq:Indice-deShannon2)
-\end{equation}
-```
+\end{equation}$$ {#eq:Indice-deShannon2}
 
 $H$ : indice de Shannon;
-
 $q$ : nombre d'espèces;
-
 $n_i$ : nombre d'individus d'une espèce;
-
 $N$ : nombre total des individus enregistrés.
 
 Quel que soit le nombre d'individus enregistré dans une unité d'échantillonnage, l'indice de Shannon ($H$) atteint son maximum ($H_max$) lorsque toutes les espèces sont représentées par le même nombre d'effectif \@ref(eq:max-Shannon2).
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 H_{max}=-\sum_{i=1}^q\frac{1}{q}ln\frac{1}{q}=lnq
-(\#eq:max-Shannon2)
-\end{equation}
-```
+\end{equation}$$ {#eq:max-Shannon2}
 
 par conséquent l'équitabilité de Pielou[@Pielou1975] peut être définit par la relation \@ref(eq:Equitabilite-dePielou2):
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 J=\frac{H}{H_{max}}
-(\#eq:Equitabilite-dePielou2)
-\end{equation}
-```
+\end{equation}$$ {#eq:Equitabilite-dePielou2}
 
 $J$ : indice de Pielou
 
@@ -181,36 +164,25 @@ Malgrè le fait qu'il soit fortement dépendant de la richesse spécifique, l'é
 
 Il permet de mesurer la probabilité que deux individus sélectionnés de manière aléatoire soient de la même espèce. Sa formule est indiquée comme suit \@ref(eq:Indice-deSimpson):
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 𝛌=\sum_{i=1}^q\ p_i^2 
-(\#eq:Indice-deSimpson)
-\end{equation}
-```
+\end{equation}$$ {#eq:Indice-deSimpson}
 
 $𝛌$ : indice de Simpson;
-
 $p_i$ : fréquence relative de l'espèce i;
-
 $q$ : nombre des espèces.
 
 La valeur de 𝛌 s'accroit lorsque la probabilité que deux individus soient de la même espèce est élevée. Généralement la diversité de Simpson est transformée sous la forme: $D=1-𝛌$, $D$ variant de 0 à 1. Plus $D$ augmente, plus le milieu est hétérogène et la diversité grande. La richesse spécifique, l'entropie de Shannon et la diversité de Simpson ont été regroupées dans la formule de l'entropie généralisée de Rényi [@Renyi1961] et reprise par Hill(1973) et Pielou (1975):
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 H_a=\frac{1}{1-a}log\sum_{i=1}^qp_i^a
-(\#eq:Equation-deRenyi)
-\end{equation}
-```
+\end{equation}$$ {#eq:Equation-deRenyi}
 
 avec $a$ étant la mesure de l'ordre de l'entropie(a=0,1,2,...). Hill(1973) a également proposé d'utilisé les *nombres de diversité* \@ref(eq:Nombre-dediversite2).
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 N_a=e^{H_a}
-(\#eq:Nombre-dediversite2)
-\end{equation}
-```
+\end{equation}$$ {#eq:Nombre-dediversite2}
 
 le paramètre $a$ permet de quantifier l'importance des effectifs et par conséquent l'équitabilité: lorsque $a=0$ la diversité se resume au nombre d'espèces (présence-absence); lorsque $a$ augmente de plus en plus l'importance est accordée à l'espèce ayant l'effectif le plus élevé. De même avec cette notation, Hill a proposé l'usage du ratio $E_1={N_1}/{N_0}$ pour l'équitabilité de Shannon et $E_2={N_2}/{N_0}$ pour l'équitabilité de Simpson. De nos jours la plupart des écologiste préfèrent utilisés les nombres de Hill pour étudier la diversité taxonomique parce que ces nombres parfois appelés "nombres équivalents" sont faciles à interpreter et représentent le nombre d'espèces équiprobables nécessaires pour produire la même valeur de diversité que la distribution observé. Les nombres de diversité sont également intéressant pour l'interprétation des modèles lineaires parce qu'ils sont plus probables d'être en rélation de colinéarité avec les variables environnementales.
 
@@ -238,61 +210,42 @@ Pour mesurer l'association entre plusieurs espèces appartenant à un même grou
 
 Elle correspond à la masse de matière végétale ligneuse sèche par unité de surface. La biomasse totale en bois des ligneux sur pieds répartie en biomasse aérienne (AGB) et en biomasse souterraine (BGB). L'estimation de la biomasse aérienne des arbres s'est faite à partir des équations allométriques élaborée par @Fayolle2018 dans le bassin du Congo. Elle a été utilisée pour les arbres de DHP supérieur à 10 cm. C'est une équation qui prend en compte le diamètre de l'arbre, la densité du bois et l'indice climatique comme prédicteur de la biomasse épigée \@ref(eq:equation-deFayolle2). La formule mathématique est la suivante :
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 BA=℮^{\left(a+b⨯ln(\rho)+c⨯ln(D)+d⨯ln(D)+e⨯E\right)}
-(\#eq:equation-deFayolle2)
-\end{equation}
-```
+\end{equation}$$ {#eq:equation-deFayolle2}
 
 $BA$ : Biomasse épigée en kg;
-
 $D$ : Diamètre(cm);
-
 $ρ$ : densité spécifique d'une espèce exprimée en g/cm^3^ ;
-
 $E$ : indice climatique ;
-
 $a, b, c\ et\ d$ sont des estimations du coefficient ($a$ =-2,3027; $b$ =1,1599; $c$ =3,0484; $d$ =-0,0807) et $e$ =0,3197.
 
 La biomasse des individus de $5 cm < dhp < 10 cm$ a eté estimée à partir de l'équation allométrique de @Chave2014 \@ref(eq:equation-Chave2014) dont la relation est la suivante :
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 BA=℮^{\left(-1,803-0,976E+0,976ln(\rho)+2,673ln(D)-0,0299(ln(D))^2\right)}
-(\#eq:equation-Chave2014)
-\end{equation}
-```
+\end{equation}$$ {#eq:equation-Chave2014}
+
 ##### Biomasse souterraine(BGB) des ligneux sur pied
 
 L'équivalent racinaire de la biomasse des ligneux sur pied \@ref(eq:equival-racinaire2) a été trouvé en multipliant la valeur de la biomasse aérienne(AGB) par un coefficient R dont la valeur est estimée en fonction du niveau de pluviométrie de la zone concernée[@GIEC2007]. Pour notre zone d'étude, nous avons considéré $R=1/4$.
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 BGB=AGB⨯R 
-(\#eq:equival-racinaire2)
-\end{equation}
-```
+\end{equation}$$ {#eq:equival-racinaire2}
 
 $BGB$: Below Ground Biomass ou Biomasse souterraine (kg);
-
 $ABG$: Above ground Biomass ou biomasse aérienne (kg);
-
 $R$: Root to shoot ratio ou coefficient racinaire.
 
 Les stocks de carbone ont été déduits de la biomasse aérienne en la multipliant par la constante 0,475 [@Zapfack2013]. La Biomasse Totale ($TB$) des ligneux sur pied \@ref(eq:biomasse-totale2) a été alors estimée en sommant les deux valeurs ci-dessus :
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 TB=AGB+BGB
-(\#eq:biomasse-totale2)
-\end{equation}
-```
+\end{equation}$$ {#eq:biomasse-totale2}
 
 $TB$ : Total Biomass ou Biomasse totale (kg) ;
-
 $BGB$ : Below Ground Biomass ou Biomasse Souterraine (kg) ;
-
 $AGB$ : Above Ground Biomass ou Biomasse Aérienne (kg).
 
 Les valeurs de densité du bois des arbres échantillonnés ont été puisées dans la littérature. Pour les espèces dont les valeurs de densité n'ont pas été retrouvées dans la littérature,une valeur par défaut ($ρ\ défaut = 0,58 g/cm^3$) pour les forêts tropicales d'Afrique, a été utilisée [@Mounmemi2021].
@@ -309,34 +262,25 @@ knitr::kable(data.frame(Espèces=c('Bananiers (Musaceae)','Palmiers (Arecaceae)'
 
 Les mesures du poids sec ($Ps$) ont suivi après séchage des échantillons à l'étuve. La biomasse a été par la suite déterminée à l'aide de la relation développée par Pearson et Brown \@ref(eq:pearson-Brown2) en 2005:
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 Biomasse=\frac{Pht⨯Ps}{Ph}
-(\#eq:pearson-Brown2)
-\end{equation}
-```
+\end{equation}$$ {#eq:pearson-Brown2}
 
 $Ps$ = Poids sec (g) de l'échantillon après 3 jours à l'étuve à 65 °C pour les feuilles et la litière, 85°C pour les tiges ;
-
 $Ph$ = Poids humide (g) de l'échantillon composite soit 500 g;
-
 $Pht$ = Poids humide total en forêt (somme des poids frais issus des 5 quadrats)
 
 ##### Biomasse des arbres morts
 
 La biomasse des arbres morts a été estimée selon les formules ci-contre: \@ref(eq:arbres-morts2)
 
-```{=tex}
-\begin{equation}
+$$\begin{equation}
 Biomasse=\frac{\pi}{4}⨯D^2⨯L⨯\rho
 \\Diamètre\  moyen\ D=\frac{D_1+D_2}{2}
-(\#eq:arbres-morts2)
-\end{equation}
-```
+\end{equation}$$ {#eq:arbres-morts2}
+
 $D$ : diamètre moyen de l'arbre mort ( cm);
-
 $L$ : longueur de l'arbre dans la placette d'échantillonnage (cm);
-
 $\rho$ : densité spécifique (g/cm^3^) lié au niveau de décomposition de l'arbre, 0,8: décomposition peu avancée; 0,5: décomposition moyennement avancée; 0,3: décomposition très avancée.
 
 #### Cartographie de la distribution spatiale des stocks de carbone
