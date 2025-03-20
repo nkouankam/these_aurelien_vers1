@@ -119,7 +119,8 @@ knitr::opts_chunk$set(
   tidy=TRUE, tidy.opts=list(blank=FALSE, width.cutoff=60),
   size="scriptsize", knitr.graphics.auto_pdf = TRUE
   )
-options(width=60)
+options(width=60)  # Limite la largeur des sorties de console
+strOptions(strict.width = "wrap")  # Force le retour à la ligne pour str()
 
 # ggplot style
 library("tidyverse")
