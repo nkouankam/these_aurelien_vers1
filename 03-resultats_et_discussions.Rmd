@@ -1,6 +1,7 @@
 ---
-bibliography: references.bib
+bibliography: referencess.bib
 output:
+  pdf_document: default
   html_document:
     df_print: paged
 ---
@@ -74,9 +75,9 @@ describe(Ndiki.Env$TUT)
 -   02 parcelles de Forêts Marécageuses (FMa) comptant pour 6,25% des inventaires;
 -   et 02 parcelles de Jachères (JA) représentant 6,25% des inventaires.
 
-```{r Nomenclatureparcelles-Ndikinimeki3,tidy=FALSE}
-knitr::kable(rownames(Ndiki_spec),caption ='Nomenclature des parcelles dans la FC de Ndikiniméki.',booktabs=TRUE,caption.short=NULL,format="pandoc")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F)%>%
+```{r Nomenclatureparcelles-Ndikinimeki3}
+knitr::kable(rownames(Ndiki_spec),caption ='Nomenclature des parcelles dans la FC de Ndikiniméki.',booktabs=TRUE,caption.short=NULL,format="latex",escape = FALSE)%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options = "HOLD_position")%>%
   kableExtra::footnote(general="x: Numéro des parcelles")
 ```
 
@@ -637,10 +638,10 @@ knitr::kable(Diversity.8_Nanga,caption="Nombre total estimé des espèces dans l
 
 La construction des courbes d'abondance a permis d'analyser la structure de la diversité dans les deux forêts communales. Après avoir déterminé le nombre total d'individus par catégories (espèces et familles) et les ranger suivant un ordre décroissant (Tableaux:\@ref(tab:Tableauabondances-Ndikinimeki3) et \@ref(tab:TableauabondancesNanga-Eboko3)),les courbes d'abondance présentent un étalement suivant l'axe des abscisses indicant ainsi une richesse spécifique importante. La raideur des pentes des courbes sur l'une des portions indique une faible équitabilité dans la distribution des espèces. *Theobroma cacao* est l'espèce classée en première position en terme d'abondance (165 individus enregistrés) dans la FC de Ndikiniméki (Figure:\@ref(fig:Courbesabondance-Ndikinimeki3)) tandis que l'espèce *Raphia sp.* est en pool position dans la FC de Nanga-Eboko (Figure:\@ref(fig:CourbesabondanceNanga-Eboko3)). Dans la FC de Ndikiniméki la famille la plus abondante est celle des Sterculiaceae suivit des Myristicaceae et des Fabaceae (Figure:\@ref(fig:Courbesabondance-Ndikinimeki3)). Dans la FC de Nanga-Eboko la famille la plus importante en terme d'effectif est celle des Annonaceae suivit des Aracaceae et des Malvaceae (Figure:\@ref(fig:CourbesabondanceNanga-Eboko3)).
 
-```{r Tableauabondances-Ndikinimeki3,tidy=FALSE}
+```{r Tableauabondances-Ndikinimeki3}
 Rankabond.1_Ndiki<-rankabundance(Ndiki_spec) 
-knitr::kable(head(Rankabond.1_Ndiki,10),caption="Les 10 plus abondantes espèces de la Forêt Communale de Ndikiniméki.",booktabs=TRUE,caption.short=NULL,format = "pandoc")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T,latex_options = "scale_down")%>%
+knitr::kable(head(Rankabond.1_Ndiki,10),caption="Les 10 plus abondantes espèces de la Forêt Communale de Ndikiniméki.",booktabs=TRUE,caption.short=NULL,format = "latex")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T,latex_options = "HOLD_position")%>%
   kableExtra::footnote(general = "rank: rang; abundance: abondance; plower: limite inferieure de confiance pour le rang de l'espèce; pupper: limite supérieure de confiance; accumfreq: fréquence cumulée; logabun: logarithme de l'abondance; rankfreq: fréquence du rang")
 ```
 
@@ -651,9 +652,9 @@ Rankabond.1f_Ndiki<-rankabundance(Ndiki_fami)
 rankabunplot(Rankabond.1f_Ndiki,scale = "abundance",specnames = c(1:3))
 ```
 
-```{r TableauabondancesNanga-Eboko3,tidy=FALSE}
+```{r TableauabondancesNanga-Eboko3}
 Rankabond.1_Nanga<-rankabundance(Nanga_spec) 
-knitr::kable(head(Rankabond.1_Nanga,10),caption = "Les 10 plus abondantes espèces de la FC de Nanga-Eboko.",booktabs=TRUE,caption.short=NULL,format = "pandoc")%>%
+knitr::kable(head(Rankabond.1_Nanga,10),caption = "Les 10 plus abondantes espèces de la FC de Nanga-Eboko.",booktabs=TRUE,caption.short=NULL,format = "latex")%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = T,latex_options = "scale_down")%>%
   kableExtra::footnote(general = "rank: rang; abundance: abondance; plower: limite inferieure de confiance pour le rang de l'espèce; pupper: limite supérieure de confiance; accumfreq: fréquence cumulée; logabun: logarithme de l'abondance; rankfreq: fréquence du rang")
 ```
