@@ -641,7 +641,7 @@ La construction des courbes d'abondance a permis d'analyser la structure de la d
 ```{r Tableauabondances-Ndikinimeki3}
 Rankabond.1_Ndiki<-rankabundance(Ndiki_spec) 
 knitr::kable(head(Rankabond.1_Ndiki,10),caption="Les 10 plus abondantes espèces de la Forêt Communale de Ndikiniméki.",booktabs=TRUE,caption.short="",format = "latex")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options = "HOLD_position")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T,latex_options = "HOLD_position")%>%
   kableExtra::footnote(general = "rank: rang; abundance: abondance; plower: limite inferieure de confiance pour le rang de l'espèce; pupper: limite supérieure de confiance; accumfreq: fréquence cumulée; logabun: logarithme de l'abondance; rankfreq: fréquence du rang",threeparttable = TRUE)
 ```
 
@@ -655,8 +655,8 @@ rankabunplot(Rankabond.1f_Ndiki,scale = "abundance",specnames = c(1:3))
 ```{r TableauabondancesNanga-Eboko3}
 Rankabond.1_Nanga<-rankabundance(Nanga_spec) 
 knitr::kable(head(Rankabond.1_Nanga,10),caption = "Les 10 plus abondantes espèces de la FC de Nanga-Eboko.",booktabs=TRUE,caption.short="",format = "latex")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options = "scale_down")%>%
-  kableExtra::footnote(general = "rank: rang; abundance: abondance; plower: limite inferieure de confiance pour le rang de l'espèce; pupper: limite supérieure de confiance; accumfreq: fréquence cumulée; logabun: logarithme de l'abondance; rankfreq: fréquence du rang")
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T,latex_options = "scale_down")%>%
+  kableExtra::footnote(general = "rank: rang; abundance: abondance; plower: limite inferieure de confiance pour le rang de l'espèce; pupper: limite supérieure de confiance; accumfreq: fréquence cumulée; logabun: logarithme de l'abondance; rankfreq: fréquence du rang",threeparttable = T)
 ```
 
 ```{r CourbesabondanceNanga-Eboko3,fig.cap="Courbes d'abondance des espèces et familles dans la FC de Nanga-Eboko."}
