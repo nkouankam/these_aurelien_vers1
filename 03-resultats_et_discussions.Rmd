@@ -76,7 +76,7 @@ describe(Ndiki.Env$TUT)
 -   et 02 parcelles de Jachères (JA) représentant 6,25% des inventaires.
 
 ```{r Nomenclatureparcelles-Ndikinimeki3}
-knitr::kable(rownames(Ndiki_spec),caption ='Nomenclature des parcelles dans la FC de Ndikiniméki.',booktabs=TRUE,caption.short=NULL,format="latex",escape = FALSE)%>%
+knitr::kable(rownames(Ndiki_spec),caption ='Nomenclature des parcelles dans la FC de Ndikiniméki.',booktabs=TRUE,caption.short="",format="latex",escape = FALSE)%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options = "HOLD_position")%>%
   kableExtra::footnote(general="x: Numéro des parcelles")
 ```
