@@ -1,9 +1,9 @@
 ---
-bibliography: references.bib
+bibliography: referencess.bib
 output:
+  pdf_document: default
   html_document:
     df_print: paged
-  pdf_document: default
 ---
 
 # Matériel et méthodes
@@ -25,7 +25,8 @@ knitr::kable(
     Outils=c("Global Positionning System (GPS)"," Boussole","Appareil photo","Machette","Penta-décamètre de 50 m","Compas forestier","Ficelle ","Clinomètre","Sécateur","Etuve","Marqueurs","Plastique polyéthylique","Planche à herbier, papiers-presse et alcool","Balance ","Carnets, crayons et gommes"),
     Fonctions=c("enregistrement des coordonnées géographiques des points et des parcelles d'échantillonnage","Orientation des layons d'ouverture "," Prise de vues ","ouverture des layons et confection des jalons","Délimitation des aires d'échantillonnage","Mesure des diamètres ou circonférences des arbres","Délimitation des sous-parcelles","Mesure les pentes des parcelles","Collecte des échantillons sur le terrain","Séchage des échantillons","Etiquetage des échantillons collectés","Collecte des échantillons de litière et sol","Pressage, séchage et conservation des spécimens","Pesage des échantillons","prises de notes")),
   caption="Liste des outils utilisés et leurs fonctions",
-  booktabs=TRUE,caption.short="Outils et fonctions utilisés",escape = FALSE)
+  booktabs=TRUE,caption.short="",format= "latex",escape = FALSE)%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options = "scale_down")
 ```
 
 ## Méthodes
@@ -260,14 +261,16 @@ $TB$ : Total Biomass ou Biomasse totale (kg) ;
 $BGB$ : Below Ground Biomass ou Biomasse Souterraine (kg) ;
 $AGB$ : Above Ground Biomass ou Biomasse Aérienne (kg).
 
-Les valeurs de densité du bois des arbres échantillonnés ont été puisées dans la littérature. Pour les espèces dont les valeurs de densité n'ont pas été retrouvées dans la littérature,une valeur par défaut ($ρ\ défaut = 0,58 g/cm^3$) pour les forêts tropicales d'Afrique, a été utilisée [@Mounmemi2021].
+Les valeurs de densité du bois des arbres échantillonnés ont été puisées dans la littérature. Pour les espèces dont les valeurs de densité n'ont pas été retrouvées dans la littérature,une valeur par défaut ($ρ\ defaut = 0,58 g/cm^3$) pour les forêts tropicales d'Afrique, a été utilisée [@Mounmemi2021].
 
 ##### Biomasse des espèces arborescentes sur pied
+
 
 Le Tableau: \@ref(tab:Biomasse-especesarborescentes2) présente les équations allométriques utilisées pour estimer la biomasse aérienne des palmiers et bananiers.
 
 ```{r  Biomasse-especesarborescentes2}
-knitr::kable(data.frame(Espèces=c('Bananiers (Musaceae)','Palmiers (Arecaceae)'),Equations=c('$ABG=0,0303⨯DHP^{2,1345}$ ','$AGB=23,487+41,851⨯(lnH^2)$'),Sources=c(' Arifin (2001)','Pearson et Brown (2005)')),caption = 'Equations allométriques de quelques espèces végétales arborescentes. (AGB = Above Ground Biomass (kg) ; DHP = Diamètre à Hauteur de Poitrine (cm) ; H = hauteur du tronc de palmier de sa souche à la base de la partie non visible du tronc (cm))',booktabs=TRUE,caption.short="")
+knitr::kable(data.frame(Espèces=c('Bananiers (Musaceae)','Palmiers (Arecaceae)'),Equations=c('$ABG=0,0303⨯DHP^{2,1345}$','$AGB=23,487+41,851⨯(lnH^2)$'),Sources=c(' Arifin (2001)','Pearson et Brown (2005)')),caption = 'Equations allométriques de quelques espèces végétales arborescentes. (AGB = Above Ground Biomass (kg) ; DHP = Diamètre à Hauteur de Poitrine (cm) ; H = hauteur du tronc de palmier de sa souche à la base de la partie non visible du tronc (cm))',booktabs=TRUE,caption.short="",escape = FALSE)%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="scale_down")
 ```
 
 ##### Biomasse des herbacées et de la litière
