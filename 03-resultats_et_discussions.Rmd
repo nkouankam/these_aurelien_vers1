@@ -111,8 +111,8 @@ knitr::kable(colnames(Ndiki_spec),caption ="Identification des espèces enregist
 
 ```{r Familles-Ndikinimeki3}
 # Nom des familles enregistrées à Ndikinimeki
-knitr::kable(colnames(Ndiki_fami),caption = "Identification des familles dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format = "pandoc")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE,latex_options="HOLD_position")%>%
+knitr::kable(colnames(Ndiki_fami),caption = "Identification des familles dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format = "latex")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",latex_options = c("HOLD_position","scale_down"))%>%
   kableExtra::footnote(general = "x: Nom des familles d'espèces")
 ```
 
@@ -156,7 +156,7 @@ barplot(ab_Nanga,las=1,xlab = "Classes d'abondances",ylab = "Fréquences",col = 
 
 Pour la FC de Nanga-Eboko la fréquence non-observable est de 2473 tandis que la valeur maximale d'abondance est de 25 (Tableau:\@ref(tab:ClassesAbondanceNanga-Eboko3)).
 
-Une projection des Coordonnées géographiques des parcelles (données GPS recueillies sur le terrain) permet de confirmer la localisation des parcelles d'inventaires dans la zone de transition Forêts-Savane (Figure:\@ref(fig:Coordonnees-parcelles3), \@ref(fig:Localisation-occupationsolsNdiki3) et \@ref(fig:Localisation-occupationsolsNanga3)).
+Une projection des Coordonnées géographiques des parcelles (données GPS recueillies sur le terrain) permet de confirmer la localisation des parcelles d'inventaires dans la zone de transition Forêts-Savane (Figures:\@ref(fig:Coordonnees-parcelles3), \@ref(fig:Localisation-occupationsolsNdiki3) et \@ref(fig:Localisation-occupationsolsNanga3)).
 
 ```{r Coordonnees-parcelles3,fig.cap="Localisation géographique des parcelles d'inventaires "}
 par(mfrow=c(1,2))
