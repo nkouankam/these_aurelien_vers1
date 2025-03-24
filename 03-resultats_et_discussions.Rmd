@@ -113,7 +113,7 @@ knitr::kable(colnames(Ndiki_spec),caption ="Identification des espèces enregist
 # Nom des familles enregistrées à Ndikinimeki
 knitr::kable(colnames(Ndiki_fami),caption = "Identification des familles dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general = "x: Nom des familles d'espèces",threeparttable = T)
+  kableExtra::footnote(general = "x: Nom des familles d'espèces")
 ```
 
 Dans la FC de Nanga-Eboko 122 espèces (Tableau:\@ref(tab:EspecesNanga-Eboko3)) rattachées à 39 familles ont été enregistrées (Tableau:\@ref(tab:FamillesNanga-Eboko3)).
@@ -129,7 +129,7 @@ knitr::kable(colnames(Nanga_spec),caption = "Identification des espèces enregis
 # Noms des familles identifiées à Nanga-Eboko
 knitr::kable(colnames(Nanga_fami),caption = "Identification des familles dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general = "x: Nom des familles d'espèces",threeparttable = T)
+  kableExtra::footnote(general = "x: Nom des familles d'espèces")
 ```
 
 Soit $X_i$ le nombre d'individus de $i$ espèces observées dans l'échantillon, $i=1,2,...,n;$ $X_i$ est considéré comme la fréquence des espèces de l'échantillon. Soit $f_k$ le nombre d'espèces représentées exactement par $k$ individus dans l'échantillon, $k=0,1,...,N;$ $f_k$ est considéré comme la fréquence d'abondance observée. $f_1=390\ et\ f_1=189$ est le nombre d'espèces représentées exactement par 1 individu (singleton) dans une parcelle unique parmi celles inventoriées respectivement pour les FC de Ndikinikiméki et Nanga-Eboko. $f_2=93\ et\ f_2=57$ est le nombre d'espèces représentées par 2 individus (doublon) dans l'échantillon d'inventaire respectivement pour les FC de Ndikiniméki et Nanga-Eboko. Pour la FC de Ndikiniméki le nombre d'observation de présence est de 608 tandis que la fréquence non-observable $f_0=4128$ (Tableau:\@ref(tab:ClassesAbondance-Ndikinimeki3)) indique le nombre d'espèces présentes dans l'assemblage des individus mais non observées dans l'échantillon d'inventaire. Ces absences représentent près de 87% des données de la matrice d'inventaire et la valeur maximale d'abondance a été enregistrée dans une parcelle où une espèce a été observée 29 fois de suite (Figure:\@ref(fig:Histogramme-Abondance3)). Ces résultats nous montrent que les espèces identifiées dans ces espaces ont des faibles probabilités d'être revues. En effet, lorsque le nombre de représentant d'une espèce augmente la probabilté d'observation diminue et vis versa. 
@@ -138,14 +138,14 @@ Soit $X_i$ le nombre d'individus de $i$ espèces observées dans l'échantillon,
 ab_Ndiki<-table(unlist(Ndiki_spec))
 knitr::kable(ab_Ndiki,caption = "Dénombrement des classes d'abondances dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general = "Var1:Classes d'abondances; Freq:Fréquences d'abondances",threeparttable = T)
+  kableExtra::footnote(general = "Var1:Classes d'abondances; Freq:Fréquences d'abondances")
 ```
 
 ```{r ClassesAbondanceNanga-Eboko3}
 ab_Nanga<-table(unlist(Nanga_spec))
 knitr::kable(ab_Nanga,caption = "Dénombrement des classes d'abondances dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
   kableExtra::kable_styling(bootstrap_options="striped",full_width =F,,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general = "Var1: Classes d'abondances; Freq: Fréquences d'abondances",threeparttable = T)
+  kableExtra::footnote(general = "Var1: Classes d'abondances; Freq: Fréquences d'abondances")
 ```
 
 ```{r Histogramme-Abondance3,fig.cap="Histogrammes des effectifs des classes d'abondance des espèces."}
@@ -250,13 +250,13 @@ sit_pres_Nanga <- apply(Nanga_spec > 0,1,sum)
 ```{r NdikiNombre-especesparcelles3}
 knitr::kable(sort(sit_pres_Ndiki),caption = "Classement de la richesse spécifiques par parcelles dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general = "x:Richesse spécifiques par parcelles",threeparttable = T)
+  kableExtra::footnote(general = "x:Richesse spécifiques par parcelles")
 ```
 
 ```{r NangaNombre-especesparcelles3}
 knitr::kable(sort(sit_pres_Nanga),caption = "Classement de la richesse spécifiques par parcelles dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general = "x:Richesse spécifiques par parcelles",threeparttable = T)
+  kableExtra::footnote(general = "x:Richesse spécifiques par parcelles")
 ```
 
 ```{r Richesses-specifiquesparcelles3,fig.cap="Nombres d'espèces par parcelles"}
@@ -548,15 +548,15 @@ Diversity.3_Ng<- diversitycomp(Nanga_spec,y=Nanga.Env,factor1 = "Management_type
 ```
 
 ```{r Comparaisonrichesse-observeeNdikinimeki3}
-knitr::kable(Diversity.3_Nd, caption="Richesse spécifique observée des differentes catégories d'utilisation des terres dans la FC de Ndikiniméki.", booktabs=TRUE,caption.short=NULL,format = "latex",escape = F)%>%
+knitr::kable(Diversity.3_Nd, caption="Richesse spécifique observée des differentes catégories d'utilisation des terres dans la FC de Ndikiniméki.", booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general = "n: nombre de parcelle; richness: richesse spécifique; FM: Forêt Mature; FS: Forêt Secondaire; FMa: Forêt Marécageuse; JA: Jachère; CAC: Cacaoyère",threeparttable = T)
+  kableExtra::footnote(general = "n: nombre de parcelle; richness: richesse spécifique; FM: Forêt Mature; FS: Forêt Secondaire; FMa: Forêt Marécageuse; JA: Jachère; CAC: Cacaoyère")
 ``` 
 
 ```{r ComparaisonrichesseNanga-Eboko3}
 knitr::kable(Diversity.3_Ng,caption="Richesse spécifique observée des differentes catégories d'utilisation des terres dans la FC de Nanga-Eboko.", booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general = "n: nombre de parcelle; richness: richesse spécifique; FSA: Forêts Secondaires Adultes; FGA: Forêts Galeries; FSJ: Forêts Secondaires Jeunes; MAR: Marécages; SAV: Savanes; CUL: Cultures.",threeparttable = T)
+  kableExtra::footnote(general = "n: nombre de parcelle; richness: richesse spécifique; FSA: Forêts Secondaires Adultes; FGA: Forêts Galeries; FSJ: Forêts Secondaires Jeunes; MAR: Marécages; SAV: Savanes; CUL: Cultures.")
 ```
 
 Etant donné que la richesse spécifique est dépendante de la taille de l'échantillon, il n'est pas aisé de comparer la richesse spécifique entre des catégories d'occupation des terres de tailles différentes. Ces différences pouvant être liées soit à la taille de l'échantillon ou à la différence de richesse spécifique entre les catégories d'utilisation des terres proprement dites. Il faut également noter que la somme des espèces lorsque plus d'un site sont combinés n'est pas toujours égale à la somme arithmétique des espèces de cette combinaison. Ceci ne peut être le cas que si les sites combinés partagent exactement le même nombre d'espèces. Ainsi, pour déterminer le nombre d'espèces dans des combinaisons de sites, on a calculé la moyenne cumulée de la richesse spécifique des différentes combinaison de sites. A cause du fait qu'il n'existe pas une valeur unique pour la richesse spécifique des sites, nous avons calculé la valeur moyenne. La richesse spécifique moyenne pour un site est de 19 espèces pour la FC de Ndiniméki:
@@ -666,7 +666,7 @@ Rankabond.1f_Nanga<-rankabundance(Nanga_fami)
 rankabunplot(Rankabond.1f_Nanga,scale = "abundance",specnames = c(1:3))
 ```
 
-Afin de prédire la présence ou l'abondance des espèces en fonction des variables environnementales telles que le type d'utilisation des terres, l'altitude (*elevation*), le stock de carbone des arbres et le carbone du sol, l'Abre de Regression Multivarié (ARM) a été d'une importance déterminante. Les statistiques à la base de l'ARM sont respectivement: l'erreur résiduel ($Error$), l'erreur due à la validation croisée ($CV\Error$) et l'erreur standard ($SE$). A partir de la Figure:\@ref(fig:ChoixpluspetitARM-Ndikinimeki3) nous constatons que la matrice des espèces dans la FC de Ndikiniméki a été partitionnée suivant les Types d'utilisation des terres (TUT) qui sont des catégories bien établies et distinctes. Cet arbre présente 2 groupes. Le premier regroupe les cacaoyères (CAC) et les jachères (JA) tandis que le second rassemble les forêts matures (FM), les forêts marécageuses (FMa) et les forêts secondaires (FS). Chaque groupe est caractérisé par un diagramme à bâtonnets qui indique l'abondance des espèces dans les groupes constitués, le nombre de parcelles ($n$) et l'erreur relative du groupe. $L'erreur\résiduel = 0,754$ ce qui signifit que le modèle R² ($1-0,754$) explique 24,6% de la variance de la matrice des espèces.
+Afin de prédire la présence ou l'abondance des espèces en fonction des variables environnementales telles que le type d'utilisation des terres, l'altitude (*elevation*), le stock de carbone des arbres et le carbone du sol, l'Abre de Regression Multivarié (ARM) a été d'une importance déterminante. Les statistiques à la base de l'ARM sont respectivement: l'erreur résiduel ($Error$), l'erreur due à la validation croisée ($CV\ Error$) et l'erreur standard ($SE$). A partir de la Figure:\@ref(fig:ChoixpluspetitARM-Ndikinimeki3) nous constatons que la matrice des espèces dans la FC de Ndikiniméki a été partitionnée suivant les Types d'utilisation des terres (TUT) qui sont des catégories bien établies et distinctes. Cet arbre présente 2 groupes. Le premier regroupe les cacaoyères (CAC) et les jachères (JA) tandis que le second rassemble les forêts matures (FM), les forêts marécageuses (FMa) et les forêts secondaires (FS). Chaque groupe est caractérisé par un diagramme à bâtonnets qui indique l'abondance des espèces dans les groupes constitués, le nombre de parcelles ($n$) et l'erreur relative du groupe. $L'erreur\ résiduel = 0,754$ ce qui signifit que le modèle R² ($1-0,754$) explique 24,6% de la variance de la matrice des espèces.
 
 ```{r ChoixpluspetitARM-Ndikinimeki3,fig.cap="Plus petit arbre entre une erreur standard et l'erreur due à la validation croisée pour la FC de Ndikiniméki."}
 par(mfrow = c(1, 2))
@@ -691,27 +691,27 @@ spe.ch.mvrpart_Ndiki=mvpart(data.matrix(spe.norm_Ndiki)~.,Ndiki.Env,margin = 0,0
 ```{r Groupe3-Ndikinimeki}
 grps_Ndiki=spe.ch.mvrpart_Ndiki$where
 groups.mrt=levels(as.factor(spe.ch.mvrpart_Ndiki$where)) 
-knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[1]),-5],caption = "Composition environnementale du groupe 3 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format="latex",escape = F)%>%
+knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[1]),-5],caption = "Composition environnementale du groupe 3 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format="latex")%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general="TUT: Type d'utilisation des terres; carbone_sol: stocks de carbone du sol (tC/ha); carbone: stock de carbone de ligneux (tC/ha); elevation: altitude; CAC; Cacaoyères; NA: Valeur manquante.",threeparttable = T)
+  kableExtra::footnote(general="TUT: Type d'utilisation des terres; carbone_sol: stocks de carbone du sol (tC/ha); carbone: stock de carbone de ligneux (tC/ha); elevation: altitude; CAC; Cacaoyères; NA: Valeur manquante.")
 ```
 
 ```{r Groupe4-Ndikinimeki}
-knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[2]),-5],caption = "Composition environnementale du groupe 4 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format="latex",escape = F)%>%
+knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[2]),-5],caption = "Composition environnementale du groupe 4 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format="latex")%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general="TUT: Type d'utilisation des terres; carbone_sol: stocks de carbone du sol (tC/ha); carbone: stock de carbone de ligneux (tC/ha); elevation: altitude; JA: Jachères; CAC: Cacaoyères; NA: Valeur manquante.",threeparttable = T)
+  kableExtra::footnote(general="TUT: Type d'utilisation des terres; carbone_sol: stocks de carbone du sol (tC/ha); carbone: stock de carbone de ligneux (tC/ha); elevation: altitude; JA: Jachères; CAC: Cacaoyères; NA: Valeur manquante.")
 ```
 
 ```{r Groupe6-Ndikinimeki}
-knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[3]),-5],caption = "Composition environnementale du groupe 6 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
+knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[3]),-5],caption = "Composition environnementale du groupe 6 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format = "latex")%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general="TUT: Type d'utilisation des terres; carbone_sol: stocks de carbone du sol (tC/ha); carbone: stock de carbone de ligneux (tC/ha); elevation: altitude; FMa: Forêts marécageuses.",threeparttable = T)
+  kableExtra::footnote(general="TUT: Type d'utilisation des terres; carbone_sol: stocks de carbone du sol (tC/ha); carbone: stock de carbone de ligneux (tC/ha); elevation: altitude; FMa: Forêts marécageuses.")
 ```
 
 ```{r Groupe7-Ndikinimeki}
-knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[4]),-5],caption = "Composition environnementale du groupe 7 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
+knitr::kable(Ndiki.Env[which(spe.ch.mvrpart_Ndiki$where == groups.mrt[4]),-5],caption = "Composition environnementale du groupe 7 dans la FC de Ndikiniméki.",booktabs=TRUE,caption.short="",format = "latex")%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general="TUT: Type d'utilisation des terres; carbone_sol: stocks de carbone du sol (tC/ha); carbone: stock de carbone de ligneux (tC/ha); elevation: altitude; NA: Valeur manquante; FM: Forêts matures; FS: Forêts secondaires.",threeparttable = T)
+  kableExtra::footnote(general="TUT: Type d'utilisation des terres; carbone_sol: stocks de carbone du sol (tC/ha); carbone: stock de carbone de ligneux (tC/ha); elevation: altitude; NA: Valeur manquante; FM: Forêts matures; FS: Forêts secondaires.")
 ```
 
 Parmi les 148 espèces identifiées dans la FC de Ndikiniméki, 7 ont été retenues comme représentives ou caractéristiques de certains groupes de parcelles appartenant à des Types t'Utilisation de Terres (TUT).Parmi ces espèces selectionnées, 3 sont exclusivement associées à un groupe, 4 sont associées à 2 groupes et aucune espèce n'a été associée à 3 groupes à la fois:
@@ -728,7 +728,7 @@ summary(iva_Ndiki,indvalcomp = TRUE)
 ```
 :::
 
-L'espèce *Klainedoxa gabonensis* ($p.value=0,027$) s'est revelé comme un bon indicateur du groupe 4 (Jachères) avec une composante spécifique élevée ($A=0,8696$) et une fidélité au dessus de la moyenne ($B=0,6667$). Les espèces telles que: *Nauclea pobeguinii*($A=1,0000\et\B=1,0000$) et *Vernonia conferta* ($A=0,9545\et\B=1,0000$) sont de très bons indicateurs ($p.value=0,002$) du groupe 6 (Forêts marécageuses) parce qu'elles apparaissent dans toutes les parcelles qui constituent ce groupe ($B=1,0000$).Avec une composante de spécificité $A=1,0000$, ces espèces ne sont rencontrées presque exclusivement que dans les Forêts marécageuses. les espèces telles que: *Theobroma cacao*, *Musa sp.* et *Dacryodes edulis* sont des indicateurs des groupe 3+4 (Cacaoyères et Jachères). Dans cette association de deux groupes constituée de 10 parcelles au total, *Theobroma* est rencontrée dans presque tous les sites et nulle part ailleur ($A=0,9451\et\B=1,000$) cependant *Musa sp.* et *Dacryodes edulis* ne sont pas présentent dans toutes les parcelles qui constituent ce regroupement. Une association des groupes 4 et 7 (Jachères, Forêts matures et Forêts secondaires) a pour indicateur l'espèce *Pycnanthus angolensis*. Cette espèce est présente dans toutes les parcelles constituant ce regroupement ($B=1,0000$) mais cependant on pourrait la retrouver dans des parcelles en dehors de ce groupe ($A=0,7606$).
+L'espèce *Klainedoxa gabonensis* ($p.value=0,027$) s'est revelé comme un bon indicateur du groupe 4 (Jachères) avec une composante spécifique élevée ($A=0,8696$) et une fidélité au dessus de la moyenne ($B=0,6667$). Les espèces telles que: *Nauclea pobeguinii*($A=1,0000\ et\ B=1,0000$) et *Vernonia conferta* ($A=0,9545\ et\ B=1,0000$) sont de très bons indicateurs ($p.value=0,002$) du groupe 6 (Forêts marécageuses) parce qu'elles apparaissent dans toutes les parcelles qui constituent ce groupe ($B=1,0000$).Avec une composante de spécificité $A=1,0000$, ces espèces ne sont rencontrées presque exclusivement que dans les Forêts marécageuses. les espèces telles que: *Theobroma cacao*, *Musa sp.* et *Dacryodes edulis* sont des indicateurs des groupe 3+4 (Cacaoyères et Jachères). Dans cette association de deux groupes constituée de 10 parcelles au total, *Theobroma* est rencontrée dans presque tous les sites et nulle part ailleur ($A=0,9451\ et\ B=1,000$) cependant *Musa sp.* et *Dacryodes edulis* ne sont pas présentent dans toutes les parcelles qui constituent ce regroupement. Une association des groupes 4 et 7 (Jachères, Forêts matures et Forêts secondaires) a pour indicateur l'espèce *Pycnanthus angolensis*. Cette espèce est présente dans toutes les parcelles constituant ce regroupement ($B=1,0000$) mais cependant on pourrait la retrouver dans des parcelles en dehors de ce groupe ($A=0,7606$).
 
 Dans le cas de la FC de Nanga-Eboko, lorsque nous observons le plus petit arbre qui se situe dans les limites de l'erreur standard, nous constatons que cet modèle comporte 3 groupes. Le premier regroupe les cultures (CUL) et les savanes (SAV), le second représente les marécages (MAR) tandis que le troisième rassemble les forêts galeries (FGA), les forêts secondaires adultes (FSA) et les forêts secondaires jeunes (FSJ). Son erreur résiduel est égale à 0,568 et signifit que ce modèle pourrait expliquer 43,7% ($1-0,568$) de la variance de la matrice des espèces (Figure:\@ref(fig:ChoixpluspetitARMNanga-Eboko3)).
 
@@ -755,27 +755,27 @@ spe.ch.mvrpart_Nanga=mvpart(data.matrix(spe.norm_Nanga)~.,Nanga.Env,margin = 0,0
 
 grps_Nanga=spe.ch.mvrpart_Nanga$where
 groups.mrt=levels(as.factor(spe.ch.mvrpart_Nanga$where)) 
-knitr::kable(Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[1]),-5],caption="Composition environnementale du groupe 2 dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
+knitr::kable(Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[1]),-5],caption="Composition environnementale du groupe 2 dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short="",format = "latex")%>%
 kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general="TUT: Type d'utilisation des terres; Carbone_sol: stocks de carbone du sol (tC/ha); Carbone: stock de carbone de ligneux (tC/ha); Elevation: altitude; CUL: Cultures; SAV: Savanes; NA: Valeur manquante.",threeparttable = T)  
+  kableExtra::footnote(general="TUT: Type d'utilisation des terres; Carbone_sol: stocks de carbone du sol (tC/ha); Carbone: stock de carbone de ligneux (tC/ha); Elevation: altitude; CUL: Cultures; SAV: Savanes; NA: Valeur manquante.")  
 ```
 
 ```{r Groupe4-Nanga}
-knitr::kable(Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[2]),-5],caption="Composition environnementale du groupe 4 dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
+knitr::kable(Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[2]),-5],caption="Composition environnementale du groupe 4 dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short="",format = "latex")%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general="TUT: Type d'utilisation des terres; Carbone_sol: stocks de carbone du sol (tC/ha); Carbone: stock de carbone de ligneux (tC/ha); Elevation: altitude; MAR: Marécages.",threeparttable = T)  
+  kableExtra::footnote(general="TUT: Type d'utilisation des terres; Carbone_sol: stocks de carbone du sol (tC/ha); Carbone: stock de carbone de ligneux (tC/ha); Elevation: altitude; MAR: Marécages.")  
 ```
 
 ```{r Groupe6-Nanga}
-knitr::kable(Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[3]),-5],caption="Composition environnementale du groupe 6 dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
+knitr::kable(Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[3]),-5],caption="Composition environnementale du groupe 6 dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short="",format = "latex")%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general="TUT: Type d'utilisation des terres; Carbone_sol: stocks de carbone du sol (tC/ha); Carbone: stock de carbone de ligneux (tC/ha); Elevation: altitude; FGA: Forêts Galeries; FSA: Forêts Secondaires Adultes.",threeparttable = T)  
+  kableExtra::footnote(general="TUT: Type d'utilisation des terres; Carbone_sol: stocks de carbone du sol (tC/ha); Carbone: stock de carbone de ligneux (tC/ha); Elevation: altitude; FGA: Forêts Galeries; FSA: Forêts Secondaires Adultes.")  
 ```
 
 ```{r Groupe7-Nanga}
-knitr::kable(Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[4]),-5],caption="Composition environnementale du groupe 7 dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short="",format = "latex",escape = F)%>%
+knitr::kable(Nanga.Env[which(spe.ch.mvrpart_Nanga$where == groups.mrt[4]),-5],caption="Composition environnementale du groupe 7 dans la FC de Nanga-Eboko.",booktabs=TRUE,caption.short="",format = "latex")%>%
   kableExtra::kable_styling(bootstrap_options = "striped",full_width = FALSE,latex_options="HOLD_position")%>%
-  kableExtra::footnote(general="TUT: Type d'utilisation des terres; Carbone_sol: stocks de carbone du sol (tC/ha); Carbone: stock de carbone de ligneux (tC/ha); Elevation: altitude; FSA: Forêts Secondaires Adultes; FGA: Forêts Galeries; FSJ: Forêts Secondaires Jeunes.",threeparttable = T)  
+  kableExtra::footnote(general="TUT: Type d'utilisation des terres; Carbone_sol: stocks de carbone du sol (tC/ha); Carbone: stock de carbone de ligneux (tC/ha); Elevation: altitude; FSA: Forêts Secondaires Adultes; FGA: Forêts Galeries; FSJ: Forêts Secondaires Jeunes.")  
 ```
 
 ```{r Indicateursespecesliesauxvariablesexplicatives-FCNanga3}
@@ -835,15 +835,15 @@ La distribution des stocks de carbone entre les individus des différents Types 
 Ndiki_total.Arbre<-Ndiki_StC.ligneux%>%group_by(Strates)%>%summarise(carbone.total=round(sum(StC_total_arbre.t.C.ha),2))
 Ndiki_total.Arbre<-Ndiki_total.Arbre%>%arrange(desc(carbone.total))
 knitr::kable(Ndiki_total.Arbre,caption="Stocks de carbone des ligneux dans les différentes catégories d'utilisation de terres dans la FC de Ndikiniméki.",booktabs=T,caption.short="",format="latex")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)%>%
-  kableExtra::footnote(general ="length: taille de l'échantillon; mean: moyenne; sd: écart type; range: amplitude; FM: Forêt Mature; FS: Forêt Secondaire; FMa: Forêt Marécageuse; JA: Jachère; CAC: Cacaoyère; carbone_total:stock de carbone total en tC/ha.",threeparttable = T)
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="HOLD_position")%>%
+  kableExtra::footnote(general ="length: taille de l'échantillon; mean: moyenne; sd: écart type; range: amplitude; FM: Forêt Mature; FS: Forêt Secondaire; FMa: Forêt Marécageuse; JA: Jachère; CAC: Cacaoyère; carbone_total:stock de carbone total en tC/ha.")
 ```
 
 ```{r Stockscarboneclassesdiametre-Ndikinimeki3}
 Ndiki_total.Arbre1<-Ndiki_StC.ligneux%>%group_by(diametre_cl)%>%summarise(carbone.total=round(sum(StC_total_arbre.t.C.ha),2))
 Ndiki_total.Arbre1<-Ndiki_total.Arbre1%>%arrange(desc(carbone.total))
 knitr::kable(Ndiki_total.Arbre1,caption='Répartion des stocks de carbone suivant les classes de diamètre dans la FC de Ndikiniméki.',booktabs=T,caption.short="",format = "latex",escape = F)%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T,latex_options="HOLD_position")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="HOLD_position")%>%
   kableExtra::footnote(general = "diametre_cl: classe de diamètre; carbone.total: stock de carbone total en tC/ha.",threeparttable = T)
 Ndiki_Sum_StC.Arbre<-sum(Ndiki_total.Arbre$carbone.total)
 Ndiki_Moy_StC.Arbre<-mean(Ndiki_total.Arbre$carbone.total)
@@ -879,7 +879,7 @@ Ndiki_stable.ligneux<-desc_statby(Ndiki_StC.ligneux,measure.var = "StC_total_arb
 Ndiki_stable.ligneux<-Ndiki_stable.ligneux[,c("Strates","length","mean","sd","range")]
 Ndiki_stable.ligneux<-Ndiki_stable.ligneux%>%arrange(desc(length))
 knitr::kable(Ndiki_stable.ligneux,digits = 2,caption = "Calcul des stocks moyens de carbone des ligneux dans les TUT de la FC de Ndikiniméki.",booktabs=T,caption.short="",format="latex",escape = F)%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T,latex_options="HOLD_position")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="HOLD_position")%>%
   kableExtra::footnote(general ="length: taille de l'échantillon; mean: moyenne; sd: écart type; range: amplitude; FM: Forêt Mature; FS: Forêt Secondaire; FMa: Forêt Marécageuse; JA: Jachère; CAC: Cacaoyère",threeparttable = T)
 ```
 
@@ -889,7 +889,7 @@ La distribution des stocks de carbone des ligneux entre les individus des diffé
 Nanga_total.Arbre<-Nanga_StC.ligneux%>%group_by(Strates)%>%summarise(carbone_total=round(sum(StC_total_arbre.t.C.ha),2))
 Nanga_total.Arbre<-Nanga_total.Arbre%>%arrange(desc(carbone_total))
 knitr::kable(Nanga_total.Arbre,caption="Stocks de carbone des ligneux dans les différentes catégories d'utilisation de terres dans la FC de Nanga-Eboko.",booktabs=T,caption.short="",format="latex",escape = F)%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T,latex_options="HOLD_position")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="HOLD_position")%>%
   kableExtra::footnote(general = "FSA: Forêts Secondaires Adultes; FGA: Forêts Galeries; FSJ: Forêts Secondaires Jeunes; MAR: Marecages; SAV: Savanes; CUL: Cultures; carbone_total: stock de carbone total en tC/ha",threeparttable = T)
 ```
 
@@ -897,7 +897,7 @@ knitr::kable(Nanga_total.Arbre,caption="Stocks de carbone des ligneux dans les d
 Nanga_total.Arbre1<-Nanga_StC.ligneux%>%group_by(diametre_cl)%>%summarise(carbone_total=round(sum(StC_total_arbre.t.C.ha),2))
 Nanga_total.Arbre1<-Nanga_total.Arbre1%>%arrange(desc(carbone_total))
 knitr::kable(Nanga_total.Arbre1,caption='Répartion des stocks de carbone suivant les classes de diamètre dans la FC de Nanga-Eboko.',booktabs=T,caption.short="",format="latex",escape = F)%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T,latex_options="HOLD_position")%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="HOLD_position")%>%
   kableExtra::footnote(general = "diametre_cl: classe de diametre; carbone_total: stock de carbone total en tC/ha.",threeparttable = T)
 Nanga_Sum_StC.Arbre<-sum(Nanga_total.Arbre$carbone_total)
 Nanga_Moy_StC.Arbre<-mean(Nanga_total.Arbre$carbone_total)
@@ -1232,7 +1232,7 @@ Ndiki_stable.Sol<-Ndiki_stable.Sol[,c("Strates","length","mean","sd","range")]
 Ndiki_stable.Sol=Ndiki_stable.Sol%>%arrange(desc(length))
 Ndiki_stable_p.Sol<-ggtexttable(Ndiki_stable.Sol,rows = NULL,theme=ttheme("classic"))
 knitr::kable(Ndiki_stable.Sol,digits = 2, caption='Calcul des stocks moyens de carbone du sol dans les TUT de la FC de Ndikiniméki.',booktabs=T,caption.short="",format="latex")%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = T)%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F)%>%
   kableExtra::footnote(general ="length: taille de l'échantillon; mean: moyenne; sd: écart type; range: amplitude; FM: Forêt Mature; FS: Forêt Secondaire; FMa: Forêt Marécageuse; JA: Jachère; CAC: Cacaoyère.",threeparttable = T)
 ```
 
