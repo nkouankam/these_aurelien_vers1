@@ -269,8 +269,9 @@ Les valeurs de densité du bois des arbres échantillonnés ont été puisées d
 Le Tableau: \@ref(tab:Biomasse-especesarborescentes2) présente les équations allométriques utilisées pour estimer la biomasse aérienne des palmiers et bananiers.
 
 ```{r  Biomasse-especesarborescentes2}
-knitr::kable(data.frame(Espèces=c('Bananiers (Musaceae)','Palmiers (Arecaceae)'),Equations=c('$ABG=0,0303⨯DHP^{2,1345}$','$AGB=23,487+41,851⨯(lnH^2)$'),Sources=c(' Arifin (2001)','Pearson et Brown (2005)')),caption = 'Equations allométriques de quelques espèces végétales arborescentes. (AGB = Above Ground Biomass (kg) ; DHP = Diamètre à Hauteur de Poitrine (cm) ; H = hauteur du tronc de palmier de sa souche à la base de la partie non visible du tronc (cm))',booktabs=TRUE,caption.short="",escape = FALSE)%>%
-  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="scale_down")
+knitr::kable(data.frame(Espèces=c('Bananiers (Musaceae)','Palmiers (Arecaceae)'),Equations=c('$ABG=0,0303⨯DHP^{2,1345}$','$AGB=23,487+41,851⨯(lnH^2)$'),Sources=c(' Arifin (2001)','Pearson et Brown (2005)')),caption = "Equations allométriques de quelques espèces végétales arborescentes.",booktabs=TRUE,caption.short="",escape = FALSE)%>%
+  kableExtra::kable_styling(bootstrap_options = "striped",full_width = F,latex_options="scale_down")%>%
+  kableExtra::footnote(general = "AGB = Above Ground Biomass (kg) ; DHP = Diamètre à Hauteur de Poitrine (cm) ; H = hauteur du tronc de palmier de sa souche à la base de la partie non visible du tronc (cm)",threeparttable = T)
 ```
 
 ##### Biomasse des herbacées et de la litière
@@ -291,8 +292,10 @@ $Pht$ = Poids humide total en forêt (somme des poids frais issus des 5 quadrats
 La biomasse des arbres morts a été estimée selon les formules ci-contre: \@ref(eq:arbres-morts2)
 
 \begin{equation}
-Biomasse=\frac{\pi}{4}⨯D^2⨯L⨯\rho
-\\Diamètre\  moyen\ D=\frac{D_1+D_2}{2}
+\begin{split}
+Biomasse=\frac{\pi}{4}⨯D^2⨯L⨯\rho\\
+Diamètre\  moyen\ D=\frac{D_1+D_2}{2}
+\end{split}
 (\#eq:arbres-morts2)
 \end{equation} 
 
