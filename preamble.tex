@@ -9,6 +9,7 @@
 \usepackage{fvextra}  % Meilleure gestion de verbatim
 \RecustomVerbatimEnvironment{Verbatim}{BVerbatim}{breaklines=true,fontsize=\small}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+\usepackage{listings}
 \usepackage{tcolorbox}
 \tcbset{
   colback=gray!10,  % Couleur de fond
@@ -16,5 +17,17 @@
   arc=4mm,          % Coins arrondis
   boxrule=1pt       % Épaisseur de la bordure
   listing only,
-  listing options={basicstyle=\footnotesize\ttfamily, breaklines=true}
+  \newtcblisting{rchunk}{
+  colback=gray!10,  % Couleur de fond
+  colframe=gray!50, % Bordure
+  arc=4mm,          % Coins arrondis
+  boxrule=1pt,      % Épaisseur de la bordure
+  listing only,     % Active le mode code
+  listing options={ % Configuration de listings
+    language=R,
+    basicstyle=\footnotesize\ttfamily, % Style du texte
+    breaklines=true, % Permet de couper les longues lignes
+    frame=single
+  }
 }
+
