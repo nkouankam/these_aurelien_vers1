@@ -71,16 +71,10 @@ describe(Ndiki.Env$TUT)
 
 
 ```{r, results='asis'}
-knitr::asis_output("
-\\begin{callout}
-\\textbf{💡 Exécution du code} : Résumé du dataset `mtcars`.
-\\begin{verbatim}
-" )
-describe(Ndiki.Env$TUT)  # Code exécuté
-knitr::asis_output("
-\\end{verbatim}
-\\end{callout}
-")
+output <- capture.output(describe(mtcars))
+
+cat("\\begin{mdframed}\n", paste(output, collapse = "\n"), "\n\\end{mdframed}")
+
 ```
 
 -   13 parcelles de Forêts Matures (FM) représentant 40,62% des inventaires;
