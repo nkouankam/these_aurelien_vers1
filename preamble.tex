@@ -10,10 +10,22 @@
 \RecustomVerbatimEnvironment{Verbatim}{BVerbatim}{breaklines=true,fontsize=\small}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
 \usepackage{mdframed}
-\newmdenv[
-  backgroundcolor=gray!10,
-  linecolor=gray,
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{lightgray}{gray}{0.95}
+
+\surroundwithmdframed[
   linewidth=1pt,
-  roundcorner=5pt
-]{callout}
+  backgroundcolor=lightgray,
+  innerleftmargin=5pt,
+  innerrightmargin=5pt
+]{lstlisting}
+
+\lstset{
+  basicstyle=\ttfamily\footnotesize,
+  breaklines=true,
+  frame=single
+}
+
 
