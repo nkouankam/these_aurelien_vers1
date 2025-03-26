@@ -9,4 +9,11 @@
 \usepackage{fvextra}  % Meilleure gestion de verbatim
 \RecustomVerbatimEnvironment{Verbatim}{BVerbatim}{breaklines=true,fontsize=\small}
 \DefineVerbatimEnvironment{Highlighting}{Verbatim}{breaklines,commandchars=\\\{\}}
+\usepackage{mdframed}
+\newmdenv[
+  backgroundcolor=gray!10,
+  linecolor=gray,
+  linewidth=1pt,
+  roundcorner=5pt
+]{callout}
 
