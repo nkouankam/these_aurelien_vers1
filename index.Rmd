@@ -41,7 +41,7 @@ link-citations: yes
 colorlinks: yes
 csquotes: yes
 bibliography: referencess.bib
-biblio-style: apalike
+biblio-style: biblatex
 description: |
   rédaction d'une thèse sur la biodiversité végétale et les stocks de carbone dans certaines forêts communales du Cameroun.
   set in the _output.yml file.
@@ -193,5 +193,4 @@ Spécifiquement il s'agit de:
 
 -   et cartographier la distribution spatiale des stocks de carbone.
 
-\`\`\`
 \mainmatter
