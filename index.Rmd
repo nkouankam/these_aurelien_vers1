@@ -27,7 +27,7 @@ uppermargin: 1.5in
 lowermargin: 1in
 toc-depth: 2
 secnum-depth: subsection
-lot: yes
+lot: yes 
 lof: yes
 site: bookdown::bookdown_site
 documentclass: book
@@ -41,7 +41,7 @@ link-citations: yes
 colorlinks: yes
 csquotes: yes
 bibliography: referencess.bib
-biblio-style: authoryear
+biblio-style: apalike
 description: |
   rédaction d'une thèse sur la biodiversité végétale et les stocks de carbone dans certaines forêts communales du Cameroun.
   set in the _output.yml file.
