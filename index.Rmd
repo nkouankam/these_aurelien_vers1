@@ -47,7 +47,7 @@ description: |
   set in the _output.yml file.
   The HTML output format for this example is bookdown::bs4_book,
 biblatexoptions:
-- backend=biber
+- backend=bibtex
 - "style=authoryear-ibid"
 - isbn=false
 - backref=true
