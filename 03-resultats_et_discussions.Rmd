@@ -64,17 +64,9 @@ Nanga_Sol<-read.csv2("C:/Users/Windows/AppData/local/RProjets/these_aurelien_ver
 
 Dans la Forêt Communale de Ndikiniméki notre étude floristique a couvert un ensemble de 32 parcelles d'inventaires (Tableau:\@ref(tab:Nomenclatureparcelles-Ndikinimeki3)) réparties sur 05 catégories d'utilisation des terres: 
 
-```{r CategoriesUtilisation-TerreNdikinimeki3,echo=F,result='asis'}
+```{r CategoriesUtilisation-TerreNdikinimeki3,echo=F}
 library(prettyR)
 describe(Ndiki.Env$TUT)
-```
-
-
-```{r, results='asis'}
-output <- capture.output(describe(mtcars))
-
-cat("\\begin{mdframed}\n", paste(output, collapse = "\n"), "\n\\end{mdframed}")
-
 ```
 
 -   13 parcelles de Forêts Matures (FM) représentant 40,62% des inventaires;
