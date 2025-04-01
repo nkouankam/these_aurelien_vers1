@@ -1,18 +1,18 @@
 ---
-bibliography: references.bib
+bibliography: referencess.bib
 output:
   pdf_document: default
   html_document:
     df_print: paged
 ---
 
-# Chapitre I: Généralités
+# Généralités
 
 ## Présentation de la Forêt Communale de Nanga-Eboko
 
 ### Localisation
 
-La forêt communale de Nanga-Eboko est constituée de deux blocs distincts (Figure: \@ref(fig:Localisation-FCNanga1)) couvrant une superficie totale de 20000 ha (11000 ha et 9000 ha). C'est le décret n°2009/2046/PM du 16 Novembre 2009 qui marque sa création et confi sa tutelle à la mairie de Nanga-Eboko. Elle est située dans la région du Centre, Département de la Haute Sanaga, Arrondissement de Nanga-Eboko [@Yemafack_Alemagi2016].
+La forêt communale de Nanga-Eboko est constituée de deux blocs distincts (Figure: \@ref(fig:Localisation-FCNanga1)) couvrant une superficie totale de 20000 ha (11000 ha et 9000 ha). C'est le décret n°2009/2046/PM du 16 Novembre 2009 qui marque sa création et confi sa tutelle à la mairie de Nanga-Eboko. Elle est située dans la région du Centre, Département de la Haute Sanaga, Arrondissement de Nanga-Eboko [@Yemafackalemagi2016].
 
 ```{r Localisation-FCNanga1,fig.cap="Localisation de la Forêt communale de Nanga-Eboko (Yemefack et Alemagi, 2016)"}
 knitr::include_graphics('images/localisation_nanga-01.png')
@@ -100,7 +100,7 @@ Pour l'évaluation des stocks de carbone, @Penman2003 et @MacDicken1997 définis
 -   Groupe 2: matière organique morte. Il comprend le bois mort;
 -   Groupe 3: carbone organique du sol. Il inclue le carbone du sol.
 
-La première technique employée par @Brown_Lugo1992, consiste à estimer la biomasse à partir des volumes de bois dits « commerciaux » (volume de bois fort sur écorce) corrigés par un coefficient d'expansion (Figure: \@ref(fig:Methode-BrownLugo1)). Elle s'applique pour les inventaires ayant un diamètre de précomptage égale à 10 cm.
+La première technique employée par @Brownlugo1992, consiste à estimer la biomasse à partir des volumes de bois dits « commerciaux » (volume de bois fort sur écorce) corrigés par un coefficient d'expansion (Figure: \@ref(fig:Methode-BrownLugo1)). Elle s'applique pour les inventaires ayant un diamètre de précomptage égale à 10 cm.
 
 ```{r Methode-BrownLugo1,fig.cap='Méthode de Brown et Lugo (1992).'}
 knitr::include_graphics('images/Methode Brown et Lugo.png')
@@ -108,37 +108,34 @@ knitr::include_graphics('images/Methode Brown et Lugo.png')
 
 Cependant, son application pour des inventaires ayant un diamètre de précomptage allant jusqu'à 30 cm nécessite l'ajout d'un facteur correctif (VEF : 'Volume Expansion Factor') permettant d'extrapoler le volume des classes de diamètre manquantes \@ref(eq:Brown-Lugo1).
 
-$$\begin{equation}
-AGB=VOB×WB×BEF(VEF)  
-\end{equation}$$ {#eq:Brown-Lugo1}
+\begin{equation}
+AGB=VOB×WB×BEF(VEF)
+(\#eq:Brown-Lugo1)
+\end{equation} 
 
-$AGB$ : Biomasse épigée;
-$VOB$ : Volume bois fort;
-$WD$ : Densité du bois;
-$VEF$:Facteur d'expansion de volume.
+$AGB$ : Biomasse épigée; $VOB$ : Volume bois fort; $WD$ : Densité du bois; $VEF$:Facteur d'expansion de volume.
 
 La seconde technique (Figure: \@ref(fig:Methode-Chave2014)) est celle consistant à estimer la biomasse à partir des tables d'inventaires et d'un modèle allométrique [@Chave2005]. Elle repose sur l'utilisation du résultat d'un inventaire en nombre de tiges par essence et par catégorie de diamètre auquel on associe la biomasse épigée totale d'un arbre (AGB) estimée à partir d'une ou plusieurs données d'entrées : le Diamètre (D), la Hauteur (H), la Densité du bois (ρ). Equation: \@ref(eq:Chave-al2005).
 
-$$\begin{equation}
+\begin{equation}
 AGB=0,0673×(ρD^2 H)0,976≡0,559×(ρD^2 H)
-\end{equation}$$ {#eq:Chave-al2005}
+(\#eq:Chave-al2005)
+\end{equation}
 
-$D$ : diamètre à hauteur de poitrine ou au-dessus des contreforts (m); 
-$H$ : hauteur (m);
-$ρ$ : densité spécifique (g/cm^3^).
+$D$ : diamètre à hauteur de poitrine ou au-dessus des contreforts (m); $H$ : hauteur (m); $ρ$ : densité spécifique (g/cm^3^).
 
 [l'intervalle de validité de l'équation: 5 à 156 cm de diamètre].
 
 Lorsque les données de hauteur ne sont pas disponibles, @Chave2014 a récemment développé une équation permettant d'estimer la biomasse épigée à partir du diamètre de l'arbre et un facteur de stress environnemental. Equation: \@ref(eq:Chave-al2014).
 
-$$\begin{equation}
+\begin{equation}
 AGB=℮^[-1,803-0,976×E+0,976×ln⁡(ρ)+2,673×ln⁡(D)-0,0299×(ln(D))²]
-\end{equation}$$ {#eq:Chave-al2014} 
+(\#eq:Chave-al2014)
+\end{equation} 
 
-$AGB$, $ρ$, $D$, $H$ et $E$ sont respectivement la biomasse aérienne (kg), la densité du bois spécifique (g/cm^3^), le diamètre de l'arbre (cm), la hauteur totale de l'arbre (m) et une variable qui quantifie le stress environnemental (elle varie entre -0,2 et 1). 
-[L'intervalle de validité de cette équation est de 5 à 180 cm de diamètre].
+$AGB$, $ρ$, $D$, $H$ et $E$ sont respectivement la biomasse aérienne (kg), la densité du bois spécifique (g/cm^3^), le diamètre de l'arbre (cm), la hauteur totale de l'arbre (m) et une variable qui quantifie le stress environnemental (elle varie entre -0,2 et 1). [L'intervalle de validité de cette équation est de 5 à 180 cm de diamètre].
 
-Comparativement à la technique de @Brown_Lugo1992, les équations de Chave permettent d'estimer la biomasse totale de l'arbre en fonction du diamètre et/ou la hauteur et un facteur de stress environnemental sans appliquer de facteur de conversion global (Figure: \@ref(fig:Methode-Chave2014)). C'est une méthode qui s'applique aisément aux données brutes d'inventaires forestiers et est très adaptée aux dispositifs scientifiques du type « placettes permanentes ». Cependant sa mise en œuvre exige des corrections d'imprécision liées à l'affectation de chaque tige à une classe de diamètre plus ou moins large (5 ou 10 cm).
+Comparativement à la technique de @Brownlugo1992, les équations de Chave permettent d'estimer la biomasse totale de l'arbre en fonction du diamètre et/ou la hauteur et un facteur de stress environnemental sans appliquer de facteur de conversion global (Figure: \@ref(fig:Methode-Chave2014)). C'est une méthode qui s'applique aisément aux données brutes d'inventaires forestiers et est très adaptée aux dispositifs scientifiques du type « placettes permanentes ». Cependant sa mise en œuvre exige des corrections d'imprécision liées à l'affectation de chaque tige à une classe de diamètre plus ou moins large (5 ou 10 cm).
 
 ```{r Methode-Chave2014,fig.cap='Méthode de Chave et al.(2014).'}
 knitr::include_graphics('images/Chave 2014-04.png')
