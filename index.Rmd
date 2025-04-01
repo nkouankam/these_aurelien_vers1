@@ -41,7 +41,7 @@ link-citations: yes
 colorlinks: yes
 csquotes: yes
 bibliography: referencess.bib
-biblio-style: apalike
+biblio-style: plainnat
 description: |
   rédaction d'une thèse sur la biodiversité végétale et les stocks de carbone dans certaines forêts communales du Cameroun.
   set in the _output.yml file.
@@ -62,6 +62,11 @@ editor_options:
   markdown:
     wrap: sentence
 ---
+
+\frontmatter
+\tableofcontents
+\mainmatter
+
 
 ```{r DoNotModify, include=FALSE}
 ### Utilities. Do not modify.
